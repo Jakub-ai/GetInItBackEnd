@@ -70,3 +70,6 @@ C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\obj\Debug\net7.0\refint\GetInIt
 C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\obj\Debug\net7.0\GetInItBackEnd.pdb
 C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\obj\Debug\net7.0\GetInItBackEnd.genruntimeconfig.cache
 C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\obj\Debug\net7.0\ref\GetInItBackEnd.dll
+C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.dll
+C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.Extensions.Logging.dll
+C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.Web.AspNetCore.dll

@@ -2,7 +2,7 @@
 
 public enum Level
 {
-    Junior,
-    Regular,
-    Senior
+    Junior = 1 ,
+    Regular = 2,
+    Senior = 3
 }

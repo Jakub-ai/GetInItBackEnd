@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "90pQabz11jY82Q1gNOsigXVZKgj+iffeGkc4wFOJ/7/N+fZ8nUoqxUwdrLB0gmpuvQ7Kj3pHOcum3N6XYeNyag==",
+  "dgSpecHash": "VhvjWdsY4Ehyuu7BODczZBEB946L8EmYwbc84xWwnCIRVg7UQrLQmvxtHv4nMr2/N5O4Hf4E7RDBeRxLuBA0VA==",
   "success": true,
   "projectFilePath": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd.csproj",
   "expectedPackageFiles": [
@@ -44,6 +44,9 @@
     "C:\\Users\\jakub\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\jakub\\.nuget\\packages\\nlog\\5.1.2\\nlog.5.1.2.nupkg.sha512",
+    "C:\\Users\\jakub\\.nuget\\packages\\nlog.extensions.logging\\5.2.2\\nlog.extensions.logging.5.2.2.nupkg.sha512",
+    "C:\\Users\\jakub\\.nuget\\packages\\nlog.web.aspnetcore\\5.2.2\\nlog.web.aspnetcore.5.2.2.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",

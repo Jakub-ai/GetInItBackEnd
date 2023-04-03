@@ -5,7 +5,8 @@ namespace GetInItBackEnd.Entities;
 public class GetInItDdContext : DbContext
 {
     private const string ConnectionString = "Server=localhost;Database=GetInItDB;User Id=SA;Password=GetInIt1234;TrustServerCertificate=True;Encrypt=True;";
-
+    
+    public DbSet<Account> Accounts { get; set; }
     public DbSet<Address> Addresses { get; set; }
     public DbSet<Company> Companies { get; set; }
     public DbSet<EmploymentType> EmploymentTypes { get; set; }
@@ -17,6 +18,10 @@ public class GetInItDdContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        //Account Table Configuration
+        modelBuilder.Entity<Account>().Property(ac => ac.Email).IsRequired();
+        modelBuilder.Entity<Account>().Property(ac => ac.Password).IsRequired().HasMaxLength(25);
+        modelBuilder.Entity<Account>().Property(ac => ac.Role).IsRequired();
         //Table Address Configuration
         modelBuilder.Entity<Address>().Property(a => a.Country).IsRequired().HasMaxLength(25);
         modelBuilder.Entity<Address>().Property(a => a.City).IsRequired().HasMaxLength(25);
@@ -25,7 +30,6 @@ public class GetInItDdContext : DbContext
         modelBuilder.Entity<Address>().Property(a => a.PostalCode).IsRequired().HasMaxLength(25);
         //Table Company Configuration
         modelBuilder.Entity<Company>().Property(c => c.Name).IsRequired().HasMaxLength(25);
-        modelBuilder.Entity<Company>().Property(c => c.Password).IsRequired().HasMaxLength(25);
         modelBuilder.Entity<Company>().Property(c => c.Nip).IsRequired();
         modelBuilder.Entity<Company>().Property(c => c.Regon).IsRequired();
         //Table EmploymentType Configuration
@@ -42,7 +46,7 @@ public class GetInItDdContext : DbContext
         modelBuilder.Entity<Payment>().Property(p => p.Invoice).IsRequired();
         modelBuilder.Entity<Payment>().Property(p => p.Amount).IsRequired();
         //Technology Table Configuration
-        modelBuilder.Entity<Technology>().Property(t => t.Language).IsRequired().HasMaxLength(25);
+        modelBuilder.Entity<Technology>().Property(t => t.Skill).IsRequired().HasMaxLength(25);
     }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

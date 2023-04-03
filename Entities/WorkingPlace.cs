@@ -2,8 +2,8 @@
 
 public enum WorkingPlace
 {
-    Stationary,
-    Hybrid,
-    Remote
+    Stationary = 1,
+    Hybrid = 2,
+    Remote = 3 
     
 }
