@@ -10,9 +10,9 @@ public class Company
     public int Regon { get; set; }
     public string Description { get; set; }
     public int AddressId { get; set; }
-    public int AccountId { get; set; }
-
+ 
+    
     public virtual Account Account { get; set; }
-    public virtual Address Address { get; set; }
+    public virtual Address? Address { get; set; }
     public virtual List<Offer>? Offers { get; set; }
 }

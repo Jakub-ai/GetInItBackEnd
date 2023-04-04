@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GetInItBackEnd.Migrations
 {
-    [DbContext(typeof(GetInItDdContext))]
+    [DbContext(typeof(GetInItDbContext))]
     [Migration("20230401165126_Alt_Migration3")]
     partial class Alt_Migration3
     {

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GetInItBackEnd.Migrations
 {
-    [DbContext(typeof(GetInItDdContext))]
+    [DbContext(typeof(GetInItDbContext))]
     partial class GetInItDdContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -45,6 +45,9 @@ namespace GetInItBackEnd.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CompanyId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -69,6 +72,9 @@ namespace GetInItBackEnd.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CompanyId")
+                        .IsUnique();
 
                     b.ToTable("Accounts");
                 });
@@ -119,9 +125,6 @@ namespace GetInItBackEnd.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AccountId")
-                        .HasColumnType("int");
-
                     b.Property<int>("AddressId")
                         .HasColumnType("int");
 
@@ -149,9 +152,6 @@ namespace GetInItBackEnd.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AccountId")
-                        .IsUnique();
 
                     b.HasIndex("AddressId")
                         .IsUnique();
@@ -263,10 +263,10 @@ namespace GetInItBackEnd.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal?>("SalaryFrom")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("(decimal(18,4))");
 
                     b.Property<decimal?>("SalaryTo")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("(decimal(18,4))");
 
                     b.HasKey("Id");
 
@@ -287,7 +287,7 @@ namespace GetInItBackEnd.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("(decimal(18,4))");
 
                     b.Property<string>("Invoice")
                         .IsRequired()
@@ -352,21 +352,24 @@ namespace GetInItBackEnd.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("GetInItBackEnd.Entities.Company", b =>
+            modelBuilder.Entity("GetInItBackEnd.Entities.Account", b =>
                 {
-                    b.HasOne("GetInItBackEnd.Entities.Account", "Account")
-                        .WithOne("Company")
-                        .HasForeignKey("GetInItBackEnd.Entities.Company", "AccountId")
+                    b.HasOne("GetInItBackEnd.Entities.Company", "Company")
+                        .WithOne("Account")
+                        .HasForeignKey("GetInItBackEnd.Entities.Account", "CompanyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Company");
+                });
+
+            modelBuilder.Entity("GetInItBackEnd.Entities.Company", b =>
+                {
                     b.HasOne("GetInItBackEnd.Entities.Address", "Address")
                         .WithOne("Company")
                         .HasForeignKey("GetInItBackEnd.Entities.Company", "AddressId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Account");
 
                     b.Navigation("Address");
                 });
@@ -421,8 +424,6 @@ namespace GetInItBackEnd.Migrations
 
             modelBuilder.Entity("GetInItBackEnd.Entities.Account", b =>
                 {
-                    b.Navigation("Company");
-
                     b.Navigation("Payments");
                 });
 
@@ -434,6 +435,9 @@ namespace GetInItBackEnd.Migrations
 
             modelBuilder.Entity("GetInItBackEnd.Entities.Company", b =>
                 {
+                    b.Navigation("Account")
+                        .IsRequired();
+
                     b.Navigation("Offers");
                 });
 

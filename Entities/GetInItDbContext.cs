@@ -2,7 +2,7 @@
 
 namespace GetInItBackEnd.Entities;
 
-public class GetInItDdContext : DbContext
+public class GetInItDbContext : DbContext
 {
     private const string ConnectionString = "Server=localhost;Database=GetInItDB;User Id=SA;Password=GetInIt1234;TrustServerCertificate=True;Encrypt=True;";
     

@@ -4,9 +4,9 @@ namespace GetInItBackEnd;
 
 public class CompanySeeder
 {
-    private readonly GetInItDdContext _dbContext;
+    private readonly GetInItDbContext _dbContext;
 
-    public CompanySeeder(GetInItDdContext dbContext)
+    public CompanySeeder(GetInItDbContext dbContext)
     {
         _dbContext = dbContext;
     }

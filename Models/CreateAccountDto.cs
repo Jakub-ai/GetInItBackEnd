@@ -12,5 +12,28 @@ public class CreateAccountDto
     [Required][MaxLength(25)]
     public string Email { get; set; }
     [Required]
-    public Role Role { get; set; }
+    public string Password { get; set; }
+
+    public CreateCompanyDto Company{ get; set; }
+
+
+    public Account ToAccount()
+    {
+        return new Account
+        {
+            Name = Name,
+            LastName = LastName,
+            Email = Email,
+            Password = Password,
+            Company = new Company
+            {
+                Name = Company.Name,
+                Url = Company.Url,
+                Nip = Company.Nip,
+                Regon = Company.Regon,
+            }
+
+        };
+    }
+    
 }
