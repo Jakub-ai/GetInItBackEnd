@@ -5,7 +5,7 @@
 namespace GetInItBackEnd.Migrations
 {
     /// <inheritdoc />
-    public partial class alt_migration6 : Migration
+    public partial class alt_migration2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -2,6 +2,7 @@ using System.Formats.Asn1;
 using GetInItBackEnd;
 using GetInItBackEnd.Entities;
 using GetInItBackEnd.Middleware;
+using GetInItBackEnd.Services.AccountServices;
 using NLog;
 using NLog.Web;
 
@@ -19,6 +20,7 @@ builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
 builder.Host.UseNLog();
 builder.Services.AddScoped<ErrorHandlingMiddleware>();
 builder.Services.AddScoped<RequestTimeMiddleware>();
+builder.Services.AddScoped<IAccountService, AccountService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -17,7 +17,7 @@ public class CompanySeeder
         {
             if (!_dbContext.Accounts.Any())
             {
-                var Admin = new Account
+                /*var Admin = new Account
                 {
                     Email = "admin@GetInIT.com",
                     Password = "123443",
@@ -27,9 +27,18 @@ public class CompanySeeder
                     Role = (Role)1,
                     Company = null,
                     Payments = null
-                };
-                _dbContext.Accounts.Add(Admin);
-                await _dbContext.SaveChangesAsync();
+                };*/
+                /*var Payment = new Payment
+                {
+                    Id = 0,
+                    PaymentDate = null,
+                    Invoice = null,
+                    Amount = 16.3m,
+                    AccountId = 0,
+                    Account = null
+                }*/
+                /*_dbContext.Accounts.Add(Admin);
+                await _dbContext.SaveChangesAsync();*/
 
 
             }

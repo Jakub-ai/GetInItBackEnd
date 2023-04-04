@@ -73,3 +73,4 @@ C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\obj\Debug\net7.0\ref\GetInItBac
 C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.dll
 C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.Extensions.Logging.dll
 C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.Web.AspNetCore.dll
+C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\nlog.config

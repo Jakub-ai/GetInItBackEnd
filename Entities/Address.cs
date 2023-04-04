@@ -9,5 +9,5 @@ public class Address
     public string BuildingNumber { get; set; }
     public string PostalCode { get; set; }
 
-    public virtual Company Company { get; set; }
+    public virtual Company? Company { get; set; }
 }

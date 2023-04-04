@@ -8,6 +8,7 @@ public class AccountDto
     public string Name { get; set; }
     public string LastName { get; set; }
     public string Email { get; set; }
+  
     public Role Role { get; set; }
 
     public static AccountDto FromAccount(Account account)
@@ -18,7 +19,8 @@ public class AccountDto
             Name = account.Name,
             LastName = account.LastName,
             Email = account.Email,
-            Role = account.Role
+            Role = account.Role,
+            
 
         };
     }

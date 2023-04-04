@@ -1,11 +1,9 @@
 ﻿using GetInItBackEnd.Entities;
 using GetInItBackEnd.Exceptions;
 using GetInItBackEnd.Models;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
 
-namespace GetInItBackEnd.Services;
+namespace GetInItBackEnd.Services.AccountServices;
 
 public class AccountService : IAccountService
 {
@@ -20,12 +18,13 @@ public class AccountService : IAccountService
     {
         var account = await _dbContext.Accounts.FindAsync(id);
 
-        return AccountDto.FromAccount(account ?? throw new NotFoundException("XD"));
+        return AccountDto.FromAccount(account ?? throw new NotFoundException("XD") );
     }
 
-    public async Task<List<AccountDto>> GetAllAccount()
+    public async Task<IEnumerable<AccountDto>> GetAllAccount()
     {
         var accounts = await _dbContext.Accounts
+            .Include(a => a.Company)
             .Select(a => new AccountDto
             {
                 Id = a.Id,
@@ -39,9 +38,14 @@ public class AccountService : IAccountService
         return accounts;
     }
 
+    public async Task<string> getString()
+    {
+        return  "sdasadsa";
+    }
+
     public async Task<int> Create(CreateAccountDto accountDto)
     {
-        if (!_dbContext.Accounts.Any()) throw new NotFoundException("not found account");
+        //if (!_dbContext.Accounts.Any()) throw new NotFoundException("not found account");
 
         /*var accountEntity = new Account
         {
