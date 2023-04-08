@@ -11,5 +11,5 @@ public class Payment
     public decimal Amount { get; set; }
     public int CompanyId { get; set; }
 
-    public virtual Company? company { get; set; }
+    public virtual Company? Company { get; set; }
 }
