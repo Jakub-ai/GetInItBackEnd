@@ -9,7 +9,7 @@ public class Payment
     public string Invoice { get; set; }
     [Column(TypeName = "decimal(18,4)")]
     public decimal Amount { get; set; }
-    public int AccountId { get; set; }
+    public int CompanyId { get; set; }
 
-    public virtual Account? Account { get; set; }
+    public virtual Company? company { get; set; }
 }

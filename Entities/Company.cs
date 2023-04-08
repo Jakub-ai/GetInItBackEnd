@@ -15,4 +15,5 @@ public class Company
     public virtual Account Account { get; set; }
     public virtual Address? Address { get; set; }
     public virtual List<Offer>? Offers { get; set; }
+    public virtual  List<Payment>? Payments { get; set; }
 }

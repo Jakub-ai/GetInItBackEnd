@@ -1276,3 +1276,15 @@ Error Number:547,State:0,Class:16
 2023-04-05 01:42:50.4128|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMPLCNVJ24H5" disconnecting. 
 2023-04-05 01:42:50.4128|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMPLCNVJ24H5" stopped. 
 2023-04-05 01:42:50.4128|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMPLCNVJ24H5" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-04-05 01:43:25.6790|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMPLCNVJ24H7" disconnecting. 
+2023-04-05 01:43:25.6790|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMPLCNVJ24H9" disconnecting. 
+2023-04-05 01:43:25.6790|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMPLCNVJ24H7" stopped. 
+2023-04-05 01:43:25.6790|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMPLCNVJ24H9" stopped. 
+2023-04-05 01:43:25.6790|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMPLCNVJ24H9" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-04-05 01:43:25.6790|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMPLCNVJ24H7" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-04-05 01:43:32.3178|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-04-05 01:43:32.3178|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-04-05 01:43:32.3178|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMPLCNVJ24H8" disconnecting. 
+2023-04-05 01:43:32.3178|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMPLCNVJ24H8" stopped. 
+2023-04-05 01:43:32.3178|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMPLCNVJ24H8" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-04-05 01:43:32.3178|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 

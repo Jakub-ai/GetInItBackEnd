@@ -12,5 +12,5 @@ public class Account
     public int CompanyId { get; set; }
     public virtual Company? Company { get; set; }
     
-    public virtual  List<Payment>? Payments { get; set; }
+    
 }
