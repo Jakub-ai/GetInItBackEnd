@@ -12,8 +12,8 @@
     "http": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchBrowser": false,
+      "launchUrl": "GetInIt",
       "applicationUrl": "http://localhost:5099",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

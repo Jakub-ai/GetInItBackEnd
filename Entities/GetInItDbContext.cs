@@ -22,10 +22,7 @@ public class GetInItDbContext : DbContext
         modelBuilder.Entity<Account>().Property(ac => ac.Email).IsRequired();
         modelBuilder.Entity<Account>().Property(ac => ac.Password).IsRequired().HasMaxLength(25);
         modelBuilder.Entity<Account>().Property(ac => ac.Role).IsRequired();
-        modelBuilder.Entity<Account>()
-            .HasOne(a => a.Company)
-            .WithOne(a => a.Account)
-            .HasForeignKey<Company>(x => x.AccountId);
+   
 
         //Table Address Configuration
         modelBuilder.Entity<Address>().Property(a => a.Country).IsRequired().HasMaxLength(25);

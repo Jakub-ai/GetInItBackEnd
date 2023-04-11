@@ -117,3 +117,447 @@
 2023-04-08 18:25:52.2099 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
 2023-04-08 18:25:52.2261 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
 2023-04-08 18:25:52.3573 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-08 18:38:21.8045 Info Message Template Auto Format enabled
+2023-04-08 18:38:21.8127 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-08 18:38:21.8547 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-08 18:38:21.8593 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-08 18:38:21.8593 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-08 18:38:21.8770 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-08 18:38:22.0029 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-08 18:55:28.5324 Info Message Template Auto Format enabled
+2023-04-08 18:55:28.5324 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-08 18:55:28.5634 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-08 18:55:28.5634 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-08 18:55:28.5634 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-08 18:55:28.5789 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-08 18:55:28.6784 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-08 18:56:27.5641 Info Message Template Auto Format enabled
+2023-04-08 18:56:27.5641 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-08 18:56:27.5961 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-08 18:56:27.5961 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-08 18:56:27.5961 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-08 18:56:27.6123 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-08 18:56:27.7353 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-08 18:56:44.6881 Info Message Template Auto Format enabled
+2023-04-08 18:56:44.6881 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-08 18:56:44.7187 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-08 18:56:44.7187 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-08 18:56:44.7187 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-08 18:56:44.7348 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-08 18:56:44.8458 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-08 18:59:23.5793 Info Message Template Auto Format enabled
+2023-04-08 18:59:23.5793 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-08 18:59:23.6160 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-08 18:59:23.6160 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-08 18:59:23.6160 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-08 18:59:23.6343 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-08 18:59:23.7398 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-08 18:59:39.2084 Info Message Template Auto Format enabled
+2023-04-08 18:59:39.2084 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-08 18:59:39.2383 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-08 18:59:39.2383 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-08 18:59:39.2383 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-08 18:59:39.2537 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-08 18:59:39.3544 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-08 19:01:07.5269 Info Message Template Auto Format enabled
+2023-04-08 19:01:07.5323 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-08 19:01:07.5566 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-08 19:01:07.5566 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-08 19:01:07.5566 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-08 19:01:07.5720 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-08 19:01:07.6695 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-08 19:01:15.5989 Info Message Template Auto Format enabled
+2023-04-08 19:01:15.5989 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-08 19:01:15.6324 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-08 19:01:15.6324 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-08 19:01:15.6324 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-08 19:01:15.6496 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-08 19:01:15.7475 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 19:13:23.8275 Info Message Template Auto Format enabled
+2023-04-11 19:13:23.8275 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 19:13:23.8757 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 19:13:23.8757 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 19:13:23.8757 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 19:13:23.8971 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 19:15:37.9705 Info Message Template Auto Format enabled
+2023-04-11 19:15:37.9705 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 19:15:38.0237 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 19:15:38.0237 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 19:15:38.0237 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 19:15:38.0453 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 19:15:38.1870 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 19:25:46.2461 Info Message Template Auto Format enabled
+2023-04-11 19:25:46.2544 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 19:25:46.2994 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 19:25:46.2994 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 19:25:46.2994 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 19:25:46.3223 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 19:25:46.4659 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 19:28:15.1919 Info Message Template Auto Format enabled
+2023-04-11 19:28:15.1919 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 19:28:15.2506 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 19:28:15.2506 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 19:28:15.2506 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 19:28:15.2767 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 19:28:15.4407 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 19:38:24.5675 Info Message Template Auto Format enabled
+2023-04-11 19:38:24.5675 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 19:38:24.6177 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 19:38:24.6177 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 19:38:24.6177 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 19:38:24.6398 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 19:38:24.7854 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 19:40:56.6787 Info Message Template Auto Format enabled
+2023-04-11 19:40:56.6866 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 19:40:56.7281 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 19:40:56.7281 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 19:40:56.7329 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 19:40:56.7519 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 19:40:56.9030 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 19:41:38.4107 Info Message Template Auto Format enabled
+2023-04-11 19:41:38.4107 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 19:41:38.4617 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 19:41:38.4617 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 19:41:38.4617 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 19:41:38.4836 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 19:41:38.6201 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 20:51:14.4712 Info Message Template Auto Format enabled
+2023-04-11 20:51:14.4712 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 20:51:14.5026 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 20:51:14.5026 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 20:51:14.5026 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 20:51:14.5195 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 20:51:14.6264 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 20:52:36.3394 Info Message Template Auto Format enabled
+2023-04-11 20:52:36.3451 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 20:52:36.3715 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 20:52:36.3749 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 20:52:36.3749 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 20:52:36.3749 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 20:52:36.4965 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 20:53:02.9042 Info Message Template Auto Format enabled
+2023-04-11 20:53:02.9121 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 20:53:02.9526 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 20:53:02.9526 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 20:53:02.9526 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 20:53:02.9744 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 20:53:03.1176 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 21:00:01.3024 Info Message Template Auto Format enabled
+2023-04-11 21:00:01.3024 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 21:00:01.3507 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 21:00:01.3507 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 21:00:01.3507 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 21:00:01.3722 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 21:00:01.5189 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 21:00:40.7849 Info Message Template Auto Format enabled
+2023-04-11 21:00:40.7849 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 21:00:40.8347 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 21:00:40.8347 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 21:00:40.8347 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 21:00:40.8567 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 21:00:41.0014 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 21:04:04.3062 Info Message Template Auto Format enabled
+2023-04-11 21:04:04.3152 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 21:04:04.3580 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 21:04:04.3625 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 21:04:04.3625 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 21:04:04.3816 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 21:04:04.5297 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 21:04:13.6678 Info Message Template Auto Format enabled
+2023-04-11 21:04:13.6771 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 21:04:13.7212 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 21:04:13.7212 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 21:04:13.7212 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 21:04:13.7430 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 21:04:13.8805 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 21:10:07.8789 Info Message Template Auto Format enabled
+2023-04-11 21:10:07.8789 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 21:10:07.9265 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 21:10:07.9265 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 21:10:07.9265 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 21:10:07.9480 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 21:10:08.0846 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 21:55:24.7390 Info Message Template Auto Format enabled
+2023-04-11 21:55:24.7390 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 21:55:24.7874 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 21:55:24.7874 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 21:55:24.7874 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 21:55:24.8089 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 21:55:24.9560 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:00:09.0073 Info Message Template Auto Format enabled
+2023-04-11 22:00:09.0152 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 22:00:09.0567 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 22:00:09.0621 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 22:00:09.0621 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 22:00:09.0811 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:00:09.2394 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:03:50.6816 Info Message Template Auto Format enabled
+2023-04-11 22:03:50.6892 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 22:03:50.7314 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 22:03:50.7357 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 22:03:50.7357 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 22:03:50.7534 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:03:50.9021 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:06:07.2391 Info Message Template Auto Format enabled
+2023-04-11 22:06:07.2546 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 22:06:07.3010 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 22:06:07.3010 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 22:06:07.3010 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 22:06:07.3467 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:06:07.9097 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:06:19.6071 Info Message Template Auto Format enabled
+2023-04-11 22:06:19.6252 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 22:06:19.6735 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 22:06:19.6735 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 22:06:19.6735 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 22:06:19.7217 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:06:20.4443 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:08:46.9718 Info Message Template Auto Format enabled
+2023-04-11 22:08:46.9718 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 22:08:47.0207 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 22:08:47.0207 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 22:08:47.0207 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 22:08:47.0424 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:08:47.1839 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:10:25.0526 Info Message Template Auto Format enabled
+2023-04-11 22:10:25.0686 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 22:10:25.1140 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 22:10:25.1140 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 22:10:25.1140 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 22:10:25.1615 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:10:42.9379 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-04-11 22:11:17.1939 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:11:18.8171 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-04-11 22:11:18.8444 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-04-11 22:11:18.8994 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-04-11 22:11:18.9254 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-04-11 22:11:18.9254 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-04-11 22:11:18.9394 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-04-11 22:11:18.9394 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-04-11 22:11:18.9543 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-04-11 22:11:18.9543 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-04-11 22:11:18.9543 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-04-11 22:11:18.9543 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-04-11 22:11:18.9689 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-04-11 22:11:18.9689 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-04-11 22:11:18.9689 Warn FileTarget(Name=allfile): Failed to create file appender: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log Exception: System.IO.IOException: The process cannot access the file 'C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\logs\nlog-AspNetCore-all-2023-04-11.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2023-04-11 22:13:15.8258 Info Message Template Auto Format enabled
+2023-04-11 22:13:15.8452 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 22:13:15.8982 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 22:13:15.8982 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 22:13:15.8982 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 22:13:15.9772 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:13:16.5613 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:13:59.4070 Info Message Template Auto Format enabled
+2023-04-11 22:13:59.4232 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 22:13:59.4698 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 22:13:59.4698 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 22:13:59.4698 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 22:13:59.5183 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:14:00.1650 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:14:27.7752 Info Message Template Auto Format enabled
+2023-04-11 22:14:27.7904 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 22:14:27.8350 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 22:14:27.8350 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 22:14:27.8350 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 22:14:27.8820 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:14:28.4246 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:15:46.8989 Info Message Template Auto Format enabled
+2023-04-11 22:15:46.9152 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 22:15:46.9597 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 22:15:46.9597 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 22:15:46.9597 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 22:15:47.0036 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:15:47.5372 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:21:31.9292 Info Message Template Auto Format enabled
+2023-04-11 22:21:31.9369 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 22:21:31.9770 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 22:21:31.9770 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 22:21:31.9770 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 22:21:31.9982 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:21:32.1367 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:22:08.3514 Info Message Template Auto Format enabled
+2023-04-11 22:22:08.3592 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 22:22:08.4003 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 22:22:08.4046 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 22:22:08.4046 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 22:22:08.4218 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:22:08.5630 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:22:43.6174 Info Message Template Auto Format enabled
+2023-04-11 22:22:43.6315 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 22:22:43.6743 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 22:22:43.6743 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 22:22:43.6743 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 22:22:43.7144 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:22:50.8747 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:23:44.4142 Info Message Template Auto Format enabled
+2023-04-11 22:23:44.4223 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 22:23:44.4694 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 22:23:44.4694 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 22:23:44.4694 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 22:23:44.4923 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:23:44.6349 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:27:35.9466 Info Message Template Auto Format enabled
+2023-04-11 22:27:35.9547 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 22:27:35.9957 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 22:27:36.0000 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 22:27:36.0000 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 22:27:36.0173 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:27:36.1577 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:37:21.2061 Info Message Template Auto Format enabled
+2023-04-11 22:37:21.2061 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-11 22:37:21.2594 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-11 22:37:21.2645 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-11 22:37:21.2645 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-11 22:37:21.2829 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-11 22:37:21.4263 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config

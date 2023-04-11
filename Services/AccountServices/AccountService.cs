@@ -1,6 +1,8 @@
-﻿using GetInItBackEnd.Entities;
+﻿using AutoMapper;
+using GetInItBackEnd.Entities;
 using GetInItBackEnd.Exceptions;
 using GetInItBackEnd.Models;
+using GetInItBackEnd.Models.Account;
 using Microsoft.EntityFrameworkCore;
 
 namespace GetInItBackEnd.Services.AccountServices;
@@ -8,42 +10,46 @@ namespace GetInItBackEnd.Services.AccountServices;
 public class AccountService : IAccountService
 {
     private readonly GetInItDbContext _dbContext;
+    private readonly IMapper _mapper;
+    private readonly ILogger<AccountService> _logger;
 
-    public AccountService(GetInItDbContext dbContext)
+    public AccountService(GetInItDbContext dbContext, IMapper mapper, ILogger<AccountService> logger)
     {
         _dbContext = dbContext;
+        _mapper = mapper;
+        _logger = logger;
     }
 
     public async Task<AccountDto> GetAccountById(int id)
     {
-        var account = await _dbContext.Accounts.FindAsync(id);
+        var account = await _dbContext.Accounts
+            .Include(a => a.Company)
+            .FirstOrDefaultAsync(a => a.Id == id);
+        if (account is null) throw new NotFoundException("Account not found");
 
-        return AccountDto.FromAccount(account ?? throw new NotFoundException("XD") );
+        var result = _mapper.Map<AccountDto>(account);
+        return result;
+
     }
 
     public async Task<IEnumerable<AccountDto>> GetAllAccount()
     {
         var accounts = await _dbContext.Accounts
             .Include(a => a.Company)
-            .Select(a => new AccountDto
-            {
-                Id = a.Id,
-                Name = a.Name,
-                LastName = a.LastName,
-                Email = a.Email,
-                Role = a.Role
-            })
             .ToListAsync();
-        
-        return accounts;
+        var accountsDto = _mapper.Map<List<AccountDto>>(accounts);
+        return accountsDto;
     }
 
-    public async Task<string> getString()
+
+    public async Task<int> CreateCompanyAccount(CreateAccountCompanyDto dto)
     {
-        return  "sdasadsa";
+        var account = _mapper.Map<Account>(dto);
+        await _dbContext.Accounts.AddAsync(account);
+        await _dbContext.SaveChangesAsync();
+        return account.Id;
     }
-
-    public async Task<int> Create(CreateAccountDto accountDto)
+    public async Task<int> CreateAccount(CreateAccountDto accountDto)
     {
         //if (!_dbContext.Accounts.Any()) throw new NotFoundException("not found account");
 
@@ -61,12 +67,11 @@ public class AccountService : IAccountService
                 Regon = accountDto.Company.Regon,
             }
         };*/
-        var accountEntity = accountDto.ToAccount();
-        
-        
-        
-        await _dbContext.Accounts.AddAsync(accountEntity);
+        var account = _mapper.Map<Account>(accountDto);
+        await _dbContext.Accounts.AddAsync(account);
         await _dbContext.SaveChangesAsync();
-         return accountEntity.Id;
+        return account.Id;
+
+
     }
 }

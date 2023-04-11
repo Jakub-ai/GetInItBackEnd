@@ -4,6 +4,7 @@ using GetInItBackEnd.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GetInItBackEnd.Migrations
 {
     [DbContext(typeof(GetInItDbContext))]
-    partial class GetInItDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230408165924_alt_Migration6")]
+    partial class alt_Migration6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,6 +70,9 @@ namespace GetInItBackEnd.Migrations
 
                     b.Property<int>("Role")
                         .HasColumnType("int");
+
+                    b.Property<string>("SubEndsAt")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -140,9 +146,6 @@ namespace GetInItBackEnd.Migrations
 
                     b.Property<int>("Regon")
                         .HasColumnType("int");
-
-                    b.Property<string>("SubEndsAt")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Url")
                         .HasColumnType("nvarchar(max)");

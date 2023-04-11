@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using GetInItBackEnd.Entities;
 
-namespace GetInItBackEnd.Models;
+namespace GetInItBackEnd.Models.Account;
 
 public class CreateAccountDto
 {
@@ -13,11 +12,10 @@ public class CreateAccountDto
     public string Email { get; set; }
     [Required]
     public string Password { get; set; }
+    
 
-    public CreateCompanyDto Company{ get; set; }
 
-
-    public Account ToAccount()
+    /*public Account ToAccount()
     {
         return new Account
         {
@@ -34,6 +32,6 @@ public class CreateAccountDto
             }
 
         };
-    }
+    }*/
     
 }

@@ -1,4 +1,4 @@
-﻿using GetInItBackEnd.Models;
+﻿using GetInItBackEnd.Models.Account;
 using GetInItBackEnd.Services.AccountServices;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,9 +16,9 @@ public class AccountController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult> CreateAccount([FromBody] CreateAccountDto dto)
+    public async Task<ActionResult> CreateAccountCompany([FromBody] CreateAccountCompanyDto dto)
     {
-        var id = await _accountService.Create(dto);
+        var id = await _accountService.CreateCompanyAccount(dto);
         return Created($"/api/account/{id}", null);
     }
 

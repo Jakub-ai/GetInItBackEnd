@@ -1,6 +1,7 @@
 ﻿using GetInItBackEnd.Entities;
+using GetInItBackEnd.Models.Company;
 
-namespace GetInItBackEnd.Models;
+namespace GetInItBackEnd.Models.Account;
 
 public class AccountDto
 {
@@ -8,11 +9,14 @@ public class AccountDto
     public string Name { get; set; }
     public string LastName { get; set; }
     public string Email { get; set; }
-
-    public CompanyDto Company { get; set; }
     public Role Role { get; set; }
 
-    public static AccountDto FromAccount(Account account)
+    public int CompanyId { get; set; }
+    public string CompanyName { get; set; }
+    public string Url { get; set; }
+    //public CompanyDto Company { get; set; }
+
+    /*public static AccountDto FromAccount(Account account)
     {
         return new AccountDto
         {
@@ -28,6 +32,6 @@ public class AccountDto
             }
 
         };
-    }
+    }*/
     
 }

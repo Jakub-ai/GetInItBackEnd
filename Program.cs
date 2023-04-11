@@ -3,6 +3,7 @@ using GetInItBackEnd;
 using GetInItBackEnd.Entities;
 using GetInItBackEnd.Middleware;
 using GetInItBackEnd.Services.AccountServices;
+using GetInItBackEnd.Services.CompanyServices;
 using NLog;
 using NLog.Web;
 
@@ -18,6 +19,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 builder.Services.AddDbContext<GetInItDbContext>();
 builder.Services.AddScoped<CompanySeeder>();
+builder.Services.AddAutoMapper(typeof(Program));
 builder.Logging.ClearProviders();
 builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
 builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
@@ -25,6 +27,7 @@ builder.Host.UseNLog();
 builder.Services.AddScoped<ErrorHandlingMiddleware>();
 builder.Services.AddScoped<RequestTimeMiddleware>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<ICompanyService, CompanyService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
