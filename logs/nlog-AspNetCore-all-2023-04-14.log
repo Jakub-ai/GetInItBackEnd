@@ -1165,3 +1165,15 @@ Address
 2023-04-14 22:13:38.7968|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'GetInItBackEnd.Controllers.AccountController.GetAll (GetInItBackEnd)' 
 2023-04-14 22:13:38.7968|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMPT4IS82AMI" completed keep alive response. 
 2023-04-14 22:13:38.8144|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:3000/api/account - - - 200 - application/json;+charset=utf-8 511.6625ms 
+2023-04-14 22:15:42.9273|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMPT4IS82AMH" disconnecting. 
+2023-04-14 22:15:42.9273|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMPT4IS82AMH" stopped. 
+2023-04-14 22:15:42.9273|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMPT4IS82AMH" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-04-14 22:15:43.9387|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMPT4IS82AMJ" disconnecting. 
+2023-04-14 22:15:43.9387|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMPT4IS82AMJ" stopped. 
+2023-04-14 22:15:43.9387|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMPT4IS82AMJ" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-04-14 22:15:48.9690|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMPT4IS82AMI" disconnecting. 
+2023-04-14 22:15:48.9690|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMPT4IS82AMI" stopped. 
+2023-04-14 22:15:48.9690|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMPT4IS82AMI" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-04-14 22:37:28.4025|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-04-14 22:37:28.4025|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-04-14 22:37:28.4025|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 

@@ -40,10 +40,10 @@ public class CompanyService : ICompanyService
 
     private async Task<Company?> GetCompanyId(int companyId)
     {
-        var company = _dbContext.Companies.FirstOrDefaultAsync(c => c.Id == companyId);
+        var company = await _dbContext.Companies.FirstOrDefaultAsync(c => c.Id == companyId);
         if (company is null) throw new NotFoundException("Company Not Found");
 
-        return await company;
+        return company;
 
     }
     
