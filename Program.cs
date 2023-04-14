@@ -36,7 +36,7 @@ builder.Services.AddCors(options =>
         {
             corsPolicyBuilder.AllowAnyMethod()
                 .AllowAnyHeader()
-                .WithOrigins("http://localhost:5099");
+                .WithOrigins("http://localhost:3000");
         });
 });
 var app = builder.Build();
@@ -51,8 +51,8 @@ if (app.Environment.IsDevelopment())
     //  app.UseExceptionHandler("Home/Error");
 
 }
-app.UseMiddleware<ErrorHandlingMiddleware>();
-app.UseMiddleware<RequestTimeMiddleware>();
+/*app.UseMiddleware<ErrorHandlingMiddleware>();
+app.UseMiddleware<RequestTimeMiddleware>();*/
 app.UseCors("FrontEndClient");
 app.UseHttpsRedirection();
 app.UseSwagger();

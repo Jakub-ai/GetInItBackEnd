@@ -36,6 +36,7 @@ public class AccountService : IAccountService
     {
         var accounts = await _dbContext.Accounts
             .Include(a => a.Company)
+            .ThenInclude(a => a!.Address)
             .ToListAsync();
         var accountsDto = _mapper.Map<List<AccountDto>>(accounts);
         return accountsDto;

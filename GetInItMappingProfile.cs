@@ -2,6 +2,7 @@
 using GetInItBackEnd.Entities;
 using GetInItBackEnd.Models;
 using GetInItBackEnd.Models.Account;
+using GetInItBackEnd.Models.Address;
 using GetInItBackEnd.Models.Company;
 
 namespace GetInItBackEnd;
@@ -15,10 +16,11 @@ public class GetInItMappingProfile : Profile
             .ForPath(a => a.CompanyName, c => c.MapFrom(
                 dto => dto.Company!.Name))
             .ForPath(a => a.Url, c => c.MapFrom(dto => dto.Company!.Url));
-        CreateMap<Company, AccountDto>();
+     
         CreateMap<Account, CreateAccountDto>();
         CreateMap<Company, CompanyDto>();
-        CreateMap<Address, AccountDto>();
+
+        CreateMap<Address, AddressDto>();
       
 
 

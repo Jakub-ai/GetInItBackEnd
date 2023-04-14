@@ -32,7 +32,7 @@ public class CompanyService : ICompanyService
     {
         var companies = await _dbContext.Companies
             .Include(z => z.Accounts)
-            //.Include(z => z.Address)
+            .Include(z => z.Address)
             .ToListAsync();
         var companyDto = _mapper.Map<List<CompanyDto>>(companies);
         return companyDto;
