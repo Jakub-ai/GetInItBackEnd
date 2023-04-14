@@ -32,9 +32,9 @@ builder.Services.AddScoped<ICompanyService, CompanyService>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("FrontEndClient",
-        builder  =>
+        corsPolicyBuilder  =>
         {
-            builder.AllowAnyMethod()
+            corsPolicyBuilder.AllowAnyMethod()
                 .AllowAnyHeader()
                 .WithOrigins("http://localhost:5099");
         });
