@@ -624,3 +624,17 @@
 2023-04-14 20:01:42.1441 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
 2023-04-14 20:01:42.1624 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
 2023-04-14 20:01:42.2977 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-14 21:21:50.2558 Info Message Template Auto Format enabled
+2023-04-14 21:21:50.2642 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-14 21:21:50.3075 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-14 21:21:50.3075 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-14 21:21:50.3075 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-14 21:21:50.3294 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-14 21:21:50.5055 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-14 21:30:57.0766 Info Message Template Auto Format enabled
+2023-04-14 21:30:57.0766 Info Loading assembly: NLog.Web.AspNetCore
+2023-04-14 21:30:57.1315 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-04-14 21:30:57.1356 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-04-14 21:30:57.1356 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-04-14 21:30:57.1531 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-04-14 21:30:57.3026 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config

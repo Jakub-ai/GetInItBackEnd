@@ -41,7 +41,6 @@ public class AccountService : IAccountService
         return accountsDto;
     }
 
-
     public async Task<int> CreateCompanyAccount(CreateAccountCompanyDto dto)
     {
         var account = _mapper.Map<Account>(dto);
