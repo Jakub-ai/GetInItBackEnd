@@ -31,6 +31,8 @@ public class CompanyService : ICompanyService
     public async Task<List<CompanyDto>> GetAllCompanies()
     {
         var companies = await _dbContext.Companies
+            .Include(z => z.Accounts)
+            //.Include(z => z.Address)
             .ToListAsync();
         var companyDto = _mapper.Map<List<CompanyDto>>(companies);
         return companyDto;

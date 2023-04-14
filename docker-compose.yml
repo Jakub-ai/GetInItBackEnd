@@ -5,10 +5,6 @@ services:
     container_name: sqlGetInIt
     ports:
       - "1433:1433"
-      - volumes:
-          - sqlserver-data:/var/opt/mssql
     environment:
       SA_PASSWORD: "GetInIt1234"
       ACCEPT_EULA: "Y"
-    volumes:
-      sqlserver-data:

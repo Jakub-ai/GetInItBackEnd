@@ -4,6 +4,7 @@ using GetInItBackEnd.Entities;
 using GetInItBackEnd.Middleware;
 using GetInItBackEnd.Services.AccountServices;
 using GetInItBackEnd.Services.CompanyServices;
+using Microsoft.Extensions.Options;
 using NLog;
 using NLog.Web;
 
@@ -28,6 +29,16 @@ builder.Services.AddScoped<ErrorHandlingMiddleware>();
 builder.Services.AddScoped<RequestTimeMiddleware>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICompanyService, CompanyService>();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("FrontEndClient",
+        builder  =>
+        {
+            builder.AllowAnyMethod()
+                .AllowAnyHeader()
+                .WithOrigins("http://localhost:5099");
+        });
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -42,6 +53,7 @@ if (app.Environment.IsDevelopment())
 }
 app.UseMiddleware<ErrorHandlingMiddleware>();
 app.UseMiddleware<RequestTimeMiddleware>();
+app.UseCors("FrontEndClient");
 app.UseHttpsRedirection();
 app.UseSwagger();
 app.UseSwaggerUI(c =>
