@@ -15,11 +15,14 @@ public class CompanyController : ControllerBase
         _companyService = companyService;
     }
 
-    [HttpPost]
-    public async Task<ActionResult> CreateAccount([FromRoute] int companyId,[FromBody] CreateAccountDto dto)
+
+
+    [HttpPut("{id}")]
+    public async Task<ActionResult> Update([FromBody] UpdateCompanyDto dto, [FromRoute] int id)
     {
-        var id = await _companyService.CreateAccount(companyId, dto);
-        return Created($"/api/company/account/{id}", null);
+       await _companyService.Update(id, dto);
+        
+        return Ok() ;
     }
 
     [HttpGet]

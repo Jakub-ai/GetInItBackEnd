@@ -22,6 +22,8 @@ public class AccountController : ControllerBase
         //Response.ContentType = "application/json";
         return Created($"/api/account/{id}", null);
     }
+    
+
 
     [HttpGet]
     public async Task<OkObjectResult> GetAll()

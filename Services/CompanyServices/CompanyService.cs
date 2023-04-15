@@ -18,15 +18,7 @@ public class CompanyService : ICompanyService
         _mapper = mapper;
     }
 
-    public async Task<int> CreateAccount(int companyId, CreateAccountDto accountDto)
-    {
-        await GetCompanyId(companyId);
-        var accountEntity = _mapper.Map<Account>(accountDto);
-        await _dbContext.Accounts.AddAsync(accountEntity);
-        await _dbContext.SaveChangesAsync();
 
-        return accountEntity.Id;
-    }
 
     public async Task<List<CompanyDto>> GetAllCompanies()
     {
@@ -38,7 +30,18 @@ public class CompanyService : ICompanyService
         return companyDto;
     }
 
-    private async Task<Company?> GetCompanyId(int companyId)
+    public async Task Update(int id, UpdateCompanyDto dto)
+    {
+        var company = await GetCompanyIdAsync(id);
+
+        company.Url = dto.Url ?? company.Url;
+        company.Description = dto.Description ?? company.Description;
+        company.Industry = dto.Industry ?? company.Industry;
+
+         await _dbContext.SaveChangesAsync();
+    }
+
+    private async Task<Company?> GetCompanyIdAsync(int companyId)
     {
         var company = await _dbContext.Companies.FirstOrDefaultAsync(c => c.Id == companyId);
         if (company is null) throw new NotFoundException("Company Not Found");

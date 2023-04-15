@@ -9,7 +9,7 @@ public class CreateAccountCompanyDto
     public string Name { get; set; }
     [Required][MaxLength(25)]
     public string LastName { get; set; }
-    [Required][MaxLength(25)]
+    [Required][MaxLength(50)]
     public string Email { get; set; }
     [Required]
     public string Password { get; set; }

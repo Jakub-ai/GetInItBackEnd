@@ -1,25 +1,36 @@
 ﻿using AutoMapper;
 using GetInItBackEnd.Entities;
 using GetInItBackEnd.Exceptions;
-using GetInItBackEnd.Models;
 using GetInItBackEnd.Models.Account;
 using Microsoft.EntityFrameworkCore;
 
 namespace GetInItBackEnd.Services.AccountServices;
 
-public class AccountService : IAccountService
+public class EmployeeAccountService : IEmployeeAccountService
 {
     private readonly GetInItDbContext _dbContext;
     private readonly IMapper _mapper;
     private readonly ILogger<AccountService> _logger;
 
-    public AccountService(GetInItDbContext dbContext, IMapper mapper, ILogger<AccountService> logger)
+    public EmployeeAccountService(GetInItDbContext dbContext, IMapper mapper, ILogger<AccountService> logger)
     {
         _dbContext = dbContext;
         _mapper = mapper;
         _logger = logger;
     }
 
+    public async Task<int> CreateAccount(int companyId, CreateAccountDto accountDto)
+    {
+        await GetCompanyId(companyId);
+        
+        var account = _mapper.Map<Account>(accountDto);
+        account.CompanyId = companyId;
+        await _dbContext.Accounts.AddAsync(account);
+        await _dbContext.SaveChangesAsync();
+        return account.Id;
+
+
+    }
     public async Task<AccountDto> GetAccountById(int id)
     {
         var account = await _dbContext.Accounts
@@ -31,7 +42,6 @@ public class AccountService : IAccountService
         return result;
 
     }
-
     public async Task<IEnumerable<AccountDto>> GetAllAccount()
     {
         var accounts = await _dbContext.Accounts
@@ -42,18 +52,12 @@ public class AccountService : IAccountService
         return accountsDto;
     }
     
-
-    public async Task<int> CreateCompanyAccount(CreateAccountCompanyDto dto)
+    private async Task<Company?> GetCompanyId(int companyId)
     {
-        var account = _mapper.Map<Account>(dto);
-        /*var company = _mapper.Map<Company>(dto);
-        var address = _mapper.Map<Address>(dto);*/
-        await _dbContext.Accounts.AddAsync(account);
-        /*await _dbContext.Companies.AddAsync(company);
-        await _dbContext.Addresses.AddAsync(address);*/
-        await _dbContext.SaveChangesAsync();
-        return account.Id;
-    }
+        var company = await _dbContext.Companies.FirstOrDefaultAsync(c => c.Id == companyId);
+        if (company is null) throw new NotFoundException("Company Not Found");
 
-  
+        return company;
+
+    }
 }

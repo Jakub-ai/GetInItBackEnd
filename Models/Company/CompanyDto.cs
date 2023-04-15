@@ -10,9 +10,10 @@ public class CompanyDto
     public string Name { get; set; }
     public string? Url { get; set; }
     public string? Industry { get; set; }
+    public string? Description { get; set; }
     public long Nip { get; set; }
     public int Regon { get; set; }
-    public virtual List<AccountDto>? Accounts { get; set; }
+    public virtual List<AccountCompanyEmployeeDto>? Accounts { get; set; }
     public virtual AddressDto? Address { get; set; }
   
     

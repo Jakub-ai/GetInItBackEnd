@@ -6,7 +6,8 @@ namespace GetInItBackEnd.Services.CompanyServices;
 
 public interface ICompanyService
 {
-    Task<int> CreateAccount(int companyId, CreateAccountDto accountDto);
+ 
     Task<List<CompanyDto>> GetAllCompanies();
+    public  Task Update (int id, UpdateCompanyDto dto);
 
 }

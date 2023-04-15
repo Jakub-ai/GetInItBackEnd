@@ -29,6 +29,7 @@ builder.Services.AddScoped<ErrorHandlingMiddleware>();
 builder.Services.AddScoped<RequestTimeMiddleware>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICompanyService, CompanyService>();
+builder.Services.AddScoped<IEmployeeAccountService, EmployeeAccountService>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("FrontEndClient",
@@ -39,12 +40,16 @@ builder.Services.AddCors(options =>
                 .WithOrigins("http://localhost:5099");
         });
 });
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options =>
+        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+    );
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 var scope = app.Services.CreateScope();
-var seeder = scope.ServiceProvider.GetRequiredService<CompanySeeder>();
-await seeder.Seed();
+/*var seeder = scope.ServiceProvider.GetRequiredService<CompanySeeder>();
+await seeder.Seed();*/
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();

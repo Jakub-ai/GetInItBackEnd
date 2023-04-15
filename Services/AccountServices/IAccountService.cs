@@ -6,8 +6,9 @@ namespace GetInItBackEnd.Services.AccountServices;
 public interface IAccountService
 {
     public Task<AccountDto> GetAccountById(int id);
-    public Task<int> CreateAccount(CreateAccountDto accountDto);
+   
     public Task<int> CreateCompanyAccount(CreateAccountCompanyDto dto);
     public Task<IEnumerable<AccountDto>> GetAllAccount();
+    
    
 }

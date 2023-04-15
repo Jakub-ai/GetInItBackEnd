@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Xml;
+using AutoMapper;
 using GetInItBackEnd.Entities;
 using GetInItBackEnd.Models;
 using GetInItBackEnd.Models.Account;
@@ -16,11 +17,13 @@ public class GetInItMappingProfile : Profile
             .ForPath(a => a.CompanyName, c => c.MapFrom(
                 dto => dto.Company!.Name))
             .ForPath(a => a.Url, c => c.MapFrom(dto => dto.Company!.Url));
-     
-        CreateMap<Account, CreateAccountDto>();
+        CreateMap<Account, AccountCompanyEmployeeDto>();
+        CreateMap<CreateAccountDto, Account>();
         CreateMap<Company, CompanyDto>();
+        CreateMap<UpdateCompanyDto, Company>();
 
         CreateMap<Address, AddressDto>();
+   
       
 
 
