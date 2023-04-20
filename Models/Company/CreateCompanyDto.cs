@@ -1,4 +1,6 @@
-﻿namespace GetInItBackEnd.Models;
+﻿using GetInItBackEnd.Models.Address;
+
+namespace GetInItBackEnd.Models.Company;
 
 public class CreateCompanyDto
 {
@@ -7,4 +9,5 @@ public class CreateCompanyDto
     public long Nip { get; set; }
     public int Regon { get; set; }
     
+    public CreateAddressDto AddressDto { get; set; }
 }

@@ -11,7 +11,7 @@ public class Account
     public string Password { get; set; }
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public Role Role { get; set; } = Role.CompanyAccount;
-    public int CompanyId { get; set; }
+    public int? CompanyId { get; set; }
     public  Company? Company { get; set; }
     
     

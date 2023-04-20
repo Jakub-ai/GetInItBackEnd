@@ -4,6 +4,7 @@ using GetInItBackEnd.Entities;
 using GetInItBackEnd.Middleware;
 using GetInItBackEnd.Services.AccountServices;
 using GetInItBackEnd.Services.CompanyServices;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using NLog;
 using NLog.Web;
@@ -29,7 +30,7 @@ builder.Services.AddScoped<ErrorHandlingMiddleware>();
 builder.Services.AddScoped<RequestTimeMiddleware>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICompanyService, CompanyService>();
-builder.Services.AddScoped<IEmployeeAccountService, EmployeeAccountService>();
+//builder.Services.AddScoped<IPasswordHasher<User>>()
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("FrontEndClient",

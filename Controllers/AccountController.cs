@@ -1,6 +1,9 @@
-﻿using GetInItBackEnd.Models.Account;
+﻿using GetInItBackEnd.Models;
+using GetInItBackEnd.Models.Account;
+using GetInItBackEnd.Models.Company;
 using GetInItBackEnd.Services.AccountServices;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace GetInItBackEnd.Controllers;
 
@@ -14,29 +17,24 @@ public class AccountController : ControllerBase
     {
         _accountService = accountService;
     }
-
-    [HttpPost]
-    public async Task<ActionResult> CreateAccountCompany([FromBody] CreateAccountCompanyDto dto)
+    
+    [HttpPost("RegisterAccountCompany")]
+    public async Task<ActionResult> RegisterCompanyAccount([FromBody] CreateAccountDto accountDto)
     {
-        var id = await _accountService.CreateCompanyAccount(dto);
-        //Response.ContentType = "application/json";
+        var id = await _accountService.RegisterAccount(accountDto, null);
+       
         return Created($"/api/account/{id}", null);
     }
-    
-
-
-    [HttpGet]
+    [HttpGet("GetAllAccounts")]
+    [SwaggerOperation(Summary = "Pobiera element o określonym ID", Description = "Opis szczegółowy metody pobierającej element o określonym ID.")]
     public async Task<OkObjectResult> GetAll()
     {
         var accountDtos = await _accountService.GetAllAccount();
         return Ok(accountDtos);
     }
+    
 
-    [HttpGet("wydra")] 
-    public async Task<string> GetWydra()
-    {
-        return "Wydra dziala";
-    }
+ 
 
 
 }

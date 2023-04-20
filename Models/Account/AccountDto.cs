@@ -12,7 +12,7 @@ public class AccountDto
     
     public string CompanyName { get; set; }
     public string Url { get; set; }
-    public CompanyDto Company { get; set; }
+    
 
  
     

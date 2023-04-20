@@ -20,35 +20,12 @@ public class GetInItMappingProfile : Profile
         CreateMap<Account, AccountCompanyEmployeeDto>();
         CreateMap<CreateAccountDto, Account>();
         CreateMap<Company, CompanyDto>();
+        CreateMap<CreateCompanyDto, Company>();
         CreateMap<UpdateCompanyDto, Company>();
 
         CreateMap<Address, AddressDto>();
-   
-      
-
-
-
-
-
-        CreateMap<CreateAccountCompanyDto, Account>()
-
-            .ForMember(a => a.Company, 
-                c => c.MapFrom(dto => new Company
-            {
-              Name = dto.CompanyName,
-              Url = dto.Url,
-              Industry = dto.Industry,
-              Nip = dto.Nip,
-              Regon = dto.Regon,
-              Address = new Address
-              {
-                  Country = dto.Country,
-                  City = dto.City,
-                  Street = dto.Street,
-                  BuildingNumber = dto.BuildingNumber,
-                  PostalCode = dto.PostalCode
-              }
-              
-            }));
+        CreateMap<AddressDto, Address>();
+        CreateMap<CreateAddressDto, Address>();
+        
     }
 }

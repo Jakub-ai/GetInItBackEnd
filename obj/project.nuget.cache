@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vGsD+pcaQIPDHyLWUTWareUjEJOK8Mb0J5XuJjADLHZccPePSaZfBovSYAoM5Szq4LaTm1aEHWfTMU6idfLXvQ==",
+  "dgSpecHash": "s/ig8A11FJ6qavxUPpoY/e1esd+eHOPQTxEtP0FbNK4ALmINqFMCNxAlSOxjEkSRzLybsZSTLk9JA3WU1Se7cw==",
   "success": true,
   "projectFilePath": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd.csproj",
   "expectedPackageFiles": [
@@ -54,6 +54,7 @@
     "C:\\Users\\jakub\\.nuget\\packages\\nlog.extensions.logging\\5.2.2\\nlog.extensions.logging.5.2.2.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\nlog.web.aspnetcore\\5.2.2\\nlog.web.aspnetcore.5.2.2.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\jakub\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\6.5.0\\swashbuckle.aspnetcore.annotations.6.5.0.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",

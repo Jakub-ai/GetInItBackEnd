@@ -1,14 +1,14 @@
 ﻿using GetInItBackEnd.Models;
 using GetInItBackEnd.Models.Account;
+using GetInItBackEnd.Models.Company;
 
 namespace GetInItBackEnd.Services.AccountServices;
 
 public interface IAccountService
 {
     public Task<AccountDto> GetAccountById(int id);
-   
-    public Task<int> CreateCompanyAccount(CreateAccountCompanyDto dto);
-    public Task<IEnumerable<AccountDto>> GetAllAccount();
     
-   
+    public Task<IEnumerable<AccountDto>> GetAllAccount();
+    public Task<int> RegisterAccount(CreateAccountDto accountDto, int? companyId);
+
 }

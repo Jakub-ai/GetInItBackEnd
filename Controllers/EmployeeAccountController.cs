@@ -7,29 +7,19 @@ namespace GetInItBackEnd.Controllers;
 [ApiController]
 public class EmployeeAccountController : ControllerBase
 {
-    private readonly IEmployeeAccountService _service;
+    private readonly IAccountService _service;
 
-    public EmployeeAccountController(IEmployeeAccountService service)
+    public EmployeeAccountController(IAccountService service)
     {
         _service = service;
     }
 
-    [HttpPost]
-    public async Task<ActionResult> CreateAccount([FromRoute] int companyId,[FromBody] CreateAccountDto dto)
+    [HttpPost("RegisterEmployee")]
+    public async Task<ActionResult> CreateAccount( int companyId,[FromBody] CreateAccountDto dto)
     {
-        var id = await _service.CreateAccount(companyId, dto);
+        var id = await _service.RegisterAccount(dto, companyId);
         return Created($"/api/company/{companyId}/EmployeeAccount/{id}", null);
     }
 
-    /*public Task<AccountDto> GetAccountById(int id)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<IEnumerable<AccountDto>> GetAllAccount()
-    {
-        throw new NotImplementedException();
-    }*/
-
- 
+    
 }

@@ -2,9 +2,10 @@
 using GetInItBackEnd.Models.Company;
 using GetInItBackEnd.Services.CompanyServices;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace GetInItBackEnd.Controllers;
-[Route("api/company")]
+[Route("api/account/company")]
 [ApiController]
 public class CompanyController : ControllerBase
 {
@@ -18,6 +19,7 @@ public class CompanyController : ControllerBase
 
 
     [HttpPut("{id}")]
+    [SwaggerOperation(Summary = "Pobiera element o określonym ID", Description = "Opis szczegółowy metody pobierającej element o określonym ID.")]
     public async Task<ActionResult> Update([FromBody] UpdateCompanyDto dto, [FromRoute] int id)
     {
        await _companyService.Update(id, dto);
@@ -25,7 +27,7 @@ public class CompanyController : ControllerBase
         return Ok() ;
     }
 
-    [HttpGet]
+    [HttpGet("GetAllCompanies")]
     public async Task<List<CompanyDto>> GetAll()
     {
         return await _companyService.GetAllCompanies();

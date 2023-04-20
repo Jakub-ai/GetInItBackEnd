@@ -1,20 +1,25 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using GetInItBackEnd.Entities;
+using GetInItBackEnd.Models.Company;
 
 namespace GetInItBackEnd.Models.Account;
 
 public class CreateAccountDto
 {
-    [Required][MaxLength(25)]
+
     public string Name { get; set; }
-    [Required][MaxLength(25)]
+
     public string LastName { get; set; }
-    [Required][MaxLength(25)]
+  
     public string Email { get; set; }
-    [Required]
+ 
     public string Password { get; set; }
 
-    public Role Role { get; set; } = Role.EmployeeAccount;
+    public Role Role { get; set; }
+    
+
+    public CreateCompanyDto? CreateCompanyDto { get; set; }
+  //  public Role Role { get; set; } = Role.EmployeeAccount;
    
     
 

@@ -42,15 +42,19 @@ public class AccountService : IAccountService
         return accountsDto;
     }
     
+    
 
-    public async Task<int> CreateCompanyAccount(CreateAccountCompanyDto dto)
+    public async Task<int> RegisterAccount(CreateAccountDto accountDto, int? companyId )
     {
-        var account = _mapper.Map<Account>(dto);
-        /*var company = _mapper.Map<Company>(dto);
-        var address = _mapper.Map<Address>(dto);*/
+        var account = _mapper.Map<Account>(accountDto);
+        account.CompanyId = companyId;
+        if (accountDto.CreateCompanyDto is not null)
+        {
+            account.Company = _mapper.Map<Company>(accountDto.CreateCompanyDto);
+        }
+        
         await _dbContext.Accounts.AddAsync(account);
-        /*await _dbContext.Companies.AddAsync(company);
-        await _dbContext.Addresses.AddAsync(address);*/
+       // await _dbContext.Companies.AddAsync(company);
         await _dbContext.SaveChangesAsync();
         return account.Id;
     }
