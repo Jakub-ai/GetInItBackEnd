@@ -20,7 +20,6 @@ public class GetInItDbContext : DbContext
     {
         //Account Table Configuration
         modelBuilder.Entity<Account>().Property(ac => ac.Email).IsRequired();
-        modelBuilder.Entity<Account>().Property(ac => ac.Password).IsRequired().HasMaxLength(50);
         modelBuilder.Entity<Account>().Property(ac => ac.Role)
             .HasConversion(r => r.ToString(), 
                 r => (Role)Enum.Parse(typeof(Role), r))

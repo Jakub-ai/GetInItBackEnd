@@ -5,30 +5,27 @@
 namespace GetInItBackEnd.Migrations
 {
     /// <inheritdoc />
-    public partial class alt_migration3 : Migration
+    public partial class alt1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.RenameColumn(
+                name: "Password",
+                table: "Accounts",
+                newName: "PasswordHash");
+
             migrationBuilder.AlterColumn<string>(
-                name: "Url",
-                table: "Companies",
+                name: "Name",
+                table: "Accounts",
                 type: "nvarchar(max)",
                 nullable: true,
                 oldClrType: typeof(string),
                 oldType: "nvarchar(max)");
 
             migrationBuilder.AlterColumn<string>(
-                name: "Industry",
-                table: "Companies",
-                type: "nvarchar(max)",
-                nullable: true,
-                oldClrType: typeof(string),
-                oldType: "nvarchar(max)");
-
-            migrationBuilder.AlterColumn<string>(
-                name: "Description",
-                table: "Companies",
+                name: "LastName",
+                table: "Accounts",
                 type: "nvarchar(max)",
                 nullable: true,
                 oldClrType: typeof(string),
@@ -38,9 +35,14 @@ namespace GetInItBackEnd.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.RenameColumn(
+                name: "PasswordHash",
+                table: "Accounts",
+                newName: "Password");
+
             migrationBuilder.AlterColumn<string>(
-                name: "Url",
-                table: "Companies",
+                name: "Name",
+                table: "Accounts",
                 type: "nvarchar(max)",
                 nullable: false,
                 defaultValue: "",
@@ -49,18 +51,8 @@ namespace GetInItBackEnd.Migrations
                 oldNullable: true);
 
             migrationBuilder.AlterColumn<string>(
-                name: "Industry",
-                table: "Companies",
-                type: "nvarchar(max)",
-                nullable: false,
-                defaultValue: "",
-                oldClrType: typeof(string),
-                oldType: "nvarchar(max)",
-                oldNullable: true);
-
-            migrationBuilder.AlterColumn<string>(
-                name: "Description",
-                table: "Companies",
+                name: "LastName",
+                table: "Accounts",
                 type: "nvarchar(max)",
                 nullable: false,
                 defaultValue: "",

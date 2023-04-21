@@ -10,5 +10,6 @@ public interface IAccountService
     
     public Task<IEnumerable<AccountDto>> GetAllAccount();
     public Task<int> RegisterAccount(CreateAccountDto accountDto, int? companyId);
+    public Task<string> GenerateJwt(LoginDto dto);
 
 }

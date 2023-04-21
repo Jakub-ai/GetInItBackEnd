@@ -32,7 +32,12 @@ public class AccountController : ControllerBase
         var accountDtos = await _accountService.GetAllAccount();
         return Ok(accountDtos);
     }
-    
+    [HttpPost("login")]
+    public async Task<ActionResult> Login([FromBody] LoginDto dto)
+    {
+        var token = await _accountService.GenerateJwt(dto);
+        return Ok(token);
+    }
 
  
 
