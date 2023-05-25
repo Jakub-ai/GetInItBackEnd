@@ -11,9 +11,7 @@ public class Offer
     public string PhoneNumber { get; set; }
     public string Email { get; set; }
     public string City { get; set; }
-    [Column(TypeName = "decimal(18,4)")]
     public decimal? SalaryFrom { get; set; }
-    [Column(TypeName = "decimal(18,4)")]
     public decimal? SalaryTo { get; set; }
     public Level Level { get; set; }
     public WorkingPlace Place { get; set; }

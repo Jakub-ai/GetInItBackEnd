@@ -8,8 +8,10 @@ using GetInItBackEnd.Entities;
 using GetInItBackEnd.Middleware;
 using GetInItBackEnd.Models.Account;
 using GetInItBackEnd.Models.Validators;
+using GetInItBackEnd.Seeders;
 using GetInItBackEnd.Services.AccountServices;
 using GetInItBackEnd.Services.CompanyServices;
+using GetInItBackEnd.Services.OfferServices;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -47,16 +49,17 @@ builder.Services.AddAuthentication(option =>
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<GetInItDbContext>();
-builder.Services.AddScoped<CompanySeeder>();
+builder.Services.AddScoped<TechnologySeeder>();
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Logging.ClearProviders();
 builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
 builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
 builder.Host.UseNLog();
-builder.Services.AddScoped<ErrorHandlingMiddleware>();
-builder.Services.AddScoped<RequestTimeMiddleware>();
+/*builder.Services.AddScoped<ErrorHandlingMiddleware>();
+builder.Services.AddScoped<RequestTimeMiddleware>();*/
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICompanyService, CompanyService>();
+builder.Services.AddScoped<IOfferService, OfferService>();
 builder.Services.AddScoped<IPasswordHasher<Account>, PasswordHasher<Account>>();
 builder.Services.AddScoped<IValidator<CreateAccountDto>, RegisterAccountDtoValidator>();
 //builder.Services.AddScoped<IPasswordHasher<User>>()
@@ -78,8 +81,8 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 var scope = app.Services.CreateScope();
-/*var seeder = scope.ServiceProvider.GetRequiredService<CompanySeeder>();
-await seeder.Seed();*/
+var seeder = scope.ServiceProvider.GetRequiredService<TechnologySeeder>();
+await seeder.Seed();
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();

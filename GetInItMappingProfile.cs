@@ -19,6 +19,7 @@ public class GetInItMappingProfile : Profile
             .ForPath(a => a.Url, c => c.MapFrom(dto => dto.Company.Url));
         CreateMap<Account, AccountCompanyEmployeeDto>();
         CreateMap<CreateAccountDto, Account>();
+        
         CreateMap<Company, CompanyDto>();
         CreateMap<CreateCompanyDto, Company>();
         CreateMap<UpdateCompanyDto, Company>();
@@ -27,5 +28,12 @@ public class GetInItMappingProfile : Profile
         CreateMap<AddressDto, Address>();
         CreateMap<CreateAddressDto, Address>();
         
+        CreateMap<TechnologyDto, Technology>();
+        
+        CreateMap<CreateOfferDto, Offer>();
+        CreateMap<Offer,OfferDto >();
+
+        
+
     }
 }
