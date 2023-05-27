@@ -45,15 +45,15 @@ public class AccountService : IAccountService
 
     }
 
-    public Task<AccountDto> GetAccountProfile()
+    public Task<ProfileDto> GetAccountProfile()
     {
-        var profile = new AccountDto
+        var profile = new ProfileDto
         {
             Name = _userService.GetUserName,
             LastName = _userService.GetUserLastName,
             Email = _userService.GetUserMail,
             Role = _userService.GetUserRole,
-            CompanyName = _userService.GetUserCompanyName
+          
         };
         return Task.FromResult(profile);
     }
@@ -115,13 +115,16 @@ public class AccountService : IAccountService
         var claims = new List<Claim>()
         {
             new Claim(ClaimTypes.NameIdentifier, account.Id.ToString()),
-            new Claim("Company", account.CompanyId.ToString()),
+            new Claim(ClaimTypes.Actor, account.CompanyId.ToString()),
             new Claim(ClaimTypes.Name, $"{account.Name}"),
             new Claim(ClaimTypes.Role, $"{account.Role}"),
-            new Claim("lastName", $"{account.LastName}"),
-            new Claim("CompanyName", $"{account.Company.Name}"),
-            new Claim("mail", $"{account.Email}")
-           
+            new Claim(ClaimTypes.Surname, $"{account.LastName}"),
+          //  new Claim("CompanyName", $"{account.Company.Name}"),
+            new Claim(ClaimTypes.Email, $"{account.Email}")
+            /*new Claim(ClaimTypes.NameIdentifier, account.Id.ToString()),
+            new Claim(ClaimTypes.Anonymous, account.CompanyId.ToString()),
+            new Claim(ClaimTypes.Name, $"{account.Name}"),
+            new Claim(ClaimTypes.Role, $"{account.Role}")*/
             
            
         };

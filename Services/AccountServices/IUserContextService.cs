@@ -10,6 +10,6 @@ public interface IUserContextService
     public string? GetUserName { get; }
     public string? GetUserRole { get; }
     public string? GetUserLastName { get; }
-    public string? GetUserCompanyName { get; }
+
     public string? GetUserMail { get; }
 }
