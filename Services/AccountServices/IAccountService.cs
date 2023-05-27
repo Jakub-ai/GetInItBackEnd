@@ -12,5 +12,6 @@ public interface IAccountService
     public Task<int> RegisterAccount(CreateAccountDto accountDto, int? companyId);
     public Task<string> GenerateJwt(LoginDto dto);
     public Task<int> RegisterEmployee(CreateEmployeeDto accountDto);
+    public Task<AccountDto> GetAccountProfile();
 
 }

@@ -39,6 +39,13 @@ public class AccountController : ControllerBase
         return Ok(token);
     }
 
+    [HttpGet("AccountProfile")]
+    public async Task<ActionResult> GetProfileInfo()
+    {
+        var accountInfo = await _accountService.GetAccountProfile();
+        return Ok(accountInfo);
+    }
+
  
 
 

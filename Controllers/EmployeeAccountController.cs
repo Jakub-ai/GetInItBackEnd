@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace GetInItBackEnd.Controllers;
 [Route("api/company/EmployeeAccount")]
 [ApiController]
+
 public class EmployeeAccountController : ControllerBase
 {
     private readonly IAccountService _service;

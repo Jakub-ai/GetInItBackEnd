@@ -45,6 +45,19 @@ public class AccountService : IAccountService
 
     }
 
+    public Task<AccountDto> GetAccountProfile()
+    {
+        var profile = new AccountDto
+        {
+            Name = _userService.GetUserName,
+            LastName = _userService.GetUserLastName,
+            Email = _userService.GetUserMail,
+            Role = _userService.GetUserRole,
+            CompanyName = _userService.GetUserCompanyName
+        };
+        return Task.FromResult(profile);
+    }
+
     public async Task<IEnumerable<AccountDto>> GetAllAccount()
     {
         var accounts = await _dbContext.Accounts
@@ -102,9 +115,14 @@ public class AccountService : IAccountService
         var claims = new List<Claim>()
         {
             new Claim(ClaimTypes.NameIdentifier, account.Id.ToString()),
-            new Claim(ClaimTypes.NameIdentifier, account.CompanyId.ToString()),
+            new Claim("Company", account.CompanyId.ToString()),
             new Claim(ClaimTypes.Name, $"{account.Name}"),
-            new Claim(ClaimTypes.Role, $"{account.Role}")
+            new Claim(ClaimTypes.Role, $"{account.Role}"),
+            new Claim("lastName", $"{account.LastName}"),
+            new Claim("CompanyName", $"{account.Company.Name}"),
+            new Claim("mail", $"{account.Email}")
+           
+            
            
         };
 

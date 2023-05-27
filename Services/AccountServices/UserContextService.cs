@@ -1,4 +1,5 @@
 ﻿using System.Security.Claims;
+using GetInItBackEnd.Entities;
 
 namespace GetInItBackEnd.Services.AccountServices;
 
@@ -16,5 +17,11 @@ public class UserContextService : IUserContextService
     public int? GetUserId =>
         User is null ? null : (int?)int.Parse(User.FindFirst(c => c.Type == ClaimTypes.NameIdentifier).Value);
     public int? GetCompanyId =>
-        User is null ? null : (int?)int.Parse(User.FindFirst(c => c.Type == ClaimTypes.NameIdentifier).Value);
+        User is null ? null : (int?)int.Parse(User.FindFirst(c => c.Type == "Company").Value);
+
+    public string? GetUserName => User is null ? null : (string?)User.FindFirst(c => c.Type == ClaimTypes.Name)?.Value;
+    public string? GetUserRole => User is null ? null : User.FindFirst(c => c.Type == ClaimTypes.Role)?.Value;
+    public string? GetUserLastName => User is null ? null : (string?)User.FindFirst(c => c.Type == "lastName")?.Value;
+    public string? GetUserCompanyName => User is null ? null : (string?)User.FindFirst(c => c.Type == "CompanyName")?.Value;
+    public string? GetUserMail => User is null ? null : (string?)User.FindFirst(c => c.Type == "mail")?.Value;
 }
