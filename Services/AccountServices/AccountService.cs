@@ -59,7 +59,7 @@ public class AccountService : IAccountService
     {
         var account = _mapper.Map<Account>(accountDto);
         account.CreatedById = _userService.GetUserId;
-        account.CompanyId = _userService.GetUserId;
+        account.CompanyId = _userService.GetCompanyId;
         var hashedPassword = _passwordHasher.HashPassword(account, accountDto.Password);
 
         account.PasswordHash = hashedPassword;
@@ -102,7 +102,7 @@ public class AccountService : IAccountService
         var claims = new List<Claim>()
         {
             new Claim(ClaimTypes.NameIdentifier, account.Id.ToString()),
-            new Claim(ClaimTypes.Anonymous, account.CompanyId.ToString()),
+            new Claim(ClaimTypes.NameIdentifier, account.CompanyId.ToString()),
             new Claim(ClaimTypes.Name, $"{account.Name}"),
             new Claim(ClaimTypes.Role, $"{account.Role}")
            

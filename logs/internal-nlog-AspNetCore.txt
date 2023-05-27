@@ -1499,3 +1499,38 @@
 2023-05-27 15:30:04.0050 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
 2023-05-27 15:30:04.0273 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
 2023-05-27 15:30:04.1699 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-05-27 15:34:13.8466 Info Message Template Auto Format enabled
+2023-05-27 15:34:13.8563 Info Loading assembly: NLog.Web.AspNetCore
+2023-05-27 15:34:13.9019 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-05-27 15:34:13.9066 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-05-27 15:34:13.9066 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-05-27 15:34:13.9247 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-05-27 15:34:14.0763 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-05-27 15:34:39.6355 Info Message Template Auto Format enabled
+2023-05-27 15:34:39.6536 Info Loading assembly: NLog.Web.AspNetCore
+2023-05-27 15:34:39.7049 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-05-27 15:34:39.7049 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-05-27 15:34:39.7049 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-05-27 15:34:39.7863 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-05-27 15:34:40.2930 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-05-27 15:37:40.1743 Info Message Template Auto Format enabled
+2023-05-27 15:37:40.1743 Info Loading assembly: NLog.Web.AspNetCore
+2023-05-27 15:37:40.2219 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-05-27 15:37:40.2219 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-05-27 15:37:40.2219 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-05-27 15:37:40.2441 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-05-27 15:37:40.4052 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-05-27 15:38:12.6605 Info Message Template Auto Format enabled
+2023-05-27 15:38:12.6605 Info Loading assembly: NLog.Web.AspNetCore
+2023-05-27 15:38:12.7071 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-05-27 15:38:12.7071 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-05-27 15:38:12.7071 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-05-27 15:38:12.7284 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-05-27 15:38:12.8736 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-05-27 15:38:20.3229 Info Message Template Auto Format enabled
+2023-05-27 15:38:20.3410 Info Loading assembly: NLog.Web.AspNetCore
+2023-05-27 15:38:20.3872 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-05-27 15:38:20.3872 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-05-27 15:38:20.3872 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-05-27 15:38:20.4354 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-05-27 15:38:20.9723 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config

@@ -16,5 +16,5 @@ public class UserContextService : IUserContextService
     public int? GetUserId =>
         User is null ? null : (int?)int.Parse(User.FindFirst(c => c.Type == ClaimTypes.NameIdentifier).Value);
     public int? GetCompanyId =>
-        User is null ? null : (int?)int.Parse(User.FindFirst(c => c.Type == ClaimTypes.Anonymous).Value);
+        User is null ? null : (int?)int.Parse(User.FindFirst(c => c.Type == ClaimTypes.NameIdentifier).Value);
 }
