@@ -19,6 +19,7 @@ public class GetInItMappingProfile : Profile
             .ForPath(a => a.Url, c => c.MapFrom(dto => dto.Company.Url));
         CreateMap<Account, AccountCompanyEmployeeDto>();
         CreateMap<CreateAccountDto, Account>();
+        CreateMap<CreateEmployeeDto, Account>();
         
         CreateMap<Company, CompanyDto>();
         CreateMap<CreateCompanyDto, Company>();

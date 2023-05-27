@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GetInItBackEnd.Migrations
 {
     [DbContext(typeof(GetInItDbContext))]
-    [Migration("20230421000359_alt1")]
+    [Migration("20230527120419_alt1")]
     partial class alt1
     {
         /// <inheritdoc />
@@ -51,6 +51,9 @@ namespace GetInItBackEnd.Migrations
                     b.Property<int?>("CompanyId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("CreatedById")
+                        .HasColumnType("int");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -72,6 +75,8 @@ namespace GetInItBackEnd.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CompanyId");
+
+                    b.HasIndex("CreatedById");
 
                     b.ToTable("Accounts");
                 });
@@ -261,10 +266,10 @@ namespace GetInItBackEnd.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal?>("SalaryFrom")
-                        .HasColumnType("decimal(18,4)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal?>("SalaryTo")
-                        .HasColumnType("decimal(18,4)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
@@ -356,7 +361,13 @@ namespace GetInItBackEnd.Migrations
                         .WithMany("Accounts")
                         .HasForeignKey("CompanyId");
 
+                    b.HasOne("GetInItBackEnd.Entities.Account", "CreatedBy")
+                        .WithMany()
+                        .HasForeignKey("CreatedById");
+
                     b.Navigation("Company");
+
+                    b.Navigation("CreatedBy");
                 });
 
             modelBuilder.Entity("GetInItBackEnd.Entities.Company", b =>

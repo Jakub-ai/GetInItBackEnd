@@ -21,14 +21,16 @@ public class AccountService : IAccountService
     private readonly ILogger<AccountService> _logger;
     private readonly IPasswordHasher<Account> _passwordHasher;
     private readonly AuthenticationSettings _authenticationSettings;
+    private readonly IUserContextService _userService;
 
-    public AccountService(GetInItDbContext dbContext, IMapper mapper, ILogger<AccountService> logger,IPasswordHasher<Account> passwordHasher, AuthenticationSettings authenticationSettings)
+    public AccountService(GetInItDbContext dbContext, IMapper mapper, ILogger<AccountService> logger,IPasswordHasher<Account> passwordHasher, AuthenticationSettings authenticationSettings, IUserContextService userService)
     {
         _dbContext = dbContext;
         _mapper = mapper;
         _logger = logger;
         _passwordHasher = passwordHasher;
         _authenticationSettings = authenticationSettings;
+        _userService = userService;
     }
 
     public async Task<AccountDto> GetAccountById(int id)
@@ -52,8 +54,19 @@ public class AccountService : IAccountService
         var accountsDto = _mapper.Map<List<AccountDto>>(accounts);
         return accountsDto;
     }
-    
-    
+
+    public async Task<int> RegisterEmployee(CreateEmployeeDto accountDto)
+    {
+        var account = _mapper.Map<Account>(accountDto);
+        account.CreatedById = _userService.GetUserId;
+        account.CompanyId = _userService.GetCompanyId;
+        var hashedPassword = _passwordHasher.HashPassword(account, accountDto.Password);
+
+        account.PasswordHash = hashedPassword;
+        await _dbContext.Accounts.AddAsync(account);
+        await _dbContext.SaveChangesAsync();
+        return account.Id;
+    }
 
     public async Task<int> RegisterAccount(CreateAccountDto accountDto, int? companyId )
     {
@@ -68,7 +81,6 @@ public class AccountService : IAccountService
 
         account.PasswordHash = hashedPassword;
         await _dbContext.Accounts.AddAsync(account);
-       // await _dbContext.Companies.AddAsync(company);
         await _dbContext.SaveChangesAsync();
         return account.Id;
     }
@@ -90,6 +102,7 @@ public class AccountService : IAccountService
         var claims = new List<Claim>()
         {
             new Claim(ClaimTypes.NameIdentifier, account.Id.ToString()),
+            new Claim(ClaimTypes.Anonymous, account.CompanyId.ToString()),
             new Claim(ClaimTypes.Name, $"{account.Name}"),
             new Claim(ClaimTypes.Role, $"{account.Role}")
            

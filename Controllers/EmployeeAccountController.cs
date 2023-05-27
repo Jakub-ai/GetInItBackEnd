@@ -3,7 +3,7 @@ using GetInItBackEnd.Services.AccountServices;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GetInItBackEnd.Controllers;
-[Route("api/company/{companyId}/EmployeeAccount")]
+[Route("api/company/EmployeeAccount")]
 [ApiController]
 public class EmployeeAccountController : ControllerBase
 {
@@ -15,10 +15,10 @@ public class EmployeeAccountController : ControllerBase
     }
 
     [HttpPost("RegisterEmployee")]
-    public async Task<ActionResult> CreateAccount( int companyId,[FromBody] CreateAccountDto dto)
+    public async Task<ActionResult> CreateAccount( [FromBody] CreateEmployeeDto dto)
     {
-        var id = await _service.RegisterAccount(dto, companyId);
-        return Created($"/api/company/{companyId}/EmployeeAccount/{id}", null);
+        var id = await _service.RegisterEmployee(dto);
+        return Created($"/api/company/EmployeeAccount/{id}", null);
     }
 
     

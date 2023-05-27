@@ -227,3 +227,14 @@
 2023-05-25 13:39:29.1335|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
 2023-05-25 13:39:29.1335|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd 
 2023-05-25 13:39:29.1335|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2023-05-25 13:44:39.6294|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMQT2LM5AQ9H" accepted. 
+2023-05-25 13:44:39.6294|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMQT2LM5AQ9H" started. 
+2023-05-25 13:46:08.3588|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMQT2LM5AQ9H" received FIN. 
+2023-05-25 13:46:08.3588|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMQT2LM5AQ9H" sending FIN because: "The client closed the connection." 
+2023-05-25 13:46:08.3588|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMQT2LM5AQ9H" disconnecting. 
+2023-05-25 13:46:08.3588|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMQT2LM5AQ9H" stopped. 
+2023-05-25 16:43:17.7192|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-05-25 16:43:17.7192|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-05-25 16:43:17.7330|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2023-05-25 19:00:02.1601|0|DEBUG|Program|init main 
+2023-05-25 19:00:30.2938|0|DEBUG|Program|init main 

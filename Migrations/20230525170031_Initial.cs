@@ -84,10 +84,10 @@ namespace GetInItBackEnd.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Role = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CompanyId = table.Column<int>(type: "int", nullable: true)
                 },
@@ -113,8 +113,8 @@ namespace GetInItBackEnd.Migrations
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     City = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SalaryFrom = table.Column<decimal>(type: "decimal(18,4)", nullable: true),
-                    SalaryTo = table.Column<decimal>(type: "decimal(18,4)", nullable: true),
+                    SalaryFrom = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    SalaryTo = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
                     Level = table.Column<int>(type: "int", nullable: false),
                     Place = table.Column<int>(type: "int", nullable: false),
                     CompanyId = table.Column<int>(type: "int", nullable: false)

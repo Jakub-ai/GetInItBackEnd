@@ -4,6 +4,7 @@ using FluentValidation;
 using FluentValidation.AspNetCore;
 using GetInItBackEnd;
 using GetInItBackEnd.Authentication;
+using GetInItBackEnd.Authorization;
 using GetInItBackEnd.Entities;
 using GetInItBackEnd.Middleware;
 using GetInItBackEnd.Models.Account;
@@ -12,6 +13,7 @@ using GetInItBackEnd.Seeders;
 using GetInItBackEnd.Services.AccountServices;
 using GetInItBackEnd.Services.CompanyServices;
 using GetInItBackEnd.Services.OfferServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -62,6 +64,8 @@ builder.Services.AddScoped<ICompanyService, CompanyService>();
 builder.Services.AddScoped<IOfferService, OfferService>();
 builder.Services.AddScoped<IPasswordHasher<Account>, PasswordHasher<Account>>();
 builder.Services.AddScoped<IValidator<CreateAccountDto>, RegisterAccountDtoValidator>();
+builder.Services.AddScoped<IAuthorizationHandler, ResourceOperationRequirementHandler>();
+builder.Services.AddScoped<IUserContextService, UserContextService>();
 //builder.Services.AddScoped<IPasswordHasher<User>>()
 builder.Services.AddCors(options =>
 {
