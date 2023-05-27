@@ -59,7 +59,7 @@ public class AccountService : IAccountService
     {
         var account = _mapper.Map<Account>(accountDto);
         account.CreatedById = _userService.GetUserId;
-        account.CompanyId = _userService.GetCompanyId;
+        account.CompanyId = _userService.GetUserId;
         var hashedPassword = _passwordHasher.HashPassword(account, accountDto.Password);
 
         account.PasswordHash = hashedPassword;
