@@ -40,7 +40,14 @@ public class AccountController : ControllerBase
         return Ok(accountInfo);
     }
 
- 
+    [HttpPut("ChangeEmail")]
+    public async Task<ActionResult> ChangeEmail([FromBody] UpdateEmailDto dto)
+    {
+        await _accountService.ChangeEmail(dto);
+        return Ok();
+    }
+
+
 
 
 }

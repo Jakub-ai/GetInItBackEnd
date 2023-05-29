@@ -5,6 +5,7 @@ using GetInItBackEnd.Models;
 using GetInItBackEnd.Models.Account;
 using GetInItBackEnd.Models.Address;
 using GetInItBackEnd.Models.Company;
+using GetInItBackEnd.Models.Validators;
 
 namespace GetInItBackEnd;
 
@@ -20,6 +21,8 @@ public class GetInItMappingProfile : Profile
         CreateMap<Account, AccountCompanyEmployeeDto>();
         CreateMap<CreateAccountDto, Account>();
         CreateMap<CreateEmployeeDto, Account>();
+        CreateMap<UpdateEmailDto, Account>();
+        CreateMap<Account, UpdateEmailDto>();
         
         CreateMap<Company, CompanyDto>();
         CreateMap<CreateCompanyDto, Company>();

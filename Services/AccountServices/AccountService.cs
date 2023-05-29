@@ -3,11 +3,13 @@ using System.Security.Claims;
 using System.Text;
 using AutoMapper;
 using GetInItBackEnd.Authentication;
+using GetInItBackEnd.Authorization;
 using GetInItBackEnd.Entities;
 using GetInItBackEnd.Exceptions;
 using GetInItBackEnd.Middleware;
 using GetInItBackEnd.Models;
 using GetInItBackEnd.Models.Account;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -22,8 +24,9 @@ public class AccountService : IAccountService
     private readonly IPasswordHasher<Account> _passwordHasher;
     private readonly AuthenticationSettings _authenticationSettings;
     private readonly IUserContextService _userService;
+    private readonly IAuthorizationService _authorizationService;
 
-    public AccountService(GetInItDbContext dbContext, IMapper mapper, ILogger<AccountService> logger,IPasswordHasher<Account> passwordHasher, AuthenticationSettings authenticationSettings, IUserContextService userService)
+    public AccountService(GetInItDbContext dbContext, IMapper mapper, ILogger<AccountService> logger,IPasswordHasher<Account> passwordHasher, AuthenticationSettings authenticationSettings, IUserContextService userService, IAuthorizationService authorizationService)
     {
         _dbContext = dbContext;
         _mapper = mapper;
@@ -31,6 +34,7 @@ public class AccountService : IAccountService
         _passwordHasher = passwordHasher;
         _authenticationSettings = authenticationSettings;
         _userService = userService;
+        _authorizationService = authorizationService;
     }
 
     public async Task<AccountDto> GetAccountById(int id)
@@ -45,18 +49,34 @@ public class AccountService : IAccountService
 
     }
 
-    /*public async Task<UpdateEmailDto> ChangeEmail()
+    public async Task ChangeEmail(UpdateEmailDto dto)
     {
-        
-    }*/
+        var account =  _dbContext.Accounts.FirstOrDefault(a => a.Id == _userService.GetUserId);
+        if (_userService.User != null)
+        {
+            var authorizationResult = _authorizationService.AuthorizeAsync(_userService.User, account,
+                new ResourceOperationRequirement(ResourceOperation.Update)).Result;
+            if (!authorizationResult.Succeeded)
+            {
+                throw new ForbidException();
+            }
+        }
+
+        if (account != null) account.Email = dto.Email;
+
+        await _dbContext.SaveChangesAsync();
+
+    }
     public Task<ProfileDto> GetAccountProfile()
     {
+        var account =  _dbContext.Accounts.FirstOrDefault(a => a.Id == _userService.GetUserId);
         var profile = new ProfileDto
         {
-            Name = _userService.GetUserName,
-            LastName = _userService.GetUserLastName,
-            Email = _userService.GetUserMail,
-            Role = _userService.GetUserRole,
+            Name = account.Name,
+            LastName = account.LastName,
+            Email = account.Email,
+            Role = account.Role.ToString()
+            
           
         };
         return Task.FromResult(profile);

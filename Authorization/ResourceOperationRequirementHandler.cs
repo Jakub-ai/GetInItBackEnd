@@ -9,7 +9,7 @@ public class ResourceOperationRequirementHandler : AuthorizationHandler<Resource
         Account resource)
     {
         if (requirement.ResourceOperation == ResourceOperation.Read ||
-            requirement.ResourceOperation == ResourceOperation.Create)
+            requirement.ResourceOperation == ResourceOperation.Create || requirement.ResourceOperation == ResourceOperation.Update)
         {
             context.Succeed(requirement);
         }
