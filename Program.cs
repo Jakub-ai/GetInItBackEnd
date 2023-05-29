@@ -65,7 +65,13 @@ builder.Services.AddScoped<IOfferService, OfferService>();
 builder.Services.AddScoped<IPasswordHasher<Account>, PasswordHasher<Account>>();
 builder.Services.AddScoped<IValidator<CreateAccountDto>, RegisterAccountDtoValidator>();
 builder.Services.AddScoped<IAuthorizationHandler, ResourceOperationRequirementHandler>();
+builder.Services.AddScoped<IAuthorizationHandler, RoleRequirementHandler>();
 builder.Services.AddScoped<IUserContextService, UserContextService>();
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("ManagerRole", b => b.AddRequirements(new RoleRequirement(Role.ManagerCompanyAccount)));
+});
+
 //builder.Services.AddScoped<IPasswordHasher<User>>()
 builder.Services.AddCors(options =>
 {

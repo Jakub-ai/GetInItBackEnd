@@ -15,12 +15,7 @@ public class EmployeeAccountController : ControllerBase
         _service = service;
     }
 
-    [HttpPost("RegisterEmployee")]
-    public async Task<ActionResult> CreateAccount( [FromBody] CreateEmployeeDto dto)
-    {
-        var id = await _service.RegisterEmployee(dto);
-        return Created($"/api/company/EmployeeAccount/{id}", null);
-    }
+   
 
     
 }

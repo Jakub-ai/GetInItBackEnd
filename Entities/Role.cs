@@ -8,7 +8,7 @@ public enum Role
     [EnumMember(Value = "Admin")]
     Admin = 1,
     [EnumMember(Value = "Manager")]
-    CompanyAccount = 2,
+    ManagerCompanyAccount = 2,
     [EnumMember(Value = "Employee")]
     EmployeeAccount = 3 
 }

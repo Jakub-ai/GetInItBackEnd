@@ -2,5 +2,8 @@
 
 public class AdminRoleRequirement
 {
-    
+    public AdminRoleRequirement()
+    {
+        
+    }
 }

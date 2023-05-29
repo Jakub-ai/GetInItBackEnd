@@ -25,12 +25,7 @@ public class AccountController : ControllerBase
        
         return Created($"/api/account/{id}", null);
     }
-    [HttpGet("GetAllCompanyAccounts")]
-    public async Task<OkObjectResult> GetAll()
-    {
-        var accountDtos = await _accountService.GetAllAccount();
-        return Ok(accountDtos);
-    }
+   
     [HttpPost("login")]
     public async Task<ActionResult> Login([FromBody] LoginDto dto)
     {
