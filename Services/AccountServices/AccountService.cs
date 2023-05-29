@@ -76,8 +76,6 @@ public class AccountService : IAccountService
             LastName = account.LastName,
             Email = account.Email,
             Role = account.Role.ToString()
-            
-          
         };
         return Task.FromResult(profile);
     }
