@@ -1634,3 +1634,9 @@ GetInItBackEnd.Authorization.RoleRequirement
 2023-05-29 19:00:25.2911|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/api/account/manager/GetAllCompanyAccounts application/json 64 - 200 115 application/json;+charset=utf-8 861.3645ms 
 2023-05-29 19:00:25.2911|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMR0COOV4BNV", Request id "0HMR0COOV4BNV:00000001": started reading request body. 
 2023-05-29 19:00:25.2911|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMR0COOV4BNV", Request id "0HMR0COOV4BNV:00000001": done reading request body. 
+2023-05-29 19:02:36.7215|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR0COOV4BNV" disconnecting. 
+2023-05-29 19:02:36.7215|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR0COOV4BNV" stopped. 
+2023-05-29 19:02:36.7215|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMR0COOV4BNV" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-05-29 19:02:55.1563|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-05-29 19:02:55.1563|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-05-29 19:02:55.1563|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
