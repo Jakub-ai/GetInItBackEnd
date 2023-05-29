@@ -25,8 +25,7 @@ public class AccountController : ControllerBase
        
         return Created($"/api/account/{id}", null);
     }
-    [HttpGet("GetAllAccounts")]
-    [SwaggerOperation(Summary = "Pobiera element o określonym ID", Description = "Opis szczegółowy metody pobierającej element o określonym ID.")]
+    [HttpGet("GetAllCompanyAccounts")]
     public async Task<OkObjectResult> GetAll()
     {
         var accountDtos = await _accountService.GetAllAccount();

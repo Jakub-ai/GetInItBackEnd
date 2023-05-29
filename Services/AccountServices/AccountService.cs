@@ -60,10 +60,12 @@ public class AccountService : IAccountService
 
     public async Task<IEnumerable<AccountDto>> GetAllAccount()
     {
+        var companyId = _userService.GetCompanyId;
         var accounts = await _dbContext.Accounts
             .Include(a => a.Company)
-            .ThenInclude(a => a!.Address)
+            .Where(a => a.CompanyId == companyId)
             .ToListAsync();
+     
         var accountsDto = _mapper.Map<List<AccountDto>>(accounts);
         return accountsDto;
     }
