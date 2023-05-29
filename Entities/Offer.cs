@@ -16,6 +16,8 @@ public class Offer
     public Level Level { get; set; }
     public WorkingPlace Place { get; set; }
     public int CompanyId { get; set; }
+    public int? CreatedById { get; set; }
+    public virtual Account? CreatedBy { get; set; }
 
     public virtual Company Company { get; set; }
     public virtual List<Technology> Technologies { get; set; }

@@ -64,6 +64,7 @@ builder.Services.AddScoped<ICompanyService, CompanyService>();
 builder.Services.AddScoped<IOfferService, OfferService>();
 builder.Services.AddScoped<IPasswordHasher<Account>, PasswordHasher<Account>>();
 builder.Services.AddScoped<IValidator<CreateAccountDto>, RegisterAccountDtoValidator>();
+builder.Services.AddScoped<IValidator<CreateEmployeeDto>, RegisterEmployeeValidator>();
 builder.Services.AddScoped<IAuthorizationHandler, ResourceOperationRequirementHandler>();
 builder.Services.AddScoped<IAuthorizationHandler, RoleRequirementHandler>();
 builder.Services.AddScoped<IUserContextService, UserContextService>();

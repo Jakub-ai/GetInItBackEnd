@@ -13,5 +13,5 @@ public class CreateEmployeeDto
     public string Password { get; set; }
     public string ConfirmPassword { get; set; }
 
-    public Role Role { get; set; }
+    public Role Role { get; set; } = Role.EmployeeAccount;
 }

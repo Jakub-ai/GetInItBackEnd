@@ -45,6 +45,10 @@ public class AccountService : IAccountService
 
     }
 
+    /*public async Task<UpdateEmailDto> ChangeEmail()
+    {
+        
+    }*/
     public Task<ProfileDto> GetAccountProfile()
     {
         var profile = new ProfileDto
@@ -87,7 +91,6 @@ public class AccountService : IAccountService
     {
         var account = _mapper.Map<Account>(accountDto);
         account.CompanyId = companyId;
-        //account.Password = accountDto.Password;
         if (accountDto.CreateCompanyDto is not null)
         {
             account.Company = _mapper.Map<Company>(accountDto.CreateCompanyDto);
@@ -121,14 +124,7 @@ public class AccountService : IAccountService
             new Claim(ClaimTypes.Name, $"{account.Name}"),
             new Claim(ClaimTypes.Role, $"{account.Role}"),
             new Claim(ClaimTypes.Surname, $"{account.LastName}"),
-          //  new Claim("CompanyName", $"{account.Company.Name}"),
             new Claim(ClaimTypes.Email, $"{account.Email}")
-            /*new Claim(ClaimTypes.NameIdentifier, account.Id.ToString()),
-            new Claim(ClaimTypes.Anonymous, account.CompanyId.ToString()),
-            new Claim(ClaimTypes.Name, $"{account.Name}"),
-            new Claim(ClaimTypes.Role, $"{account.Role}")*/
-            
-           
         };
 
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authenticationSettings.JwtKey));
@@ -143,6 +139,7 @@ public class AccountService : IAccountService
 
         return tokenHandler.WriteToken(token);
     }
+    
 
   
 }
