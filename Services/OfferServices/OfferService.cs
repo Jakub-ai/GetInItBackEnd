@@ -46,7 +46,8 @@ public class OfferService : IOfferService
 
     public async Task<IEnumerable<OfferDto>> GetAll()
     {
-        var offers = await _dbContext.Offers.ToListAsync();
+        var offers = await _dbContext.Offers
+            .Include(o => o.Company).ToListAsync();
         var offerDtos = _mapper.Map<List<OfferDto>>(offers);
         return offerDtos;
     }
