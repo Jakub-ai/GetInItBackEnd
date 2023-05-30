@@ -5,6 +5,7 @@ using GetInItBackEnd.Models;
 using GetInItBackEnd.Models.Account;
 using GetInItBackEnd.Models.Address;
 using GetInItBackEnd.Models.Company;
+using GetInItBackEnd.Models.Offer;
 using GetInItBackEnd.Models.Validators;
 
 namespace GetInItBackEnd;
@@ -37,9 +38,10 @@ public class GetInItMappingProfile : Profile
         CreateMap<TechnologyDto, Technology>();
         
         CreateMap<CreateOfferDto, Offer>();
-        CreateMap<Offer,OfferDto >();
+        CreateMap<Offer, OfferDto>()
+            .ForMember(o => o.CompanyName, c => c.MapFrom(c=> c.Company.Name));
 
-        
+
 
     }
 }

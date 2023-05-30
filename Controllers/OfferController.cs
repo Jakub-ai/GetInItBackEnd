@@ -1,4 +1,5 @@
 ﻿using GetInItBackEnd.Models;
+using GetInItBackEnd.Models.Offer;
 using GetInItBackEnd.Services.OfferServices;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,10 +14,16 @@ public class OfferController : ControllerBase
         _offerService = offerService;
     }
 
-    [HttpPost("api/offer/createOffer")]
+    [HttpPost("createOffer")]
     public async Task<ActionResult> CreateOffer([FromBody] CreateOfferDto dto)
     {
         var id = await _offerService.Create(dto);
-        return Created($"a[i/offer/{id}", null);
+        return Created($"api/offer/{id}", null);
+    }
+
+    [HttpGet("GetAllOffers")]
+    public async Task<IEnumerable<OfferDto>> GetAllOffers()
+    {
+        return await _offerService.GetAll();
     }
 }

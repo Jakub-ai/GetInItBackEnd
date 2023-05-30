@@ -1,4 +1,5 @@
 ﻿using GetInItBackEnd.Models;
+using GetInItBackEnd.Models.Offer;
 
 namespace GetInItBackEnd.Services.OfferServices;
 
