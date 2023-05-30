@@ -14,5 +14,6 @@ public interface IAccountService
     public Task<int> RegisterEmployee(CreateEmployeeDto accountDto);
     public Task<ProfileDto> GetAccountProfile();
     public Task ChangeEmail(UpdateEmailDto dto);
+    public Task ChangePassword(UpdatePasswordDto passwordDto);
 
 }

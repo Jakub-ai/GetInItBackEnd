@@ -47,25 +47,22 @@ public class AccountService : IAccountService
         var result = _mapper.Map<AccountDto>(account);
         return result;
 
+      
+    }
+
+    public async Task ChangePassword(UpdatePasswordDto passwordDto)
+    {
+        var account = GetUserFromToken();
+        var hashedPassword = _passwordHasher.HashPassword(account.Result, passwordDto.Password);
+        account.Result.PasswordHash = hashedPassword;
+        await _dbContext.SaveChangesAsync();
     }
 
     public async Task ChangeEmail(UpdateEmailDto dto)
     {
-        var account =  _dbContext.Accounts.FirstOrDefault(a => a.Id == _userService.GetUserId);
-        if (_userService.User != null)
-        {
-            var authorizationResult = _authorizationService.AuthorizeAsync(_userService.User, account,
-                new ResourceOperationRequirement(ResourceOperation.Update)).Result;
-            if (!authorizationResult.Succeeded)
-            {
-                throw new ForbidException();
-            }
-        }
-
-        if (account != null) account.Email = dto.Email;
-
+        var account = GetUserFromToken();
+        account.Result.Email = dto.Email;
         await _dbContext.SaveChangesAsync();
-
     }
     public Task<ProfileDto> GetAccountProfile()
     {
@@ -156,6 +153,26 @@ public class AccountService : IAccountService
         var tokenHandler = new JwtSecurityTokenHandler();
 
         return tokenHandler.WriteToken(token);
+    }
+
+    private Task<Account> GetUserFromToken()
+    {
+        var account =  _dbContext.Accounts.FirstOrDefault(a => a.Id == _userService.GetUserId);
+        if (_userService.User != null)
+        {
+            var authorizationResultUpdate = _authorizationService.AuthorizeAsync(_userService.User, account,
+                new ResourceOperationRequirement(ResourceOperation.Update)).Result;
+            var authorizationResultCreate = _authorizationService.AuthorizeAsync(_userService.User, account,
+                new ResourceOperationRequirement(ResourceOperation.Create)).Result;
+            var authorizationResultRead = _authorizationService.AuthorizeAsync(_userService.User, account,
+                new ResourceOperationRequirement(ResourceOperation.Read)).Result;
+            if (!authorizationResultUpdate.Succeeded || !authorizationResultCreate.Succeeded || !authorizationResultRead.Succeeded)
+            {
+                throw new ForbidException();
+            }
+        }
+        if (account is null) throw new NotFoundException("Account Not Found");
+        return Task.FromResult(account);
     }
     
 

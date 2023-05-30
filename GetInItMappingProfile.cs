@@ -22,6 +22,7 @@ public class GetInItMappingProfile : Profile
         CreateMap<CreateAccountDto, Account>();
         CreateMap<CreateEmployeeDto, Account>();
         CreateMap<UpdateEmailDto, Account>();
+        CreateMap<UpdatePasswordDto, Account>();
         CreateMap<Account, UpdateEmailDto>();
         CreateMap<Account, ProfileDto>();
         

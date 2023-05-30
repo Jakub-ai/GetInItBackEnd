@@ -47,6 +47,13 @@ public class AccountController : ControllerBase
         return Ok();
     }
 
+    [HttpPut("ChangePassword")]
+    public async Task<ActionResult> ChangePassword([FromBody] UpdatePasswordDto dto)
+    {
+        await _accountService.ChangePassword(dto);
+        return Ok();
+    }
+
 
 
 
