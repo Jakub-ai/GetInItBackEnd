@@ -69,6 +69,9 @@ namespace GetInItBackEnd.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CompanyId");
@@ -261,7 +264,7 @@ namespace GetInItBackEnd.Migrations
                     b.Property<int>("Place")
                         .HasColumnType("int");
 
-                    b.Property<string>("PriamryLanguage")
+                    b.Property<string>("PriamarySkill")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -321,6 +324,9 @@ namespace GetInItBackEnd.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<int?>("SkillLevel")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

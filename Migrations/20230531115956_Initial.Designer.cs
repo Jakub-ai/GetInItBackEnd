@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GetInItBackEnd.Migrations
 {
     [DbContext(typeof(GetInItDbContext))]
-    [Migration("20230530143613_Initial")]
+    [Migration("20230531115956_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -70,6 +70,9 @@ namespace GetInItBackEnd.Migrations
 
                     b.Property<string>("Role")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -264,7 +267,7 @@ namespace GetInItBackEnd.Migrations
                     b.Property<int>("Place")
                         .HasColumnType("int");
 
-                    b.Property<string>("PriamryLanguage")
+                    b.Property<string>("PriamarySkill")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -324,6 +327,9 @@ namespace GetInItBackEnd.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<int?>("SkillLevel")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
