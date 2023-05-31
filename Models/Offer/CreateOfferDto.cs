@@ -6,7 +6,7 @@ public class CreateOfferDto
 {
     public string Name { get; set; }
     public string Description { get; set; }
-    public string PriamrySkill { get; set; }
+    public string PrimarySkill { get; set; }
     public string PhoneNumber { get; set; }
     public string Email { get; set; }
     public string City { get; set; }

@@ -21,9 +21,9 @@ public class OfferController : ControllerBase
         return Created($"api/offer/{id}", null);
     }
 
-    [HttpGet("GetAllOffers")]
+    [HttpGet("GetAllOffers")] 
     public async Task<IEnumerable<OfferDto>> GetAllOffers()
     {
-        return await _offerService.GetAll();
+        return await _offerService.GetOffers();
     }
 }

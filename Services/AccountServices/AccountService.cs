@@ -108,6 +108,7 @@ public class AccountService : IAccountService
         if (accountDto.CreateCompanyDto is not null)
         {
             account.Company = _mapper.Map<Company>(accountDto.CreateCompanyDto);
+            account.Company.Address = _mapper.Map<Address>(accountDto.CreateCompanyDto.AddressDto);
         }
         var hashedPassword = _passwordHasher.HashPassword(account, accountDto.Password);
 

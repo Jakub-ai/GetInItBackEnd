@@ -8,6 +8,8 @@ public class CreateCompanyDto
     public string Url { get; set; }
     public long Nip { get; set; }
     public int Regon { get; set; }
+    public string? Description { get; set; }
+    
     
     public CreateAddressDto AddressDto { get; set; }
 }

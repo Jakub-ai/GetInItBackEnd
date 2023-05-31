@@ -20,7 +20,8 @@ public class GetInItMappingProfile : Profile
                 dto => dto.Company.Name))
             .ForPath(a => a.Role,c => c.MapFrom(dto => dto.Role));
         CreateMap<Account, AccountCompanyEmployeeDto>();
-        CreateMap<CreateAccountDto, Account>();
+        CreateMap<CreateAccountDto, Account>()
+            .ForPath(a => a.Company.Address, c => c.MapFrom(dto => dto.CreateCompanyDto.AddressDto));
         CreateMap<CreateEmployeeDto, Account>();
         CreateMap<UpdateEmailDto, Account>();
         CreateMap<UpdatePasswordDto, Account>();
@@ -37,9 +38,10 @@ public class GetInItMappingProfile : Profile
         
         CreateMap<TechnologyDto, Technology>();
         
-        CreateMap<CreateOfferDto, Offer>();
+        CreateMap<CreateOfferDto, Offer>().ForMember(o=> o.City, c => c.MapFrom(dto => dto.City));
         CreateMap<Offer, OfferDto>()
-            .ForMember(o => o.CompanyName, c => c.MapFrom(c=> c.Company.Name));
+            .ForMember(o => o.CompanyName, c => c.MapFrom(c=> c.Company.Name))
+            .ForMember(O => O.City, a => a.MapFrom(dto => dto.City));
 
 
 

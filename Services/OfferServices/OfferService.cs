@@ -23,28 +23,32 @@ public class OfferService : IOfferService
 
     public async Task<int> Create(CreateOfferDto dto)
     {
+        var address = await _dbContext.Addresses.FirstOrDefaultAsync(a => a.Company.Id ==  (int)_userContextService.GetCompanyId);
+        dto.City = address.City;
         var offer = _mapper.Map<Offer>(dto);
-        var company = await _dbContext.Companies.FirstOrDefaultAsync(c => c.Id == (int)_userContextService.GetCompanyId);
         offer.CreatedById = (int) _userContextService.GetUserId;
-        offer.CompanyId = (int)_userContextService.GetCompanyId;
-        dto.City = company.Address.City;
-
+        offer.CompanyId =  (int)_userContextService.GetCompanyId;;
+        
         await _dbContext.Offers.AddAsync(offer);
         await _dbContext.SaveChangesAsync();
         return offer.Id;
     }
 
-    public async Task<OfferDto> GetByName(string name)
-    {
-        var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Name == name);
-        if (offer is null) throw new NotFoundException("offer is not found");
 
-        var result = _mapper.Map<OfferDto>(offer);
+    /*public async Task<IEnumerable<OfferDto>> GetByName(string name)
+    {
+        var lowerCaseName = name.ToLower();
+        var offers = await _dbContext.Offers
+            .Include(o => o.Company).ToListAsync();
+        var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Name.ToLower().StartsWith(lowerCaseName));
+        if (offer is null) throw new NotFoundException("Offer is not found");
+
+        var result = _mapper.Map<List<OfferDto>>(offer);
         return result;
 
-    }
+    }*/
 
-    public async Task<IEnumerable<OfferDto>> GetAll()
+    public async Task<IEnumerable<OfferDto>> GetOffers()
     {
         var offers = await _dbContext.Offers
             .Include(o => o.Company).ToListAsync();
