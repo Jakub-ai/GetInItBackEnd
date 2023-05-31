@@ -18,10 +18,10 @@ public class AccountController : ControllerBase
         _accountService = accountService;
     }
     
-    [HttpPost("RegisterAccountCompany")]
+    [HttpPost("RegisterAccount")]
     public async Task<ActionResult> RegisterCompanyAccount([FromBody] CreateAccountDto accountDto)
     {
-        var id = await _accountService.RegisterAccount(accountDto, null);
+        var id = await _accountService.RegisterAccount(accountDto);
        
         return Created($"/api/account/{id}", null);
     }

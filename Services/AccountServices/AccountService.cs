@@ -102,10 +102,9 @@ public class AccountService : IAccountService
         return account.Id;
     }
 
-    public async Task<int> RegisterAccount(CreateAccountDto accountDto, int? companyId )
+    public async Task<int> RegisterAccount(CreateAccountDto accountDto)
     {
         var account = _mapper.Map<Account>(accountDto);
-        account.CompanyId = companyId;
         if (accountDto.CreateCompanyDto is not null)
         {
             account.Company = _mapper.Map<Company>(accountDto.CreateCompanyDto);

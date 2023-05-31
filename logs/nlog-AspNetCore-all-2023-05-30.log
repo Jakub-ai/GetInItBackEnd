@@ -2685,3 +2685,7 @@ Error Number:207,State:1,Class:16
 2023-05-30 17:39:56.5237|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/api/offer/GetAllOffers application/json 291 - 200 1111 application/json;+charset=utf-8 945.6223ms 
 2023-05-30 17:39:56.5237|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMR14GF24NM5", Request id "0HMR14GF24NM5:00000001": started reading request body. 
 2023-05-30 17:39:56.5237|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMR14GF24NM5", Request id "0HMR14GF24NM5:00000001": done reading request body. 
+2023-05-30 17:40:44.5865|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMR14GF24NM5" received FIN. 
+2023-05-30 17:40:44.5865|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMR14GF24NM5" sending FIN because: "The client closed the connection." 
+2023-05-30 17:40:44.5865|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR14GF24NM5" disconnecting. 
+2023-05-30 17:40:44.5926|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR14GF24NM5" stopped. 
