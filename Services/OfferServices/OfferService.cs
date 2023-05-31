@@ -24,11 +24,10 @@ public class OfferService : IOfferService
     public async Task<int> Create(CreateOfferDto dto)
     {
         var offer = _mapper.Map<Offer>(dto);
-        var company = await _dbContext.Companies.FirstOrDefaultAsync(c => c.Id == (int)_userContextService.GetCompanyId);
+        // var company = await _dbContext.Companies.FirstOrDefaultAsync(c => c.Id == (int)_userContextService.GetCompanyId);
         offer.CreatedById = (int) _userContextService.GetUserId;
         offer.CompanyId = (int)_userContextService.GetCompanyId;
-        dto.CompanyName = company.Name;
-            
+
         await _dbContext.Offers.AddAsync(offer);
         await _dbContext.SaveChangesAsync();
         return offer.Id;
