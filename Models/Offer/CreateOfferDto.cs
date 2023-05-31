@@ -9,6 +9,7 @@ public class CreateOfferDto
     public string PriamrySkill { get; set; }
     public string PhoneNumber { get; set; }
     public string Email { get; set; }
+    public string City { get; set; }
     public decimal? SalaryFrom { get; set; }
     public decimal? SalaryTo { get; set; }
     public Level Level { get; set; }
