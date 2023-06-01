@@ -12,6 +12,7 @@ using GetInItBackEnd.Models.Validators;
 using GetInItBackEnd.Seeders;
 using GetInItBackEnd.Services.AccountServices;
 using GetInItBackEnd.Services.CompanyServices;
+using GetInItBackEnd.Services.GptServices;
 using GetInItBackEnd.Services.OfferServices;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -61,6 +62,8 @@ builder.Host.UseNLog();
 builder.Services.AddScoped<RequestTimeMiddleware>();*/
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICompanyService, CompanyService>();
+builder.Services.AddHttpClient<ChatGptService>();
+builder.Services.AddScoped<IChatGptService, ChatGptService>();
 builder.Services.AddScoped<IOfferService, OfferService>();
 builder.Services.AddScoped<IPasswordHasher<Account>, PasswordHasher<Account>>();
 builder.Services.AddScoped<IValidator<CreateAccountDto>, RegisterAccountDtoValidator>();

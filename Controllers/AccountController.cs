@@ -1,9 +1,6 @@
-﻿using GetInItBackEnd.Models;
-using GetInItBackEnd.Models.Account;
-using GetInItBackEnd.Models.Company;
+﻿using GetInItBackEnd.Models.Account;
 using GetInItBackEnd.Services.AccountServices;
 using Microsoft.AspNetCore.Mvc;
-using Swashbuckle.AspNetCore.Annotations;
 
 namespace GetInItBackEnd.Controllers;
 

@@ -42,7 +42,7 @@ public class GetInItMappingProfile : Profile
         CreateMap<Offer, OfferDto>()
             .ForMember(o => o.CompanyName, c => c.MapFrom(c=> c.Company.Name))
             .ForMember(O => O.City, a => a.MapFrom(dto => dto.City));
-
+        CreateMap<OfferDto, Offer>();
 
 
     }

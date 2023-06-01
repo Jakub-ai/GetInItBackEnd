@@ -9,4 +9,5 @@ public interface IOfferService
    // Task<OfferDto> GetByName(string name);
     Task<IEnumerable<OfferDto>> GetOffers();
     Task Delete(int id);
+    public Task<IEnumerable<OfferDto>> GetByName(string name);
 }

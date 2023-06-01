@@ -35,18 +35,20 @@ public class OfferService : IOfferService
     }
 
 
-    /*public async Task<IEnumerable<OfferDto>> GetByName(string name)
+    public async Task<IEnumerable<OfferDto>> GetByName(string name)
     {
         var lowerCaseName = name.ToLower();
         var offers = await _dbContext.Offers
-            .Include(o => o.Company).ToListAsync();
-        var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Name.ToLower().StartsWith(lowerCaseName));
-        if (offer is null) throw new NotFoundException("Offer is not found");
+            .Where(o => o.Name.ToLower().StartsWith(lowerCaseName))
+            .Include(o => o.Company)
+            .ToListAsync();
 
-        var result = _mapper.Map<List<OfferDto>>(offer);
+        if (!offers.Any())
+            throw new NotFoundException("Offer is not found");
+
+        var result = _mapper.Map<List<OfferDto>>(offers);
         return result;
-
-    }*/
+    }
 
     public async Task<IEnumerable<OfferDto>> GetOffers()
     {

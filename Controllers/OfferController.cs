@@ -26,4 +26,10 @@ public class OfferController : ControllerBase
     {
         return await _offerService.GetOffers();
     }
+    [HttpGet("GetOfferByName")] 
+    public async Task<IEnumerable<OfferDto>> GetOffersByName([FromQuery]string name)
+    {
+        return await _offerService.GetByName(name);
+    }
+
 }
