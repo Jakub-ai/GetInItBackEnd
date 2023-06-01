@@ -49,6 +49,22 @@ public class OfferService : IOfferService
         var result = _mapper.Map<List<OfferDto>>(offers);
         return result;
     }
+    public async Task<IEnumerable<OfferDto>> GetByTechnology(string tech)
+    {
+        var lowerCaseTech = tech.ToLower();
+
+        var offers = await _dbContext.Offers
+            .Where(o => o.Technologies.Any(t => t.Skill.ToLower() == lowerCaseTech))
+            .Include(o => o.Company)
+            .Include(o => o.Technologies)
+            .ToListAsync();
+
+        if (!offers.Any())
+            throw new NotFoundException("Offer is not found");
+
+        var result = _mapper.Map<List<OfferDto>>(offers);
+        return result;
+    }
 
     public async Task<IEnumerable<OfferDto>> GetOffers()
     {

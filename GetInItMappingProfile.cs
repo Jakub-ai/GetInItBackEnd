@@ -37,12 +37,15 @@ public class GetInItMappingProfile : Profile
         CreateMap<CreateAddressDto, Address>();
         
         CreateMap<TechnologyDto, Technology>();
+        CreateMap<Technology, TechnologyDto>();
         
         CreateMap<CreateOfferDto, Offer>().ForMember(o=> o.City, c => c.MapFrom(dto => dto.City));
+        
         CreateMap<Offer, OfferDto>()
             .ForMember(o => o.CompanyName, c => c.MapFrom(c=> c.Company.Name))
-            .ForMember(O => O.City, a => a.MapFrom(dto => dto.City));
-        CreateMap<OfferDto, Offer>();
+            .ForMember(O => O.City, a => a.MapFrom(dto => dto.City))
+            .ForPath(o => o.Technologies, c => c.MapFrom(dto => dto.Technologies));
+       
 
 
     }
