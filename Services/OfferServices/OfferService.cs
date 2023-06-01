@@ -88,7 +88,8 @@ public class OfferService : IOfferService
     public async Task<IEnumerable<OfferDto>> GetOffers()
     {
         var offers = await _dbContext.Offers
-            .Include(o => o.Company).ToListAsync();
+            .Include(o => o.Company)
+            .Include(t => t.Technologies).ToListAsync();
         var offerDtos = _mapper.Map<List<OfferDto>>(offers);
         return offerDtos;
     }
@@ -115,10 +116,21 @@ public class OfferService : IOfferService
     }
 
 
-    public async Task Delete(int id)
+    public async Task DeleteAsManager(int id)
     {
         var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Id == id);
         if (offer is null) throw new NotFoundException("offer is not found");
+        if (offer.CompanyId != _userContextService.GetCompanyId) throw new ForbidException();
+        
+            _dbContext.Offers.Remove(offer);
+        await _dbContext.SaveChangesAsync();
+    }
+    public async Task DeleteAsEmployee(int id)
+    {
+        var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Id == id);
+        if (offer is null) throw new NotFoundException("offer is not found");
+        if (offer.CreatedById != _userContextService.GetUserId) throw new ForbidException();
+        
         _dbContext.Offers.Remove(offer);
         await _dbContext.SaveChangesAsync();
     }

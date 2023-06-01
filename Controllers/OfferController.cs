@@ -48,12 +48,25 @@ public class OfferController : ControllerBase
     {
         return await _offerService.GetAllCompanyOffers();
     }
-    [HttpGet("GetCompanyOffers")] 
+    [HttpGet("GetEmployeeOffers")] 
     [Authorize(Policy = "EmployeeRole")]
     public async Task<IEnumerable<OfferDto>> GetEmployeeOffers()
     {
         return await _offerService.GetAllEmployeeOffers();
     }
-    
+    [HttpDelete("DeleteCompanyOffer")] 
+    [Authorize(Policy = "ManagerRole")]
+    public async Task<ActionResult> DeleteAsManager([FromQuery]int id)
+    {
+       await _offerService.DeleteAsManager(id);
+       return NoContent();
+    }
+    [HttpDelete("DeleteEmployeeOffer")] 
+    [Authorize(Policy = "EmployeeRole")]
+    public async Task<ActionResult> DeleteAsEmployee([FromQuery]int id)
+    {
+        await _offerService.DeleteAsEmployee(id);
+        return NoContent();
+    }
 
 }
