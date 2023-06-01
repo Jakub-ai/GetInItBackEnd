@@ -2417,3 +2417,9 @@ Content-Length: 146
 2023-06-01 18:50:07.8779|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/api/account/AccountProfile application/json 366 - 200 90 application/json;+charset=utf-8 112.5724ms 
 2023-06-01 18:50:07.8779|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMR2O0JQ7ECO", Request id "0HMR2O0JQ7ECO:00000003": started reading request body. 
 2023-06-01 18:50:07.8779|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMR2O0JQ7ECO", Request id "0HMR2O0JQ7ECO:00000003": done reading request body. 
+2023-06-01 18:52:19.0930|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2O0JQ7ECO" disconnecting. 
+2023-06-01 18:52:19.0930|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2O0JQ7ECO" stopped. 
+2023-06-01 18:52:19.0930|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMR2O0JQ7ECO" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-01 18:53:32.5964|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-06-01 18:53:32.5964|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-06-01 18:53:32.5964|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 

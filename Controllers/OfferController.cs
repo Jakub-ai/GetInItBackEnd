@@ -48,5 +48,12 @@ public class OfferController : ControllerBase
     {
         return await _offerService.GetAllCompanyOffers();
     }
+    [HttpGet("GetCompanyOffers")] 
+    [Authorize(Policy = "EmployeeRole")]
+    public async Task<IEnumerable<OfferDto>> GetEmployeeOffers()
+    {
+        return await _offerService.GetAllEmployeeOffers();
+    }
+    
 
 }

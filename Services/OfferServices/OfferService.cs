@@ -29,7 +29,7 @@ public class OfferService : IOfferService
         var offer = _mapper.Map<Offer>(dto);
         offer.CreatedById = (int)_userContextService.GetUserId;
         offer.CompanyId = (int)_userContextService.GetCompanyId;
-        ;
+        
 
         await _dbContext.Offers.AddAsync(offer);
         await _dbContext.SaveChangesAsync();
@@ -100,6 +100,16 @@ public class OfferService : IOfferService
             .Include(o => o.Company)
             .Include(o => o.Technologies)
             .Where(o => o.CompanyId == companyId).ToListAsync();
+        var offerDtos = _mapper.Map<List<OfferDto>>(offers);
+        return offerDtos;
+    }
+    public async Task<IEnumerable<OfferDto>> GetAllEmployeeOffers()
+    {
+        var employeeId = _userContextService.GetUserId;
+        var offers = await _dbContext.Offers
+            .Include(o => o.Company)
+            .Include(o => o.Technologies)
+            .Where(o => o.CreatedById == employeeId).ToListAsync();
         var offerDtos = _mapper.Map<List<OfferDto>>(offers);
         return offerDtos;
     }

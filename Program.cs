@@ -72,10 +72,12 @@ builder.Services.AddScoped<IValidator<UpdatePasswordDto>, UpdatePasswordValidato
 builder.Services.AddScoped<IValidator<UpdateEmailDto>, UpdateEmailValidator>();
 builder.Services.AddScoped<IAuthorizationHandler, ResourceOperationRequirementHandler>();
 builder.Services.AddScoped<IAuthorizationHandler, RoleManagerRequirementHandler>();
+builder.Services.AddScoped<IAuthorizationHandler, RoleEmployeeRequirementHandler>();
 builder.Services.AddScoped<IUserContextService, UserContextService>();
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("ManagerRole", b => b.AddRequirements(new RoleRequirement(Role.ManagerCompanyAccount)));
+    options.AddPolicy("EmployeeRole", b => b.AddRequirements(new RoleRequirement(Role.EmployeeAccount)));
 });
 
 //builder.Services.AddScoped<IPasswordHasher<User>>()
