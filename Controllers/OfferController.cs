@@ -36,5 +36,10 @@ public class OfferController : ControllerBase
     {
         return await _offerService.GetByTechnology(name);
     }
+    [HttpGet("GetOfferByPrimarySkill")] 
+    public async Task<IEnumerable<OfferDto>> GetOffersByPrimarySkill([FromQuery]string name)
+    {
+        return await _offerService.GetByPrimarySkill(name);
+    }
 
 }

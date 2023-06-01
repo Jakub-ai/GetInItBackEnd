@@ -1723,3 +1723,562 @@ GetInItBackEnd.Entities.Technology -> GetInItBackEnd.Models.TechnologyDto
 2023-06-01 18:04:27.3336|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'GetInItBackEnd.Controllers.OfferController.GetOffersByTechnology (GetInItBackEnd)' 
 2023-06-01 18:04:27.3441|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N7FQE0SG" completed keep alive response. 
 2023-06-01 18:04:27.3441|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/api/offer/GetOfferByTech?name=C%23 - - - 200 297 application/json;+charset=utf-8 944.3127ms 
+2023-06-01 18:05:38.1046|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-06-01 18:05:38.1046|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-06-01 18:05:38.1123|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N7FQE0SH" disconnecting. 
+2023-06-01 18:05:38.1123|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N7FQE0SG" disconnecting. 
+2023-06-01 18:05:38.1123|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N7FQE0SG" stopped. 
+2023-06-01 18:05:38.1123|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N7FQE0SH" stopped. 
+2023-06-01 18:05:38.1123|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMR2N7FQE0SG" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-01 18:05:38.1123|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMR2N7FQE0SH" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-01 18:05:38.1123|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2023-06-01 18:08:07.9913|0|DEBUG|Program|init main 
+2023-06-01 18:08:09.6854|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2023-06-01 18:08:09.7328|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2023-06-01 18:08:09.7328|63|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-06-01 18:08:09.7328|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-61beac45-c194-47f9-a2d7-e231fdca960a.xml'. 
+2023-06-01 18:08:09.7515|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {61beac45-c194-47f9-a2d7-e231fdca960a}. 
+2023-06-01 18:08:09.7515|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {61beac45-c194-47f9-a2d7-e231fdca960a} with expiration date 2023-06-15 01:09:09Z as default key. 
+2023-06-01 18:08:09.7515|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-01 18:08:09.7643|51|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2023-06-01 18:08:09.7643|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-01 18:08:09.7643|4|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2023-06-01 18:08:09.7643|3|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2023-06-01 18:08:09.7643|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {61beac45-c194-47f9-a2d7-e231fdca960a} as the default key. 
+2023-06-01 18:08:09.7643|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {61beac45-c194-47f9-a2d7-e231fdca960a} was loaded during application startup. 
+2023-06-01 18:08:09.7980|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5099 
+2023-06-01 18:08:09.7980|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly GetInItBackEnd 
+2023-06-01 18:08:09.7980|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-06-01 18:08:09.7980|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-06-01 18:08:09.7980|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd 
+2023-06-01 18:08:09.7980|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2023-06-01 18:08:14.9800|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3L" accepted. 
+2023-06-01 18:08:14.9800|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3L" started. 
+2023-06-01 18:08:14.9800|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3M" accepted. 
+2023-06-01 18:08:14.9800|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3M" started. 
+2023-06-01 18:08:15.0144|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5099/swagger/index.html - - 
+2023-06-01 18:08:15.0144|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2023-06-01 18:08:15.0144|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-01 18:08:15.0360|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.html' 
+2023-06-01 18:08:15.0360|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2023-06-01 18:08:15.0598|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-01 18:08:15.0613|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2023-06-01 18:08:15.1682|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3L" completed keep alive response. 
+2023-06-01 18:08:15.1682|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/swagger/index.html - - - 200 - text/html;charset=utf-8 156.1607ms 
+2023-06-01 18:08:15.3735|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5099/swagger/v1/swagger.json - - 
+2023-06-01 18:08:15.3735|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-01 18:08:15.3735|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json' 
+2023-06-01 18:08:15.3735|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2023-06-01 18:08:15.3735|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-01 18:08:15.5318|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3L" completed keep alive response. 
+2023-06-01 18:08:15.5318|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 158.5326ms 
+2023-06-01 18:08:22.4659|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5099/api/offer/GetOfferByPrimarySkill?name=test%20skill - - 
+2023-06-01 18:08:22.4659|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-01 18:08:22.4708|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/offer/GetOfferByPrimarySkill' 
+2023-06-01 18:08:22.4708|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd)' with route pattern 'api/offer/GetOfferByPrimarySkill' is valid for the request path '/api/offer/GetOfferByPrimarySkill' 
+2023-06-01 18:08:22.4708|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd)' 
+2023-06-01 18:08:22.4708|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-01 18:08:22.4708|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2023-06-01 18:08:22.4708|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd)' 
+2023-06-01 18:08:22.4945|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOffersByPrimarySkill", controller = "Offer"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[GetInItBackEnd.Models.Offer.OfferDto]] GetOffersByPrimarySkill(System.String) on controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd). 
+2023-06-01 18:08:22.4945|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2023-06-01 18:08:22.4945|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2023-06-01 18:08:22.4945|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000) 
+2023-06-01 18:08:22.4945|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2023-06-01 18:08:22.4945|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): None 
+2023-06-01 18:08:22.4945|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd) 
+2023-06-01 18:08:22.6372|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd) 
+2023-06-01 18:08:22.6449|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'name' of type 'System.String' ... 
+2023-06-01 18:08:22.6449|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'name' of type 'System.String' using the name 'name' in request data ... 
+2023-06-01 18:08:22.6449|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'name' of type 'System.String'. 
+2023-06-01 18:08:22.6449|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'name' of type 'System.String'. 
+2023-06-01 18:08:22.6449|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'name' of type 'System.String' ... 
+2023-06-01 18:08:22.6599|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'name' of type 'System.String'. 
+2023-06-01 18:08:22.6599|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:08:22.6599|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:08:22.6599|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd) - Validation state: Valid 
+2023-06-01 18:08:22.6599|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd) with arguments (test skill) 
+2023-06-01 18:08:23.0484|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 378.898ms. 
+2023-06-01 18:08:23.0484|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:08:23.0484|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:08:23.0484|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2023-06-01 18:08:23.0484|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2023-06-01 18:08:23.0484|6|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter based on Accept header 'text/plain'. 
+2023-06-01 18:08:23.0484|5|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Could not find an output formatter based on content negotiation. Accepted types were (text/plain) 
+2023-06-01 18:08:23.0484|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2023-06-01 18:08:23.0484|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2023-06-01 18:08:23.0484|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2023-06-01 18:08:23.0484|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GetInItBackEnd.Models.Offer.OfferDto, GetInItBackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-06-01 18:08:23.1910|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2023-06-01 18:08:23.1910|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd) in 696.0904ms 
+2023-06-01 18:08:23.1910|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd)' 
+2023-06-01 18:08:23.1910|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3L" completed keep alive response. 
+2023-06-01 18:08:23.2115|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/api/offer/GetOfferByPrimarySkill?name=test%20skill - - - 200 268 application/json;+charset=utf-8 745.6260ms 
+2023-06-01 18:10:26.0918|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3M" disconnecting. 
+2023-06-01 18:10:26.0918|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3M" stopped. 
+2023-06-01 18:10:26.0918|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMR2N9JUHB3M" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-01 18:10:26.2125|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3N" accepted. 
+2023-06-01 18:10:26.2125|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3N" started. 
+2023-06-01 18:10:26.2125|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3O" accepted. 
+2023-06-01 18:10:26.2125|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3O" started. 
+2023-06-01 18:10:26.2125|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMR2N9JUHB3N" received FIN. 
+2023-06-01 18:10:26.2125|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3N" disconnecting. 
+2023-06-01 18:10:26.2125|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMR2N9JUHB3N" sending FIN because: "The client closed the connection." 
+2023-06-01 18:10:26.2125|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5099/api/chatGpt/sendPrompt application/json 33 
+2023-06-01 18:10:26.2125|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-01 18:10:26.2125|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/chatGpt/sendPrompt' 
+2023-06-01 18:10:26.2125|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'GetInItBackEnd.Controllers.ChatGptController.Post (GetInItBackEnd)' with route pattern 'api/chatGpt/sendPrompt' is valid for the request path '/api/chatGpt/sendPrompt' 
+2023-06-01 18:10:26.2125|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'GetInItBackEnd.Controllers.ChatGptController.Post (GetInItBackEnd)' 
+2023-06-01 18:10:26.2125|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-01 18:10:26.2125|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2023-06-01 18:10:26.2125|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'GetInItBackEnd.Controllers.ChatGptController.Post (GetInItBackEnd)' 
+2023-06-01 18:10:26.2206|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Post", controller = "ChatGpt"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(GetInItBackEnd.Models.chatGptDto.ChatPromptDto) on controller GetInItBackEnd.Controllers.ChatGptController (GetInItBackEnd). 
+2023-06-01 18:10:26.2206|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2023-06-01 18:10:26.2206|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2023-06-01 18:10:26.2206|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2023-06-01 18:10:26.2206|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2023-06-01 18:10:26.2206|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2023-06-01 18:10:26.2206|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller GetInItBackEnd.Controllers.ChatGptController (GetInItBackEnd) 
+2023-06-01 18:10:26.2206|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller GetInItBackEnd.Controllers.ChatGptController (GetInItBackEnd) 
+2023-06-01 18:10:26.2206|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'prompt' of type 'GetInItBackEnd.Models.chatGptDto.ChatPromptDto' ... 
+2023-06-01 18:10:26.2206|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'prompt' of type 'GetInItBackEnd.Models.chatGptDto.ChatPromptDto' using the name '' in request data ... 
+2023-06-01 18:10:26.2206|2|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'. 
+2023-06-01 18:10:26.2206|1|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'. 
+2023-06-01 18:10:26.2206|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3N" stopped. 
+2023-06-01 18:10:26.2206|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMR2N9JUHB3O", Request id "0HMR2N9JUHB3O:00000001": started reading request body. 
+2023-06-01 18:10:26.2206|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMR2N9JUHB3O", Request id "0HMR2N9JUHB3O:00000001": done reading request body. 
+2023-06-01 18:10:26.2587|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'prompt' of type 'GetInItBackEnd.Models.chatGptDto.ChatPromptDto'. 
+2023-06-01 18:10:26.2587|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'prompt' of type 'GetInItBackEnd.Models.chatGptDto.ChatPromptDto'. 
+2023-06-01 18:10:26.2587|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'prompt' of type 'GetInItBackEnd.Models.chatGptDto.ChatPromptDto' ... 
+2023-06-01 18:10:26.2587|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'prompt' of type 'GetInItBackEnd.Models.chatGptDto.ChatPromptDto'. 
+2023-06-01 18:10:26.2587|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:10:26.2587|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:10:26.2587|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-01 18:10:26.2587|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-01 18:10:26.2587|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.ChatGptController.Post (GetInItBackEnd) - Validation state: Valid 
+2023-06-01 18:10:26.2587|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.ChatGptController.Post (GetInItBackEnd) with arguments (GetInItBackEnd.Models.chatGptDto.ChatPromptDto) 
+2023-06-01 18:10:26.2768|100|INFO|System.Net.Http.HttpClient.Default.LogicalHandler|Start processing HTTP request POST https://api.openai.com/v1/engines/davinci-codex/completions 
+2023-06-01 18:10:26.2768|102|TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+ 
+2023-06-01 18:10:26.2768|100|INFO|System.Net.Http.HttpClient.Default.ClientHandler|Sending HTTP request POST https://api.openai.com/v1/engines/davinci-codex/completions 
+2023-06-01 18:10:26.2768|102|TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+ 
+2023-06-01 18:10:26.6605|101|INFO|System.Net.Http.HttpClient.Default.ClientHandler|Received HTTP response headers after 379.7394ms - 404 
+2023-06-01 18:10:26.6605|103|TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Response Headers:
+Date: Thu, 01 Jun 2023 16:10:27 GMT
+Connection: keep-alive
+Vary: Origin
+X-Request-ID: fb699d531f8a5771311fd7e8698cf802
+Strict-Transport-Security: max-age=15724800; includeSubDomains
+CF-Cache-Status: DYNAMIC
+Server: cloudflare
+CF-RAY: 7d08ba10d89fbffd-WAW
+Alt-Svc: h3=":443"
+Content-Type: application/json; charset=utf-8
+Content-Length: 187
+ 
+2023-06-01 18:10:26.6605|101|INFO|System.Net.Http.HttpClient.Default.LogicalHandler|End processing HTTP request after 388.5419ms - 404 
+2023-06-01 18:10:26.6605|103|TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Response Headers:
+Date: Thu, 01 Jun 2023 16:10:27 GMT
+Connection: keep-alive
+Vary: Origin
+X-Request-ID: fb699d531f8a5771311fd7e8698cf802
+Strict-Transport-Security: max-age=15724800; includeSubDomains
+CF-Cache-Status: DYNAMIC
+Server: cloudflare
+CF-RAY: 7d08ba10d89fbffd-WAW
+Alt-Svc: h3=":443"
+Content-Type: application/json; charset=utf-8
+Content-Length: 187
+ 
+2023-06-01 18:10:26.6605|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method GetInItBackEnd.Controllers.ChatGptController.Post (GetInItBackEnd), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 405.2542ms. 
+2023-06-01 18:10:26.6605|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-01 18:10:26.6605|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-01 18:10:26.6605|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:10:26.6605|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:10:26.6605|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-01 18:10:26.6605|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-01 18:10:26.6605|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2023-06-01 18:10:26.6605|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2023-06-01 18:10:26.6605|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2023-06-01 18:10:26.6605|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2023-06-01 18:10:26.6605|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2023-06-01 18:10:26.6605|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response. 
+2023-06-01 18:10:26.6605|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'. 
+2023-06-01 18:10:26.6605|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2023-06-01 18:10:26.6605|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-01 18:10:26.6605|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-01 18:10:26.6605|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action GetInItBackEnd.Controllers.ChatGptController.Post (GetInItBackEnd) in 447.0796ms 
+2023-06-01 18:10:26.6605|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'GetInItBackEnd.Controllers.ChatGptController.Post (GetInItBackEnd)' 
+2023-06-01 18:10:26.6605|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3O" completed keep alive response. 
+2023-06-01 18:10:26.6605|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5099/api/chatGpt/sendPrompt application/json 33 - 400 - text/plain;+charset=utf-8 453.4773ms 
+2023-06-01 18:10:34.1515|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3L" disconnecting. 
+2023-06-01 18:10:34.1515|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3L" stopped. 
+2023-06-01 18:10:34.1515|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMR2N9JUHB3L" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-01 18:11:22.4791|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5099/api/chatGpt/sendPrompt application/json 366 
+2023-06-01 18:11:22.4791|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-01 18:11:22.4791|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/chatGpt/sendPrompt' 
+2023-06-01 18:11:22.4791|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'GetInItBackEnd.Controllers.ChatGptController.Post (GetInItBackEnd)' with route pattern 'api/chatGpt/sendPrompt' is valid for the request path '/api/chatGpt/sendPrompt' 
+2023-06-01 18:11:22.4791|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'GetInItBackEnd.Controllers.ChatGptController.Post (GetInItBackEnd)' 
+2023-06-01 18:11:22.6135|2|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2023-06-01 18:11:22.6135|8|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was successfully authenticated. 
+2023-06-01 18:11:22.6135|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2023-06-01 18:11:22.6135|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'GetInItBackEnd.Controllers.ChatGptController.Post (GetInItBackEnd)' 
+2023-06-01 18:11:22.6135|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Post", controller = "ChatGpt"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(GetInItBackEnd.Models.chatGptDto.ChatPromptDto) on controller GetInItBackEnd.Controllers.ChatGptController (GetInItBackEnd). 
+2023-06-01 18:11:22.6135|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2023-06-01 18:11:22.6135|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2023-06-01 18:11:22.6135|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2023-06-01 18:11:22.6135|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2023-06-01 18:11:22.6135|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2023-06-01 18:11:22.6135|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller GetInItBackEnd.Controllers.ChatGptController (GetInItBackEnd) 
+2023-06-01 18:11:22.6135|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller GetInItBackEnd.Controllers.ChatGptController (GetInItBackEnd) 
+2023-06-01 18:11:22.6135|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'prompt' of type 'GetInItBackEnd.Models.chatGptDto.ChatPromptDto' ... 
+2023-06-01 18:11:22.6135|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'prompt' of type 'GetInItBackEnd.Models.chatGptDto.ChatPromptDto' using the name '' in request data ... 
+2023-06-01 18:11:22.6135|2|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'. 
+2023-06-01 18:11:22.6135|1|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'. 
+2023-06-01 18:11:22.6135|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMR2N9JUHB3O", Request id "0HMR2N9JUHB3O:00000002": started reading request body. 
+2023-06-01 18:11:22.6135|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMR2N9JUHB3O", Request id "0HMR2N9JUHB3O:00000002": done reading request body. 
+2023-06-01 18:11:22.6135|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'prompt' of type 'GetInItBackEnd.Models.chatGptDto.ChatPromptDto'. 
+2023-06-01 18:11:22.6135|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'prompt' of type 'GetInItBackEnd.Models.chatGptDto.ChatPromptDto'. 
+2023-06-01 18:11:22.6135|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'prompt' of type 'GetInItBackEnd.Models.chatGptDto.ChatPromptDto' ... 
+2023-06-01 18:11:22.6135|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'prompt' of type 'GetInItBackEnd.Models.chatGptDto.ChatPromptDto'. 
+2023-06-01 18:11:22.6135|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:11:22.6135|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:11:22.6135|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-01 18:11:22.6135|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-01 18:11:22.6135|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.ChatGptController.Post (GetInItBackEnd) - Validation state: Valid 
+2023-06-01 18:11:22.6135|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.ChatGptController.Post (GetInItBackEnd) with arguments (GetInItBackEnd.Models.chatGptDto.ChatPromptDto) 
+2023-06-01 18:11:22.6135|100|INFO|System.Net.Http.HttpClient.Default.LogicalHandler|Start processing HTTP request POST https://api.openai.com/v1/engines/davinci-codex/completions 
+2023-06-01 18:11:22.6135|102|TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+ 
+2023-06-01 18:11:22.6135|100|INFO|System.Net.Http.HttpClient.Default.ClientHandler|Sending HTTP request POST https://api.openai.com/v1/engines/davinci-codex/completions 
+2023-06-01 18:11:22.6135|102|TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Request Headers:
+Authorization: Bearer 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
+Content-Type: application/json; charset=utf-8
+ 
+2023-06-01 18:11:22.9560|101|INFO|System.Net.Http.HttpClient.Default.ClientHandler|Received HTTP response headers after 334.022ms - 401 
+2023-06-01 18:11:22.9560|103|TRACE|System.Net.Http.HttpClient.Default.ClientHandler|Response Headers:
+Date: Thu, 01 Jun 2023 16:11:23 GMT
+Connection: keep-alive
+Vary: Origin
+X-Request-ID: 6f9b47aab2029fd6375cccdacc449a3a
+Strict-Transport-Security: max-age=15724800; includeSubDomains
+CF-Cache-Status: DYNAMIC
+Server: cloudflare
+CF-RAY: 7d08bb701b2abffd-WAW
+Alt-Svc: h3=":443"
+Content-Type: application/json; charset=utf-8
+Content-Length: 146
+ 
+2023-06-01 18:11:22.9560|101|INFO|System.Net.Http.HttpClient.Default.LogicalHandler|End processing HTTP request after 334.2969ms - 401 
+2023-06-01 18:11:22.9560|103|TRACE|System.Net.Http.HttpClient.Default.LogicalHandler|Response Headers:
+Date: Thu, 01 Jun 2023 16:11:23 GMT
+Connection: keep-alive
+Vary: Origin
+X-Request-ID: 6f9b47aab2029fd6375cccdacc449a3a
+Strict-Transport-Security: max-age=15724800; includeSubDomains
+CF-Cache-Status: DYNAMIC
+Server: cloudflare
+CF-RAY: 7d08bb701b2abffd-WAW
+Alt-Svc: h3=":443"
+Content-Type: application/json; charset=utf-8
+Content-Length: 146
+ 
+2023-06-01 18:11:22.9560|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method GetInItBackEnd.Controllers.ChatGptController.Post (GetInItBackEnd), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 335.2235ms. 
+2023-06-01 18:11:22.9560|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-01 18:11:22.9560|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-01 18:11:22.9560|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:11:22.9560|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:11:22.9560|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-01 18:11:22.9560|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-01 18:11:22.9560|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2023-06-01 18:11:22.9560|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2023-06-01 18:11:22.9560|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2023-06-01 18:11:22.9560|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2023-06-01 18:11:22.9560|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2023-06-01 18:11:22.9560|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response. 
+2023-06-01 18:11:22.9560|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'System.String'. 
+2023-06-01 18:11:22.9560|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2023-06-01 18:11:22.9560|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-01 18:11:22.9560|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-01 18:11:22.9560|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action GetInItBackEnd.Controllers.ChatGptController.Post (GetInItBackEnd) in 341.2464ms 
+2023-06-01 18:11:22.9560|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'GetInItBackEnd.Controllers.ChatGptController.Post (GetInItBackEnd)' 
+2023-06-01 18:11:22.9560|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3O" completed keep alive response. 
+2023-06-01 18:11:22.9560|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5099/api/chatGpt/sendPrompt application/json 366 - 400 - text/plain;+charset=utf-8 477.9518ms 
+2023-06-01 18:11:48.6722|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5099/api/offer/createOffer application/json 366 
+2023-06-01 18:11:48.6722|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-01 18:11:48.6722|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/offer/createOffer' 
+2023-06-01 18:11:48.6722|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'GetInItBackEnd.Controllers.OfferController.CreateOffer (GetInItBackEnd)' with route pattern 'api/offer/createOffer' is valid for the request path '/api/offer/createOffer' 
+2023-06-01 18:11:48.6722|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'GetInItBackEnd.Controllers.OfferController.CreateOffer (GetInItBackEnd)' 
+2023-06-01 18:11:48.6722|2|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2023-06-01 18:11:48.6722|8|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was successfully authenticated. 
+2023-06-01 18:11:48.6722|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2023-06-01 18:11:48.6722|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'GetInItBackEnd.Controllers.OfferController.CreateOffer (GetInItBackEnd)' 
+2023-06-01 18:11:48.6722|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CreateOffer", controller = "Offer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateOffer(GetInItBackEnd.Models.CreateOfferDto) on controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd). 
+2023-06-01 18:11:48.6722|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2023-06-01 18:11:48.6722|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2023-06-01 18:11:48.6722|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000) 
+2023-06-01 18:11:48.6722|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2023-06-01 18:11:48.6722|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): None 
+2023-06-01 18:11:48.6722|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd) 
+2023-06-01 18:11:48.6722|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd) 
+2023-06-01 18:11:48.6722|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.CreateOfferDto' ... 
+2023-06-01 18:11:48.6722|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.CreateOfferDto' using the name '' in request data ... 
+2023-06-01 18:11:48.6722|2|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'. 
+2023-06-01 18:11:48.6722|1|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'. 
+2023-06-01 18:11:48.6722|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMR2N9JUHB3O", Request id "0HMR2N9JUHB3O:00000003": started reading request body. 
+2023-06-01 18:11:48.6722|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMR2N9JUHB3O", Request id "0HMR2N9JUHB3O:00000003": done reading request body. 
+2023-06-01 18:11:48.6884|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.CreateOfferDto'. 
+2023-06-01 18:11:48.6884|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.CreateOfferDto'. 
+2023-06-01 18:11:48.6884|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'dto' of type 'GetInItBackEnd.Models.CreateOfferDto' ... 
+2023-06-01 18:11:48.6884|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'dto' of type 'GetInItBackEnd.Models.CreateOfferDto'. 
+2023-06-01 18:11:48.6884|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:11:48.6884|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:11:48.6884|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.OfferController.CreateOffer (GetInItBackEnd) - Validation state: Valid 
+2023-06-01 18:11:48.6884|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.OfferController.CreateOffer (GetInItBackEnd) with arguments (GetInItBackEnd.Models.CreateOfferDto) 
+2023-06-01 18:11:49.1244|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method GetInItBackEnd.Controllers.OfferController.CreateOffer (GetInItBackEnd), returned result Microsoft.AspNetCore.Mvc.CreatedResult in 427.5086ms. 
+2023-06-01 18:11:49.1244|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:11:49.1244|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:11:49.1244|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.CreatedResult. 
+2023-06-01 18:11:49.1244|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2023-06-01 18:11:49.1244|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2023-06-01 18:11:49.1244|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2023-06-01 18:11:49.1244|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2023-06-01 18:11:49.1244|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter' and content type '' to write the response. 
+2023-06-01 18:11:49.1244|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedResult, writing value of type 'null'. 
+2023-06-01 18:11:49.1244|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.CreatedResult. 
+2023-06-01 18:11:49.1244|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action GetInItBackEnd.Controllers.OfferController.CreateOffer (GetInItBackEnd) in 447.5712ms 
+2023-06-01 18:11:49.1244|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'GetInItBackEnd.Controllers.OfferController.CreateOffer (GetInItBackEnd)' 
+2023-06-01 18:11:49.1244|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3O" completed keep alive response. 
+2023-06-01 18:11:49.1244|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5099/api/offer/createOffer application/json 366 - 201 0 - 453.0022ms 
+2023-06-01 18:12:10.0604|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3P" accepted. 
+2023-06-01 18:12:10.0609|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3P" started. 
+2023-06-01 18:12:10.0609|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5099/api/offer/GetOfferByPrimarySkill?name=testowa%20oferta%202 - - 
+2023-06-01 18:12:10.0609|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-01 18:12:10.0609|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/offer/GetOfferByPrimarySkill' 
+2023-06-01 18:12:10.0609|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd)' with route pattern 'api/offer/GetOfferByPrimarySkill' is valid for the request path '/api/offer/GetOfferByPrimarySkill' 
+2023-06-01 18:12:10.0609|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd)' 
+2023-06-01 18:12:10.0609|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-01 18:12:10.0609|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2023-06-01 18:12:10.0609|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd)' 
+2023-06-01 18:12:10.0609|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOffersByPrimarySkill", controller = "Offer"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[GetInItBackEnd.Models.Offer.OfferDto]] GetOffersByPrimarySkill(System.String) on controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd). 
+2023-06-01 18:12:10.0609|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2023-06-01 18:12:10.0609|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2023-06-01 18:12:10.0609|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000) 
+2023-06-01 18:12:10.0609|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2023-06-01 18:12:10.0609|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): None 
+2023-06-01 18:12:10.0609|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd) 
+2023-06-01 18:12:10.0609|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd) 
+2023-06-01 18:12:10.0609|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'name' of type 'System.String' ... 
+2023-06-01 18:12:10.0609|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'name' of type 'System.String' using the name 'name' in request data ... 
+2023-06-01 18:12:10.0609|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'name' of type 'System.String'. 
+2023-06-01 18:12:10.0609|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'name' of type 'System.String'. 
+2023-06-01 18:12:10.0609|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'name' of type 'System.String' ... 
+2023-06-01 18:12:10.0609|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'name' of type 'System.String'. 
+2023-06-01 18:12:10.0609|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:12:10.0609|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:12:10.0609|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd) - Validation state: Valid 
+2023-06-01 18:12:10.0609|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd) with arguments (testowa oferta 2) 
+2023-06-01 18:12:10.0609|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 7.5714ms. 
+2023-06-01 18:12:10.0609|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:12:10.0609|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:12:10.0609|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2023-06-01 18:12:10.0609|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2023-06-01 18:12:10.0609|6|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter based on Accept header 'text/plain'. 
+2023-06-01 18:12:10.0609|5|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Could not find an output formatter based on content negotiation. Accepted types were (text/plain) 
+2023-06-01 18:12:10.0609|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2023-06-01 18:12:10.0609|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2023-06-01 18:12:10.0609|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2023-06-01 18:12:10.0609|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GetInItBackEnd.Models.Offer.OfferDto, GetInItBackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-06-01 18:12:10.0609|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2023-06-01 18:12:10.0609|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd) in 11.5456ms 
+2023-06-01 18:12:10.0609|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd)' 
+2023-06-01 18:12:10.0609|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3P" completed keep alive response. 
+2023-06-01 18:12:10.0609|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/api/offer/GetOfferByPrimarySkill?name=testowa%20oferta%202 - - - 200 300 application/json;+charset=utf-8 12.0714ms 
+2023-06-01 18:12:26.2773|103|DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|HttpMessageHandler expired after 120000ms for client '' 
+2023-06-01 18:12:36.2844|100|DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2023-06-01 18:12:36.2844|101|DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0265ms - processed: 0 items - remaining: 1 items 
+2023-06-01 18:12:46.2958|100|DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2023-06-01 18:12:46.2958|101|DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0023ms - processed: 0 items - remaining: 1 items 
+2023-06-01 18:12:56.2994|100|DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Starting HttpMessageHandler cleanup cycle with 1 items 
+2023-06-01 18:12:56.2994|101|DEBUG|Microsoft.Extensions.Http.DefaultHttpClientFactory|Ending HttpMessageHandler cleanup cycle after 0.0045ms - processed: 0 items - remaining: 1 items 
+2023-06-01 18:13:01.8402|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-06-01 18:13:01.8402|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-06-01 18:13:01.8471|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3O" disconnecting. 
+2023-06-01 18:13:01.8471|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3P" disconnecting. 
+2023-06-01 18:13:01.8471|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3O" stopped. 
+2023-06-01 18:13:01.8471|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2N9JUHB3P" stopped. 
+2023-06-01 18:13:01.8471|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMR2N9JUHB3O" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-01 18:13:01.8471|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMR2N9JUHB3P" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-01 18:13:01.8471|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2023-06-01 18:13:06.7084|0|DEBUG|Program|init main 
+2023-06-01 18:13:08.3227|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2023-06-01 18:13:08.3726|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2023-06-01 18:13:08.3816|63|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-06-01 18:13:08.3816|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-61beac45-c194-47f9-a2d7-e231fdca960a.xml'. 
+2023-06-01 18:13:08.3911|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {61beac45-c194-47f9-a2d7-e231fdca960a}. 
+2023-06-01 18:13:08.3911|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {61beac45-c194-47f9-a2d7-e231fdca960a} with expiration date 2023-06-15 01:09:09Z as default key. 
+2023-06-01 18:13:08.3911|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-01 18:13:08.3911|51|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2023-06-01 18:13:08.3911|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-01 18:13:08.4062|4|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2023-06-01 18:13:08.4062|3|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2023-06-01 18:13:08.4062|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {61beac45-c194-47f9-a2d7-e231fdca960a} as the default key. 
+2023-06-01 18:13:08.4062|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {61beac45-c194-47f9-a2d7-e231fdca960a} was loaded during application startup. 
+2023-06-01 18:13:08.4420|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5099 
+2023-06-01 18:13:08.4420|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly GetInItBackEnd 
+2023-06-01 18:13:08.4420|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-06-01 18:13:08.4420|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-06-01 18:13:08.4420|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd 
+2023-06-01 18:13:08.4420|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2023-06-01 18:13:08.5690|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2NCBEDK2N" accepted. 
+2023-06-01 18:13:08.5690|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2NCBEDK2N" started. 
+2023-06-01 18:13:08.6023|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5099/api/offer/GetOfferByPrimarySkill?name=testowa%20oferta%202 - - 
+2023-06-01 18:13:08.6023|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2023-06-01 18:13:08.6023|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-01 18:13:08.6287|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/offer/GetOfferByPrimarySkill' 
+2023-06-01 18:13:08.6287|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd)' with route pattern 'api/offer/GetOfferByPrimarySkill' is valid for the request path '/api/offer/GetOfferByPrimarySkill' 
+2023-06-01 18:13:08.6287|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd)' 
+2023-06-01 18:13:08.6559|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-01 18:13:08.6559|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2023-06-01 18:13:08.6759|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2023-06-01 18:13:08.6759|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd)' 
+2023-06-01 18:13:08.6932|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOffersByPrimarySkill", controller = "Offer"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[GetInItBackEnd.Models.Offer.OfferDto]] GetOffersByPrimarySkill(System.String) on controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd). 
+2023-06-01 18:13:08.6932|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2023-06-01 18:13:08.6932|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2023-06-01 18:13:08.6932|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000) 
+2023-06-01 18:13:08.6932|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2023-06-01 18:13:08.6932|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): None 
+2023-06-01 18:13:08.6932|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd) 
+2023-06-01 18:13:08.8536|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd) 
+2023-06-01 18:13:08.8631|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'name' of type 'System.String' ... 
+2023-06-01 18:13:08.8631|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'name' of type 'System.String' using the name 'name' in request data ... 
+2023-06-01 18:13:08.8631|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'name' of type 'System.String'. 
+2023-06-01 18:13:08.8631|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'name' of type 'System.String'. 
+2023-06-01 18:13:08.8631|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'name' of type 'System.String' ... 
+2023-06-01 18:13:08.8841|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'name' of type 'System.String'. 
+2023-06-01 18:13:08.8841|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:13:08.8841|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:13:08.8899|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd) - Validation state: Valid 
+2023-06-01 18:13:08.8899|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd) with arguments (testowa oferta 2) 
+2023-06-01 18:13:08.9653|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:13:08.9653|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:13:08.9705|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd) in 271.453ms 
+2023-06-01 18:13:08.9705|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd)' 
+2023-06-01 18:13:08.9705|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.InvalidOperationException: The expression 'o.PrimarySkill' is invalid inside an 'Include' operation, since it does not represent a property access: 't => t.MyProperty'. To target navigations declared on derived types, use casting ('t => ((Derived)t).MyProperty') or the 'as' operator ('t => (t as Derived).MyProperty'). Collection navigation access can be filtered by composing Where, OrderBy(Descending), ThenBy(Descending), Skip or Take operations. For more information on including related data, see http://go.microsoft.com/fwlink/?LinkID=746393.
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.PopulateIncludeTree(IncludeTreeNode includeTreeNode, Expression expression, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at GetInItBackEnd.Services.OfferServices.OfferService.GetByPrimarySkill(String primarySkill) in C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\Services\OfferServices\OfferService.cs:line 55
+   at GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill(String name) in C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\Controllers\OfferController.cs:line 42
+   at lambda_method24(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-06-01 18:13:08.9980|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2NCBEDK2N" completed keep alive response. 
+2023-06-01 18:13:09.0053|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/api/offer/GetOfferByPrimarySkill?name=testowa%20oferta%202 - - - 500 - text/plain;+charset=utf-8 404.2937ms 
+2023-06-01 18:13:48.3151|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-06-01 18:13:48.3151|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-06-01 18:13:48.3151|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2NCBEDK2N" disconnecting. 
+2023-06-01 18:13:48.3151|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2NCBEDK2N" stopped. 
+2023-06-01 18:13:48.3151|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMR2NCBEDK2N" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-01 18:13:48.3305|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2023-06-01 18:13:53.0200|0|DEBUG|Program|init main 
+2023-06-01 18:13:54.8570|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2023-06-01 18:13:54.9052|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2023-06-01 18:13:54.9052|63|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-06-01 18:13:54.9052|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-61beac45-c194-47f9-a2d7-e231fdca960a.xml'. 
+2023-06-01 18:13:54.9246|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {61beac45-c194-47f9-a2d7-e231fdca960a}. 
+2023-06-01 18:13:54.9434|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {61beac45-c194-47f9-a2d7-e231fdca960a} with expiration date 2023-06-15 01:09:09Z as default key. 
+2023-06-01 18:13:54.9434|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-01 18:13:54.9434|51|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2023-06-01 18:13:54.9434|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-01 18:13:54.9434|4|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2023-06-01 18:13:54.9434|3|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2023-06-01 18:13:54.9434|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {61beac45-c194-47f9-a2d7-e231fdca960a} as the default key. 
+2023-06-01 18:13:54.9519|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {61beac45-c194-47f9-a2d7-e231fdca960a} was loaded during application startup. 
+2023-06-01 18:13:54.9805|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5099 
+2023-06-01 18:13:54.9805|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly GetInItBackEnd 
+2023-06-01 18:13:54.9805|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-06-01 18:13:54.9805|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-06-01 18:13:54.9805|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd 
+2023-06-01 18:13:54.9805|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2023-06-01 18:13:55.1388|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2NCPAHIM7" accepted. 
+2023-06-01 18:13:55.1388|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2NCPAHIM7" started. 
+2023-06-01 18:13:55.1716|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5099/api/offer/GetOfferByPrimarySkill?name=testowa%20oferta%202 - - 
+2023-06-01 18:13:55.1716|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2023-06-01 18:13:55.1716|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-01 18:13:55.1936|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2NCPAHIM8" accepted. 
+2023-06-01 18:13:55.1936|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2NCPAHIM8" started. 
+2023-06-01 18:13:55.1936|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/offer/GetOfferByPrimarySkill' 
+2023-06-01 18:13:55.1936|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd)' with route pattern 'api/offer/GetOfferByPrimarySkill' is valid for the request path '/api/offer/GetOfferByPrimarySkill' 
+2023-06-01 18:13:55.2010|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd)' 
+2023-06-01 18:13:55.2257|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-01 18:13:55.2257|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2023-06-01 18:13:55.2462|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2023-06-01 18:13:55.2482|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd)' 
+2023-06-01 18:13:55.2642|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetOffersByPrimarySkill", controller = "Offer"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[GetInItBackEnd.Models.Offer.OfferDto]] GetOffersByPrimarySkill(System.String) on controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd). 
+2023-06-01 18:13:55.2642|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2023-06-01 18:13:55.2642|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2023-06-01 18:13:55.2642|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000) 
+2023-06-01 18:13:55.2642|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2023-06-01 18:13:55.2642|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): None 
+2023-06-01 18:13:55.2642|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd) 
+2023-06-01 18:13:55.4205|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd) 
+2023-06-01 18:13:55.4205|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'name' of type 'System.String' ... 
+2023-06-01 18:13:55.4205|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'name' of type 'System.String' using the name 'name' in request data ... 
+2023-06-01 18:13:55.4374|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'name' of type 'System.String'. 
+2023-06-01 18:13:55.4374|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'name' of type 'System.String'. 
+2023-06-01 18:13:55.4374|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'name' of type 'System.String' ... 
+2023-06-01 18:13:55.4374|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'name' of type 'System.String'. 
+2023-06-01 18:13:55.4374|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:13:55.4374|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:13:55.4548|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd) - Validation state: Valid 
+2023-06-01 18:13:55.4548|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd) with arguments (testowa oferta 2) 
+2023-06-01 18:13:55.9557|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 497.1715ms. 
+2023-06-01 18:13:55.9557|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:13:55.9557|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-01 18:13:55.9557|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2023-06-01 18:13:55.9557|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2023-06-01 18:13:55.9557|6|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter based on Accept header 'text/plain'. 
+2023-06-01 18:13:55.9557|5|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Could not find an output formatter based on content negotiation. Accepted types were (text/plain) 
+2023-06-01 18:13:55.9557|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2023-06-01 18:13:55.9557|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2023-06-01 18:13:55.9557|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2023-06-01 18:13:55.9557|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GetInItBackEnd.Models.Offer.OfferDto, GetInItBackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2023-06-01 18:13:56.0986|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2023-06-01 18:13:56.0986|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd) in 834.3428ms 
+2023-06-01 18:13:56.0986|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'GetInItBackEnd.Controllers.OfferController.GetOffersByPrimarySkill (GetInItBackEnd)' 
+2023-06-01 18:13:56.1092|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR2NCPAHIM7" completed keep alive response. 
+2023-06-01 18:13:56.1092|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/api/offer/GetOfferByPrimarySkill?name=testowa%20oferta%202 - - - 200 331 application/json;+charset=utf-8 951.6835ms 

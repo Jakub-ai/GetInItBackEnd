@@ -11,4 +11,5 @@ public interface IOfferService
     Task Delete(int id);
     public Task<IEnumerable<OfferDto>> GetByName(string name);
     public Task<IEnumerable<OfferDto>> GetByTechnology(string tech);
+    public Task<IEnumerable<OfferDto>> GetByPrimarySkill(string primarySkill);
 }
