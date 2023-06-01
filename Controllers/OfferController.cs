@@ -1,6 +1,7 @@
 ﻿using GetInItBackEnd.Models;
 using GetInItBackEnd.Models.Offer;
 using GetInItBackEnd.Services.OfferServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GetInItBackEnd.Controllers;
@@ -40,6 +41,12 @@ public class OfferController : ControllerBase
     public async Task<IEnumerable<OfferDto>> GetOffersByPrimarySkill([FromQuery]string name)
     {
         return await _offerService.GetByPrimarySkill(name);
+    }
+    [HttpGet("GetCompanyOffers")] 
+    [Authorize(Policy = "ManagerRole")]
+    public async Task<IEnumerable<OfferDto>> GetCompanyOffers()
+    {
+        return await _offerService.GetAllCompanyOffers();
     }
 
 }

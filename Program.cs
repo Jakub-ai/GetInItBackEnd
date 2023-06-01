@@ -71,7 +71,7 @@ builder.Services.AddScoped<IValidator<CreateEmployeeDto>, RegisterEmployeeValida
 builder.Services.AddScoped<IValidator<UpdatePasswordDto>, UpdatePasswordValidator>();
 builder.Services.AddScoped<IValidator<UpdateEmailDto>, UpdateEmailValidator>();
 builder.Services.AddScoped<IAuthorizationHandler, ResourceOperationRequirementHandler>();
-builder.Services.AddScoped<IAuthorizationHandler, RoleRequirementHandler>();
+builder.Services.AddScoped<IAuthorizationHandler, RoleManagerRequirementHandler>();
 builder.Services.AddScoped<IUserContextService, UserContextService>();
 builder.Services.AddAuthorization(options =>
 {

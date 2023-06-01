@@ -5,12 +5,12 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace GetInItBackEnd.Authorization;
 
-public class RoleRequirementHandler : AuthorizationHandler<RoleRequirement>
+public class RoleManagerRequirementHandler : AuthorizationHandler<RoleRequirement>
 {
-    private readonly ILogger<RoleRequirementHandler> _logger;
+    private readonly ILogger<RoleManagerRequirementHandler> _logger;
    
 
-    public RoleRequirementHandler(ILogger<RoleRequirementHandler> logger)
+    public RoleManagerRequirementHandler(ILogger<RoleManagerRequirementHandler> logger)
     {
         _logger = logger;
         

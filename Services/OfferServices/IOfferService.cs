@@ -12,4 +12,5 @@ public interface IOfferService
     public Task<IEnumerable<OfferDto>> GetByName(string name);
     public Task<IEnumerable<OfferDto>> GetByTechnology(string tech);
     public Task<IEnumerable<OfferDto>> GetByPrimarySkill(string primarySkill);
+    public Task<IEnumerable<OfferDto>> GetAllCompanyOffers();
 }

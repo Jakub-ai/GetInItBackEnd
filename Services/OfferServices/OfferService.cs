@@ -23,12 +23,14 @@ public class OfferService : IOfferService
 
     public async Task<int> Create(CreateOfferDto dto)
     {
-        var address = await _dbContext.Addresses.FirstOrDefaultAsync(a => a.Company.Id ==  (int)_userContextService.GetCompanyId);
+        var address =
+            await _dbContext.Addresses.FirstOrDefaultAsync(a => a.Company.Id == (int)_userContextService.GetCompanyId);
         dto.City = address.City;
         var offer = _mapper.Map<Offer>(dto);
-        offer.CreatedById = (int) _userContextService.GetUserId;
-        offer.CompanyId =  (int)_userContextService.GetCompanyId;;
-        
+        offer.CreatedById = (int)_userContextService.GetUserId;
+        offer.CompanyId = (int)_userContextService.GetCompanyId;
+        ;
+
         await _dbContext.Offers.AddAsync(offer);
         await _dbContext.SaveChangesAsync();
         return offer.Id;
@@ -49,6 +51,7 @@ public class OfferService : IOfferService
         var result = _mapper.Map<List<OfferDto>>(offers);
         return result;
     }
+
     public async Task<IEnumerable<OfferDto>> GetByPrimarySkill(string primarySkill)
     {
         var lowerCaseName = primarySkill.ToLower();
@@ -64,6 +67,7 @@ public class OfferService : IOfferService
         var result = _mapper.Map<List<OfferDto>>(offers);
         return result;
     }
+
     public async Task<IEnumerable<OfferDto>> GetByTechnology(string tech)
     {
         var lowerCaseTech = tech.ToLower();
@@ -88,7 +92,18 @@ public class OfferService : IOfferService
         var offerDtos = _mapper.Map<List<OfferDto>>(offers);
         return offerDtos;
     }
-    
+
+    public async Task<IEnumerable<OfferDto>> GetAllCompanyOffers()
+    {
+        var companyId = _userContextService.GetCompanyId;
+        var offers = await _dbContext.Offers
+            .Include(o => o.Company)
+            .Include(o => o.Technologies)
+            .Where(o => o.CompanyId == companyId).ToListAsync();
+        var offerDtos = _mapper.Map<List<OfferDto>>(offers);
+        return offerDtos;
+    }
+
 
     public async Task Delete(int id)
     {
@@ -96,11 +111,5 @@ public class OfferService : IOfferService
         if (offer is null) throw new NotFoundException("offer is not found");
         _dbContext.Offers.Remove(offer);
         await _dbContext.SaveChangesAsync();
-    }
-
-    private Task<Account?> GetUserByToken()
-    {
-        var account =  _dbContext.Accounts.FirstOrDefault(a => a.Id == _userContextService.GetUserId);
-        return Task.FromResult(account);
     }
 }
