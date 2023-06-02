@@ -20,6 +20,9 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using NLog;
 using NLog.Web;
+using Stripe;
+using Account = GetInItBackEnd.Entities.Account;
+using AccountService = GetInItBackEnd.Services.AccountServices.AccountService;
 
 var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
 logger.Debug("init main");
@@ -96,7 +99,8 @@ builder.Services.AddControllers()
         options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
     );
 var app = builder.Build();
-
+StripeConfiguration.ApiKey =
+    "sk_test_51NECXpLpkQnyrIfCXAF91dHQTHQBIj4PCtBXiRTMumckFBOUezK7spzO8PhAStUZPiAGRarv1Su2HU9YERZz6oe600GEU7tbYo";
 // Configure the HTTP request pipeline.
 var scope = app.Services.CreateScope();
 var seeder = scope.ServiceProvider.GetRequiredService<TechnologySeeder>();
