@@ -23,6 +23,7 @@ public class GetInItMappingProfile : Profile
         CreateMap<CreateAccountDto, Account>()
             .ForPath(a => a.Company.Address, c => c.MapFrom(dto => dto.CreateCompanyDto.AddressDto));
         CreateMap<CreateEmployeeDto, Account>();
+        CreateMap<RegisterUserDto, Account>();
         CreateMap<UpdateEmailDto, Account>();
         CreateMap<UpdatePasswordDto, Account>();
         CreateMap<Account, UpdateEmailDto>();

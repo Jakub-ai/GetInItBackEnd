@@ -9,7 +9,8 @@ public interface IAccountService
     public Task<AccountDto> GetAccountById(int id);
     
     public Task<IEnumerable<AccountDto>> GetAllAccount();
-    public Task<int> RegisterAccount(CreateAccountDto accountDto, int? companyId);
+    public Task<int> RegisterCompanyAccount(CreateAccountDto accountDto);
+    public Task<int> RegisterUser(RegisterUserDto userDto);
     public Task<string> GenerateJwt(LoginDto dto);
     public Task<int> RegisterEmployee(CreateEmployeeDto accountDto);
     public Task<ProfileDto> GetAccountProfile();

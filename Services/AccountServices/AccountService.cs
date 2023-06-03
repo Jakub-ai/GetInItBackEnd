@@ -102,16 +102,26 @@ public class AccountService : IAccountService
         return account.Id;
     }
 
-    public async Task<int> RegisterAccount(CreateAccountDto accountDto, int? companyId)
+    public async Task<int> RegisterCompanyAccount(CreateAccountDto accountDto)
     {
         var account = _mapper.Map<Account>(accountDto);
-        account.CompanyId = companyId;
         if (accountDto.CreateCompanyDto is not null)
         {
             account.Company = _mapper.Map<Company>(accountDto.CreateCompanyDto);
             account.Company.Address = _mapper.Map<Address>(accountDto.CreateCompanyDto.AddressDto);
         }
         var hashedPassword = _passwordHasher.HashPassword(account, accountDto.Password);
+
+        account.PasswordHash = hashedPassword;
+        await _dbContext.Accounts.AddAsync(account);
+        await _dbContext.SaveChangesAsync();
+        return account.Id;
+    }
+    public async Task<int> RegisterUser(RegisterUserDto userDto)
+    {
+        var account = _mapper.Map<Account>(userDto);
+    
+        var hashedPassword = _passwordHasher.HashPassword(account, userDto.Password);
 
         account.PasswordHash = hashedPassword;
         await _dbContext.Accounts.AddAsync(account);
