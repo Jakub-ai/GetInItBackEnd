@@ -902,6 +902,18 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Stripe.Client.Sdk/1.0.13": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "8.0.3"
+        },
+        "compile": {
+          "lib/net45/Stripe.Client.Sdk.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Stripe.Client.Sdk.dll": {}
+        }
+      },
       "Stripe.net/41.20.0-beta.1": {
         "type": "package",
         "dependencies": {
@@ -2958,6 +2970,18 @@
         "nlog.web.aspnetcore.nuspec"
       ]
     },
+    "Stripe.Client.Sdk/1.0.13": {
+      "sha512": "uOxIEhJcNcQwfi6dRIBEijE/pnnURSNeFB5qS86lZ02MkiWfMq3QYFrEDIK47qN0ZiouS0H/9pJPBrXYKDodbg==",
+      "type": "package",
+      "path": "stripe.client.sdk/1.0.13",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Stripe.Client.Sdk.dll",
+        "stripe.client.sdk.1.0.13.nupkg.sha512",
+        "stripe.client.sdk.nuspec"
+      ]
+    },
     "Stripe.net/41.20.0-beta.1": {
       "sha512": "h6kOTuvVyIgCWCODfKATb5n1BvyOAgDxEsjqkDQWi6sXqPUsdzvTqgcjHhuTBTKzk60QMaYNu0hVenjmT6PNOQ==",
       "type": "package",
@@ -4424,25 +4448,31 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.3",
       "NLog.Web.AspNetCore >= 5.2.2",
+      "Stripe.Client.Sdk >= 1.0.13",
       "Stripe.net >= 41.20.0-beta.1",
       "Swashbuckle.AspNetCore >= 6.5.0",
       "Swashbuckle.AspNetCore.Annotations >= 6.5.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bartl\\.nuget\\packages\\": {}
+    "C:\\Users\\jakub\\.nuget\\packages\\": {},
+    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BAKEND\\GetInItBackEnd.csproj",
+      "projectUniqueName": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd.csproj",
       "projectName": "GetInItBackEnd",
-      "projectPath": "D:\\BAKEND\\GetInItBackEnd.csproj",
-      "packagesPath": "C:\\Users\\bartl\\.nuget\\packages\\",
-      "outputPath": "D:\\BAKEND\\obj\\",
+      "projectPath": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd.csproj",
+      "packagesPath": "C:\\Users\\jakub\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\bartl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jakub\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4450,6 +4480,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4512,6 +4543,10 @@
             "target": "Package",
             "version": "[5.2.2, )"
           },
+          "Stripe.Client.Sdk": {
+            "target": "Package",
+            "version": "[1.0.13, )"
+          },
           "Stripe.net": {
             "target": "Package",
             "version": "[41.20.0-beta.1, )"
@@ -4544,8 +4579,20 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Stripe.Client.Sdk 1.0.13' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Stripe.Client.Sdk",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

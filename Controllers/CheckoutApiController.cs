@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using GetInItBackEnd.Services.PaymentServices;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -10,35 +11,21 @@ using Stripe.Checkout;
 
 namespace GetInItBackEnd.Controllers;
 
-[Route("create-checkout-session")]
+[Route("CreateCheckoutSession")]
 [ApiController]
 public class CheckoutApiController : Controller
 {
-    [HttpPost]
-    public ActionResult Create()
-    {
-        var domain = "http://localhost:3000";
-        var options = new SessionCreateOptions
-        {
-            
-            LineItems = new List<SessionLineItemOptions>
-            {
-                new SessionLineItemOptions
-                {
-                    // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-                    Price = "price_1NEebZLpkQnyrIfCRA4cmJXA",
-                    Quantity = 1,
-                },
-            },
-            Mode = "payment",
-            SuccessUrl = domain + "/paymentConfirmed",
-            CancelUrl = domain + "/paymentRefused",
-            AutomaticTax = new SessionAutomaticTaxOptions { Enabled = true },
-        };
-        var service = new SessionService();
-        Session session = service.Create(options);
+    private readonly IPaymentService _paymentService;
 
-        Response.Headers.Add("Location", session.Url);
-        return new StatusCodeResult(303);
+    public CheckoutApiController(IPaymentService paymentService)
+    {
+        _paymentService = paymentService;
+    }
+    [HttpPost("Payment")]
+    public Task<ActionResult> MakePayment()
+    {
+        var url = _paymentService.MakePayment().Result.Url;
+        Response.Headers.Add("Location",  url);
+        return Task.FromResult<ActionResult>(new StatusCodeResult(303));
     }
 }
