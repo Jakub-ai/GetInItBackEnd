@@ -120,7 +120,7 @@ public class OfferService : IOfferService
     {
         var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Id == dto.Id || o.Name == dto.Name);
         if (offer is null) throw new NotFoundException("offer is not found");
-        if ( _userContextService.GetUserRole != Role.ManagerCompanyAccount.ToString()) throw new ForbidException();
+        if ( _userContextService.GetUserRole != Role.ManagerCompanyAccount.ToString() && offer.CompanyId != _userContextService.GetCompanyId) throw new ForbidException();
         
             _dbContext.Offers.Remove(offer);
         await _dbContext.SaveChangesAsync();
