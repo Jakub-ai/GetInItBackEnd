@@ -56,16 +56,16 @@ public class OfferController : ControllerBase
     }
     [HttpDelete("DeleteCompanyOffer")] 
     [Authorize(Policy = "ManagerRole")]
-    public async Task<ActionResult> DeleteAsManager([FromQuery]int id)
+    public async Task<ActionResult> DeleteAsManager([FromBody]DeleteOfferDto dto)
     {
-       await _offerService.DeleteAsManager(id);
+       await _offerService.DeleteAsManager(dto);
        return NoContent();
     }
     [HttpDelete("DeleteEmployeeOffer")] 
     [Authorize(Policy = "EmployeeRole")]
-    public async Task<ActionResult> DeleteAsEmployee([FromQuery]int id)
+    public async Task<ActionResult> DeleteAsEmployee([FromBody]DeleteOfferDto dto)
     {
-        await _offerService.DeleteAsEmployee(id);
+        await _offerService.DeleteAsEmployee(dto);
         return NoContent();
     }
 

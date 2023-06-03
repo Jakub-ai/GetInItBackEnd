@@ -116,18 +116,18 @@ public class OfferService : IOfferService
     }
 
 
-    public async Task DeleteAsManager(int id)
+    public async Task DeleteAsManager(DeleteOfferDto dto)
     {
-        var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Id == id);
+        var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Id == dto.Id || o.Name == dto.Name);
         if (offer is null) throw new NotFoundException("offer is not found");
         if (offer.CompanyId != _userContextService.GetCompanyId) throw new ForbidException();
         
             _dbContext.Offers.Remove(offer);
         await _dbContext.SaveChangesAsync();
     }
-    public async Task DeleteAsEmployee(int id)
+    public async Task DeleteAsEmployee(DeleteOfferDto dto)
     {
-        var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Id == id);
+        var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Id == dto.Id || o.Name == dto.Name);
         if (offer is null) throw new NotFoundException("offer is not found");
         if (offer.CreatedById != _userContextService.GetUserId) throw new ForbidException();
         
