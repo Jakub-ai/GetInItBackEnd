@@ -22,51 +22,41 @@ public class OfferController : ControllerBase
         return Created($"api/offer/{id}", null);
     }
 
-    [HttpGet("GetAllOffers")] 
+    [HttpGet("GetEveryExistingOffer")] 
     public async Task<IEnumerable<OfferDto>> GetAllOffers()
     {
-        return await _offerService.GetOffers();
+        return await _offerService.GetEveryExistingOffer();
     }
-    [HttpGet("GetOfferByName")] 
-    public async Task<IEnumerable<OfferDto>> GetOffersByName([FromQuery]string name)
+
+    [HttpGet("SearchOffer")]
+    public async Task<IEnumerable<OfferDto>> GetOffersByPrimarySkill([FromQuery] SearchOfferDto dto)
     {
-        return await _offerService.GetByName(name);
+        return await _offerService.SearchOffers(dto);
     }
-    [HttpGet("GetOfferByTech")] 
-    public async Task<IEnumerable<OfferDto>> GetOffersByTechnology([FromQuery]string name)
-    {
-        return await _offerService.GetByTechnology(name);
-    }
-    [HttpGet("GetOfferByPrimarySkill")] 
-    public async Task<IEnumerable<OfferDto>> GetOffersByPrimarySkill([FromQuery]string name)
-    {
-        return await _offerService.GetByPrimarySkill(name);
-    }
-    [HttpGet("GetCompanyOffers")] 
-    [Authorize(Policy = "ManagerRole")]
-    public async Task<IEnumerable<OfferDto>> GetCompanyOffers()
-    {
-        return await _offerService.GetAllCompanyOffers();
-    }
-    [HttpGet("GetEmployeeOffers")] 
+
+    [HttpGet("getOffers")] 
     [Authorize(Policy = "EmployeeRole")]
-    public async Task<IEnumerable<OfferDto>> GetEmployeeOffers()
-    {
-        return await _offerService.GetAllEmployeeOffers();
-    }
-    [HttpDelete("DeleteCompanyOffer")] 
     [Authorize(Policy = "ManagerRole")]
-    public async Task<ActionResult> DeleteAsManager([FromBody]DeleteOfferDto dto)
+    public async Task<IEnumerable<TechnicalOfferDto>> GetOffers()
     {
-       await _offerService.DeleteAsManager(dto);
-       return NoContent();
+        return await _offerService.GetAllOffers();
     }
-    [HttpDelete("DeleteEmployeeOffer")] 
+    [HttpDelete("DeleteOffer")] 
     [Authorize(Policy = "EmployeeRole")]
-    public async Task<ActionResult> DeleteAsEmployee([FromBody]DeleteOfferDto dto)
+    [Authorize(Policy = "ManagerRole")]
+    public async Task<ActionResult> DeleteOffer([FromBody]DeleteOfferDto dto)
     {
-        await _offerService.DeleteAsEmployee(dto);
+        await _offerService.DeleteOffer(dto);
         return NoContent();
+    }
+    
+    [HttpPut("updateOffer/{id}")]
+    [Authorize("ManagerRole")]
+    [Authorize("EmployeeRole")]
+    public async Task<ActionResult> UpdateOffer([FromBody] CreateOfferDto dto, [FromRoute] int id)
+    {
+        await _offerService.UpdateOffer(dto, id);
+        return Ok();
     }
 
 }

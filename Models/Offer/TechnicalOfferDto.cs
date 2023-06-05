@@ -2,9 +2,9 @@
 
 namespace GetInItBackEnd.Models.Offer;
 
-public class OfferDto
+public class TechnicalOfferDto
 {
-   
+    public int Id { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
     public string PrimarySkill { get; set; }
