@@ -14,6 +14,6 @@ public interface IOfferService
     public Task<IEnumerable<OfferDto>> SearchOffers(SearchOfferDto dto);
 
     public Task<IEnumerable<TechnicalOfferDto>> GetAllOffers();
-    public Task UpdateOffer(CreateOfferDto dto, int id);
+    public Task UpdateOffer(UpdateOfferDto dto, int id);
     public Task DeleteOffer(DeleteOfferDto dto);
 }

@@ -53,7 +53,7 @@ public class OfferController : ControllerBase
     [HttpPut("updateOffer/{id}")]
     [Authorize("ManagerRole")]
     [Authorize("EmployeeRole")]
-    public async Task<ActionResult> UpdateOffer([FromBody] CreateOfferDto dto, [FromRoute] int id)
+    public async Task<ActionResult> UpdateOffer([FromBody] UpdateOfferDto dto, [FromRoute] int id)
     {
         await _offerService.UpdateOffer(dto, id);
         return Ok();

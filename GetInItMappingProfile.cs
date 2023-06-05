@@ -54,8 +54,8 @@ public class GetInItMappingProfile : Profile
             .ForMember(o => o.CompanyName, c => c.MapFrom(c=> c.Company.Name))
             .ForMember(O => O.City, a => a.MapFrom(dto => dto.City))
             .ForPath(o => o.Technologies, c => c.MapFrom(dto => dto.Technologies));
-
-       
+        CreateMap<UpdateOfferDto, Offer>()
+            .ForAllMembers(opt => opt.Condition((src, dest, srcMember) => srcMember != null));
 
 
     }

@@ -132,7 +132,7 @@ public class OfferService : IOfferService
 
         return offerDtos;
     }
-    public async Task UpdateOffer(CreateOfferDto dto, int id)
+    public async Task UpdateOffer(UpdateOfferDto dto, int id)
     {
         var userId = _userContextService.GetUserId;
         var companyId = _userContextService.GetCompanyId;
