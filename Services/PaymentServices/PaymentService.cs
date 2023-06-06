@@ -33,9 +33,9 @@ public class PaymentService : IPaymentService
                 new SessionLineItemOptions
                 {
                     // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-                    Price = "price_1NEebZLpkQnyrIfCRA4cmJXA",
+                    Price = "price_1NG1yHLpkQnyrIfC1TdGrsY3",
                     Quantity = 1,
-                },
+                }
             },
             Mode = "payment",
             SuccessUrl = domain + "/paymentConfirmed",
