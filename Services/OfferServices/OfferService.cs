@@ -105,7 +105,7 @@ public class OfferService : IOfferService
         return offerDtos;
     }
     
-    public async Task<IEnumerable<TechnicalOfferDto>> GetAllOffers()
+    public async Task<IEnumerable<OfferDto>> GetAllOffers()
     {
         var role = _userContextService.GetUserRole;
         var userId = _userContextService.GetUserId;
@@ -128,7 +128,7 @@ public class OfferService : IOfferService
             throw new UnauthorizedAccessException("User role not allowed");
         }
 
-        var offerDtos = _mapper.Map<List<TechnicalOfferDto>>(await offers.ToListAsync());
+        var offerDtos = _mapper.Map<List<OfferDto>>(await offers.ToListAsync());
 
         return offerDtos;
     }

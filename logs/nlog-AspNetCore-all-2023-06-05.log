@@ -1342,3 +1342,9 @@ Error Number:515,State:2,Class:16
 2023-06-05 18:24:42.1864|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/api/offer/getOffers application/json 67 - 200 670 application/json;+charset=utf-8 5.2713ms 
 2023-06-05 18:24:42.1864|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMR5S3RU5SVV", Request id "0HMR5S3RU5SVV:00000006": started reading request body. 
 2023-06-05 18:24:42.1864|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMR5S3RU5SVV", Request id "0HMR5S3RU5SVV:00000006": done reading request body. 
+2023-06-05 18:26:53.1642|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR5S3RU5SVV" disconnecting. 
+2023-06-05 18:26:53.1642|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMR5S3RU5SVV" stopped. 
+2023-06-05 18:26:53.1642|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMR5S3RU5SVV" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-05 18:39:35.9745|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-06-05 18:39:35.9745|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-06-05 18:39:35.9840|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
