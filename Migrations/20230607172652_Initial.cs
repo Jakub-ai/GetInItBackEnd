@@ -116,9 +116,9 @@ namespace GetInItBackEnd.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PaymentDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Invoice = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Invoice = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
                     Amount = table.Column<decimal>(type: "decimal(18,4)", nullable: false),
-                    CompanyId = table.Column<int>(type: "int", nullable: false)
+                    CompanyId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -127,8 +127,7 @@ namespace GetInItBackEnd.Migrations
                         name: "FK_Payments_Companies_CompanyId",
                         column: x => x.CompanyId,
                         principalTable: "Companies",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -138,8 +137,8 @@ namespace GetInItBackEnd.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    PriamarySkill = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "NVARCHAR(MAX)", maxLength: 50, nullable: false),
+                    PrimarySkill = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     City = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -199,9 +198,8 @@ namespace GetInItBackEnd.Migrations
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Cv = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Resume = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
                     Message = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    Rodo = table.Column<bool>(type: "bit", nullable: false),
                     OfferId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

@@ -5,6 +5,7 @@ using GetInItBackEnd.Models;
 using GetInItBackEnd.Models.Account;
 using GetInItBackEnd.Models.Address;
 using GetInItBackEnd.Models.Company;
+using GetInItBackEnd.Models.JobApplicationDto;
 using GetInItBackEnd.Models.Offer;
 using GetInItBackEnd.Models.Validators;
 
@@ -56,6 +57,10 @@ public class GetInItMappingProfile : Profile
             .ForPath(o => o.Technologies, c => c.MapFrom(dto => dto.Technologies));
         CreateMap<UpdateOfferDto, Offer>()
             .ForAllMembers(opt => opt.Condition((src, dest, srcMember) => srcMember != null));
+
+        CreateMap<CreateJobApplicationDto, JobApplication>();
+        CreateMap<JobApplication,JobApplicationDto >();
+        CreateMap<JobApplication,SearchApplicationDto >();
 
 
     }

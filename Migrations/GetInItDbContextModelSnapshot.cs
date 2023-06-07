@@ -188,8 +188,8 @@ namespace GetInItBackEnd.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Cv")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("CreatedById")
+                        .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
@@ -212,10 +212,16 @@ namespace GetInItBackEnd.Migrations
                     b.Property<int>("OfferId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("Rodo")
-                        .HasColumnType("bit");
+                    b.Property<byte[]>("Resume")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("UrlLink")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CreatedById");
 
                     b.HasIndex("OfferId");
 
@@ -294,12 +300,12 @@ namespace GetInItBackEnd.Migrations
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,4)");
 
-                    b.Property<int>("CompanyId")
+                    b.Property<int?>("CompanyId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Invoice")
+                    b.Property<byte[]>("Invoice")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("PaymentDate")
                         .IsRequired()
@@ -389,11 +395,17 @@ namespace GetInItBackEnd.Migrations
 
             modelBuilder.Entity("GetInItBackEnd.Entities.JobApplication", b =>
                 {
+                    b.HasOne("GetInItBackEnd.Entities.Account", "CreatedBy")
+                        .WithMany()
+                        .HasForeignKey("CreatedById");
+
                     b.HasOne("GetInItBackEnd.Entities.Offer", "Offer")
                         .WithMany("JobApplications")
                         .HasForeignKey("OfferId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("CreatedBy");
 
                     b.Navigation("Offer");
                 });
@@ -417,13 +429,9 @@ namespace GetInItBackEnd.Migrations
 
             modelBuilder.Entity("GetInItBackEnd.Entities.Payment", b =>
                 {
-                    b.HasOne("GetInItBackEnd.Entities.Company", "Company")
+                    b.HasOne("GetInItBackEnd.Entities.Company", null)
                         .WithMany("Payments")
-                        .HasForeignKey("CompanyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Company");
+                        .HasForeignKey("CompanyId");
                 });
 
             modelBuilder.Entity("OfferTechnology", b =>

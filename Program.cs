@@ -8,9 +8,11 @@ using GetInItBackEnd.Authorization;
 using GetInItBackEnd.Entities;
 using GetInItBackEnd.Middleware;
 using GetInItBackEnd.Models.Account;
+using GetInItBackEnd.Models.JobApplicationDto;
 using GetInItBackEnd.Models.Validators;
 using GetInItBackEnd.Seeders;
 using GetInItBackEnd.Services.AccountServices;
+using GetInItBackEnd.Services.ApplicationServices;
 using GetInItBackEnd.Services.CompanyServices;
 using GetInItBackEnd.Services.GptServices;
 using GetInItBackEnd.Services.OfferServices;
@@ -70,20 +72,24 @@ builder.Services.AddHttpClient<ChatGptService>();
 builder.Services.AddScoped<IChatGptService, ChatGptService>();
 builder.Services.AddScoped<IOfferService, OfferService>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
+builder.Services.AddScoped<IApplicationService, ApplicationService>();
 builder.Services.AddScoped<IPasswordHasher<Account>, PasswordHasher<Account>>();
 builder.Services.AddScoped<IValidator<CreateAccountDto>, RegisterAccountDtoValidator>();
 builder.Services.AddScoped<IValidator<CreateEmployeeDto>, RegisterEmployeeValidator>();
 builder.Services.AddScoped<IValidator<UpdatePasswordDto>, UpdatePasswordValidator>();
 builder.Services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator>();
 builder.Services.AddScoped<IValidator<UpdateEmailDto>, UpdateEmailValidator>();
+builder.Services.AddScoped<IValidator<CreateJobApplicationDto>, CreateJobApplicationDtoValidator>();
 builder.Services.AddScoped<IAuthorizationHandler, ResourceOperationRequirementHandler>();
 builder.Services.AddScoped<IAuthorizationHandler, RoleManagerRequirementHandler>();
 builder.Services.AddScoped<IAuthorizationHandler, RoleEmployeeRequirementHandler>();
+builder.Services.AddScoped<IAuthorizationHandler, RoleUserRequirementHandler>();
 builder.Services.AddScoped<IUserContextService, UserContextService>();
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("ManagerRole", b => b.AddRequirements(new RoleRequirement(Role.ManagerCompanyAccount)));
     options.AddPolicy("EmployeeRole", b => b.AddRequirements(new RoleRequirement(Role.EmployeeAccount)));
+    options.AddPolicy("UserRole", b => b.AddRequirements(new RoleRequirement(Role.UserAccount)));
 });
 
 //builder.Services.AddScoped<IPasswordHasher<User>>()

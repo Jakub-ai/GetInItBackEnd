@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GetInItBackEnd.Controllers;
+
 [Route("api/offer")]
+[ApiController]
 public class OfferController : ControllerBase
 {
     private readonly IOfferService _offerService;

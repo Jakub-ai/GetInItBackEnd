@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GetInItBackEnd.Migrations
 {
     [DbContext(typeof(GetInItDbContext))]
-    [Migration("20230531193121_alt3")]
-    partial class alt3
+    [Migration("20230607172652_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -191,9 +191,6 @@ namespace GetInItBackEnd.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Cv")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
@@ -215,8 +212,9 @@ namespace GetInItBackEnd.Migrations
                     b.Property<int>("OfferId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("Rodo")
-                        .HasColumnType("bit");
+                    b.Property<byte[]>("Resume")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
 
                     b.HasKey("Id");
 
@@ -246,7 +244,7 @@ namespace GetInItBackEnd.Migrations
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("NVARCHAR(MAX)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -297,12 +295,12 @@ namespace GetInItBackEnd.Migrations
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,4)");
 
-                    b.Property<int>("CompanyId")
+                    b.Property<int?>("CompanyId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Invoice")
+                    b.Property<byte[]>("Invoice")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("PaymentDate")
                         .IsRequired()
@@ -420,13 +418,9 @@ namespace GetInItBackEnd.Migrations
 
             modelBuilder.Entity("GetInItBackEnd.Entities.Payment", b =>
                 {
-                    b.HasOne("GetInItBackEnd.Entities.Company", "Company")
+                    b.HasOne("GetInItBackEnd.Entities.Company", null)
                         .WithMany("Payments")
-                        .HasForeignKey("CompanyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Company");
+                        .HasForeignKey("CompanyId");
                 });
 
             modelBuilder.Entity("OfferTechnology", b =>

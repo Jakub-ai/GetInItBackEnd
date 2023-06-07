@@ -8,3 +8,8 @@ services:
     environment:
       SA_PASSWORD: "GetInIt1234"
       ACCEPT_EULA: "Y"
+    restart: always
+    volumes:
+      - sqlserver:/var/lib/sqlserver/data
+volumes:
+  sqlserver:
