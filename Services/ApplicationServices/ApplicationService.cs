@@ -20,22 +20,33 @@ public class ApplicationService : IApplicationService
         _mapper = mapper;
     }
 
-    public async Task<int> CreateApplication(CreateJobApplicationDto dto, int offerId)
+    public async Task<int> CreateApplication(CreateJobApplicationDto dto, int offerId, IFormFile file)
     {
         
         var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Id == offerId);
         if (offer is null) throw new NotFoundException("offer does not exist");
-        if (dto.Resume is null) throw new NotFoundException("Resume must be added");
+        var userId = _userContextService.GetUserId;
         dto.Name = _userContextService.GetUserName;
         dto.LastName = _userContextService.GetUserLastName;
         dto.Email = _userContextService.GetUserMail;
-        dto.CreatedById = _userContextService.GetUserId;
+        dto.CreatedById = userId;
         dto.OfferId = offerId;
 
-        if (dto.Resume is { Length: > 0 })
+        if (file is { Length: > 0 })
         {
-            using var memoryStream = new MemoryStream();
-            dto.Resume = memoryStream.ToArray();
+            var rootPath = Directory.GetCurrentDirectory();
+            var fileName = file.Name;
+            var folderPath = $"{rootPath}/wwwroot/OfferFiles/{offerId}/{userId}";
+            var fullPath = Path.Combine(folderPath, fileName);
+            Directory.CreateDirectory(folderPath);
+            await using (var stream = new FileStream(fullPath,FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+
+            dto.ResumePath = fullPath;
+            if (dto.ResumePath is null) throw new NotFoundException("Resume must be added");
+
         }
 
         var application = _mapper.Map<JobApplication>(dto);

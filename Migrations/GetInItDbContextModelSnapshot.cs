@@ -212,9 +212,8 @@ namespace GetInItBackEnd.Migrations
                     b.Property<int>("OfferId")
                         .HasColumnType("int");
 
-                    b.Property<byte[]>("Resume")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
+                    b.Property<string>("ResumePath")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UrlLink")
                         .HasColumnType("nvarchar(max)");

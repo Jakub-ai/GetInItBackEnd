@@ -37,11 +37,11 @@ public class JobApplicationController : ControllerBase
     }
     
     [HttpPost("CreateApplication/{offerId}")]
-    public async Task<IActionResult> CreateApplication([FromBody] CreateJobApplicationDto dto, [FromRoute] int offerId)
+    public async Task<IActionResult> CreateApplication([FromForm] CreateJobApplicationDto dto,[FromRoute] int offerId,[FromForm] IFormFile file )
     {
         try
         {
-            var applicationId = await _applicationService.CreateApplication(dto, offerId);
+            var applicationId = await _applicationService.CreateApplication(dto, offerId, file);
             return Ok(new { ApplicationId = applicationId });
         }
         catch (NotFoundException ex)

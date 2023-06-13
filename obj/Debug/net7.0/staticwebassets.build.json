@@ -1,11 +1,54 @@
 {
   "Version": 1,
-  "Hash": "36B3X293oBSm3dWgHrSxk+p3qz0tUigrDZDiLiJMiSw=",
+  "Hash": "XXzWkLaFKStht5QNRblKeWa3g/I71SKP1Asgorf+GEA=",
   "Source": "GetInItBackEnd",
   "BasePath": "_content/GetInItBackEnd",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "GetInItBackEnd\\wwwroot",
+      "Source": "GetInItBackEnd",
+      "ContentRoot": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\wwwroot\\",
+      "BasePath": "_content/GetInItBackEnd",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\wwwroot\\OfferFiles\\1\\2\\file\\file",
+      "SourceId": "GetInItBackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\wwwroot\\",
+      "BasePath": "_content/GetInItBackEnd",
+      "RelativePath": "OfferFiles/1/2/file/file",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\OfferFiles\\1\\2\\file\\file"
+    },
+    {
+      "Identity": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\wwwroot\\OfferFiles\\file",
+      "SourceId": "GetInItBackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\wwwroot\\",
+      "BasePath": "_content/GetInItBackEnd",
+      "RelativePath": "OfferFiles/file",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\OfferFiles\\file"
+    }
+  ]
 }

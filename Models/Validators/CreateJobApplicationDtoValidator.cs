@@ -8,6 +8,6 @@ public class CreateJobApplicationDtoValidator : AbstractValidator<CreateJobAppli
 {
     public CreateJobApplicationDtoValidator(GetInItDbContext dbContext)
     {
-        RuleFor(a => a.Resume).NotEmpty();
+       // RuleFor(a => a.ResumePath).NotEmpty();
     }
 }

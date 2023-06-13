@@ -108,6 +108,7 @@ builder.Services.AddControllers()
         options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
     );
 var app = builder.Build();
+app.UseStaticFiles();
 StripeConfiguration.ApiKey =
     "sk_test_51NECXpLpkQnyrIfCXAF91dHQTHQBIj4PCtBXiRTMumckFBOUezK7spzO8PhAStUZPiAGRarv1Su2HU9YERZz6oe600GEU7tbYo";
 // Configure the HTTP request pipeline.

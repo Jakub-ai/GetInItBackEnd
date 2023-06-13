@@ -198,13 +198,20 @@ namespace GetInItBackEnd.Migrations
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Resume = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
+                    ResumePath = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UrlLink = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Message = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    OfferId = table.Column<int>(type: "int", nullable: false)
+                    OfferId = table.Column<int>(type: "int", nullable: false),
+                    CreatedById = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_JobApplications", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_JobApplications_Accounts_CreatedById",
+                        column: x => x.CreatedById,
+                        principalTable: "Accounts",
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_JobApplications_Offers_OfferId",
                         column: x => x.OfferId,
@@ -258,6 +265,11 @@ namespace GetInItBackEnd.Migrations
                 name: "IX_EmploymentTypeOffer_OffersId",
                 table: "EmploymentTypeOffer",
                 column: "OffersId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_JobApplications_CreatedById",
+                table: "JobApplications",
+                column: "CreatedById");
 
             migrationBuilder.CreateIndex(
                 name: "IX_JobApplications_OfferId",

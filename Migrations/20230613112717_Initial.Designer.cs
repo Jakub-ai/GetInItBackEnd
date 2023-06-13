@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GetInItBackEnd.Migrations
 {
     [DbContext(typeof(GetInItDbContext))]
-    [Migration("20230607220317_alt1")]
-    partial class alt1
+    [Migration("20230613112717_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -215,9 +215,8 @@ namespace GetInItBackEnd.Migrations
                     b.Property<int>("OfferId")
                         .HasColumnType("int");
 
-                    b.Property<byte[]>("Resume")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
+                    b.Property<string>("ResumePath")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UrlLink")
                         .HasColumnType("nvarchar(max)");
