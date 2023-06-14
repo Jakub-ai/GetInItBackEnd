@@ -9,6 +9,15 @@
             mozna tu wpisac opis controllera i kazdego endpointu zeby zrobic dokumentacje kodu jezeli bedzie potrzebna
             </summary>
         </member>
+        <member name="M:GetInItBackEnd.Controllers.JobApplicationController.CreateApplication(GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto,System.Int32,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            controller for creating new jobapplications by user
+            </summary>
+            <param name="dto"></param>
+            <param name="offerId"></param>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
         <member name="T:GetInItBackEnd.Migrations.Initial">
             <inheritdoc />
         </member>

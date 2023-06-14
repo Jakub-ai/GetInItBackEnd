@@ -21,7 +21,7 @@ public class JobApplicationController : ControllerBase
     {
         _applicationService = applicationService;
     }
-    [HttpGet("SearchApplications")]
+    [HttpPost("SearchApplications")]
     public async Task<IActionResult> SearchApplications([FromBody] SearchApplicationDto searchDto)
     {
         try
@@ -39,6 +39,13 @@ public class JobApplicationController : ControllerBase
         }
     }
     
+    /// <summary>
+    /// controller for creating new jobapplications by user
+    /// </summary>
+    /// <param name="dto"></param>
+    /// <param name="offerId"></param>
+    /// <param name="file"></param>
+    /// <returns></returns>
     [HttpPost("CreateApplication/{offerId}")]
     public async Task<IActionResult> CreateApplication([FromForm] CreateJobApplicationDto dto,[FromRoute] int offerId,[FromForm] IFormFile file )
     {

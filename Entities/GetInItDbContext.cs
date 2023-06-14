@@ -48,7 +48,6 @@ public class GetInItDbContext : DbContext
         modelBuilder.Entity<Offer>().Property(o => o.Description).IsRequired().HasMaxLength(50);
         //Table Payment Configuration
         modelBuilder.Entity<Payment>().Property(p => p.PaymentDate).IsRequired();
-        modelBuilder.Entity<Payment>().Property(p => p.Invoice).IsRequired();
         modelBuilder.Entity<Payment>().Property(p => p.Amount).IsRequired();
         //Technology Table Configuration
         modelBuilder.Entity<Technology>().Property(t => t.Skill).IsRequired().HasMaxLength(50);

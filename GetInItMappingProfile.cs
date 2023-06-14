@@ -7,6 +7,7 @@ using GetInItBackEnd.Models.Address;
 using GetInItBackEnd.Models.Company;
 using GetInItBackEnd.Models.JobApplicationDto;
 using GetInItBackEnd.Models.Offer;
+using GetInItBackEnd.Models.PaymentsDtos;
 using GetInItBackEnd.Models.Validators;
 
 namespace GetInItBackEnd;
@@ -62,6 +63,10 @@ public class GetInItMappingProfile : Profile
         CreateMap<JobApplication,JobApplicationDto >().ForMember(a => a.ApplicantName, c => c.MapFrom(d => d.Name));;
         CreateMap<JobApplication,SearchApplicationDto >().ForMember(a => a.ApplicantName, c => c.MapFrom(d => d.Name));;
 
+        //payments
+
+        CreateMap<CreatePaymentDto, Payment>();
+        
 
     }
 }

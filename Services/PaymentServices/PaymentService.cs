@@ -24,6 +24,7 @@ public class PaymentService : IPaymentService
 
     public async Task<Session> MakePayment()
     {
+        var payment =  _dbContext.Payments;
         var domain = "http://localhost:3000";
         var options = new SessionCreateOptions
         {
