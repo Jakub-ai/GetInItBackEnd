@@ -36,7 +36,7 @@ public class ApplicationService : IApplicationService
         {
             var rootPath = Directory.GetCurrentDirectory();
             var fileName = file.FileName;
-            var folderPath = $"{rootPath}/wwwroot/OfferFiles/{offerId}/{userId}";
+            var folderPath = $"{rootPath}\\wwwroot\\OfferFiles\\{offerId}\\{userId}".Replace('\\', '/');
             var fullPath = Path.Combine(folderPath, fileName);
             Directory.CreateDirectory(folderPath);
             await using (var stream = new FileStream(fullPath,FileMode.Create))
@@ -85,7 +85,7 @@ public class ApplicationService : IApplicationService
         {
             applications = await _dbContext.JobApplications
                 .Include(o => o.Offer)
-                .Where(o => o.Offer.CreatedById == userId)
+                .Where(o => o.CreatedById == userId)
                 .ToListAsync();
         }
         else
@@ -123,20 +123,19 @@ public class ApplicationService : IApplicationService
             throw new UnauthorizedAccessException(" not allowed");
         }
 
-        
-        if (searchDto.Id != 0)
+        if (!string.IsNullOrEmpty(searchDto.LastName))
+        {
+            applications = applications.Where(a => a.LastName.ToUpper() == searchDto.LastName.ToUpper());
+        }
+        if (searchDto.Id is not null)
         {
             applications = applications.Where(a => a.Id == searchDto.Id);
         }
         if (!string.IsNullOrEmpty(searchDto.ApplicantName))
         {
-            applications = applications.Where(a => a.Name == searchDto.ApplicantName);
+            applications = applications.Where(a => a.Name == searchDto.ApplicantName.ToUpper());
         }
-        if (!string.IsNullOrEmpty(searchDto.LastName))
-        {
-            applications = applications.Where(a => a.LastName == searchDto.LastName);
-        }
-
+   
         var results = await applications.Include(a => a.Offer).ToListAsync();
         var applicationDtos = _mapper.Map<List<JobApplicationDto>>(results);
 

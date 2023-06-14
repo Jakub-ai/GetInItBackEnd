@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "v7PqkS4uVC47GUV3k+sw2QWzntbH0jFViimnGqhS/K4=",
+  "Hash": "giskWd66CtYjjJN24kajI3Ccx07AKD7bYckLHNaafhM=",
   "Source": "GetInItBackEnd",
   "BasePath": "_content/GetInItBackEnd",
   "Mode": "Default",
@@ -15,5 +15,23 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\wwwroot\\OfferFiles\\2\\2\\tokeny.txt",
+      "SourceId": "GetInItBackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\wwwroot\\",
+      "BasePath": "_content/GetInItBackEnd",
+      "RelativePath": "OfferFiles/2/2/tokeny.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\OfferFiles\\2\\2\\tokeny.txt"
+    }
+  ]
 }

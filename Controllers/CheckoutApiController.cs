@@ -28,4 +28,13 @@ public class CheckoutApiController : Controller
         Response.Headers.Add("Location",  url);
         return Task.FromResult<ActionResult>(new StatusCodeResult(303));
     }
+    [HttpPost("webhook")]
+    public async Task<IActionResult> HandleStripeWebhook()
+    {
+    
+
+        // Return a response to Stripe to acknowledge receipt of the event
+        return Ok();
+    }
+
 }

@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\wwwroot\\OfferFiles\\file",
-      "PackagePath": "staticwebassets\\OfferFiles"
+      "Id": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\wwwroot\\OfferFiles\\2\\2\\tokeny.txt",
+      "PackagePath": "staticwebassets\\OfferFiles\\2\\2\\tokeny.txt"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.GetInItBackEnd.Microsoft.AspNetCore.StaticWebAssets.props",
