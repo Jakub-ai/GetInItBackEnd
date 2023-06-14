@@ -58,9 +58,9 @@ public class GetInItMappingProfile : Profile
         CreateMap<UpdateOfferDto, Offer>()
             .ForAllMembers(opt => opt.Condition((src, dest, srcMember) => srcMember != null));
 
-        CreateMap<CreateJobApplicationDto, JobApplication>();
-        CreateMap<JobApplication,JobApplicationDto >();
-        CreateMap<JobApplication,SearchApplicationDto >();
+        CreateMap<CreateJobApplicationDto, JobApplication>().ForMember(a => a.Name, c => c.MapFrom(d => d.ApplicantName));
+        CreateMap<JobApplication,JobApplicationDto >().ForMember(a => a.ApplicantName, c => c.MapFrom(d => d.Name));;
+        CreateMap<JobApplication,SearchApplicationDto >().ForMember(a => a.ApplicantName, c => c.MapFrom(d => d.Name));;
 
 
     }

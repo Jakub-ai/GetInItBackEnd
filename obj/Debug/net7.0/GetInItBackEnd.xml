@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GetInItBackEnd</name>
+    </assembly>
+    <members>
+        <member name="T:GetInItBackEnd.Controllers.JobApplicationController">
+            <summary>
+            mozna tu wpisac opis controllera i kazdego endpointu zeby zrobic dokumentacje kodu jezeli bedzie potrzebna
+            </summary>
+        </member>
+        <member name="T:GetInItBackEnd.Migrations.Initial">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GetInItBackEnd.Controllers;
+/// <summary>
+/// mozna tu wpisac opis controllera i kazdego endpointu zeby zrobic dokumentacje kodu jezeli bedzie potrzebna
+/// </summary>
 [Route("api/JobApplications")]
 [ApiController]
 [Authorize(Policy = "EmployeeRole")]
@@ -54,7 +57,13 @@ public class JobApplicationController : ControllerBase
         }
     }
 
+    [HttpGet("GetAllApplications")]
+    public async Task<IEnumerable<JobApplicationDto>> GetAllAppliactions()
+    {
+        return await _applicationService.GetAllApplications();
+    }
 
 
-    
+
+
 }

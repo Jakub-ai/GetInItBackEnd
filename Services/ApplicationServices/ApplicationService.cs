@@ -26,7 +26,7 @@ public class ApplicationService : IApplicationService
         var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Id == offerId);
         if (offer is null) throw new NotFoundException("offer does not exist");
         var userId = _userContextService.GetUserId;
-        dto.Name = _userContextService.GetUserName;
+        dto.ApplicantName = _userContextService.GetUserName;
         dto.LastName = _userContextService.GetUserLastName;
         dto.Email = _userContextService.GetUserMail;
         dto.CreatedById = userId;
@@ -35,7 +35,7 @@ public class ApplicationService : IApplicationService
         if (file is { Length: > 0 })
         {
             var rootPath = Directory.GetCurrentDirectory();
-            var fileName = file.Name;
+            var fileName = file.FileName;
             var folderPath = $"{rootPath}/wwwroot/OfferFiles/{offerId}/{userId}";
             var fullPath = Path.Combine(folderPath, fileName);
             Directory.CreateDirectory(folderPath);
@@ -128,9 +128,9 @@ public class ApplicationService : IApplicationService
         {
             applications = applications.Where(a => a.Id == searchDto.Id);
         }
-        if (!string.IsNullOrEmpty(searchDto.Name))
+        if (!string.IsNullOrEmpty(searchDto.ApplicantName))
         {
-            applications = applications.Where(a => a.Name == searchDto.Name);
+            applications = applications.Where(a => a.Name == searchDto.ApplicantName);
         }
         if (!string.IsNullOrEmpty(searchDto.LastName))
         {

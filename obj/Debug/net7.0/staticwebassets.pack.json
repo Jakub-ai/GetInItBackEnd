@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\wwwroot\\OfferFiles\\1\\2\\file\\file",
-      "PackagePath": "staticwebassets\\OfferFiles\\1\\2\\file"
-    },
-    {
       "Id": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\wwwroot\\OfferFiles\\file",
       "PackagePath": "staticwebassets\\OfferFiles"
     },
