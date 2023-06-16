@@ -31,7 +31,7 @@ public class OfferController : ControllerBase
     }
 
     [HttpPost("SearchOffer")]
-    public async Task<IEnumerable<OfferDto>> GetOffersByPrimarySkill([FromQuery] SearchOfferDto dto)
+    public async Task<IEnumerable<OfferDto>> GetOffersByPrimarySkill([FromBody] SearchOfferDto dto)
     {
         return await _offerService.SearchOffers(dto);
     }

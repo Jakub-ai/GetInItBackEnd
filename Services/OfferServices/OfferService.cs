@@ -39,9 +39,7 @@ public class OfferService : IOfferService
     {
         IQueryable<Offer> offers = _dbContext.Offers
             .Include(o => o.Company)
-            .Include(o => o.Technologies)
-            .Include(o => o.Place)
-            .Include(o => o.Level);
+            .Include(o => o.Technologies);
 
         if (!string.IsNullOrEmpty(dto.Name))
         {
