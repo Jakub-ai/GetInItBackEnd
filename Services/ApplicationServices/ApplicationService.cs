@@ -25,6 +25,8 @@ public class ApplicationService : IApplicationService
         
         var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Id == offerId);
         if (offer is null) throw new NotFoundException("offer does not exist");
+        if (_userContextService.GetUserRole != Role.UserAccount.ToString()) throw new ForbidException();
+        
         var userId = _userContextService.GetUserId;
         dto.ApplicantName = _userContextService.GetUserName;
         dto.LastName = _userContextService.GetUserLastName;
