@@ -135,6 +135,10 @@ public class ApplicationService : IApplicationService
         {
             applications = applications.Where(a => a.Name == searchDto.ApplicantName.ToUpper());
         }
+        if (!string.IsNullOrEmpty(searchDto.OfferName))
+        {
+            applications = applications.Where(a => a.Name == searchDto.OfferName.ToUpper());
+        }
    
         var results = await applications.Include(a => a.Offer).ToListAsync();
         var applicationDtos = _mapper.Map<List<JobApplicationDto>>(results);

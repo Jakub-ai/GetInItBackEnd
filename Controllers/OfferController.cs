@@ -30,7 +30,7 @@ public class OfferController : ControllerBase
         return await _offerService.GetEveryExistingOffer();
     }
 
-    [HttpGet("SearchOffer")]
+    [HttpPost("SearchOffer")]
     public async Task<IEnumerable<OfferDto>> GetOffersByPrimarySkill([FromQuery] SearchOfferDto dto)
     {
         return await _offerService.SearchOffers(dto);

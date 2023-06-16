@@ -61,7 +61,9 @@ public class GetInItMappingProfile : Profile
 
         CreateMap<CreateJobApplicationDto, JobApplication>().ForMember(a => a.Name, c => c.MapFrom(d => d.ApplicantName));
         CreateMap<JobApplication,JobApplicationDto >().ForMember(a => a.ApplicantName, c => c.MapFrom(d => d.Name));;
-        CreateMap<JobApplication,SearchApplicationDto >().ForMember(a => a.ApplicantName, c => c.MapFrom(d => d.Name));;
+        CreateMap<JobApplication,SearchApplicationDto >()
+            .ForMember(a => a.ApplicantName, c => c.MapFrom(d => d.Name))
+            .ForMember(a => a.OfferName, o => o.MapFrom(a => a.Offer.Name));
 
         //payments
 
