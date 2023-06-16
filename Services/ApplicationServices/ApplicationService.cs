@@ -137,7 +137,11 @@ public class ApplicationService : IApplicationService
         }
         if (!string.IsNullOrEmpty(searchDto.OfferName))
         {
-            applications = applications.Where(a => a.Name == searchDto.OfferName.ToUpper());
+            applications = applications.Where(a => a.Offer.Name == searchDto.OfferName.ToUpper());
+        }
+        if (searchDto.OfferId is not null)
+        {
+            applications = applications.Where(a => a.OfferId == searchDto.OfferId);
         }
    
         var results = await applications.Include(a => a.Offer).ToListAsync();
