@@ -10,9 +10,7 @@ namespace GetInItBackEnd.Controllers;
 /// </summary>
 [Route("api/JobApplications")]
 [ApiController]
-[Authorize(Policy = "EmployeeRole")]
-[Authorize(Policy = "ManagerRole")]
-[Authorize(Policy = "UserRole")]
+
 public class JobApplicationController : ControllerBase
 {
     private readonly IApplicationService _applicationService;
@@ -21,6 +19,9 @@ public class JobApplicationController : ControllerBase
     {
         _applicationService = applicationService;
     }
+    [Authorize(Policy = "EmployeeRole")]
+    [Authorize(Policy = "ManagerRole")]
+    [Authorize(Policy = "UserRole")]
     [HttpPost("SearchApplications")]
     public async Task<IActionResult> SearchApplications([FromBody] SearchApplicationDto searchDto)
     {
@@ -46,6 +47,7 @@ public class JobApplicationController : ControllerBase
     /// <param name="offerId"></param>
     /// <param name="file"></param>
     /// <returns></returns>
+    [Authorize(Policy = "UserRole")]
     [HttpPost("CreateApplication/{offerId}")]
     public async Task<IActionResult> CreateApplication([FromForm] CreateJobApplicationDto dto,[FromRoute] int offerId,[FromForm] IFormFile file )
     {
@@ -63,7 +65,9 @@ public class JobApplicationController : ControllerBase
             return StatusCode(500, ex.Message);
         }
     }
-
+    [Authorize(Policy = "EmployeeRole")]
+    [Authorize(Policy = "ManagerRole")]
+    [Authorize(Policy = "UserRole")]
     [HttpGet("GetAllApplications")]
     public async Task<IEnumerable<JobApplicationDto>> GetAllAppliactions()
     {
