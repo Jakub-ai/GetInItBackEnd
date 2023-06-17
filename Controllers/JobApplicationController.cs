@@ -76,7 +76,7 @@ public class JobApplicationController : ControllerBase
     [Authorize(Policy = "EmployeeRole")]
     [Authorize(Policy = "ManagerRole")]
     [HttpGet("DownloadFile/{offerId}/{userId}/{fileName}")]
-    public async Task<IActionResult> DownloadResumeFile(string offerId, string userId, string fileName)
+    public async Task<IActionResult> DownloadResumeFile([FromRoute]string offerId, [FromRoute]string userId,[FromRoute] string fileName)
     {
         try
         {
