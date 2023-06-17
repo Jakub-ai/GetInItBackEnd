@@ -101,13 +101,14 @@ public class ApplicationService : IApplicationService
         return results;
     }
 
-    public async Task<Tuple<byte[], string, string>>  GetResumeFile(string offerId, string userId, string fileName)
+    public async Task<Tuple<byte[], string, string>>  GetResumeFile(string filePathFromClient)
     {
         var rootPath = Directory.GetCurrentDirectory();
-        var filePath = $"{rootPath}\\OfferFiles\\{offerId}\\{userId}\\{fileName}".Replace('\\', '/');
+        var filePath = $"{rootPath}\\{filePathFromClient}".Replace('\\', '/');
         var fileExists = File.Exists(filePath);
         if (!fileExists) throw new FileNotFoundException("file not found");
         var contentProvider = new FileExtensionContentTypeProvider();
+        var fileName = Path.GetFileName(filePath);
         contentProvider.TryGetContentType(fileName, out string contentType);
 
         var fileContents = await File.ReadAllBytesAsync(filePath);
