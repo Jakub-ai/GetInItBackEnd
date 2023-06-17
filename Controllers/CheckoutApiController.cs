@@ -31,10 +31,19 @@ public class CheckoutApiController : Controller
     [HttpPost("webhook")]
     public async Task<IActionResult> HandleStripeWebhook()
     {
-    
+        
+        var result = await _paymentService.PaymentToDatabase(Request);
 
-        // Return a response to Stripe to acknowledge receipt of the event
-        return Ok();
+        if (result == 1)
+        {
+            return Ok();
+        }
+        else if (result == -1)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError);
+        }
+
+        return BadRequest();
     }
-
 }
+

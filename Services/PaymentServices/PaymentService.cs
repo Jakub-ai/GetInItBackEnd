@@ -18,10 +18,12 @@ namespace GetInItBackEnd.Services.PaymentServices;
 public class PaymentService : IPaymentService
 {
     private readonly GetInItDbContext _dbContext;
+    private readonly ILogger _logger;
 
-    public PaymentService(GetInItDbContext dbContext)
+    public PaymentService(GetInItDbContext dbContext, ILogger logger)
     {
         _dbContext = dbContext;
+        _logger = logger;
     }
 
     public async Task<Session> MakePayment()
@@ -52,44 +54,47 @@ public class PaymentService : IPaymentService
 
     }
 
-    /*public async Task<int> PaymentToDatabase()
+    public async Task<int> PaymentToDatabase(HttpRequest request)
     {
-        var json = await new StreamReader(HttpContext.Request.Body).ReadToEndAsync();
+        var json = await new StreamReader(request.Body).ReadToEndAsync();
 
         try
         {
             var stripeEvent = EventUtility.ParseEvent(json);
 
-            // Handle the event
             if (stripeEvent.Type == Events.PaymentIntentSucceeded)
             {
                 var paymentIntent = stripeEvent.Data.Object as PaymentIntent;
 
-                // Create a new DTO with the required fields
                 var paymentDto = new CreatePaymentDto
                 {
-                    PaymentDate = DateTime.Now.ToString(), // Set the payment date to the current date and time
-                    Amount = paymentIntent.Amount /
-                             100M, // Stripe amounts are in cents, so we need to convert it to dollars
+                    PaymentDate = DateTime.Now,
+                    Amount = paymentIntent.Amount / 100M,
                     StripePaymentId = paymentIntent.Id,
                     PaymentStatus = "Succeeded"
                 };
 
-                // Convert the DTO to a Payment object
                 var payment = new Payment
                 {
-                    PaymentDate = ,
+                    PaymentDate = paymentDto.PaymentDate,
                     Amount = paymentDto.Amount,
                     StripePaymentId = paymentDto.StripePaymentId,
                     PaymentStatus = paymentDto.PaymentStatus
                 };
 
-                // Add the new payment to the database
                 _dbContext.Payments.Add(payment);
                 await _dbContext.SaveChangesAsync();
+
+                return 1; // W przypadku sukcesu, zwróć 1
             }
 
-            return
+            return 0; // W przypadku niepowodzenia, zwróć 0
         }
-    }*/
+        catch (Exception e)
+        {
+            _logger.LogError(e.Message);
+            return -1; // W przypadku błędu, zwróć -1
+        }
+    }
+
 }
