@@ -1,4 +1,5 @@
 ﻿
+using GetInItBackEnd.Entities;
 using GetInItBackEnd.Models.PaymentsDtos;
 using GetInItBackEnd.Services.PaymentServices;
 using Microsoft.AspNetCore.Authorization;
@@ -38,6 +39,14 @@ public class CheckoutApiController : Controller
     public async Task<IEnumerable<PaymentDto>> GetEveryPayment()
     {
         return await _paymentService.GetEveryPayment();
+    }
+
+    [Authorize(Policy = "AdminRole")]
+    [HttpGet("Payment/{id}")]
+    public async Task<IActionResult> GetPaymentById(int id)
+    {
+        await _paymentService.GetByIdPayment(id);
+        return Ok();
     }
     [HttpPost("webhook")]
     public async Task<IActionResult> HandleStripeWebhook()

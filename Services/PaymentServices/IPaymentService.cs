@@ -9,4 +9,5 @@ public interface IPaymentService
     public Task<int> PaymentToDatabase(HttpRequest request);
     public Task<int> CreatePayment(PaymentDto dto);
     public Task<IEnumerable<PaymentDto>> GetEveryPayment();
+    public Task<PaymentDto> GetByIdPayment(int id);
 }

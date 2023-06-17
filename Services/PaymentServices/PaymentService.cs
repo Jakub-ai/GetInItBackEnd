@@ -39,6 +39,13 @@ public class PaymentService : IPaymentService
        var result = _mapper.Map<List<PaymentDto>>(payments);
        return result;
     }
+
+    public async Task<PaymentDto> GetByIdPayment(int id)
+    {
+        var payment = await _dbContext.Payments.FirstOrDefaultAsync(p => p.Id == id);
+        var result = _mapper.Map<PaymentDto>(payment);
+        return result;
+    }
     public async Task<Session> MakePayment()
     {
         var payment =  _dbContext.Payments;
