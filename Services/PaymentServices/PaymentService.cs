@@ -25,7 +25,7 @@ public class PaymentService : IPaymentService
     private readonly IUserContextService _userContextService;
     private readonly IMapper _mapper;
 
-    public PaymentService(GetInItDbContext dbContext, ILogger logger, IUserContextService userContextService, IMapper mapper)
+    public PaymentService(GetInItDbContext dbContext, ILogger<PaymentService> logger, IUserContextService userContextService, IMapper mapper)
     {
         _dbContext = dbContext;
         _logger = logger;

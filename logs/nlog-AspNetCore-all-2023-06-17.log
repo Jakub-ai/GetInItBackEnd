@@ -1466,3 +1466,46 @@ GetInItBackEnd.Authorization.RoleRequirement
 2023-06-17 14:58:36.4224|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
 2023-06-17 14:58:36.4224|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
 2023-06-17 14:58:36.4224|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2023-06-17 18:43:12.9142|0|DEBUG|Program|init main 
+2023-06-17 18:47:00.9018|0|DEBUG|Program|init main 
+2023-06-17 18:47:03.3427|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2023-06-17 18:47:03.4402|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2023-06-17 18:47:03.4545|63|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-06-17 18:47:03.4545|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-61beac45-c194-47f9-a2d7-e231fdca960a.xml'. 
+2023-06-17 18:47:03.4545|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-e18af407-1558-4655-9058-fa0c0096c470.xml'. 
+2023-06-17 18:47:03.4687|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {61beac45-c194-47f9-a2d7-e231fdca960a}. 
+2023-06-17 18:47:03.4687|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e18af407-1558-4655-9058-fa0c0096c470}. 
+2023-06-17 18:47:03.4819|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {e18af407-1558-4655-9058-fa0c0096c470} with expiration date 2023-09-11 11:37:12Z as default key. 
+2023-06-17 18:47:03.4819|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-17 18:47:03.4819|51|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2023-06-17 18:47:03.4819|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-17 18:47:03.4819|4|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2023-06-17 18:47:03.4819|3|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2023-06-17 18:47:03.4819|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {e18af407-1558-4655-9058-fa0c0096c470} as the default key. 
+2023-06-17 18:47:03.4819|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {e18af407-1558-4655-9058-fa0c0096c470} was loaded during application startup. 
+2023-06-17 18:47:03.5393|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5099 
+2023-06-17 18:47:03.5393|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly GetInItBackEnd 
+2023-06-17 18:47:03.5393|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-06-17 18:47:03.5393|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-06-17 18:47:03.5393|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd 
+2023-06-17 18:47:03.5393|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2023-06-17 18:47:10.2553|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRFA9V76PNR" accepted. 
+2023-06-17 18:47:10.2553|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRFA9V76PNR" started. 
+2023-06-17 18:47:10.3023|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5099/swagger/index.html - - 
+2023-06-17 18:47:10.3023|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2023-06-17 18:47:10.3023|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-17 18:47:10.3362|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.html' 
+2023-06-17 18:47:10.3362|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2023-06-17 18:47:10.3709|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-17 18:47:10.3736|5|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger/index.html does not match an existing file 
+2023-06-17 18:47:10.3736|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2023-06-17 18:47:10.5282|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRFA9V76PNR" completed keep alive response. 
+2023-06-17 18:47:10.5282|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/swagger/index.html - - - 200 - text/html;charset=utf-8 229.9940ms 
+2023-06-17 18:47:10.8425|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5099/swagger/v1/swagger.json - - 
+2023-06-17 18:47:10.8425|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-17 18:47:10.8425|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json' 
+2023-06-17 18:47:10.8425|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2023-06-17 18:47:10.8425|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-17 18:47:10.8425|5|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger/v1/swagger.json does not match an existing file 
+2023-06-17 18:47:11.0768|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRFA9V76PNR" completed keep alive response. 
+2023-06-17 18:47:11.0768|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 234.7531ms 
