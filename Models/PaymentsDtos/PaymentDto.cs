@@ -1,6 +1,6 @@
 ﻿namespace GetInItBackEnd.Models.PaymentsDtos;
 
-public class CreatePaymentDto
+public class PaymentDto
 {
     public string? Name { get; set; }
     public string? LastName { get; set; }

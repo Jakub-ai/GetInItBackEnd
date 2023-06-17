@@ -7,5 +7,6 @@ public interface IPaymentService
 {
     Task<Session> MakePayment();
     public Task<int> PaymentToDatabase(HttpRequest request);
-    public Task<int> CreatePayment(CreatePaymentDto dto);
+    public Task<int> CreatePayment(PaymentDto dto);
+    public Task<IEnumerable<PaymentDto>> GetEveryPayment();
 }

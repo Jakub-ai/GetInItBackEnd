@@ -67,7 +67,7 @@ public class GetInItMappingProfile : Profile
 
         //payments
 
-        CreateMap<CreatePaymentDto, Payment>();
+        CreateMap<PaymentDto, Payment>();
         
 
     }

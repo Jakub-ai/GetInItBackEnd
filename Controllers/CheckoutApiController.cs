@@ -27,10 +27,17 @@ public class CheckoutApiController : Controller
 
     [Authorize(Policy = "AdminRole")]
     [HttpPost("OfflinePayment")]
-    public async Task<IActionResult> CreatePaymentOffline(CreatePaymentDto dto)
+    public async Task<IActionResult> CreatePaymentOffline(PaymentDto dto)
     {
         await _paymentService.CreatePayment(dto);
         return Ok();
+    }
+
+    [Authorize(Policy = "AdminRole")]
+    [HttpGet("GetEveryPayment")]
+    public async Task<IEnumerable<PaymentDto>> GetEveryPayment()
+    {
+        return await _paymentService.GetEveryPayment();
     }
     [HttpPost("webhook")]
     public async Task<IActionResult> HandleStripeWebhook()

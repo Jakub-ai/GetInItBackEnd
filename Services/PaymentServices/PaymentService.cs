@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Stripe;
@@ -32,6 +33,12 @@ public class PaymentService : IPaymentService
         _mapper = mapper;
     }
 
+    public async Task<IEnumerable<PaymentDto>> GetEveryPayment()
+    {
+       var payments = await _dbContext.Payments.ToListAsync();
+       var result = _mapper.Map<List<PaymentDto>>(payments);
+       return result;
+    }
     public async Task<Session> MakePayment()
     {
         var payment =  _dbContext.Payments;
@@ -60,7 +67,7 @@ public class PaymentService : IPaymentService
 
     }
 
-    public async Task<int> CreatePayment(CreatePaymentDto dto)
+    public async Task<int> CreatePayment(PaymentDto dto)
     {
         dto.PaymentStatus = "Offline Payment";
         var payment = _mapper.Map<Payment>(dto);
@@ -82,7 +89,7 @@ public class PaymentService : IPaymentService
             {
                 var paymentIntent = stripeEvent.Data.Object as PaymentIntent;
 
-                var paymentDto = new CreatePaymentDto
+                var paymentDto = new PaymentDto
                 {
                     
                     PaymentDate = DateTime.Now,
