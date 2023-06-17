@@ -1612,3 +1612,12 @@ GetInItBackEnd.Authorization.RoleRequirement
 2023-06-17 19:37:56.1221|5|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger/v1/swagger.json does not match an existing file 
 2023-06-17 19:37:56.3229|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRFB6AQ9A26" completed keep alive response. 
 2023-06-17 19:37:56.3229|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 201.0422ms 
+2023-06-17 19:38:36.5676|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-06-17 19:38:36.5676|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-06-17 19:38:36.5766|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRFB6AQ9A27" disconnecting. 
+2023-06-17 19:38:36.5766|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRFB6AQ9A26" disconnecting. 
+2023-06-17 19:38:36.5766|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRFB6AQ9A26" stopped. 
+2023-06-17 19:38:36.5766|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRFB6AQ9A27" stopped. 
+2023-06-17 19:38:36.5766|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMRFB6AQ9A27" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-17 19:38:36.5766|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMRFB6AQ9A26" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-17 19:38:36.5766|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 

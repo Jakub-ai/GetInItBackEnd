@@ -41,7 +41,7 @@ public class ApplicationService : IApplicationService
             var rootPath = Directory.GetCurrentDirectory();
             var fileName = file.FileName;
             var folderPath = $"{rootPath}\\wwwroot\\OfferFiles\\{offerId}\\{userId}".Replace('\\', '/');
-            var fullPath = Path.Combine(folderPath, fileName);
+            var fullPath = Path.Combine(folderPath, fileName.Replace('\\', '/'));
             Directory.CreateDirectory(folderPath);
             await using (var stream = new FileStream(fullPath,FileMode.Create))
             {
