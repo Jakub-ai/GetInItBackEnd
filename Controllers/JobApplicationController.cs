@@ -75,12 +75,12 @@ public class JobApplicationController : ControllerBase
     }
     [Authorize(Policy = "EmployeeRole")]
     [Authorize(Policy = "ManagerRole")]
-    [HttpPost("DownloadFile")]
-    public async Task<IActionResult> DownloadResumeFile([FromBody]FileDownloadDto dto)
+    [HttpGet("DownloadFile/{offerId}/{userId}/{fileName}")]
+    public async Task<IActionResult> DownloadResumeFile(string offerId, string userId, string fileName)
     {
         try
         {
-            var fileData = await _applicationService.GetResumeFile(dto);
+            var fileData = await _applicationService.GetResumeFile(offerId, userId, fileName);
             return File(fileData.Item1, fileData.Item2, fileData.Item3);
         }
         catch (FileNotFoundException)

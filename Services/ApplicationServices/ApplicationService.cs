@@ -101,17 +101,17 @@ public class ApplicationService : IApplicationService
         return results;
     }
 
-    public async Task<Tuple<byte[], string, string>>  GetResumeFile(FileDownloadDto dto)
+    public async Task<Tuple<byte[], string, string>>  GetResumeFile(string offerId, string userId, string fileName)
     {
         var rootPath = Directory.GetCurrentDirectory();
-        var filePath = $"{rootPath}\\OfferFiles\\{dto.OfferId}\\{dto.UserId}\\{dto.FileName}".Replace('\\', '/');
+        var filePath = $"{rootPath}\\OfferFiles\\{offerId}\\{userId}\\{fileName}".Replace('\\', '/');
         var fileExists = File.Exists(filePath);
         if (!fileExists) throw new FileNotFoundException("file not found");
         var contentProvider = new FileExtensionContentTypeProvider();
-        contentProvider.TryGetContentType(dto.FileName, out string contentType);
+        contentProvider.TryGetContentType(fileName, out string contentType);
 
         var fileContents = await File.ReadAllBytesAsync(filePath);
-        return new Tuple<byte[], string, string>(fileContents, contentType, dto.FileName);
+        return new Tuple<byte[], string, string>(fileContents, contentType, fileName);
     }
 
     public async Task<IEnumerable<JobApplicationDto>> SearchApplications(SearchApplicationDto searchDto)
