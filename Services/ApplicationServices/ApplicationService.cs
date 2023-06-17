@@ -3,6 +3,8 @@ using GetInItBackEnd.Entities;
 using GetInItBackEnd.Exceptions;
 using GetInItBackEnd.Models.JobApplicationDto;
 using GetInItBackEnd.Services.AccountServices;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.EntityFrameworkCore;
 
 namespace GetInItBackEnd.Services.ApplicationServices;
@@ -98,7 +100,20 @@ public class ApplicationService : IApplicationService
         var results = _mapper.Map<List<JobApplicationDto>>(applications);
         return results;
     }
-    
+
+    public async Task<Tuple<byte[], string, string>>  GetResumeFile(FileDownloadDto dto)
+    {
+        var rootPath = Directory.GetCurrentDirectory();
+        var filePath = $"{rootPath}\\OfferFiles\\{dto.OfferId}\\{dto.UserId}\\{dto.FileName}".Replace('\\', '/');
+        var fileExists = File.Exists(filePath);
+        if (!fileExists) throw new FileNotFoundException("file not found");
+        var contentProvider = new FileExtensionContentTypeProvider();
+        contentProvider.TryGetContentType(dto.FileName, out string contentType);
+
+        var fileContents = await File.ReadAllBytesAsync(filePath);
+        return new Tuple<byte[], string, string>(fileContents, contentType, dto.FileName);
+    }
+
     public async Task<IEnumerable<JobApplicationDto>> SearchApplications(SearchApplicationDto searchDto)
     {
         var companyId = _userContextService.GetCompanyId;

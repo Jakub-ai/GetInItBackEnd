@@ -73,6 +73,26 @@ public class JobApplicationController : ControllerBase
     {
         return await _applicationService.GetAllApplications();
     }
+    [Authorize(Policy = "EmployeeRole")]
+    [Authorize(Policy = "ManagerRole")]
+    [HttpPost("DownloadFile")]
+    public async Task<IActionResult> DownloadResumeFile([FromBody]FileDownloadDto dto)
+    {
+        try
+        {
+            var fileData = await _applicationService.GetResumeFile(dto);
+            return File(fileData.Item1, fileData.Item2, fileData.Item3);
+        }
+        catch (FileNotFoundException)
+        {
+            return NotFound("File not found");
+        }
+        catch (Exception ex)
+        {
+            // handle other exceptions as necessary
+            return StatusCode(500, $"Internal server error: {ex}");
+        }
+    }
 
 
 
