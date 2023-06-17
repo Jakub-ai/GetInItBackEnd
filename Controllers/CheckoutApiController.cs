@@ -1,13 +1,9 @@
-﻿using System.Collections.Generic;
+﻿
+using GetInItBackEnd.Models.PaymentsDtos;
 using GetInItBackEnd.Services.PaymentServices;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Stripe;
-using Stripe.Checkout;
+
 
 namespace GetInItBackEnd.Controllers;
 
@@ -22,11 +18,19 @@ public class CheckoutApiController : Controller
         _paymentService = paymentService;
     }
     [HttpPost("Payment")]
-    public Task<ActionResult> MakePayment()
+    public async Task<ActionResult> MakePayment()
     {
         var url = _paymentService.MakePayment().Result.Url;
         Response.Headers.Add("Location",  url);
-        return Task.FromResult<ActionResult>(new StatusCodeResult(303));
+        return await Task.FromResult<ActionResult>(new StatusCodeResult(303));
+    }
+
+    [Authorize(Policy = "AdminRole")]
+    [HttpPost("OfflinePayment")]
+    public async Task<IActionResult> CreatePaymentOffline(CreatePaymentDto dto)
+    {
+        await _paymentService.CreatePayment(dto);
+        return Ok();
     }
     [HttpPost("webhook")]
     public async Task<IActionResult> HandleStripeWebhook()

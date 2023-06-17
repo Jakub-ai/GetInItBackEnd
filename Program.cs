@@ -97,12 +97,14 @@ builder.Services.AddScoped<IAuthorizationHandler, ResourceOperationRequirementHa
 builder.Services.AddScoped<IAuthorizationHandler, RoleManagerRequirementHandler>();
 builder.Services.AddScoped<IAuthorizationHandler, RoleEmployeeRequirementHandler>();
 builder.Services.AddScoped<IAuthorizationHandler, RoleUserRequirementHandler>();
+builder.Services.AddScoped<IAuthorizationHandler, AdminRoleRequirementHandler>();
 builder.Services.AddScoped<IUserContextService, UserContextService>();
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("ManagerRole", b => b.AddRequirements(new RoleRequirement(Role.ManagerCompanyAccount)));
     options.AddPolicy("EmployeeRole", b => b.AddRequirements(new RoleRequirement(Role.EmployeeAccount)));
     options.AddPolicy("UserRole", b => b.AddRequirements(new RoleRequirement(Role.UserAccount)));
+    options.AddPolicy("AdminRole", b => b.AddRequirements(new RoleRequirement(Role.Admin)));
 });
 
 //builder.Services.AddScoped<IPasswordHasher<User>>()

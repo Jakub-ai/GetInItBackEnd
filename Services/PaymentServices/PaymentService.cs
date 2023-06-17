@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
+using AutoMapper;
 using Azure;
 using GetInItBackEnd.Entities;
 using GetInItBackEnd.Models.PaymentsDtos;
+using GetInItBackEnd.Services.AccountServices;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -19,11 +21,15 @@ public class PaymentService : IPaymentService
 {
     private readonly GetInItDbContext _dbContext;
     private readonly ILogger _logger;
+    private readonly IUserContextService _userContextService;
+    private readonly IMapper _mapper;
 
-    public PaymentService(GetInItDbContext dbContext, ILogger logger)
+    public PaymentService(GetInItDbContext dbContext, ILogger logger, IUserContextService userContextService, IMapper mapper)
     {
         _dbContext = dbContext;
         _logger = logger;
+        _userContextService = userContextService;
+        _mapper = mapper;
     }
 
     public async Task<Session> MakePayment()
@@ -54,6 +60,16 @@ public class PaymentService : IPaymentService
 
     }
 
+    public async Task<int> CreatePayment(CreatePaymentDto dto)
+    {
+        dto.PaymentStatus = "Offline Payment";
+        var payment = _mapper.Map<Payment>(dto);
+        await _dbContext.Payments.AddAsync(payment);
+        await _dbContext.SaveChangesAsync();
+        return payment.Id;
+    }
+    
+
     public async Task<int> PaymentToDatabase(HttpRequest request)
     {
         var json = await new StreamReader(request.Body).ReadToEndAsync();
@@ -68,10 +84,14 @@ public class PaymentService : IPaymentService
 
                 var paymentDto = new CreatePaymentDto
                 {
+                    
                     PaymentDate = DateTime.Now,
                     Amount = paymentIntent.Amount / 100M,
                     StripePaymentId = paymentIntent.Id,
-                    PaymentStatus = "Succeeded"
+                    PaymentStatus = "Succeeded",
+                    Name = _userContextService.GetUserName,
+                    LastName = _userContextService.GetUserLastName
+
                 };
 
                 var payment = new Payment
@@ -80,6 +100,8 @@ public class PaymentService : IPaymentService
                     Amount = paymentDto.Amount,
                     StripePaymentId = paymentDto.StripePaymentId,
                     PaymentStatus = paymentDto.PaymentStatus
+                    
+                    
                 };
 
                 _dbContext.Payments.Add(payment);
