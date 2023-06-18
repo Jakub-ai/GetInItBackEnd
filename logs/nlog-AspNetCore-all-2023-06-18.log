@@ -2392,3 +2392,370 @@
 2023-06-18 22:10:39.6880|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG6TDEVVUI" stopped. 
 2023-06-18 22:10:39.6880|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMRG6TDEVVUI" sending FIN because: "The Socket transport's send loop completed gracefully." 
 2023-06-18 22:10:39.6880|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2023-06-18 22:35:08.8501|0|DEBUG|Program|init main 
+2023-06-18 22:35:10.6470|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2023-06-18 22:35:10.7033|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2023-06-18 22:35:10.7033|63|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-06-18 22:35:10.7151|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-61beac45-c194-47f9-a2d7-e231fdca960a.xml'. 
+2023-06-18 22:35:10.7151|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-e18af407-1558-4655-9058-fa0c0096c470.xml'. 
+2023-06-18 22:35:10.7385|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {61beac45-c194-47f9-a2d7-e231fdca960a}. 
+2023-06-18 22:35:10.7385|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e18af407-1558-4655-9058-fa0c0096c470}. 
+2023-06-18 22:35:10.7475|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {e18af407-1558-4655-9058-fa0c0096c470} with expiration date 2023-09-11 11:37:12Z as default key. 
+2023-06-18 22:35:10.7475|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-18 22:35:10.7475|51|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2023-06-18 22:35:10.7475|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-18 22:35:10.7475|4|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2023-06-18 22:35:10.7475|3|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2023-06-18 22:35:10.7475|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {e18af407-1558-4655-9058-fa0c0096c470} as the default key. 
+2023-06-18 22:35:10.7475|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {e18af407-1558-4655-9058-fa0c0096c470} was loaded during application startup. 
+2023-06-18 22:35:10.7824|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5099 
+2023-06-18 22:35:10.7824|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly GetInItBackEnd 
+2023-06-18 22:35:10.7824|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-06-18 22:35:10.7824|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-06-18 22:35:10.7824|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd 
+2023-06-18 22:35:10.7824|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2023-06-18 22:35:41.6828|6|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMRG7EAO5TFK" received FIN. 
+2023-06-18 22:35:41.6894|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG7EAO5TFK" accepted. 
+2023-06-18 22:35:41.6894|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG7EAO5TFK" started. 
+2023-06-18 22:35:41.6894|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG7EAO5TFL" accepted. 
+2023-06-18 22:35:41.6894|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG7EAO5TFL" started. 
+2023-06-18 22:35:41.7007|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMRG7EAO5TFK" sending FIN because: "The client closed the connection." 
+2023-06-18 22:35:41.7007|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG7EAO5TFK" disconnecting. 
+2023-06-18 22:35:41.7007|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG7EAO5TFK" stopped. 
+2023-06-18 22:35:41.7294|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5099/api/JobApplications/CreateApplication/1 multipart/form-data;+boundary=--------------------------532602392966375511895236 2010 
+2023-06-18 22:35:41.7294|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2023-06-18 22:35:41.7305|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-18 22:35:41.7585|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/JobApplications/CreateApplication/1' 
+2023-06-18 22:35:41.7585|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'GetInItBackEnd.Controllers.JobApplicationController.CreateApplication (GetInItBackEnd)' with route pattern 'api/JobApplications/CreateApplication/{offerId}' is valid for the request path '/api/JobApplications/CreateApplication/1' 
+2023-06-18 22:35:41.7585|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'GetInItBackEnd.Controllers.JobApplicationController.CreateApplication (GetInItBackEnd)' 
+2023-06-18 22:35:41.9099|2|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2023-06-18 22:35:41.9099|8|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was successfully authenticated. 
+2023-06-18 22:35:41.9099|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2023-06-18 22:35:41.9099|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2023-06-18 22:35:41.9486|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2023-06-18 22:35:41.9486|0|INFO|GetInItBackEnd.Authorization.RoleManagerRequirementHandler|user http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: user has role: http://schemas.microsoft.com/ws/2008/06/identity/claims/role: UserAccount 
+2023-06-18 22:35:41.9486|0|INFO|GetInItBackEnd.Authorization.RoleManagerRequirementHandler|Authorization succeed 
+2023-06-18 22:35:41.9486|0|INFO|GetInItBackEnd.Authorization.RoleEmployeeRequirementHandler|user http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: user has role: http://schemas.microsoft.com/ws/2008/06/identity/claims/role: UserAccount 
+2023-06-18 22:35:41.9486|0|INFO|GetInItBackEnd.Authorization.RoleEmployeeRequirementHandler|Authorization succeed 
+2023-06-18 22:35:41.9486|0|INFO|GetInItBackEnd.Authorization.RoleUserRequirementHandler|user http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: user has role: http://schemas.microsoft.com/ws/2008/06/identity/claims/role: UserAccount 
+2023-06-18 22:35:41.9486|0|INFO|GetInItBackEnd.Authorization.RoleUserRequirementHandler|Authorization succeed 
+2023-06-18 22:35:41.9486|0|INFO|GetInItBackEnd.Authorization.AdminRoleRequirementHandler|user http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: user has role: http://schemas.microsoft.com/ws/2008/06/identity/claims/role: UserAccount 
+2023-06-18 22:35:41.9486|0|INFO|GetInItBackEnd.Authorization.AdminRoleRequirementHandler|Authorization succeed 
+2023-06-18 22:35:41.9486|1|DEBUG|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2023-06-18 22:35:41.9486|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'GetInItBackEnd.Controllers.JobApplicationController.CreateApplication (GetInItBackEnd)' 
+2023-06-18 22:35:41.9805|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CreateApplication", controller = "JobApplication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateApplication(GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto, Int32, Microsoft.AspNetCore.Http.IFormFile) on controller GetInItBackEnd.Controllers.JobApplicationController (GetInItBackEnd). 
+2023-06-18 22:35:41.9805|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2023-06-18 22:35:41.9805|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2023-06-18 22:35:41.9805|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2023-06-18 22:35:41.9805|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2023-06-18 22:35:41.9805|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2023-06-18 22:35:41.9805|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller GetInItBackEnd.Controllers.JobApplicationController (GetInItBackEnd) 
+2023-06-18 22:35:42.1642|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller GetInItBackEnd.Controllers.JobApplicationController (GetInItBackEnd) 
+2023-06-18 22:35:42.1775|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMRG7EAO5TFL", Request id "0HMRG7EAO5TFL:00000001": started reading request body. 
+2023-06-18 22:35:42.1775|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMRG7EAO5TFL", Request id "0HMRG7EAO5TFL:00000001": done reading request body. 
+2023-06-18 22:35:42.1942|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto' ... 
+2023-06-18 22:35:42.1942|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder|Attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto' using the name '' in request data ... 
+2023-06-18 22:35:42.2028|13|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.ApplicantName' of type 'System.String' using the name 'ApplicantName' in request data ... 
+2023-06-18 22:35:42.2028|15|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Could not find a value in the request with name 'ApplicantName' for binding property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.ApplicantName' of type 'System.String'. 
+2023-06-18 22:35:42.2028|14|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.ApplicantName' of type 'System.String'. 
+2023-06-18 22:35:42.2028|13|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.LastName' of type 'System.String' using the name 'LastName' in request data ... 
+2023-06-18 22:35:42.2028|15|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Could not find a value in the request with name 'LastName' for binding property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.LastName' of type 'System.String'. 
+2023-06-18 22:35:42.2028|14|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.LastName' of type 'System.String'. 
+2023-06-18 22:35:42.2028|13|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.Email' of type 'System.String' using the name 'Email' in request data ... 
+2023-06-18 22:35:42.2028|15|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Could not find a value in the request with name 'Email' for binding property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.Email' of type 'System.String'. 
+2023-06-18 22:35:42.2028|14|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.Email' of type 'System.String'. 
+2023-06-18 22:35:42.2028|13|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.ResumePath' of type 'System.String' using the name 'ResumePath' in request data ... 
+2023-06-18 22:35:42.2028|15|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Could not find a value in the request with name 'ResumePath' for binding property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.ResumePath' of type 'System.String'. 
+2023-06-18 22:35:42.2028|14|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.ResumePath' of type 'System.String'. 
+2023-06-18 22:35:42.2028|13|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.Message' of type 'System.String' using the name 'Message' in request data ... 
+2023-06-18 22:35:42.2028|14|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.Message' of type 'System.String'. 
+2023-06-18 22:35:42.2028|13|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.UrlLink' of type 'System.String' using the name 'UrlLink' in request data ... 
+2023-06-18 22:35:42.2028|14|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.UrlLink' of type 'System.String'. 
+2023-06-18 22:35:42.2028|13|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.OfferId' of type 'System.Int32' using the name 'OfferId' in request data ... 
+2023-06-18 22:35:42.2028|15|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Could not find a value in the request with name 'OfferId' for binding property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.OfferId' of type 'System.Int32'. 
+2023-06-18 22:35:42.2028|14|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.OfferId' of type 'System.Int32'. 
+2023-06-18 22:35:42.2028|13|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.CreatedById' of type 'System.Nullable`1[System.Int32]' using the name 'CreatedById' in request data ... 
+2023-06-18 22:35:42.2028|15|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Could not find a value in the request with name 'CreatedById' for binding property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.CreatedById' of type 'System.Nullable`1[System.Int32]'. 
+2023-06-18 22:35:42.2028|14|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind property 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto.CreatedById' of type 'System.Nullable`1[System.Int32]'. 
+2023-06-18 22:35:42.2028|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder|Done attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto'. 
+2023-06-18 22:35:42.2028|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto'. 
+2023-06-18 22:35:42.2028|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto' ... 
+2023-06-18 22:35:42.2415|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto'. 
+2023-06-18 22:35:42.2415|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'offerId' of type 'System.Int32' ... 
+2023-06-18 22:35:42.2415|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'offerId' of type 'System.Int32' using the name 'offerId' in request data ... 
+2023-06-18 22:35:42.2415|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'offerId' of type 'System.Int32'. 
+2023-06-18 22:35:42.2415|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'offerId' of type 'System.Int32'. 
+2023-06-18 22:35:42.2415|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'offerId' of type 'System.Int32' ... 
+2023-06-18 22:35:42.2415|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'offerId' of type 'System.Int32'. 
+2023-06-18 22:35:42.2415|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile' ... 
+2023-06-18 22:35:42.2415|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinder|Attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile' using the name '' in request data ... 
+2023-06-18 22:35:42.2415|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinder|Done attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile'. 
+2023-06-18 22:35:42.2415|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile'. 
+2023-06-18 22:35:42.2415|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile' ... 
+2023-06-18 22:35:42.2415|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'file' of type 'Microsoft.AspNetCore.Http.IFormFile'. 
+2023-06-18 22:35:42.2457|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-18 22:35:42.2457|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-18 22:35:42.2457|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-18 22:35:42.2457|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-18 22:35:42.2457|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.JobApplicationController.CreateApplication (GetInItBackEnd) - Validation state: Valid 
+2023-06-18 22:35:42.2457|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.JobApplicationController.CreateApplication (GetInItBackEnd) with arguments (GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto, 1, Microsoft.AspNetCore.Http.FormFile) 
+2023-06-18 22:35:42.7907|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method GetInItBackEnd.Controllers.JobApplicationController.CreateApplication (GetInItBackEnd), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 537.2321ms. 
+2023-06-18 22:35:42.7907|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-18 22:35:42.7907|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-18 22:35:42.7926|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-18 22:35:42.7926|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-18 22:35:42.7926|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-18 22:35:42.7926|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-18 22:35:42.7926|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2023-06-18 22:35:42.7926|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2023-06-18 22:35:42.7926|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2023-06-18 22:35:42.7926|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2023-06-18 22:35:42.7926|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2023-06-18 22:35:42.7926|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2023-06-18 22:35:42.7926|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2023-06-18 22:35:42.9272|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2023-06-18 22:35:42.9272|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-18 22:35:42.9272|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-18 22:35:42.9272|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action GetInItBackEnd.Controllers.JobApplicationController.CreateApplication (GetInItBackEnd) in 946.4993ms 
+2023-06-18 22:35:42.9272|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'GetInItBackEnd.Controllers.JobApplicationController.CreateApplication (GetInItBackEnd)' 
+2023-06-18 22:35:42.9382|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG7EAO5TFL" completed keep alive response. 
+2023-06-18 22:35:42.9520|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5099/api/JobApplications/CreateApplication/1 multipart/form-data;+boundary=--------------------------532602392966375511895236 2010 - 200 20 application/json;+charset=utf-8 1223.7657ms 
+2023-06-18 22:37:54.0083|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG7EAO5TFL" disconnecting. 
+2023-06-18 22:37:54.0083|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG7EAO5TFL" stopped. 
+2023-06-18 22:37:54.0083|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMRG7EAO5TFL" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-18 22:40:34.6220|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG7EAO5TFM" accepted. 
+2023-06-18 22:40:34.6220|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG7EAO5TFM" started. 
+2023-06-18 22:40:34.6220|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5099/api/JobApplications/DownloadFile application/json-patch+json 62 
+2023-06-18 22:40:34.6220|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-18 22:40:34.6220|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/JobApplications/DownloadFile' 
+2023-06-18 22:40:34.6220|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd)' with route pattern 'api/JobApplications/DownloadFile' is valid for the request path '/api/JobApplications/DownloadFile' 
+2023-06-18 22:40:34.6220|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd)' 
+2023-06-18 22:40:34.6220|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-18 22:40:34.6220|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2023-06-18 22:40:34.6220|2|DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'http://localhost:5099'. 
+2023-06-18 22:40:34.6220|5|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution failed. 
+2023-06-18 22:40:34.6220|6|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Request origin http://localhost:5099 does not have permission to access the resource. 
+2023-06-18 22:40:34.6220|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2023-06-18 22:40:34.6220|0|INFO|GetInItBackEnd.Authorization.RoleManagerRequirementHandler|user  has role:  
+2023-06-18 22:40:34.6220|0|INFO|GetInItBackEnd.Authorization.RoleManagerRequirementHandler|Authorization succeed 
+2023-06-18 22:40:34.6220|0|INFO|GetInItBackEnd.Authorization.RoleManagerRequirementHandler|user  has role:  
+2023-06-18 22:40:34.6220|0|INFO|GetInItBackEnd.Authorization.RoleManagerRequirementHandler|Authorization succeed 
+2023-06-18 22:40:34.6220|0|INFO|GetInItBackEnd.Authorization.RoleEmployeeRequirementHandler|user  has role:  
+2023-06-18 22:40:34.6220|0|INFO|GetInItBackEnd.Authorization.RoleEmployeeRequirementHandler|Authorization succeed 
+2023-06-18 22:40:34.6220|0|INFO|GetInItBackEnd.Authorization.RoleEmployeeRequirementHandler|user  has role:  
+2023-06-18 22:40:34.6220|0|INFO|GetInItBackEnd.Authorization.RoleEmployeeRequirementHandler|Authorization succeed 
+2023-06-18 22:40:34.6220|0|INFO|GetInItBackEnd.Authorization.RoleUserRequirementHandler|user  has role:  
+2023-06-18 22:40:34.6220|0|INFO|GetInItBackEnd.Authorization.RoleUserRequirementHandler|Authorization succeed 
+2023-06-18 22:40:34.6220|0|INFO|GetInItBackEnd.Authorization.RoleUserRequirementHandler|user  has role:  
+2023-06-18 22:40:34.6220|0|INFO|GetInItBackEnd.Authorization.RoleUserRequirementHandler|Authorization succeed 
+2023-06-18 22:40:34.6220|0|INFO|GetInItBackEnd.Authorization.AdminRoleRequirementHandler|user  has role:  
+2023-06-18 22:40:34.6220|0|INFO|GetInItBackEnd.Authorization.AdminRoleRequirementHandler|Authorization succeed 
+2023-06-18 22:40:34.6220|0|INFO|GetInItBackEnd.Authorization.AdminRoleRequirementHandler|user  has role:  
+2023-06-18 22:40:34.6220|0|INFO|GetInItBackEnd.Authorization.AdminRoleRequirementHandler|Authorization succeed 
+2023-06-18 22:40:34.6220|2|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization failed. These requirements were not met:
+GetInItBackEnd.Authorization.RoleRequirement
+GetInItBackEnd.Authorization.RoleRequirement 
+2023-06-18 22:40:34.6398|12|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was challenged. 
+2023-06-18 22:40:34.6398|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG7EAO5TFM" completed keep alive response. 
+2023-06-18 22:40:34.6398|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5099/api/JobApplications/DownloadFile application/json-patch+json 62 - 401 0 - 16.6190ms 
+2023-06-18 22:40:34.6398|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMRG7EAO5TFM", Request id "0HMRG7EAO5TFM:00000001": started reading request body. 
+2023-06-18 22:40:34.6398|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMRG7EAO5TFM", Request id "0HMRG7EAO5TFM:00000001": done reading request body. 
+2023-06-18 22:40:52.8038|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5099/api/JobApplications/DownloadFile application/json-patch+json 62 
+2023-06-18 22:40:52.8038|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-18 22:40:52.8038|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/JobApplications/DownloadFile' 
+2023-06-18 22:40:52.8038|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd)' with route pattern 'api/JobApplications/DownloadFile' is valid for the request path '/api/JobApplications/DownloadFile' 
+2023-06-18 22:40:52.8038|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd)' 
+2023-06-18 22:40:52.8038|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-18 22:40:52.8038|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2023-06-18 22:40:52.8038|2|DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'http://localhost:5099'. 
+2023-06-18 22:40:52.8038|5|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution failed. 
+2023-06-18 22:40:52.8038|6|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Request origin http://localhost:5099 does not have permission to access the resource. 
+2023-06-18 22:40:52.8038|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2023-06-18 22:40:52.8038|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd)' 
+2023-06-18 22:40:52.8112|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "DownloadResumeFile", controller = "JobApplication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadResumeFile(GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto) on controller GetInItBackEnd.Controllers.JobApplicationController (GetInItBackEnd). 
+2023-06-18 22:40:52.8112|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2023-06-18 22:40:52.8112|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2023-06-18 22:40:52.8112|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2023-06-18 22:40:52.8112|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2023-06-18 22:40:52.8112|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2023-06-18 22:40:52.8112|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller GetInItBackEnd.Controllers.JobApplicationController (GetInItBackEnd) 
+2023-06-18 22:40:52.8112|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller GetInItBackEnd.Controllers.JobApplicationController (GetInItBackEnd) 
+2023-06-18 22:40:52.8112|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto' ... 
+2023-06-18 22:40:52.8112|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto' using the name '' in request data ... 
+2023-06-18 22:40:52.8112|2|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2023-06-18 22:40:52.8112|1|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'. 
+2023-06-18 22:40:52.8112|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMRG7EAO5TFM", Request id "0HMRG7EAO5TFM:00000002": started reading request body. 
+2023-06-18 22:40:52.8112|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMRG7EAO5TFM", Request id "0HMRG7EAO5TFM:00000002": done reading request body. 
+2023-06-18 22:40:52.8427|1|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter|JSON input formatter threw an exception. Newtonsoft.Json.JsonReaderException: Bad JSON escape sequence: \O. Path 'relativePathFromDb', line 2, position 34.
+   at Newtonsoft.Json.JsonTextReader.ReadStringIntoBuffer(Char quote)
+   at Newtonsoft.Json.JsonTextReader.ParseString(Char quote, ReadType readType)
+   at Newtonsoft.Json.JsonTextReader.ReadStringValue(ReadType readType)
+   at Newtonsoft.Json.JsonTextReader.ReadAsString()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+2023-06-18 22:40:52.8427|1|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter|JSON input formatter threw an exception. Newtonsoft.Json.JsonReaderException: Error parsing boolean value. Path 'relativePathFromDb', line 2, position 35.
+   at Newtonsoft.Json.JsonTextReader.ParseFalse()
+   at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonReader.Skip()
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.HandleError(JsonReader reader, Boolean readPastError, Int32 initialDepth)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+2023-06-18 22:40:52.8572|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto'. 
+2023-06-18 22:40:52.8572|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto'. 
+2023-06-18 22:40:52.8572|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto' ... 
+2023-06-18 22:40:52.8572|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto'. 
+2023-06-18 22:40:52.8572|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-18 22:40:52.8572|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-18 22:40:52.8572|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-18 22:40:52.8572|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter|The request has model state errors, returning an error response. 
+2023-06-18 22:40:52.8572|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-18 22:40:52.8572|63|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'. 
+2023-06-18 22:40:52.8572|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-18 22:40:52.8572|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-18 22:40:52.8572|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-18 22:40:52.8572|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-18 22:40:52.8572|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2023-06-18 22:40:52.8572|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2023-06-18 22:40:52.8572|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2023-06-18 22:40:52.8572|9|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types 'application/problem+json, application/problem+xml, application/problem+json, application/problem+xml'. 
+2023-06-18 22:40:52.8572|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/problem+json' to write the response. 
+2023-06-18 22:40:52.8572|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+2023-06-18 22:40:52.8966|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2023-06-18 22:40:52.8966|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-18 22:40:52.8966|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-18 22:40:52.8966|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd) in 85.4348ms 
+2023-06-18 22:40:52.8966|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd)' 
+2023-06-18 22:40:52.8966|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG7EAO5TFM" completed keep alive response. 
+2023-06-18 22:40:52.8966|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5099/api/JobApplications/DownloadFile application/json-patch+json 62 - 400 422 application/problem+json;+charset=utf-8 93.2541ms 
+2023-06-18 22:40:56.4538|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5099/api/JobApplications/DownloadFile application/json-patch+json 62 
+2023-06-18 22:40:56.4538|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-18 22:40:56.4538|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/JobApplications/DownloadFile' 
+2023-06-18 22:40:56.4538|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd)' with route pattern 'api/JobApplications/DownloadFile' is valid for the request path '/api/JobApplications/DownloadFile' 
+2023-06-18 22:40:56.4538|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd)' 
+2023-06-18 22:40:56.4538|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-18 22:40:56.4538|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2023-06-18 22:40:56.4538|2|DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'http://localhost:5099'. 
+2023-06-18 22:40:56.4538|5|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution failed. 
+2023-06-18 22:40:56.4538|6|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Request origin http://localhost:5099 does not have permission to access the resource. 
+2023-06-18 22:40:56.4538|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2023-06-18 22:40:56.4538|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd)' 
+2023-06-18 22:40:56.4538|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "DownloadResumeFile", controller = "JobApplication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadResumeFile(GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto) on controller GetInItBackEnd.Controllers.JobApplicationController (GetInItBackEnd). 
+2023-06-18 22:40:56.4538|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2023-06-18 22:40:56.4538|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2023-06-18 22:40:56.4538|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2023-06-18 22:40:56.4538|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2023-06-18 22:40:56.4538|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2023-06-18 22:40:56.4538|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller GetInItBackEnd.Controllers.JobApplicationController (GetInItBackEnd) 
+2023-06-18 22:40:56.4538|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller GetInItBackEnd.Controllers.JobApplicationController (GetInItBackEnd) 
+2023-06-18 22:40:56.4538|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto' ... 
+2023-06-18 22:40:56.4538|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto' using the name '' in request data ... 
+2023-06-18 22:40:56.4538|2|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2023-06-18 22:40:56.4538|1|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'. 
+2023-06-18 22:40:56.4538|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMRG7EAO5TFM", Request id "0HMRG7EAO5TFM:00000003": started reading request body. 
+2023-06-18 22:40:56.4538|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMRG7EAO5TFM", Request id "0HMRG7EAO5TFM:00000003": done reading request body. 
+2023-06-18 22:40:56.4538|1|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter|JSON input formatter threw an exception. Newtonsoft.Json.JsonReaderException: Bad JSON escape sequence: \O. Path 'relativePathFromDb', line 2, position 34.
+   at Newtonsoft.Json.JsonTextReader.ReadStringIntoBuffer(Char quote)
+   at Newtonsoft.Json.JsonTextReader.ParseString(Char quote, ReadType readType)
+   at Newtonsoft.Json.JsonTextReader.ReadStringValue(ReadType readType)
+   at Newtonsoft.Json.JsonTextReader.ReadAsString()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+2023-06-18 22:40:56.4538|1|DEBUG|Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter|JSON input formatter threw an exception. Newtonsoft.Json.JsonReaderException: Error parsing boolean value. Path 'relativePathFromDb', line 2, position 35.
+   at Newtonsoft.Json.JsonTextReader.ParseFalse()
+   at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonReader.Skip()
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.HandleError(JsonReader reader, Boolean readPastError, Int32 initialDepth)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+2023-06-18 22:40:56.4538|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto'. 
+2023-06-18 22:40:56.4538|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto'. 
+2023-06-18 22:40:56.4538|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto' ... 
+2023-06-18 22:40:56.4538|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto'. 
+2023-06-18 22:40:56.4538|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-18 22:40:56.4538|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-18 22:40:56.4538|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-18 22:40:56.4538|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter|The request has model state errors, returning an error response. 
+2023-06-18 22:40:56.4538|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-18 22:40:56.4538|63|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'. 
+2023-06-18 22:40:56.4538|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-18 22:40:56.4538|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-18 22:40:56.4538|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-18 22:40:56.4538|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-18 22:40:56.4538|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2023-06-18 22:40:56.4538|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2023-06-18 22:40:56.4538|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2023-06-18 22:40:56.4538|9|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types 'application/problem+json, application/problem+xml, application/problem+json, application/problem+xml'. 
+2023-06-18 22:40:56.4538|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/problem+json' to write the response. 
+2023-06-18 22:40:56.4538|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+2023-06-18 22:40:56.4538|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.BadRequestObjectResult. 
+2023-06-18 22:40:56.4538|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-18 22:40:56.4538|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-18 22:40:56.4538|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd) in 3.3761ms 
+2023-06-18 22:40:56.4538|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd)' 
+2023-06-18 22:40:56.4538|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG7EAO5TFM" completed keep alive response. 
+2023-06-18 22:40:56.4538|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5099/api/JobApplications/DownloadFile application/json-patch+json 62 - 400 422 application/problem+json;+charset=utf-8 6.9908ms 
+2023-06-18 22:41:07.5697|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost:5099/api/JobApplications/DownloadFile application/json-patch+json 65 
+2023-06-18 22:41:07.5697|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-18 22:41:07.5697|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/JobApplications/DownloadFile' 
+2023-06-18 22:41:07.5697|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd)' with route pattern 'api/JobApplications/DownloadFile' is valid for the request path '/api/JobApplications/DownloadFile' 
+2023-06-18 22:41:07.5697|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd)' 
+2023-06-18 22:41:07.5697|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-18 22:41:07.5697|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2023-06-18 22:41:07.5697|2|DEBUG|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|The request has an origin header: 'http://localhost:5099'. 
+2023-06-18 22:41:07.5697|5|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution failed. 
+2023-06-18 22:41:07.5697|6|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Request origin http://localhost:5099 does not have permission to access the resource. 
+2023-06-18 22:41:07.5697|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2023-06-18 22:41:07.5697|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd)' 
+2023-06-18 22:41:07.5697|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "DownloadResumeFile", controller = "JobApplication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadResumeFile(GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto) on controller GetInItBackEnd.Controllers.JobApplicationController (GetInItBackEnd). 
+2023-06-18 22:41:07.5697|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2023-06-18 22:41:07.5697|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2023-06-18 22:41:07.5697|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2023-06-18 22:41:07.5697|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2023-06-18 22:41:07.5697|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2023-06-18 22:41:07.5697|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller GetInItBackEnd.Controllers.JobApplicationController (GetInItBackEnd) 
+2023-06-18 22:41:07.5697|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller GetInItBackEnd.Controllers.JobApplicationController (GetInItBackEnd) 
+2023-06-18 22:41:07.5697|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto' ... 
+2023-06-18 22:41:07.5697|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto' using the name '' in request data ... 
+2023-06-18 22:41:07.5697|2|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'. 
+2023-06-18 22:41:07.5697|1|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'. 
+2023-06-18 22:41:07.5697|25|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMRG7EAO5TFM", Request id "0HMRG7EAO5TFM:00000004": started reading request body. 
+2023-06-18 22:41:07.5697|26|DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMRG7EAO5TFM", Request id "0HMRG7EAO5TFM:00000004": done reading request body. 
+2023-06-18 22:41:07.5793|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto'. 
+2023-06-18 22:41:07.5793|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto'. 
+2023-06-18 22:41:07.5793|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto' ... 
+2023-06-18 22:41:07.5793|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'dto' of type 'GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto'. 
+2023-06-18 22:41:07.5793|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-18 22:41:07.5793|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-18 22:41:07.5793|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-18 22:41:07.5793|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-18 22:41:07.5793|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd) - Validation state: Valid 
+2023-06-18 22:41:07.5793|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd) with arguments (GetInItBackEnd.Models.JobApplicationDto.FileDownloadDto) 
+2023-06-18 22:41:07.5793|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd), returned result Microsoft.AspNetCore.Mvc.FileContentResult in 3.7677ms. 
+2023-06-18 22:41:07.5793|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-18 22:41:07.5793|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2023-06-18 22:41:07.5793|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-18 22:41:07.5793|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-18 22:41:07.5793|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-18 22:41:07.5793|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-18 22:41:07.5793|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.FileContentResult. 
+2023-06-18 22:41:07.5793|2|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.FileContentResultExecutor|Executing FileContentResult, sending file with download name 'tokeny.txt' ... 
+2023-06-18 22:41:07.5793|38|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.FileContentResultExecutor|The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'. 
+2023-06-18 22:41:07.5793|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.FileContentResult. 
+2023-06-18 22:41:07.5793|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-18 22:41:07.5793|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2023-06-18 22:41:07.5793|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd) in 17.5852ms 
+2023-06-18 22:41:07.5793|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'GetInItBackEnd.Controllers.JobApplicationController.DownloadResumeFile (GetInItBackEnd)' 
+2023-06-18 22:41:07.5793|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG7EAO5TFM" completed keep alive response. 
+2023-06-18 22:41:07.5793|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5099/api/JobApplications/DownloadFile application/json-patch+json 65 - 200 1569 text/plain 18.7470ms 
+2023-06-18 22:41:19.8491|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-06-18 22:41:19.8491|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-06-18 22:41:19.8559|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG7EAO5TFM" disconnecting. 
+2023-06-18 22:41:19.8559|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRG7EAO5TFM" stopped. 
+2023-06-18 22:41:19.8559|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMRG7EAO5TFM" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-18 22:41:19.8559|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
