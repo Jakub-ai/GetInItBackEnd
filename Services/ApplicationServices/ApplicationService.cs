@@ -24,11 +24,10 @@ public class ApplicationService : IApplicationService
 
     public async Task<int> CreateApplication(CreateJobApplicationDto dto, int offerId, IFormFile file)
     {
-        
         var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Id == offerId);
         if (offer is null) throw new NotFoundException("offer does not exist");
         if (_userContextService.GetUserRole != Role.UserAccount.ToString()) throw new ForbidException();
-        
+    
         var userId = _userContextService.GetUserId;
         dto.ApplicantName = _userContextService.GetUserName;
         dto.LastName = _userContextService.GetUserLastName;
@@ -40,26 +39,31 @@ public class ApplicationService : IApplicationService
         {
             var rootPath = Directory.GetCurrentDirectory();
             var fileName = file.FileName;
-            var folderPath = $"{rootPath}\\wwwroot\\OfferFiles\\{offerId}\\{userId}".Replace('\\', '/');
+            var folderPath = Path.Combine(rootPath, "wwwroot", "OfferFiles", offerId.ToString(), userId.ToString());
             var fullPath = Path.Combine(folderPath, fileName);
-            fullPath.Replace('\\', '/');
+
             Directory.CreateDirectory(folderPath);
-            await using (var stream = new FileStream(fullPath,FileMode.Create))
+            await using (var stream = new FileStream(fullPath, FileMode.Create))
             {
                 await file.CopyToAsync(stream);
             }
 
             dto.ResumePath = fullPath;
-            if (dto.ResumePath is null) throw new NotFoundException("Resume must be added");
+        }
 
+        if (string.IsNullOrEmpty(dto.ResumePath)) 
+        {
+            throw new NotFoundException("Resume must be added");
         }
 
         var application = _mapper.Map<JobApplication>(dto);
-        
+    
         await _dbContext.JobApplications.AddAsync(application);
         await _dbContext.SaveChangesAsync();
         return application.Id;
-        }
+    }
+
+
 
     public async Task<IEnumerable<JobApplicationDto>> GetAllApplications()
     {

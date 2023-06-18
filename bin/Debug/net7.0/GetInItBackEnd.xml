@@ -30,5 +30,17 @@
         <member name="M:GetInItBackEnd.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:GetInItBackEnd.Migrations.alt1">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt1.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt1.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>
