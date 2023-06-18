@@ -76,11 +76,11 @@ public class JobApplicationController : ControllerBase
     [Authorize(Policy = "EmployeeRole")]
     [Authorize(Policy = "ManagerRole")]
     [HttpPost("DownloadFile")]
-    public async Task<IActionResult> DownloadResumeFile([FromBody]string filePath)
+    public async Task<IActionResult> DownloadResumeFile([FromBody]FileDownloadDto dto)
     {
         try
         {
-            var fileData = await _applicationService.GetResumeFile(filePath);
+            var fileData = await _applicationService.GetResumeFile(dto);
             return File(fileData.Item1, fileData.Item2, fileData.Item3);
         }
         catch (FileNotFoundException)

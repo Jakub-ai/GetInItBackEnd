@@ -27,7 +27,7 @@ public class ApplicationService : IApplicationService
         var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Id == offerId);
         if (offer is null) throw new NotFoundException("offer does not exist");
         if (_userContextService.GetUserRole != Role.UserAccount.ToString()) throw new ForbidException();
-    
+
         var userId = _userContextService.GetUserId;
         dto.ApplicantName = _userContextService.GetUserName;
         dto.LastName = _userContextService.GetUserLastName;
@@ -41,27 +41,24 @@ public class ApplicationService : IApplicationService
             var fileName = file.FileName;
             var folderPath = Path.Combine(rootPath, "wwwroot", "OfferFiles", offerId.ToString(), userId.ToString());
             var fullPath = Path.Combine(folderPath, fileName);
-
             Directory.CreateDirectory(folderPath);
             await using (var stream = new FileStream(fullPath, FileMode.Create))
             {
                 await file.CopyToAsync(stream);
             }
 
-            dto.ResumePath = fullPath;
-        }
-
-        if (string.IsNullOrEmpty(dto.ResumePath)) 
-        {
-            throw new NotFoundException("Resume must be added");
+            var relativePath = Path.GetRelativePath(rootPath, fullPath);
+            dto.ResumePath = relativePath;
+            if (dto.ResumePath is null) throw new NotFoundException("Resume must be added");
         }
 
         var application = _mapper.Map<JobApplication>(dto);
-    
+
         await _dbContext.JobApplications.AddAsync(application);
         await _dbContext.SaveChangesAsync();
         return application.Id;
     }
+
 
 
 
@@ -106,10 +103,10 @@ public class ApplicationService : IApplicationService
         return results;
     }
 
-    public async Task<Tuple<byte[], string, string>>  GetResumeFile(string filePathFromClient)
+    public async Task<Tuple<byte[], string, string>>  GetResumeFile(FileDownloadDto dto)
     {
         var rootPath = Directory.GetCurrentDirectory();
-        var filePath = Path.Combine(rootPath, filePathFromClient);
+        var filePath = Path.Combine(rootPath, dto.RelativePathFromDb);
         var fileExists = File.Exists(filePath);
         if (!fileExists) throw new FileNotFoundException("file not found");
         var contentProvider = new FileExtensionContentTypeProvider();
@@ -119,6 +116,7 @@ public class ApplicationService : IApplicationService
         var fileContents = await File.ReadAllBytesAsync(filePath);
         return new Tuple<byte[], string, string>(fileContents, contentType, fileName);
     }
+
 
     public async Task<IEnumerable<JobApplicationDto>> SearchApplications(SearchApplicationDto searchDto)
     {

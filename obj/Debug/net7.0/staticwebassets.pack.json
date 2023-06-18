@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\wwwroot\\OfferFiles\\1\\2\\tokeny.txt",
+      "PackagePath": "staticwebassets\\OfferFiles\\1\\2\\tokeny.txt"
+    },
+    {
       "Id": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\wwwroot\\OfferFiles\\2\\2\\tokeny.txt",
       "PackagePath": "staticwebassets\\OfferFiles\\2\\2\\tokeny.txt"
     },
