@@ -57,7 +57,7 @@ public class PaymentService : IPaymentService
             {
                 new SessionLineItemOptions
                 {
-                    // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+                   
                     Price = "price_1NG1yHLpkQnyrIfC1TdGrsY3",
                     Quantity = 1,
                 }
@@ -113,7 +113,9 @@ public class PaymentService : IPaymentService
                     PaymentDate = paymentDto.PaymentDate,
                     Amount = paymentDto.Amount,
                     StripePaymentId = paymentDto.StripePaymentId,
-                    PaymentStatus = paymentDto.PaymentStatus
+                    PaymentStatus = paymentDto.PaymentStatus,
+                    Name = paymentDto.Name,
+                    LastName = paymentDto.LastName
                     
                     
                 };

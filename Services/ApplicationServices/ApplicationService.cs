@@ -109,7 +109,7 @@ public class ApplicationService : IApplicationService
     public async Task<Tuple<byte[], string, string>>  GetResumeFile(string filePathFromClient)
     {
         var rootPath = Directory.GetCurrentDirectory();
-        var filePath = $"{rootPath}\\{filePathFromClient}".Replace('\\', '/');
+        var filePath = Path.Combine(rootPath, filePathFromClient);
         var fileExists = File.Exists(filePath);
         if (!fileExists) throw new FileNotFoundException("file not found");
         var contentProvider = new FileExtensionContentTypeProvider();

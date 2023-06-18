@@ -416,3 +416,9 @@
 2023-06-18 14:23:24.9506|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'GetInItBackEnd.Controllers.JobApplicationController.CreateApplication (GetInItBackEnd)' 
 2023-06-18 14:23:24.9506|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRFUPU0O4BG" completed keep alive response. 
 2023-06-18 14:23:24.9506|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost:5099/api/JobApplications/CreateApplication/1 multipart/form-data;+boundary=--------------------------126289521256694230190536 2010 - 200 20 application/json;+charset=utf-8 25.4535ms 
+2023-06-18 14:25:36.7673|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRFUPU0O4BG" disconnecting. 
+2023-06-18 14:25:36.7673|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRFUPU0O4BG" stopped. 
+2023-06-18 14:25:36.7673|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMRFUPU0O4BG" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-18 14:35:42.3521|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-06-18 14:35:42.3521|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-06-18 14:35:42.3619|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
