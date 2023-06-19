@@ -16,7 +16,7 @@ public interface IAccountService
     public Task<ProfileDto> GetAccountProfile();
     public Task ChangeEmail(UpdateEmailDto dto);
     public Task ChangePassword(UpdatePasswordDto passwordDto);
-    public Task DeleteAccount();
+    public Task DeleteAccount(int? id);
     public Task DeleteCompany();
 
 }

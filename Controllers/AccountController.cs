@@ -42,7 +42,7 @@ public class AccountController : ControllerBase
     [HttpDelete("DeleteAccount")]
     public async Task<ActionResult> DeleteAccount()
     {
-        await _accountService.DeleteAccount();
+        await _accountService.DeleteAccount(null);
         return NoContent();
     }
    
@@ -75,7 +75,5 @@ public class AccountController : ControllerBase
         await _accountService.ChangePassword(dto);
         return Ok();
     }
-
-
 
 }

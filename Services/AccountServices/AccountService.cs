@@ -121,9 +121,10 @@ public class AccountService : IAccountService
 
     }
 
-    public async Task DeleteAccount()
+    public async Task DeleteAccount(int? id)
     {
-        var accountId = _userService.GetUserId.GetValueOrDefault();
+        
+        var accountId = id ?? _userService.GetUserId.GetValueOrDefault();
         
         var account = await _dbContext.Accounts
             .FirstOrDefaultAsync(a => a.Id == accountId);

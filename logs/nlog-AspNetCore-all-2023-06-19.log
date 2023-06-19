@@ -1961,3 +1961,6 @@
 2023-06-19 22:22:18.7381|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRH059014CE" disconnecting. 
 2023-06-19 22:22:18.7381|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRH059014CE" stopped. 
 2023-06-19 22:22:18.7381|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMRH059014CE" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-19 22:36:12.2447|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-06-19 22:36:12.2461|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-06-19 22:36:12.2461|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 

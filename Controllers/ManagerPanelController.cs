@@ -27,4 +27,11 @@ public class ManagerPanelController : ControllerBase
         var id = await _accountService.RegisterEmployee(dto);
         return Created($"/api/company/EmployeeAccount/{id}", null);
     }
+
+    [HttpDelete("DeleteEmployee/{id}")]
+    public async Task<ActionResult> DeleteAccount([FromRoute] int id)
+    {
+        await _accountService.DeleteAccount(id);
+        return NoContent();
+    }
 }
