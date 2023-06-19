@@ -120,6 +120,7 @@ public class ApplicationService : IApplicationService
         {
             applications = await _dbContext.JobApplications
                 .Include(o => o.Offer)
+                .Include(a => a.Offer.Company)
                 .Where(o => o.Offer.CompanyId == companyId)
                 .ToListAsync();
         }
@@ -131,6 +132,7 @@ public class ApplicationService : IApplicationService
 
             applications = await _dbContext.JobApplications
                 .Include(o => o.Offer)
+                .Include(a => a.Offer.Company)
                 .Where(o => offersCreatedByUser.Select(offer => offer.Id).Contains(o.OfferId))
                 .ToListAsync();
         }
@@ -138,6 +140,7 @@ public class ApplicationService : IApplicationService
         {
             applications = await _dbContext.JobApplications
                 .Include(o => o.Offer)
+                .Include(a => a.Offer.Company)
                 .Where(o => o.CreatedById == userId)
                 .ToListAsync();
         }
