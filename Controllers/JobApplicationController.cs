@@ -49,11 +49,15 @@ public class JobApplicationController : ControllerBase
     /// <returns></returns>
     [Authorize(Policy = "UserRole")]
     [HttpPost("CreateApplication/{offerId}")]
-    public async Task<IActionResult> CreateApplication([FromForm] CreateJobApplicationDto dto,[FromRoute] int offerId,[FromForm] IFormFile file )
+    public async Task<IActionResult> CreateApplication([FromForm] CreateJobApplicationDto dto,[FromRoute] int offerId,[FromForm] IFormFile file)
     {
         try
         {
-            var applicationId = await _applicationService.CreateApplication(dto, offerId, file);
+            var applicationId = await _applicationService.CreateApplication(dto, offerId);
+            if (file != null)
+            {
+                await _applicationService.UploadFileAndSetPath(applicationId, file);
+            }
             return Ok(new { ApplicationId = applicationId });
         }
         catch (NotFoundException ex)
@@ -65,6 +69,7 @@ public class JobApplicationController : ControllerBase
             return StatusCode(500, ex.Message);
         }
     }
+
     [Authorize(Policy = "EmployeeRole")]
     [Authorize(Policy = "ManagerRole")]
     [Authorize(Policy = "UserRole")]

@@ -60,7 +60,10 @@ public class GetInItMappingProfile : Profile
             .ForAllMembers(opt => opt.Condition((src, dest, srcMember) => srcMember != null));
 
         CreateMap<CreateJobApplicationDto, JobApplication>().ForMember(a => a.Name, c => c.MapFrom(d => d.ApplicantName));
-        CreateMap<JobApplication,JobApplicationDto >().ForMember(a => a.ApplicantName, c => c.MapFrom(d => d.Name));;
+        CreateMap<JobApplication,JobApplicationDto >()
+            .ForMember(a => a.ApplicantName, c => c.MapFrom(d => d.Name))
+            .ForMember(a => a.CompanyName, c => c.MapFrom(c => c.Offer.Company.Name))
+            .ForMember(a=> a.Level, c => c.MapFrom(a=> a.Offer.Level.ToString()));
         CreateMap<JobApplication,SearchApplicationDto >()
             .ForMember(a => a.ApplicantName, c => c.MapFrom(d => d.Name))
             .ForMember(a => a.OfferName, o => o.MapFrom(a => a.Offer.Name));

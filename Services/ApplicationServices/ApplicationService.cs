@@ -22,8 +22,53 @@ public class ApplicationService : IApplicationService
         _mapper = mapper;
     }
 
-    
-    public async Task<int> CreateApplication(CreateJobApplicationDto dto, int offerId, IFormFile file)
+    public async Task<int> CreateApplication(CreateJobApplicationDto dto, int offerId)
+    {
+        var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Id == offerId);
+        if (offer is null) throw new NotFoundException("offer does not exist");
+        if (_userContextService.GetUserRole != Role.UserAccount.ToString()) throw new ForbidException();
+
+        var userId = _userContextService.GetUserId;
+        dto.ApplicantName = _userContextService.GetUserName;
+        dto.LastName = _userContextService.GetUserLastName;
+        dto.Email = _userContextService.GetUserMail;
+        dto.CreatedById = userId;
+        dto.OfferId = offerId;
+
+        var application = _mapper.Map<JobApplication>(dto);
+        await _dbContext.JobApplications.AddAsync(application);
+        await _dbContext.SaveChangesAsync();
+
+        return application.Id;
+    }
+    public async Task UploadFileAndSetPath(int applicationId, IFormFile file)
+    {
+        var application = await _dbContext.JobApplications.FirstOrDefaultAsync(a => a.Id == applicationId);
+        if (application is null) throw new NotFoundException("application does not exist");
+
+        if (file is { Length: > 0 })
+        {
+            var rootPath = Directory.GetCurrentDirectory();
+            var fileName = file.FileName;
+            var folderPath = Path.Combine(rootPath, "wwwroot", "OfferFiles", application.Id.ToString());
+            var fullPath = Path.Combine(folderPath, fileName);
+            Directory.CreateDirectory(folderPath);
+            await using (var stream = new FileStream(fullPath, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+
+            var relativePath = Path.GetRelativePath(rootPath, fullPath);
+            application.ResumePath = relativePath;
+            if (application.ResumePath is null) throw new NotFoundException("Resume must be added");
+
+            _dbContext.JobApplications.Update(application);
+            await _dbContext.SaveChangesAsync();
+        }
+    }
+
+
+    /*public async Task<int> CreateApplication(CreateJobApplicationDto dto, int offerId, IFormFile file)
     {
         var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Id == offerId);
         if (offer is null) throw new NotFoundException("offer does not exist");
@@ -61,46 +106,7 @@ public class ApplicationService : IApplicationService
         }
 
         return application.Id;
-    }
-
-    // public async Task<int> CreateApplication(CreateJobApplicationDto dto, int offerId, IFormFile file)
-    // {
-    //     var offer = await _dbContext.Offers.FirstOrDefaultAsync(o => o.Id == offerId);
-    //     if (offer is null) throw new NotFoundException("offer does not exist");
-    //     if (_userContextService.GetUserRole != Role.UserAccount.ToString()) throw new ForbidException();
-    //
-    //     var userId = _userContextService.GetUserId;
-    //     dto.ApplicantName = _userContextService.GetUserName;
-    //     dto.LastName = _userContextService.GetUserLastName;
-    //     dto.Email = _userContextService.GetUserMail;
-    //     dto.CreatedById = userId;
-    //     dto.OfferId = offerId;
-    //
-    //     if (file is { Length: > 0 })
-    //     {
-    //         var rootPath = Directory.GetCurrentDirectory();
-    //         var fileName = file.FileName;
-    //         var folderPath = Path.Combine(rootPath, "wwwroot", "OfferFiles", offerId.ToString(), userId.ToString());
-    //         var fullPath = Path.Combine(folderPath, fileName);
-    //         Directory.CreateDirectory(folderPath);
-    //         await using (var stream = new FileStream(fullPath, FileMode.Create))
-    //         {
-    //             await file.CopyToAsync(stream);
-    //         }
-    //
-    //         var relativePath = Path.GetRelativePath(rootPath, fullPath);
-    //         dto.ResumePath = relativePath;
-    //         if (dto.ResumePath is null) throw new NotFoundException("Resume must be added");
-    //     }
-    //
-    //     var application = _mapper.Map<JobApplication>(dto);
-    //
-    //     await _dbContext.JobApplications.AddAsync(application);
-    //     await _dbContext.SaveChangesAsync();
-    //     return application.Id;
-    // }
-
-
+    }*/
 
 
     public async Task<IEnumerable<JobApplicationDto>> GetAllApplications()
