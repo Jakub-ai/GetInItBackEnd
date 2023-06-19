@@ -69,6 +69,19 @@ public class PaymentService : IPaymentService
         };
         var service = new SessionService();
         Session session = await service.CreateAsync(options);
+
+        var paymentDto = new PaymentDto
+        {
+            Name = _userContextService.GetUserName,
+            LastName = _userContextService.GetUserLastName,
+            PaymentDate = DateTime.Now.Date,
+            Amount = (decimal)session.AmountTotal,
+            StripePaymentId = session.InvoiceId,
+            PaymentStatus = session.PaymentStatus
+        };
+        var paymentToDataBase = _mapper.Map<Payment>(paymentDto);
+        await _dbContext.Payments.AddAsync(paymentToDataBase);
+        await _dbContext.SaveChangesAsync();
         return session;
 
 
