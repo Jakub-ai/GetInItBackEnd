@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GetInItBackEnd.Migrations
 {
     [DbContext(typeof(GetInItDbContext))]
-    [Migration("20230618121520_alt1")]
-    partial class alt1
+    [Migration("20230619185046_alt5")]
+    partial class alt5
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -78,8 +78,6 @@ namespace GetInItBackEnd.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CompanyId");
-
-                    b.HasIndex("CreatedById");
 
                     b.ToTable("Accounts");
                 });
@@ -223,8 +221,6 @@ namespace GetInItBackEnd.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CreatedById");
-
                     b.HasIndex("OfferId");
 
                     b.ToTable("JobApplications");
@@ -286,8 +282,6 @@ namespace GetInItBackEnd.Migrations
 
                     b.HasIndex("CompanyId");
 
-                    b.HasIndex("CreatedById");
-
                     b.ToTable("Offers");
                 });
 
@@ -301,9 +295,6 @@ namespace GetInItBackEnd.Migrations
 
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,4)");
-
-                    b.Property<int?>("CompanyId")
-                        .HasColumnType("int");
 
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
@@ -321,8 +312,6 @@ namespace GetInItBackEnd.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CompanyId");
 
                     b.ToTable("Payments");
                 });
@@ -384,13 +373,7 @@ namespace GetInItBackEnd.Migrations
                         .WithMany("Accounts")
                         .HasForeignKey("CompanyId");
 
-                    b.HasOne("GetInItBackEnd.Entities.Account", "CreatedBy")
-                        .WithMany()
-                        .HasForeignKey("CreatedById");
-
                     b.Navigation("Company");
-
-                    b.Navigation("CreatedBy");
                 });
 
             modelBuilder.Entity("GetInItBackEnd.Entities.Company", b =>
@@ -404,17 +387,11 @@ namespace GetInItBackEnd.Migrations
 
             modelBuilder.Entity("GetInItBackEnd.Entities.JobApplication", b =>
                 {
-                    b.HasOne("GetInItBackEnd.Entities.Account", "CreatedBy")
-                        .WithMany()
-                        .HasForeignKey("CreatedById");
-
                     b.HasOne("GetInItBackEnd.Entities.Offer", "Offer")
                         .WithMany("JobApplications")
                         .HasForeignKey("OfferId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("CreatedBy");
 
                     b.Navigation("Offer");
                 });
@@ -427,20 +404,7 @@ namespace GetInItBackEnd.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("GetInItBackEnd.Entities.Account", "CreatedBy")
-                        .WithMany()
-                        .HasForeignKey("CreatedById");
-
                     b.Navigation("Company");
-
-                    b.Navigation("CreatedBy");
-                });
-
-            modelBuilder.Entity("GetInItBackEnd.Entities.Payment", b =>
-                {
-                    b.HasOne("GetInItBackEnd.Entities.Company", null)
-                        .WithMany("Payments")
-                        .HasForeignKey("CompanyId");
                 });
 
             modelBuilder.Entity("OfferTechnology", b =>
@@ -468,8 +432,6 @@ namespace GetInItBackEnd.Migrations
                     b.Navigation("Accounts");
 
                     b.Navigation("Offers");
-
-                    b.Navigation("Payments");
                 });
 
             modelBuilder.Entity("GetInItBackEnd.Entities.Offer", b =>

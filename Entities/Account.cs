@@ -12,7 +12,7 @@ public class Account
     public string? Url { get; set; }
     
     public int? CreatedById { get; set; }
-    public virtual Account? CreatedBy { get; set; }
+  
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public Role Role { get; set; }
     public int? CompanyId { get; set; }

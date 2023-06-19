@@ -102,6 +102,40 @@ public class AccountService : IAccountService
         return account.Id;
     }
 
+    public async Task DeleteCompany()
+    {
+        var companyId = _userService.GetCompanyId;
+
+        var company = await _dbContext.Companies
+            .Include(c=> c.Accounts)
+            .Include(c => c.Address)
+            .Include(c => c.Offers)
+                .ThenInclude(o => o.JobApplications)
+            .FirstOrDefaultAsync(c => c.Id == companyId);
+        if (company is null)
+        {
+            throw new NotFoundException("Company Not Found");
+        }
+        _dbContext.RemoveRange(company);
+        await _dbContext.SaveChangesAsync();
+
+    }
+
+    public async Task DeleteAccount()
+    {
+        var accountId = _userService.GetUserId.GetValueOrDefault();
+        
+        var account = await _dbContext.Accounts
+            .FirstOrDefaultAsync(a => a.Id == accountId);
+        
+        if (account == null)
+        {
+            throw new NotFoundException("User not found.");
+        }
+        _dbContext.Accounts.Remove(account);
+        await _dbContext.SaveChangesAsync();
+       
+    }
     public async Task<int> RegisterCompanyAccount(CreateAccountDto accountDto)
     {
         var account = _mapper.Map<Account>(accountDto);

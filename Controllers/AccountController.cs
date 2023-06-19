@@ -1,5 +1,6 @@
 ﻿using GetInItBackEnd.Models.Account;
 using GetInItBackEnd.Services.AccountServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GetInItBackEnd.Controllers;
@@ -36,6 +37,23 @@ public class AccountController : ControllerBase
         var token = await _accountService.GenerateJwt(dto);
         return Ok(token);
     }
+    [Authorize(Policy = "EmployeeRole")]
+    [Authorize(Policy = "UserRole")]
+    [HttpDelete("DeleteAccount")]
+    public async Task<ActionResult> DeleteAccount()
+    {
+        await _accountService.DeleteAccount();
+        return NoContent();
+    }
+   
+    [Authorize(Policy = "ManagerRole")]
+    [HttpDelete("DeleteAccountAndCompany")]
+    public async Task<ActionResult> DeleteOffer()
+    {
+        //await _accountService.DeleteAccount();
+        await _accountService.DeleteCompany();
+        return NoContent();
+    }
 
     [HttpGet("AccountProfile")]
     public async Task<ActionResult> GetProfileInfo()
@@ -57,7 +75,6 @@ public class AccountController : ControllerBase
         await _accountService.ChangePassword(dto);
         return Ok();
     }
-
 
 
 

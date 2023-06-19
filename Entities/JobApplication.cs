@@ -13,7 +13,7 @@ public class JobApplication
     public string? Message { get; set; }
     public int OfferId { get; set; }
     public int? CreatedById { get; set; }
-    public virtual Account? CreatedBy { get; set; }
+  
 
     public virtual Offer Offer { get; set; }
 }

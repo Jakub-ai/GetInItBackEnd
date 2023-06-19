@@ -18,6 +18,51 @@ public class GetInItDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Company>()
+            .HasMany(c => c.Accounts)
+            .WithOne(a => a.Company)
+            .HasForeignKey(a => a.CompanyId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<Company>()
+            .HasOne(c => c.Address)
+            .WithOne(a => a.Company)
+            .HasForeignKey<Company>(a => a.AddressId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<Company>()
+            .HasMany(c => c.Offers)
+            .WithOne(o => o.Company)
+            .HasForeignKey(o => o.CompanyId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<Offer>()
+            .HasMany(o => o.JobApplications)
+            .WithOne(j => j.Offer)
+            .HasForeignKey(j => j.OfferId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<Offer>()
+            .HasMany(o => o.Technologies)
+            .WithMany(t => t.Offers);
+
+        modelBuilder.Entity<Offer>()
+            .HasMany(o => o.EmploymentTypes)
+            .WithMany(e => e.Offers)
+            .UsingEntity<Dictionary<string, object>>(
+                "OfferEmploymentType",
+                j => j.HasOne<EmploymentType>().WithMany().HasForeignKey("EmploymentTypeId"),
+                j => j.HasOne<Offer>().WithMany().HasForeignKey("OfferId"),
+                j =>
+                {
+                    j.Property<DateTime>("CreatedAt").HasDefaultValueSql("GETDATE()");
+                    j.HasKey("OfferId", "EmploymentTypeId");
+                });
+
+     
+        modelBuilder.Entity<Technology>()
+            .HasMany(t => t.Offers)
+            .WithMany(o => o.Technologies);
         //Account Table Configuration
         modelBuilder.Entity<Account>().Property(ac => ac.Email).IsRequired();
         modelBuilder.Entity<Account>().Property(ac => ac.Role)

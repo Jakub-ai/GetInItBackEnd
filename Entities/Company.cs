@@ -15,6 +15,6 @@ public class Company
     
     public  Address? Address { get; set; }
     public  List<Offer>? Offers { get; set; }
-    public  List<Payment>? Payments { get; set; }
+
     public  List<Account>? Accounts { get; set; }
 }

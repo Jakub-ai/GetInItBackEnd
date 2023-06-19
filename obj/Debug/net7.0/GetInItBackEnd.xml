@@ -42,5 +42,65 @@
         <member name="M:GetInItBackEnd.Migrations.alt1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:GetInItBackEnd.Migrations.alt2">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt2.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt2.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt2.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:GetInItBackEnd.Migrations.alt3">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt3.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt3.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt3.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:GetInItBackEnd.Migrations.alt5">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt5.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt5.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt5.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:GetInItBackEnd.Migrations.alt6">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt6.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt6.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt6.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:GetInItBackEnd.Migrations.alt7">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt7.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt7.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.alt7.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>
