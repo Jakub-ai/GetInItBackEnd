@@ -71,6 +71,7 @@ public class GetInItMappingProfile : Profile
         //payments
 
         CreateMap<PaymentDto, Payment>().ReverseMap();
+        CreateMap<OfflinePaymentDto, Payment>().ReverseMap();
         
 
     }

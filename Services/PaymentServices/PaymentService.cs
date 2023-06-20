@@ -93,6 +93,7 @@ public class PaymentService : IPaymentService
     {
         var payment = _mapper.Map<Payment>(dto);
         payment.PaymentStatus = "Offline Payment";
+        payment.PaymentDate = DateTime.UtcNow;
         await _dbContext.Payments.AddAsync(payment);
         await _dbContext.SaveChangesAsync();
         return payment.Id;
