@@ -29,7 +29,7 @@ public class CheckoutApiController : Controller
 
     [Authorize(Policy = "AdminRole")]
     [HttpPost("OfflinePayment")]
-    public async Task<IActionResult> CreatePaymentOffline(PaymentDto dto)
+    public async Task<IActionResult> CreatePaymentOffline(OfflinePaymentDto dto)
     {
         await _paymentService.CreatePayment(dto);
         return Ok();

@@ -79,7 +79,7 @@ public class PaymentService : IPaymentService
             Name = _userContextService.GetUserName,
             Email = _userContextService.GetUserMail,
             PaymentDate = DateTime.UtcNow,
-            Amount = "5",
+            Amount = "15",
             StripePaymentId = new Random().Next(100000).ToString(),
             PaymentStatus = "Paid"
         };
@@ -89,10 +89,10 @@ public class PaymentService : IPaymentService
         return paymentToDataBase.Id;
     }
 
-    public async Task<int> CreatePayment(PaymentDto dto)
+    public async Task<int> CreatePayment(OfflinePaymentDto dto)
     {
-        dto.PaymentStatus = "Offline Payment";
         var payment = _mapper.Map<Payment>(dto);
+        payment.PaymentStatus = "Offline Payment";
         await _dbContext.Payments.AddAsync(payment);
         await _dbContext.SaveChangesAsync();
         return payment.Id;
