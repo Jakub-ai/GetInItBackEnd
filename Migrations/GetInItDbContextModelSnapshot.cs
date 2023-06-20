@@ -275,16 +275,18 @@ namespace GetInItBackEnd.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,4)");
+                    b.Property<string>("Amount")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("LastName")
+                    b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("PaymentDate")
+                    b.Property<DateTime?>("PaymentDate")
+                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PaymentStatus")

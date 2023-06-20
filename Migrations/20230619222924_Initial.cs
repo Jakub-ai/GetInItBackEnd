@@ -42,6 +42,24 @@ namespace GetInItBackEnd.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Payments",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PaymentDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Amount = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StripePaymentId = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PaymentStatus = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Payments", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Technologies",
                 columns: table => new
                 {
@@ -77,7 +95,8 @@ namespace GetInItBackEnd.Migrations
                         name: "FK_Companies_Addresses_AddressId",
                         column: x => x.AddressId,
                         principalTable: "Addresses",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -99,39 +118,11 @@ namespace GetInItBackEnd.Migrations
                 {
                     table.PrimaryKey("PK_Accounts", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Accounts_Accounts_CreatedById",
-                        column: x => x.CreatedById,
-                        principalTable: "Accounts",
-                        principalColumn: "Id");
-                    table.ForeignKey(
                         name: "FK_Accounts_Companies_CompanyId",
                         column: x => x.CompanyId,
                         principalTable: "Companies",
-                        principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Payments",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PaymentDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Amount = table.Column<decimal>(type: "decimal(18,4)", nullable: false),
-                    StripePaymentId = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PaymentStatus = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CompanyId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Payments", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Payments_Companies_CompanyId",
-                        column: x => x.CompanyId,
-                        principalTable: "Companies",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -157,38 +148,9 @@ namespace GetInItBackEnd.Migrations
                 {
                     table.PrimaryKey("PK_Offers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Offers_Accounts_CreatedById",
-                        column: x => x.CreatedById,
-                        principalTable: "Accounts",
-                        principalColumn: "Id");
-                    table.ForeignKey(
                         name: "FK_Offers_Companies_CompanyId",
                         column: x => x.CompanyId,
                         principalTable: "Companies",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "EmploymentTypeOffer",
-                columns: table => new
-                {
-                    EmploymentTypesId = table.Column<int>(type: "int", nullable: false),
-                    OffersId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_EmploymentTypeOffer", x => new { x.EmploymentTypesId, x.OffersId });
-                    table.ForeignKey(
-                        name: "FK_EmploymentTypeOffer_EmploymentTypes_EmploymentTypesId",
-                        column: x => x.EmploymentTypesId,
-                        principalTable: "EmploymentTypes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_EmploymentTypeOffer_Offers_OffersId",
-                        column: x => x.OffersId,
-                        principalTable: "Offers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -212,12 +174,32 @@ namespace GetInItBackEnd.Migrations
                 {
                     table.PrimaryKey("PK_JobApplications", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_JobApplications_Accounts_CreatedById",
-                        column: x => x.CreatedById,
-                        principalTable: "Accounts",
-                        principalColumn: "Id");
-                    table.ForeignKey(
                         name: "FK_JobApplications_Offers_OfferId",
+                        column: x => x.OfferId,
+                        principalTable: "Offers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "OfferEmploymentType",
+                columns: table => new
+                {
+                    OfferId = table.Column<int>(type: "int", nullable: false),
+                    EmploymentTypeId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETDATE()")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OfferEmploymentType", x => new { x.OfferId, x.EmploymentTypeId });
+                    table.ForeignKey(
+                        name: "FK_OfferEmploymentType_EmploymentTypes_EmploymentTypeId",
+                        column: x => x.EmploymentTypeId,
+                        principalTable: "EmploymentTypes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_OfferEmploymentType_Offers_OfferId",
                         column: x => x.OfferId,
                         principalTable: "Offers",
                         principalColumn: "Id",
@@ -254,11 +236,6 @@ namespace GetInItBackEnd.Migrations
                 column: "CompanyId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Accounts_CreatedById",
-                table: "Accounts",
-                column: "CreatedById");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Companies_AddressId",
                 table: "Companies",
                 column: "AddressId",
@@ -266,19 +243,14 @@ namespace GetInItBackEnd.Migrations
                 filter: "[AddressId] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_EmploymentTypeOffer_OffersId",
-                table: "EmploymentTypeOffer",
-                column: "OffersId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_JobApplications_CreatedById",
-                table: "JobApplications",
-                column: "CreatedById");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_JobApplications_OfferId",
                 table: "JobApplications",
                 column: "OfferId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OfferEmploymentType_EmploymentTypeId",
+                table: "OfferEmploymentType",
+                column: "EmploymentTypeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Offers_CompanyId",
@@ -286,29 +258,22 @@ namespace GetInItBackEnd.Migrations
                 column: "CompanyId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Offers_CreatedById",
-                table: "Offers",
-                column: "CreatedById");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_OfferTechnology_TechnologiesId",
                 table: "OfferTechnology",
                 column: "TechnologiesId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Payments_CompanyId",
-                table: "Payments",
-                column: "CompanyId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "EmploymentTypeOffer");
+                name: "Accounts");
 
             migrationBuilder.DropTable(
                 name: "JobApplications");
+
+            migrationBuilder.DropTable(
+                name: "OfferEmploymentType");
 
             migrationBuilder.DropTable(
                 name: "OfferTechnology");
@@ -324,9 +289,6 @@ namespace GetInItBackEnd.Migrations
 
             migrationBuilder.DropTable(
                 name: "Technologies");
-
-            migrationBuilder.DropTable(
-                name: "Accounts");
 
             migrationBuilder.DropTable(
                 name: "Companies");

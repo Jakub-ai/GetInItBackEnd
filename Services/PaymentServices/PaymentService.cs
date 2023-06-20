@@ -69,22 +69,24 @@ public class PaymentService : IPaymentService
         };
         var service = new SessionService();
         Session session = await service.CreateAsync(options);
+        return session;
+    }
 
-        var paymentDto = new PaymentDto
+    public async Task<int> SavePayment()
+    {
+        var paymentDto =  new PaymentDto
         {
             Name = _userContextService.GetUserName,
-            LastName = _userContextService.GetUserLastName,
-            PaymentDate = DateTime.Now.Date,
-            Amount = (decimal)session.AmountTotal,
-            StripePaymentId = session.InvoiceId,
-            PaymentStatus = session.PaymentStatus
+            Email = _userContextService.GetUserMail,
+            PaymentDate = DateTime.UtcNow,
+            Amount = "5",
+            StripePaymentId = new Random().Next(100000).ToString(),
+            PaymentStatus = "Paid"
         };
         var paymentToDataBase = _mapper.Map<Payment>(paymentDto);
         await _dbContext.Payments.AddAsync(paymentToDataBase);
         await _dbContext.SaveChangesAsync();
-        return session;
-
-
+        return paymentToDataBase.Id;
     }
 
     public async Task<int> CreatePayment(PaymentDto dto)
@@ -97,7 +99,7 @@ public class PaymentService : IPaymentService
     }
     
 
-    public async Task<int> PaymentToDatabase(HttpRequest request)
+    /*public async Task<int> PaymentToDatabase(HttpRequest request)
     {
         var json = await new StreamReader(request.Body).ReadToEndAsync();
 
@@ -112,8 +114,8 @@ public class PaymentService : IPaymentService
                 var paymentDto = new PaymentDto
                 {
                     
-                    PaymentDate = DateTime.Now,
-                    Amount = paymentIntent.Amount / 100M,
+                    PaymentDate = DateTime.UtcNow,
+                    Amount = paymentIntent.Amount.ToString() ,
                     StripePaymentId = paymentIntent.Id,
                     PaymentStatus = "Succeeded",
                     Name = _userContextService.GetUserName,
@@ -128,7 +130,7 @@ public class PaymentService : IPaymentService
                     StripePaymentId = paymentDto.StripePaymentId,
                     PaymentStatus = paymentDto.PaymentStatus,
                     Name = paymentDto.Name,
-                    LastName = paymentDto.LastName
+                    Email = paymentDto.Email
                     
                     
                 };
@@ -147,5 +149,6 @@ public class PaymentService : IPaymentService
             return -1; // W przypadku błędu, zwróć -1
         }
     }
+    */
 
 }

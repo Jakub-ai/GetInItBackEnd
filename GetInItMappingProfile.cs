@@ -70,7 +70,7 @@ public class GetInItMappingProfile : Profile
 
         //payments
 
-        CreateMap<PaymentDto, Payment>();
+        CreateMap<PaymentDto, Payment>().ReverseMap();
         
 
     }

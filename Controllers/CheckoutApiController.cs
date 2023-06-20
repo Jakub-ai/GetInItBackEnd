@@ -21,9 +21,10 @@ public class CheckoutApiController : Controller
     [HttpPost("Payment")]
     public async Task<ActionResult> MakePayment()
     {
-        var url = _paymentService.MakePayment().Result.Url;
-        Response.Headers.Add("Location",  url);
-        return await Task.FromResult<ActionResult>(new StatusCodeResult(303));
+        var paymentResult = await _paymentService.MakePayment();
+        var url = paymentResult.Url;
+        Response.Headers.Add("Location", url);
+        return StatusCode(303);
     }
 
     [Authorize(Policy = "AdminRole")]
@@ -48,22 +49,13 @@ public class CheckoutApiController : Controller
         await _paymentService.GetByIdPayment(id);
         return Ok();
     }
-    [HttpPost("webhook")]
-    public async Task<IActionResult> HandleStripeWebhook()
+
+    [HttpPost("PaymentToDataBase")]
+    public async Task<IActionResult> PaymentToDataBase()
     {
-        
-        var result = await _paymentService.PaymentToDatabase(Request);
-
-        if (result == 1)
-        {
-            return Ok();
-        }
-        else if (result == -1)
-        {
-            return StatusCode(StatusCodes.Status500InternalServerError);
-        }
-
-        return BadRequest();
+        await _paymentService.SavePayment();
+        return Ok();
     }
+   
 }
 
