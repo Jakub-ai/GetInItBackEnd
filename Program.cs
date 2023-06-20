@@ -20,6 +20,7 @@ using GetInItBackEnd.Services.OfferServices;
 using GetInItBackEnd.Services.PaymentServices;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -70,7 +71,8 @@ builder.Services.AddAuthentication(option =>
 });
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<GetInItDbContext>();
+builder.Services.AddDbContext<GetInItDbContext>(options => options.UseSqlServer(
+    builder.Configuration.GetConnectionString("GetInIt")));
 builder.Services.AddScoped<TechnologySeeder>();
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Logging.ClearProviders();

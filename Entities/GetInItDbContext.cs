@@ -4,7 +4,10 @@ namespace GetInItBackEnd.Entities;
 
 public class GetInItDbContext : DbContext
 {
-    private const string ConnectionString = "Server=localhost;Database=GetInItDB;User Id=SA;Password=GetInIt1234;TrustServerCertificate=True;Encrypt=True;";
+    public GetInItDbContext(DbContextOptions<GetInItDbContext> options) : base(options)
+    {
+    }
+   // private const string ConnectionString = "Server=localhost;Database=GetInItDB;User Id=SA;Password=GetInIt1234;TrustServerCertificate=True;Encrypt=True;";
     
     public DbSet<Account> Accounts { get; set; }
     public DbSet<Address> Addresses { get; set; }
@@ -97,9 +100,9 @@ public class GetInItDbContext : DbContext
         //Technology Table Configuration
         modelBuilder.Entity<Technology>().Property(t => t.Skill).IsRequired().HasMaxLength(50);
     }
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseSqlServer(ConnectionString);
-    }
+    // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    // {
+    //     optionsBuilder.UseSqlServer(ConnectionString);
+    // }
     
 }

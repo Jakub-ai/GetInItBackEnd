@@ -23,9 +23,7 @@ public class OfferService : IOfferService
 
     public async Task<int> Create(CreateOfferDto dto)
     {
-        var address =
-            await _dbContext.Addresses.FirstOrDefaultAsync(a => a.Company.Id == (int)_userContextService.GetCompanyId);
-        dto.City = address.City;
+       
         var offer = _mapper.Map<Offer>(dto);
         offer.CreatedById = (int)_userContextService.GetUserId;
         offer.CompanyId = (int)_userContextService.GetCompanyId;
