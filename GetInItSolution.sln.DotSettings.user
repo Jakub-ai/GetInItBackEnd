@@ -3,5 +3,8 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::7E59B41B-50EF-463E-BB9A-4E0C8A8E3BAC::net7.0::GetInItBackEnd.Tests.StringBuilderTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::7E59B41B-50EF-463E-BB9A-4E0C8A8E3BAC::net7.0::GetInItBackEnd.Tests.AccountControllerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A6852D71-0426-4EE1-9F53-F8FACF60F811::net7.0::GetInItBackend.Integration.Tests.AccountControllerTests.Get_AccountProfile_ReturnOkResults&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A6852D71-0426-4EE1-9F53-F8FACF60F811::net7.0::GetInItBackend.Integration.Tests.AccountControllerTests.GetAllOffers_ReturnsSuccessStatusCode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::B7B7C5AF-469B-4B8A-BF80-F4AE5425D99E::net7.0::GetInItBackend.Integration.Tests.AccountControllerTests.GetAllOffers_ReturnsSuccessStatusCode&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
