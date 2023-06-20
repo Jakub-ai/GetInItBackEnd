@@ -35,4 +35,10 @@
     <Folder Include="wwwroot\OfferFiles" />
   </ItemGroup>
 
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="GetInBackEndTests\obj\GetInBackEndTests.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="GetInBackEndTests\obj\project.assets.json" />
+    <_ContentIncludedByDefault Remove="GetInBackEndTests\obj\project.packagespec.json" />
+  </ItemGroup>
+
 </Project>
