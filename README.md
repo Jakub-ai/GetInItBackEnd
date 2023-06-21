@@ -8,13 +8,13 @@ The application is built using a layered architecture: Data Access Layer with En
 The project is implemented using the following technologies:
 
 - ASP.NET Core REST Web API
--Docker
--Entity Framework
--MSSQL 2019
--AutoMapper
--JWT Token Authentication
--Stripe Payment Integration
--.NET 7.0
+- Docker
+- Entity Framework
+- MSSQL 2019
+- AutoMapper
+- JWT Token Authentication
+- Stripe Payment Integration
+- .NET 7.0
 # Requirements
 To run this project, you need Docker and .NET 7.0 SDK installed.
 
