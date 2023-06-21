@@ -50,9 +50,9 @@ public class AccountController : ControllerBase
     [Authorize(Policy = "EmployeeRole")]
     [Authorize(Policy = "UserRole")]
     [HttpDelete("DeleteAccount")]
-    public async Task<ActionResult> DeleteAccount()
+    public async Task<ActionResult> DeleteAccount(int? id)
     {
-        await _accountService.DeleteAccount(null);
+        await _accountService.DeleteAccount(id);
         return NoContent();
     }
    

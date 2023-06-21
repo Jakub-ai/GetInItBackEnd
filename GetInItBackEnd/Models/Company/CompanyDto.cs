@@ -15,15 +15,5 @@ public class CompanyDto
     public int Regon { get; set; }
     public virtual List<AccountCompanyEmployeeDto>? Accounts { get; set; }
     public virtual AddressDto? Address { get; set; }
-  
     
-
-    /*public static CompanyDto FromCompanyDto(Company company)
-    {
-                  return new CompanyDto
-                  {
-                      Name = company.Name,
-                      Url = company.Url
-                  };
-    }*/
 }

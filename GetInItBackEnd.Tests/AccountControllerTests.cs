@@ -6,6 +6,7 @@ using GetInItBackEnd.Models.Address;
 using GetInItBackEnd.Models.Company;
 using GetInItBackEnd.Services.AccountServices;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Moq;
 
 namespace GetInItBackEnd.Tests;
@@ -15,7 +16,7 @@ public class AccountControllerTests
     [Fact]
     public async Task RegisterCompanyAccount_ReturnsCreatedResult_WhenDtoIsValid()
     {
-        // Arrange
+   
         var fixture = new Fixture();
         var mockService = new Mock<IAccountService>();
 
@@ -27,10 +28,10 @@ public class AccountControllerTests
 
         var controller = new AccountController(mockService.Object);
 
-        // Act
+       
         var result = await controller.RegisterCompanyAccount(validAccountDto);
 
-        // Assert
+
         var createdAtActionResult = Assert.IsType<CreatedResult>(result);
         Assert.Equal($"/api/account/{createdId}", createdAtActionResult.Location);
     }
@@ -39,7 +40,7 @@ public class AccountControllerTests
     [Fact]
     public async Task RegisterUserAccount_ReturnsCreatedResult_WhenDtoIsValid()
     {
-        // Arrange
+     
         var fixture = new Fixture();
         var mockService = new Mock<IAccountService>();
 
@@ -57,6 +58,46 @@ public class AccountControllerTests
         var createdAtActionResult = Assert.IsType<CreatedResult>(result);
         Assert.Equal($"/api/account/{createdId}", createdAtActionResult.Location);
     }
+    [Fact]
+    public async Task ChangePassword_ReturnsOk_WhenCalled()
+    {
+       
+        var mockAccountService = new Mock<IAccountService>();
+        var dto = new UpdatePasswordDto { Password = "NewPassword", ConfirmPassword = "NewPassword" };
+    
+        mockAccountService
+            .Setup(service => service.ChangePassword(dto))
+            .Returns(Task.CompletedTask);
+
+        var controller = new AccountController(mockAccountService.Object);
+
+     
+        var result = await controller.ChangePassword(dto);
+
+        
+        Assert.IsType<OkResult>(result);
+    }
+    [Fact]
+    public async Task ChangeEmail_ReturnsOk_WhenCalled()
+    {
+      
+        var mockAccountService = new Mock<IAccountService>();
+        var dto = new UpdateEmailDto { Email = "newEmail@example.com", ConfirmEmail = "newEmail@example.com" };
+    
+        mockAccountService
+            .Setup(service => service.ChangeEmail(dto))
+            .Returns(Task.CompletedTask);
+
+        var controller = new AccountController(mockAccountService.Object);
+
+        
+        var result = await controller.ChangeEmail(dto);
+
+       
+        Assert.IsType<OkResult>(result);
+    }
+
+
 
 
 }

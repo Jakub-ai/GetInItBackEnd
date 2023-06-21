@@ -42,11 +42,10 @@ public class OfferControllerTests : IClassFixture<WebApplicationFactory<Program>
     [Fact]
     public async Task GetAllOffers_ReturnsSuccessStatusCode()
     {
-        // Arrange
-        // Act
+        
         var response = await _client.GetAsync("/api/offer/GetEveryExistingOffer");
 
-        // Assert
+
         response.EnsureSuccessStatusCode(); // Status Code 200-299
     }
 
@@ -59,9 +58,7 @@ public class OfferControllerTests : IClassFixture<WebApplicationFactory<Program>
         var json = JsonConvert.SerializeObject(model);
         var httpContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
 
-        // string jwtToken =
-        //     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA5LzA5L2lkZW50aXR5L2NsYWltcy9hY3RvciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiSmFrdWIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJNYW5hZ2VyQ29tcGFueUFjY291bnQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zdXJuYW1lIjoiV29qIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoibWFpbDFAbWFpbC5jb20iLCJleHAiOjE2ODg1NzI3MzIsImlzcyI6Imh0dHA6Ly9HZXRJbkl0LmNvbSIsImF1ZCI6Imh0dHA6Ly9HZXRJbkl0LmNvbSJ9.GUZNJzGeYKXJwMLwx5jOmY55nFGJUMCVlR8GiHD57b0";
-        // _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
+      
         var response = await _client.PostAsync("api/offer/createOffer", httpContent);
 
         response.StatusCode.Should().Be(System.Net.HttpStatusCode.Created);
