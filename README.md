@@ -19,33 +19,32 @@ The project is implemented using the following technologies:
 To run this project, you need Docker and .NET 7.0 SDK installed.
 
 # Installation
-Clone the repository to your local computer:
-git clone https://github.com/YourGithubUsername/GetInBackEnd.git
+1. Clone the repository to your local computer:
+```git clone https://github.com/YourGithubUsername/GetInBackEnd.git```
 
-Navigate to the project folder:
-cd GetInBackEnd
+2. Navigate to the project folder:
+```cd GetInBackEnd```
 
-Restore the .NET packages and install the required dependencies:
-dotnet restore
+3. Restore the .NET packages and install the required dependencies:
+```dotnet restore```
 
-Update the connection strings in appsettings.json to match your SQL Server setup.
+4. Update the connection strings in appsettings.json to match your SQL Server setup.
 
-Build the solution:
-dotnet build
+5. Build the solution:
+```dotnet build```
 
-Run the web project:
-dotnet run --project GetInBackEnd
+6. Run the web project:
+```dotnet run --project GetInBackEnd```
 
-Alternatively, run the application in a Docker container:
+7. Alternatively, run the application in a Docker container:
 
-Build the Docker image:
-docker build -t getinbackend .
+8. Build the Docker image from the project directory:
+```docker build -t getinbackend ```
 
-Run the Docker container:
-docker run -p 5000:80 getinbackend
+9. Run the Docker container:
+```docker run -p 5000:80 getinbackend```
 
-The API will now be running on http://localhost:5000.
-
+The API will now be running on http://localhost:50099.
 # Usage
 After installation and running the application, companies can register and add employees to create and view their own job listings. Individual users can view these listings and apply directly, attaching their CV in PDF format if necessary. Payments for donations can be made securely via Stripe.
 
