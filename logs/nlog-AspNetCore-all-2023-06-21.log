@@ -1,1144 +1,192 @@
-2023-06-21 14:01:21.7933|0|DEBUG|Program|init main 
-2023-06-21 14:01:22.1319|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
-2023-06-21 14:01:22.4728|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'OfferId'} was not created on entity type 'OfferEmploymentType (Dictionary<string, object>)' as the properties are already covered by the index {'OfferId', 'EmploymentTypeId'}. 
-2023-06-21 14:01:22.4728|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'OffersId'} was not created on entity type 'OfferTechnology (Dictionary<string, object>)' as the properties are already covered by the index {'OffersId', 'TechnologiesId'}. 
-2023-06-21 14:01:22.5469|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'OfferTechnology (Dictionary<string, object>).OffersId' was created in shadow state because there are no eligible CLR members with a matching name. 
-2023-06-21 14:01:22.5469|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'OfferTechnology (Dictionary<string, object>).TechnologiesId' was created in shadow state because there are no eligible CLR members with a matching name. 
-2023-06-21 14:01:22.5862|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.7 initialized 'GetInItDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:7.0.7' with options: StoreName=GetInItDb  
-2023-06-21 14:01:22.6053|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+2023-06-21 15:15:56.3430|0|DEBUG|Program|init main 
+2023-06-21 15:15:56.7562|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2023-06-21 15:15:57.3648|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'OfferId'} was not created on entity type 'OfferEmploymentType (Dictionary<string, object>)' as the properties are already covered by the index {'OfferId', 'EmploymentTypeId'}. 
+2023-06-21 15:15:57.3648|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'OffersId'} was not created on entity type 'OfferTechnology (Dictionary<string, object>)' as the properties are already covered by the index {'OffersId', 'TechnologiesId'}. 
+2023-06-21 15:15:57.4705|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'OfferTechnology (Dictionary<string, object>).OffersId' was created in shadow state because there are no eligible CLR members with a matching name. 
+2023-06-21 15:15:57.4705|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'OfferTechnology (Dictionary<string, object>).TechnologiesId' was created in shadow state because there are no eligible CLR members with a matching name. 
+2023-06-21 15:15:57.4975|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'SalaryFrom' on entity type 'Offer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-06-21 15:15:57.4975|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'SalaryTo' on entity type 'Offer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-06-21 15:15:57.6894|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.3 initialized 'GetInItDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.3' with options: None 
+2023-06-21 15:15:57.7076|20005|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2023-06-21 15:15:57.7433|20006|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (33ms). 
+2023-06-21 15:15:57.7470|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-21 15:15:57.9514|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-21 15:15:57.9680|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2023-06-21 15:15:57.9680|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (7ms). 
+2023-06-21 15:15:57.9680|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (14ms). 
+2023-06-21 15:15:57.9889|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2023-06-21 15:15:58.0416|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (56ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2023-06-21 15:15:58.0480|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-21 15:15:58.0594|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'GetInItDB' on server 'localhost' (7ms). 
+2023-06-21 15:15:58.1169|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
 'DbSet<Technology>()
     .Any()' 
-2023-06-21 14:01:22.6862|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
-'queryContext => new QueryingEnumerable<bool>(
-    queryContext, 
-    new ResultEnumerable(() => new ValueBuffer(new object[]{ (object)InMemoryShapedQueryCompilingExpressionVisitor.Table(
-        queryContext: queryContext, 
-        entityType: EntityType: Technology)
-        .Any() })), 
-    Func<QueryContext, ValueBuffer, bool>, 
+2023-06-21 15:15:58.2982|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            SELECT 1
+            FROM Technologies AS t)), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
     GetInItBackEnd.Entities.GetInItDbContext, 
+    False, 
     False, 
     True
 )
     .Single()' 
-2023-06-21 14:01:22.7208|10808|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"GetInItDbContext"' generated a value for the property '"Id"."Technology"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:22.7476|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'GetInItDbContext' started tracking 'Technology' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:22.7476|10808|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"GetInItDbContext"' generated a value for the property '"Id"."Technology"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:22.7476|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'GetInItDbContext' started tracking 'Technology' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:22.7476|10808|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"GetInItDbContext"' generated a value for the property '"Id"."Technology"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:22.7476|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'GetInItDbContext' started tracking 'Technology' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:22.7476|10808|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"GetInItDbContext"' generated a value for the property '"Id"."Technology"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:22.7476|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'GetInItDbContext' started tracking 'Technology' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:22.7476|10004|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'GetInItDbContext'. 
-2023-06-21 14:01:22.7476|10800|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'GetInItDbContext'. 
-2023-06-21 14:01:22.7476|10801|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'GetInItDbContext'. 
-2023-06-21 14:01:22.7704|30100|INFO|Microsoft.EntityFrameworkCore.Update|Saved 4 entities to in-memory store. 
-2023-06-21 14:01:22.7704|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Technology' tracked by 'GetInItDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:22.7704|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Technology' tracked by 'GetInItDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:22.7704|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Technology' tracked by 'GetInItDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:22.7704|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Technology' tracked by 'GetInItDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:22.7773|10005|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'GetInItDbContext' with 4 entities written to the database. 
-2023-06-21 14:01:22.8174|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
-2023-06-21 14:01:22.8302|4|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with no compiled views. 
-2023-06-21 14:01:22.8302|63|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
-2023-06-21 14:01:22.8916|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
-2023-06-21 14:01:22.8916|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-61beac45-c194-47f9-a2d7-e231fdca960a.xml'. 
-2023-06-21 14:01:22.8916|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-e18af407-1558-4655-9058-fa0c0096c470.xml'. 
-2023-06-21 14:01:22.9018|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {61beac45-c194-47f9-a2d7-e231fdca960a}. 
-2023-06-21 14:01:22.9018|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e18af407-1558-4655-9058-fa0c0096c470}. 
-2023-06-21 14:01:22.9018|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {e18af407-1558-4655-9058-fa0c0096c470} with expiration date 2023-09-11 11:37:12Z as default key. 
-2023-06-21 14:01:22.9018|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
-2023-06-21 14:01:22.9018|51|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
-2023-06-21 14:01:22.9018|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
-2023-06-21 14:01:22.9018|4|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
-2023-06-21 14:01:22.9182|3|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
-2023-06-21 14:01:22.9182|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {e18af407-1558-4655-9058-fa0c0096c470} as the default key. 
-2023-06-21 14:01:22.9182|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {e18af407-1558-4655-9058-fa0c0096c470} was loaded during application startup. 
-2023-06-21 14:01:22.9371|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly GetInItBackEnd 
-2023-06-21 14:01:22.9371|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
-2023-06-21 14:01:22.9693|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost/api/offer/GetEveryExistingOffer - - 
-2023-06-21 14:01:22.9693|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
-2023-06-21 14:01:22.9693|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
-2023-06-21 14:01:22.9968|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/offer/GetEveryExistingOffer' 
-2023-06-21 14:01:22.9968|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'GetInItBackEnd.Controllers.OfferController.GetAllOffers (GetInItBackEnd)' with route pattern 'api/offer/GetEveryExistingOffer' is valid for the request path '/api/offer/GetEveryExistingOffer' 
-2023-06-21 14:01:22.9968|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'GetInItBackEnd.Controllers.OfferController.GetAllOffers (GetInItBackEnd)' 
-2023-06-21 14:01:23.0232|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
-2023-06-21 14:01:23.0232|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
-2023-06-21 14:01:23.0232|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
-2023-06-21 14:01:23.0474|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
-2023-06-21 14:01:23.0474|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'GetInItBackEnd.Controllers.OfferController.GetAllOffers (GetInItBackEnd)' 
-2023-06-21 14:01:23.0613|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAllOffers", controller = "Offer"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[GetInItBackEnd.Models.Offer.OfferDto]] GetAllOffers() on controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd). 
-2023-06-21 14:01:23.0613|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
-2023-06-21 14:01:23.0613|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
-2023-06-21 14:01:23.0613|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), GetInItBackend.Integration.Tests.FakeManagerFilter 
-2023-06-21 14:01:23.0613|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
-2023-06-21 14:01:23.0613|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter, Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
-2023-06-21 14:01:23.0613|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:23.0613|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:23.0613|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd) 
-2023-06-21 14:01:23.1541|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd) 
-2023-06-21 14:01:23.1541|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
-2023-06-21 14:01:23.1541|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
-2023-06-21 14:01:23.1541|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
-2023-06-21 14:01:23.1541|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
-2023-06-21 14:01:23.1541|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter GetInItBackend.Integration.Tests.FakeManagerFilter. 
-2023-06-21 14:01:23.1541|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.OfferController.GetAllOffers (GetInItBackEnd) - Validation state: Valid 
-2023-06-21 14:01:23.1541|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.7 initialized 'GetInItDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:7.0.7' with options: StoreName=GetInItDb  
-2023-06-21 14:01:23.1727|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
-'DbSet<Offer>()
-    .Include(o => o.Company)
-    .Include(t => t.Technologies)' 
-2023-06-21 14:01:23.1848|10112|DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Offer.Company'. 
-2023-06-21 14:01:23.1848|10112|DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Offer.Technologies'. 
-2023-06-21 14:01:23.2376|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
-'queryContext => new QueryingEnumerable<Offer>(
-    queryContext, 
-    InMemoryShapedQueryCompilingExpressionVisitor.Table(
-        queryContext: queryContext, 
-        entityType: EntityType: Offer)
-        .Join(
-            inner: InMemoryShapedQueryCompilingExpressionVisitor.Table(
-                queryContext: queryContext, 
-                entityType: EntityType: Company), 
-            outerKeySelector: valueBuffer => (object)(int?)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 2, 
-                property: Property: Offer.CompanyId (int) Required FK Index), 
-            innerKeySelector: valueBuffer => (object)(int?)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 0, 
-                property: Property: Company.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-            resultSelector: (outer, inner) => new ValueBuffer(new object[]
-            { 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                    valueBuffer: outer, 
-                    index: 0, 
-                    property: Property: Offer.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: outer, 
-                    index: 1, 
-                    property: Property: Offer.City (string) Required), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                    valueBuffer: outer, 
-                    index: 2, 
-                    property: Property: Offer.CompanyId (int) Required FK Index), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<int?>(
-                    valueBuffer: outer, 
-                    index: 3, 
-                    property: Property: Offer.CreatedById (int?)), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: outer, 
-                    index: 4, 
-                    property: Property: Offer.Description (string) Required MaxLength(50)), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: outer, 
-                    index: 5, 
-                    property: Property: Offer.Email (string) Required), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<Level>(
-                    valueBuffer: outer, 
-                    index: 6, 
-                    property: Property: Offer.Level (Level) Required), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: outer, 
-                    index: 7, 
-                    property: Property: Offer.Name (string) Required MaxLength(50)), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: outer, 
-                    index: 8, 
-                    property: Property: Offer.PhoneNumber (string) Required), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<WorkingPlace>(
-                    valueBuffer: outer, 
-                    index: 9, 
-                    property: Property: Offer.Place (WorkingPlace) Required), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: outer, 
-                    index: 10, 
-                    property: Property: Offer.PrimarySkill (string) Required), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<decimal?>(
-                    valueBuffer: outer, 
-                    index: 11, 
-                    property: Property: Offer.SalaryFrom (decimal?)), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<decimal?>(
-                    valueBuffer: outer, 
-                    index: 12, 
-                    property: Property: Offer.SalaryTo (decimal?)), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                    valueBuffer: inner, 
-                    index: 0, 
-                    property: Property: Company.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<int?>(
-                    valueBuffer: inner, 
-                    index: 1, 
-                    property: Property: Company.AddressId (int?) FK Index), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: inner, 
-                    index: 2, 
-                    property: Property: Company.Description (string)), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: inner, 
-                    index: 3, 
-                    property: Property: Company.Industry (string)), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: inner, 
-                    index: 4, 
-                    property: Property: Company.Name (string) Required MaxLength(50)), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<long>(
-                    valueBuffer: inner, 
-                    index: 5, 
-                    property: Property: Company.Nip (long) Required), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                    valueBuffer: inner, 
-                    index: 6, 
-                    property: Property: Company.Regon (int) Required), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: inner, 
-                    index: 7, 
-                    property: Property: Company.SubEndsAt (string)), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: inner, 
-                    index: 8, 
-                    property: Property: Company.Url (string)) 
-            }))
-        .Select(valueBuffer => new ValueBuffer(new object[]
-        { 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 0, 
-                property: Property: Offer.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 1, 
-                property: Property: Offer.City (string) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 2, 
-                property: Property: Offer.CompanyId (int) Required FK Index), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int?>(
-                valueBuffer: valueBuffer, 
-                index: 3, 
-                property: Property: Offer.CreatedById (int?)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 4, 
-                property: Property: Offer.Description (string) Required MaxLength(50)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 5, 
-                property: Property: Offer.Email (string) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<Level>(
-                valueBuffer: valueBuffer, 
-                index: 6, 
-                property: Property: Offer.Level (Level) Required), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 7, 
-                property: Property: Offer.Name (string) Required MaxLength(50)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 8, 
-                property: Property: Offer.PhoneNumber (string) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<WorkingPlace>(
-                valueBuffer: valueBuffer, 
-                index: 9, 
-                property: Property: Offer.Place (WorkingPlace) Required), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 10, 
-                property: Property: Offer.PrimarySkill (string) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<decimal?>(
-                valueBuffer: valueBuffer, 
-                index: 11, 
-                property: Property: Offer.SalaryFrom (decimal?)), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<decimal?>(
-                valueBuffer: valueBuffer, 
-                index: 12, 
-                property: Property: Offer.SalaryTo (decimal?)), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 13, 
-                property: Property: Company.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int?>(
-                valueBuffer: valueBuffer, 
-                index: 14, 
-                property: Property: Company.AddressId (int?) FK Index), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 15, 
-                property: Property: Company.Description (string)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 16, 
-                property: Property: Company.Industry (string)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 17, 
-                property: Property: Company.Name (string) Required MaxLength(50)), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<long>(
-                valueBuffer: valueBuffer, 
-                index: 18, 
-                property: Property: Company.Nip (long) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 19, 
-                property: Property: Company.Regon (int) Required), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 20, 
-                property: Property: Company.SubEndsAt (string)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 21, 
-                property: Property: Company.Url (string)) 
-        }))
-        .Select(valueBuffer => new ValueBuffer(new object[]
-        { 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 0, 
-                property: Property: Offer.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 1, 
-                property: Property: Offer.City (string) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 2, 
-                property: Property: Offer.CompanyId (int) Required FK Index), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int?>(
-                valueBuffer: valueBuffer, 
-                index: 3, 
-                property: Property: Offer.CreatedById (int?)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 4, 
-                property: Property: Offer.Description (string) Required MaxLength(50)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 5, 
-                property: Property: Offer.Email (string) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<Level>(
-                valueBuffer: valueBuffer, 
-                index: 6, 
-                property: Property: Offer.Level (Level) Required), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 7, 
-                property: Property: Offer.Name (string) Required MaxLength(50)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 8, 
-                property: Property: Offer.PhoneNumber (string) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<WorkingPlace>(
-                valueBuffer: valueBuffer, 
-                index: 9, 
-                property: Property: Offer.Place (WorkingPlace) Required), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 10, 
-                property: Property: Offer.PrimarySkill (string) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<decimal?>(
-                valueBuffer: valueBuffer, 
-                index: 11, 
-                property: Property: Offer.SalaryFrom (decimal?)), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<decimal?>(
-                valueBuffer: valueBuffer, 
-                index: 12, 
-                property: Property: Offer.SalaryTo (decimal?)), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 13, 
-                property: Property: Company.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int?>(
-                valueBuffer: valueBuffer, 
-                index: 14, 
-                property: Property: Company.AddressId (int?) FK Index), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 15, 
-                property: Property: Company.Description (string)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 16, 
-                property: Property: Company.Industry (string)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 17, 
-                property: Property: Company.Name (string) Required MaxLength(50)), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<long>(
-                valueBuffer: valueBuffer, 
-                index: 18, 
-                property: Property: Company.Nip (long) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 19, 
-                property: Property: Company.Regon (int) Required), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 20, 
-                property: Property: Company.SubEndsAt (string)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 21, 
-                property: Property: Company.Url (string)), 
-            InMemoryShapedQueryCompilingExpressionVisitor.Table(
-                queryContext: queryContext, 
-                entityType: EntityType: OfferTechnology (Dictionary<string, object>) CLR Type: Dictionary<string, object>)
-                .Where(valueBuffer => (int?)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                    valueBuffer: valueBuffer, 
-                    index: 0, 
-                    property: Property: Offer.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd) != null && object.Equals(
-                    objA: (object)(int?)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 0, 
-                        property: Property: Offer.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-                    objB: (object)(int?)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 0, 
-                        property: Property: OfferTechnology (Dictionary<string, object>).OffersId (no field, int) Indexer Required PK FK AfterSave:Throw)))
-                .Join(
-                    inner: InMemoryShapedQueryCompilingExpressionVisitor.Table(
-                        queryContext: queryContext, 
-                        entityType: EntityType: Technology), 
-                    outerKeySelector: valueBuffer => (object)(int?)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 1, 
-                        property: Property: OfferTechnology (Dictionary<string, object>).TechnologiesId (no field, int) Indexer Required PK FK Index AfterSave:Throw), 
-                    innerKeySelector: valueBuffer => (object)(int?)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 0, 
-                        property: Property: Technology.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-                    resultSelector: (outer, inner) => new ValueBuffer(new object[]
-                    { 
-                        (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                            valueBuffer: outer, 
-                            index: 0, 
-                            property: Property: OfferTechnology (Dictionary<string, object>).OffersId (no field, int) Indexer Required PK FK AfterSave:Throw), 
-                        (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                            valueBuffer: outer, 
-                            index: 1, 
-                            property: Property: OfferTechnology (Dictionary<string, object>).TechnologiesId (no field, int) Indexer Required PK FK Index AfterSave:Throw), 
-                        (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                            valueBuffer: inner, 
-                            index: 0, 
-                            property: Property: Technology.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-                        ExpressionExtensions.ValueBufferTryReadValue<string>(
-                            valueBuffer: inner, 
-                            index: 1, 
-                            property: Property: Technology.Skill (string) Required MaxLength(50)), 
-                        (object)ExpressionExtensions.ValueBufferTryReadValue<SkillLevel?>(
-                            valueBuffer: inner, 
-                            index: 2, 
-                            property: Property: Technology.SkillLevel (SkillLevel?)) 
-                    }))
-                .Select(valueBuffer => new ValueBuffer(new object[]
-                { 
-                    (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 0, 
-                        property: Property: OfferTechnology (Dictionary<string, object>).OffersId (no field, int) Indexer Required PK FK AfterSave:Throw), 
-                    (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 1, 
-                        property: Property: OfferTechnology (Dictionary<string, object>).TechnologiesId (no field, int) Indexer Required PK FK Index AfterSave:Throw), 
-                    (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 2, 
-                        property: Property: Technology.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-                    ExpressionExtensions.ValueBufferTryReadValue<string>(
-                        valueBuffer: valueBuffer, 
-                        index: 3, 
-                        property: Property: Technology.Skill (string) Required MaxLength(50)), 
-                    (object)ExpressionExtensions.ValueBufferTryReadValue<SkillLevel?>(
-                        valueBuffer: valueBuffer, 
-                        index: 4, 
-                        property: Property: Technology.SkillLevel (SkillLevel?)) 
-                }))
-                .Select(valueBuffer => new ValueBuffer(new object[]
-                { 
-                    (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 0, 
-                        property: Property: OfferTechnology (Dictionary<string, object>).OffersId (no field, int) Indexer Required PK FK AfterSave:Throw), 
-                    (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 1, 
-                        property: Property: OfferTechnology (Dictionary<string, object>).TechnologiesId (no field, int) Indexer Required PK FK Index AfterSave:Throw), 
-                    (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 2, 
-                        property: Property: Technology.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-                    ExpressionExtensions.ValueBufferTryReadValue<string>(
-                        valueBuffer: valueBuffer, 
-                        index: 3, 
-                        property: Property: Technology.Skill (string) Required MaxLength(50)), 
-                    (object)ExpressionExtensions.ValueBufferTryReadValue<SkillLevel?>(
-                        valueBuffer: valueBuffer, 
-                        index: 4, 
-                        property: Property: Technology.SkillLevel (SkillLevel?)) 
-                })) 
-        })), 
-    Func<QueryContext, ValueBuffer, Offer>, 
-    GetInItBackEnd.Entities.GetInItDbContext, 
-    False, 
-    True
-)' 
-2023-06-21 14:01:23.2604|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method GetInItBackEnd.Controllers.OfferController.GetAllOffers (GetInItBackEnd), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 100.8417ms. 
-2023-06-21 14:01:23.2604|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter GetInItBackend.Integration.Tests.FakeManagerFilter. 
-2023-06-21 14:01:23.2604|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
-2023-06-21 14:01:23.2604|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
-2023-06-21 14:01:23.2604|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
-2023-06-21 14:01:23.2604|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
-2023-06-21 14:01:23.2604|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:23.2604|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:23.2604|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
-2023-06-21 14:01:23.2604|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
-2023-06-21 14:01:23.2614|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
-2023-06-21 14:01:23.2614|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
-2023-06-21 14:01:23.2614|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
-2023-06-21 14:01:23.2614|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
-2023-06-21 14:01:23.2614|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
-2023-06-21 14:01:23.2614|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
-2023-06-21 14:01:23.2614|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GetInItBackEnd.Models.Offer.OfferDto, GetInItBackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
-2023-06-21 14:01:23.3131|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
-2023-06-21 14:01:23.3131|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
-2023-06-21 14:01:23.3131|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
-2023-06-21 14:01:23.3131|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:23.3131|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:23.3131|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:23.3131|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:23.3131|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action GetInItBackEnd.Controllers.OfferController.GetAllOffers (GetInItBackEnd) in 250.7798ms 
-2023-06-21 14:01:23.3131|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'GetInItBackEnd.Controllers.OfferController.GetAllOffers (GetInItBackEnd)' 
-2023-06-21 14:01:23.3131|10407|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'GetInItDbContext' disposed. 
-2023-06-21 14:01:23.3131|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost/api/offer/GetEveryExistingOffer - - - 200 2 application/json;+charset=utf-8 351.1855ms 
-2023-06-21 14:01:23.3279|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
-2023-06-21 14:01:23.3279|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
-2023-06-21 14:01:23.3279|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
-2023-06-21 14:01:23.3279|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
-2023-06-21 14:01:29.7441|0|DEBUG|Program|init main 
-2023-06-21 14:01:29.9940|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
-2023-06-21 14:01:30.2913|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'OfferId'} was not created on entity type 'OfferEmploymentType (Dictionary<string, object>)' as the properties are already covered by the index {'OfferId', 'EmploymentTypeId'}. 
-2023-06-21 14:01:30.2933|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'OffersId'} was not created on entity type 'OfferTechnology (Dictionary<string, object>)' as the properties are already covered by the index {'OffersId', 'TechnologiesId'}. 
-2023-06-21 14:01:30.3472|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'OfferTechnology (Dictionary<string, object>).OffersId' was created in shadow state because there are no eligible CLR members with a matching name. 
-2023-06-21 14:01:30.3472|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'OfferTechnology (Dictionary<string, object>).TechnologiesId' was created in shadow state because there are no eligible CLR members with a matching name. 
-2023-06-21 14:01:30.3800|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.7 initialized 'GetInItDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:7.0.7' with options: StoreName=GetInItDb  
-2023-06-21 14:01:30.3963|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+2023-06-21 15:15:58.3315|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-06-21 15:15:58.3315|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2023-06-21 15:15:58.3315|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2023-06-21 15:15:58.3315|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-21 15:15:58.3315|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-21 15:15:58.3315|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Technologies] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2023-06-21 15:15:58.3461|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Technologies] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2023-06-21 15:15:58.3573|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'GetInItDB' on server 'localhost'. 
+2023-06-21 15:15:58.3573|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'GetInItDB' on server 'localhost' is being disposed after spending 11ms reading results. 
+2023-06-21 15:15:58.3573|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-21 15:15:58.3573|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'GetInItDB' on server 'localhost' (0ms). 
+2023-06-21 15:15:58.3998|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2023-06-21 15:15:58.4458|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2023-06-21 15:15:58.4557|63|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-06-21 15:15:58.4557|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-61beac45-c194-47f9-a2d7-e231fdca960a.xml'. 
+2023-06-21 15:15:58.4694|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-e18af407-1558-4655-9058-fa0c0096c470.xml'. 
+2023-06-21 15:15:58.4816|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {61beac45-c194-47f9-a2d7-e231fdca960a}. 
+2023-06-21 15:15:58.4816|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e18af407-1558-4655-9058-fa0c0096c470}. 
+2023-06-21 15:15:58.4816|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {e18af407-1558-4655-9058-fa0c0096c470} with expiration date 2023-09-11 11:37:12Z as default key. 
+2023-06-21 15:15:58.4816|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-21 15:15:58.4816|51|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2023-06-21 15:15:58.4816|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-21 15:15:58.4816|4|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2023-06-21 15:15:58.4816|3|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2023-06-21 15:15:58.4957|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {e18af407-1558-4655-9058-fa0c0096c470} as the default key. 
+2023-06-21 15:15:58.4957|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {e18af407-1558-4655-9058-fa0c0096c470} was loaded during application startup. 
+2023-06-21 15:15:58.5241|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5099 
+2023-06-21 15:15:58.5241|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly GetInItBackEnd 
+2023-06-21 15:15:58.5241|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-06-21 15:15:58.5241|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-06-21 15:15:58.5241|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\GetInItBackEnd 
+2023-06-21 15:15:58.5241|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2023-06-21 15:17:52.9331|0|DEBUG|Program|init main 
+2023-06-21 15:17:53.2809|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2023-06-21 15:17:53.9613|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'OfferId'} was not created on entity type 'OfferEmploymentType (Dictionary<string, object>)' as the properties are already covered by the index {'OfferId', 'EmploymentTypeId'}. 
+2023-06-21 15:17:53.9654|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'OffersId'} was not created on entity type 'OfferTechnology (Dictionary<string, object>)' as the properties are already covered by the index {'OffersId', 'TechnologiesId'}. 
+2023-06-21 15:17:54.0863|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'OfferTechnology (Dictionary<string, object>).OffersId' was created in shadow state because there are no eligible CLR members with a matching name. 
+2023-06-21 15:17:54.0863|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'OfferTechnology (Dictionary<string, object>).TechnologiesId' was created in shadow state because there are no eligible CLR members with a matching name. 
+2023-06-21 15:17:54.1132|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'SalaryFrom' on entity type 'Offer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-06-21 15:17:54.1132|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'SalaryTo' on entity type 'Offer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-06-21 15:17:54.2948|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.3 initialized 'GetInItDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.3' with options: None 
+2023-06-21 15:17:54.3112|20005|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2023-06-21 15:17:54.3470|20006|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (33ms). 
+2023-06-21 15:17:54.3470|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-21 15:17:54.5584|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-21 15:17:54.5875|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2023-06-21 15:17:54.6030|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (11ms). 
+2023-06-21 15:17:54.6075|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (23ms). 
+2023-06-21 15:17:54.6234|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2023-06-21 15:17:54.6882|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (75ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2023-06-21 15:17:54.6882|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-21 15:17:54.7051|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'GetInItDB' on server 'localhost' (6ms). 
+2023-06-21 15:17:54.7569|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
 'DbSet<Technology>()
     .Any()' 
-2023-06-21 14:01:30.4710|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
-'queryContext => new QueryingEnumerable<bool>(
-    queryContext, 
-    new ResultEnumerable(() => new ValueBuffer(new object[]{ (object)InMemoryShapedQueryCompilingExpressionVisitor.Table(
-        queryContext: queryContext, 
-        entityType: EntityType: Technology)
-        .Any() })), 
-    Func<QueryContext, ValueBuffer, bool>, 
+2023-06-21 15:17:54.9189|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            SELECT 1
+            FROM Technologies AS t)), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
     GetInItBackEnd.Entities.GetInItDbContext, 
+    False, 
     False, 
     True
 )
     .Single()' 
-2023-06-21 14:01:30.5055|10808|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"GetInItDbContext"' generated a value for the property '"Id"."Technology"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:30.5313|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'GetInItDbContext' started tracking 'Technology' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:30.5313|10808|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"GetInItDbContext"' generated a value for the property '"Id"."Technology"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:30.5313|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'GetInItDbContext' started tracking 'Technology' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:30.5313|10808|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"GetInItDbContext"' generated a value for the property '"Id"."Technology"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:30.5313|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'GetInItDbContext' started tracking 'Technology' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:30.5313|10808|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"GetInItDbContext"' generated a value for the property '"Id"."Technology"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:30.5313|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'GetInItDbContext' started tracking 'Technology' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:30.5313|10004|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'GetInItDbContext'. 
-2023-06-21 14:01:30.5313|10800|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'GetInItDbContext'. 
-2023-06-21 14:01:30.5439|10801|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'GetInItDbContext'. 
-2023-06-21 14:01:30.5439|30100|INFO|Microsoft.EntityFrameworkCore.Update|Saved 4 entities to in-memory store. 
-2023-06-21 14:01:30.5582|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Technology' tracked by 'GetInItDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:30.5582|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Technology' tracked by 'GetInItDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:30.5582|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Technology' tracked by 'GetInItDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:30.5582|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Technology' tracked by 'GetInItDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:30.5582|10005|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'GetInItDbContext' with 4 entities written to the database. 
-2023-06-21 14:01:30.5934|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
-2023-06-21 14:01:30.5934|4|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with no compiled views. 
-2023-06-21 14:01:30.6114|63|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
-2023-06-21 14:01:30.6554|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
-2023-06-21 14:01:30.6554|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-61beac45-c194-47f9-a2d7-e231fdca960a.xml'. 
-2023-06-21 14:01:30.6554|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-e18af407-1558-4655-9058-fa0c0096c470.xml'. 
-2023-06-21 14:01:30.6554|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {61beac45-c194-47f9-a2d7-e231fdca960a}. 
-2023-06-21 14:01:30.6681|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e18af407-1558-4655-9058-fa0c0096c470}. 
-2023-06-21 14:01:30.6681|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {e18af407-1558-4655-9058-fa0c0096c470} with expiration date 2023-09-11 11:37:12Z as default key. 
-2023-06-21 14:01:30.6681|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
-2023-06-21 14:01:30.6681|51|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
-2023-06-21 14:01:30.6681|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
-2023-06-21 14:01:30.6681|4|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
-2023-06-21 14:01:30.6681|3|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
-2023-06-21 14:01:30.6681|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {e18af407-1558-4655-9058-fa0c0096c470} as the default key. 
-2023-06-21 14:01:30.6681|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {e18af407-1558-4655-9058-fa0c0096c470} was loaded during application startup. 
-2023-06-21 14:01:30.6901|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly GetInItBackEnd 
-2023-06-21 14:01:30.6901|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
-2023-06-21 14:01:30.7139|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost/api/offer/GetEveryExistingOffer - - 
-2023-06-21 14:01:30.7148|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
-2023-06-21 14:01:30.7148|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
-2023-06-21 14:01:30.7351|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/offer/GetEveryExistingOffer' 
-2023-06-21 14:01:30.7351|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'GetInItBackEnd.Controllers.OfferController.GetAllOffers (GetInItBackEnd)' with route pattern 'api/offer/GetEveryExistingOffer' is valid for the request path '/api/offer/GetEveryExistingOffer' 
-2023-06-21 14:01:30.7351|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'GetInItBackEnd.Controllers.OfferController.GetAllOffers (GetInItBackEnd)' 
-2023-06-21 14:01:30.7541|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
-2023-06-21 14:01:30.7541|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
-2023-06-21 14:01:30.7541|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
-2023-06-21 14:01:30.7714|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
-2023-06-21 14:01:30.7714|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'GetInItBackEnd.Controllers.OfferController.GetAllOffers (GetInItBackEnd)' 
-2023-06-21 14:01:30.7822|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAllOffers", controller = "Offer"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[GetInItBackEnd.Models.Offer.OfferDto]] GetAllOffers() on controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd). 
-2023-06-21 14:01:30.7822|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
-2023-06-21 14:01:30.7822|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
-2023-06-21 14:01:30.7822|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), GetInItBackend.Integration.Tests.FakeManagerFilter 
-2023-06-21 14:01:30.7822|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
-2023-06-21 14:01:30.7822|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter, Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
-2023-06-21 14:01:30.7822|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:30.7822|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:30.7822|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd) 
-2023-06-21 14:01:30.8745|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd) 
-2023-06-21 14:01:30.8745|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
-2023-06-21 14:01:30.8745|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
-2023-06-21 14:01:30.8745|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
-2023-06-21 14:01:30.8745|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
-2023-06-21 14:01:30.8745|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter GetInItBackend.Integration.Tests.FakeManagerFilter. 
-2023-06-21 14:01:30.8745|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.OfferController.GetAllOffers (GetInItBackEnd) - Validation state: Valid 
-2023-06-21 14:01:30.8745|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.7 initialized 'GetInItDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:7.0.7' with options: StoreName=GetInItDb  
-2023-06-21 14:01:30.8931|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
-'DbSet<Offer>()
-    .Include(o => o.Company)
-    .Include(t => t.Technologies)' 
-2023-06-21 14:01:30.9046|10112|DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Offer.Company'. 
-2023-06-21 14:01:30.9046|10112|DEBUG|Microsoft.EntityFrameworkCore.Query|Including navigation: 'Offer.Technologies'. 
-2023-06-21 14:01:30.9567|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
-'queryContext => new QueryingEnumerable<Offer>(
-    queryContext, 
-    InMemoryShapedQueryCompilingExpressionVisitor.Table(
-        queryContext: queryContext, 
-        entityType: EntityType: Offer)
-        .Join(
-            inner: InMemoryShapedQueryCompilingExpressionVisitor.Table(
-                queryContext: queryContext, 
-                entityType: EntityType: Company), 
-            outerKeySelector: valueBuffer => (object)(int?)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 2, 
-                property: Property: Offer.CompanyId (int) Required FK Index), 
-            innerKeySelector: valueBuffer => (object)(int?)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 0, 
-                property: Property: Company.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-            resultSelector: (outer, inner) => new ValueBuffer(new object[]
-            { 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                    valueBuffer: outer, 
-                    index: 0, 
-                    property: Property: Offer.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: outer, 
-                    index: 1, 
-                    property: Property: Offer.City (string) Required), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                    valueBuffer: outer, 
-                    index: 2, 
-                    property: Property: Offer.CompanyId (int) Required FK Index), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<int?>(
-                    valueBuffer: outer, 
-                    index: 3, 
-                    property: Property: Offer.CreatedById (int?)), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: outer, 
-                    index: 4, 
-                    property: Property: Offer.Description (string) Required MaxLength(50)), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: outer, 
-                    index: 5, 
-                    property: Property: Offer.Email (string) Required), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<Level>(
-                    valueBuffer: outer, 
-                    index: 6, 
-                    property: Property: Offer.Level (Level) Required), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: outer, 
-                    index: 7, 
-                    property: Property: Offer.Name (string) Required MaxLength(50)), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: outer, 
-                    index: 8, 
-                    property: Property: Offer.PhoneNumber (string) Required), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<WorkingPlace>(
-                    valueBuffer: outer, 
-                    index: 9, 
-                    property: Property: Offer.Place (WorkingPlace) Required), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: outer, 
-                    index: 10, 
-                    property: Property: Offer.PrimarySkill (string) Required), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<decimal?>(
-                    valueBuffer: outer, 
-                    index: 11, 
-                    property: Property: Offer.SalaryFrom (decimal?)), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<decimal?>(
-                    valueBuffer: outer, 
-                    index: 12, 
-                    property: Property: Offer.SalaryTo (decimal?)), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                    valueBuffer: inner, 
-                    index: 0, 
-                    property: Property: Company.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<int?>(
-                    valueBuffer: inner, 
-                    index: 1, 
-                    property: Property: Company.AddressId (int?) FK Index), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: inner, 
-                    index: 2, 
-                    property: Property: Company.Description (string)), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: inner, 
-                    index: 3, 
-                    property: Property: Company.Industry (string)), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: inner, 
-                    index: 4, 
-                    property: Property: Company.Name (string) Required MaxLength(50)), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<long>(
-                    valueBuffer: inner, 
-                    index: 5, 
-                    property: Property: Company.Nip (long) Required), 
-                (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                    valueBuffer: inner, 
-                    index: 6, 
-                    property: Property: Company.Regon (int) Required), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: inner, 
-                    index: 7, 
-                    property: Property: Company.SubEndsAt (string)), 
-                ExpressionExtensions.ValueBufferTryReadValue<string>(
-                    valueBuffer: inner, 
-                    index: 8, 
-                    property: Property: Company.Url (string)) 
-            }))
-        .Select(valueBuffer => new ValueBuffer(new object[]
-        { 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 0, 
-                property: Property: Offer.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 1, 
-                property: Property: Offer.City (string) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 2, 
-                property: Property: Offer.CompanyId (int) Required FK Index), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int?>(
-                valueBuffer: valueBuffer, 
-                index: 3, 
-                property: Property: Offer.CreatedById (int?)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 4, 
-                property: Property: Offer.Description (string) Required MaxLength(50)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 5, 
-                property: Property: Offer.Email (string) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<Level>(
-                valueBuffer: valueBuffer, 
-                index: 6, 
-                property: Property: Offer.Level (Level) Required), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 7, 
-                property: Property: Offer.Name (string) Required MaxLength(50)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 8, 
-                property: Property: Offer.PhoneNumber (string) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<WorkingPlace>(
-                valueBuffer: valueBuffer, 
-                index: 9, 
-                property: Property: Offer.Place (WorkingPlace) Required), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 10, 
-                property: Property: Offer.PrimarySkill (string) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<decimal?>(
-                valueBuffer: valueBuffer, 
-                index: 11, 
-                property: Property: Offer.SalaryFrom (decimal?)), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<decimal?>(
-                valueBuffer: valueBuffer, 
-                index: 12, 
-                property: Property: Offer.SalaryTo (decimal?)), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 13, 
-                property: Property: Company.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int?>(
-                valueBuffer: valueBuffer, 
-                index: 14, 
-                property: Property: Company.AddressId (int?) FK Index), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 15, 
-                property: Property: Company.Description (string)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 16, 
-                property: Property: Company.Industry (string)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 17, 
-                property: Property: Company.Name (string) Required MaxLength(50)), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<long>(
-                valueBuffer: valueBuffer, 
-                index: 18, 
-                property: Property: Company.Nip (long) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 19, 
-                property: Property: Company.Regon (int) Required), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 20, 
-                property: Property: Company.SubEndsAt (string)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 21, 
-                property: Property: Company.Url (string)) 
-        }))
-        .Select(valueBuffer => new ValueBuffer(new object[]
-        { 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 0, 
-                property: Property: Offer.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 1, 
-                property: Property: Offer.City (string) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 2, 
-                property: Property: Offer.CompanyId (int) Required FK Index), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int?>(
-                valueBuffer: valueBuffer, 
-                index: 3, 
-                property: Property: Offer.CreatedById (int?)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 4, 
-                property: Property: Offer.Description (string) Required MaxLength(50)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 5, 
-                property: Property: Offer.Email (string) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<Level>(
-                valueBuffer: valueBuffer, 
-                index: 6, 
-                property: Property: Offer.Level (Level) Required), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 7, 
-                property: Property: Offer.Name (string) Required MaxLength(50)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 8, 
-                property: Property: Offer.PhoneNumber (string) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<WorkingPlace>(
-                valueBuffer: valueBuffer, 
-                index: 9, 
-                property: Property: Offer.Place (WorkingPlace) Required), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 10, 
-                property: Property: Offer.PrimarySkill (string) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<decimal?>(
-                valueBuffer: valueBuffer, 
-                index: 11, 
-                property: Property: Offer.SalaryFrom (decimal?)), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<decimal?>(
-                valueBuffer: valueBuffer, 
-                index: 12, 
-                property: Property: Offer.SalaryTo (decimal?)), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 13, 
-                property: Property: Company.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int?>(
-                valueBuffer: valueBuffer, 
-                index: 14, 
-                property: Property: Company.AddressId (int?) FK Index), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 15, 
-                property: Property: Company.Description (string)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 16, 
-                property: Property: Company.Industry (string)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 17, 
-                property: Property: Company.Name (string) Required MaxLength(50)), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<long>(
-                valueBuffer: valueBuffer, 
-                index: 18, 
-                property: Property: Company.Nip (long) Required), 
-            (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                valueBuffer: valueBuffer, 
-                index: 19, 
-                property: Property: Company.Regon (int) Required), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 20, 
-                property: Property: Company.SubEndsAt (string)), 
-            ExpressionExtensions.ValueBufferTryReadValue<string>(
-                valueBuffer: valueBuffer, 
-                index: 21, 
-                property: Property: Company.Url (string)), 
-            InMemoryShapedQueryCompilingExpressionVisitor.Table(
-                queryContext: queryContext, 
-                entityType: EntityType: OfferTechnology (Dictionary<string, object>) CLR Type: Dictionary<string, object>)
-                .Where(valueBuffer => (int?)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                    valueBuffer: valueBuffer, 
-                    index: 0, 
-                    property: Property: Offer.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd) != null && object.Equals(
-                    objA: (object)(int?)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 0, 
-                        property: Property: Offer.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-                    objB: (object)(int?)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 0, 
-                        property: Property: OfferTechnology (Dictionary<string, object>).OffersId (no field, int) Indexer Required PK FK AfterSave:Throw)))
-                .Join(
-                    inner: InMemoryShapedQueryCompilingExpressionVisitor.Table(
-                        queryContext: queryContext, 
-                        entityType: EntityType: Technology), 
-                    outerKeySelector: valueBuffer => (object)(int?)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 1, 
-                        property: Property: OfferTechnology (Dictionary<string, object>).TechnologiesId (no field, int) Indexer Required PK FK Index AfterSave:Throw), 
-                    innerKeySelector: valueBuffer => (object)(int?)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 0, 
-                        property: Property: Technology.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-                    resultSelector: (outer, inner) => new ValueBuffer(new object[]
-                    { 
-                        (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                            valueBuffer: outer, 
-                            index: 0, 
-                            property: Property: OfferTechnology (Dictionary<string, object>).OffersId (no field, int) Indexer Required PK FK AfterSave:Throw), 
-                        (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                            valueBuffer: outer, 
-                            index: 1, 
-                            property: Property: OfferTechnology (Dictionary<string, object>).TechnologiesId (no field, int) Indexer Required PK FK Index AfterSave:Throw), 
-                        (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                            valueBuffer: inner, 
-                            index: 0, 
-                            property: Property: Technology.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-                        ExpressionExtensions.ValueBufferTryReadValue<string>(
-                            valueBuffer: inner, 
-                            index: 1, 
-                            property: Property: Technology.Skill (string) Required MaxLength(50)), 
-                        (object)ExpressionExtensions.ValueBufferTryReadValue<SkillLevel?>(
-                            valueBuffer: inner, 
-                            index: 2, 
-                            property: Property: Technology.SkillLevel (SkillLevel?)) 
-                    }))
-                .Select(valueBuffer => new ValueBuffer(new object[]
-                { 
-                    (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 0, 
-                        property: Property: OfferTechnology (Dictionary<string, object>).OffersId (no field, int) Indexer Required PK FK AfterSave:Throw), 
-                    (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 1, 
-                        property: Property: OfferTechnology (Dictionary<string, object>).TechnologiesId (no field, int) Indexer Required PK FK Index AfterSave:Throw), 
-                    (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 2, 
-                        property: Property: Technology.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-                    ExpressionExtensions.ValueBufferTryReadValue<string>(
-                        valueBuffer: valueBuffer, 
-                        index: 3, 
-                        property: Property: Technology.Skill (string) Required MaxLength(50)), 
-                    (object)ExpressionExtensions.ValueBufferTryReadValue<SkillLevel?>(
-                        valueBuffer: valueBuffer, 
-                        index: 4, 
-                        property: Property: Technology.SkillLevel (SkillLevel?)) 
-                }))
-                .Select(valueBuffer => new ValueBuffer(new object[]
-                { 
-                    (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 0, 
-                        property: Property: OfferTechnology (Dictionary<string, object>).OffersId (no field, int) Indexer Required PK FK AfterSave:Throw), 
-                    (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 1, 
-                        property: Property: OfferTechnology (Dictionary<string, object>).TechnologiesId (no field, int) Indexer Required PK FK Index AfterSave:Throw), 
-                    (object)ExpressionExtensions.ValueBufferTryReadValue<int>(
-                        valueBuffer: valueBuffer, 
-                        index: 2, 
-                        property: Property: Technology.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd), 
-                    ExpressionExtensions.ValueBufferTryReadValue<string>(
-                        valueBuffer: valueBuffer, 
-                        index: 3, 
-                        property: Property: Technology.Skill (string) Required MaxLength(50)), 
-                    (object)ExpressionExtensions.ValueBufferTryReadValue<SkillLevel?>(
-                        valueBuffer: valueBuffer, 
-                        index: 4, 
-                        property: Property: Technology.SkillLevel (SkillLevel?)) 
-                })) 
-        })), 
-    Func<QueryContext, ValueBuffer, Offer>, 
-    GetInItBackEnd.Entities.GetInItDbContext, 
-    False, 
-    True
-)' 
-2023-06-21 14:01:30.9791|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method GetInItBackEnd.Controllers.OfferController.GetAllOffers (GetInItBackEnd), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 99.3138ms. 
-2023-06-21 14:01:30.9791|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter GetInItBackend.Integration.Tests.FakeManagerFilter. 
-2023-06-21 14:01:30.9791|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
-2023-06-21 14:01:30.9791|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
-2023-06-21 14:01:30.9791|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
-2023-06-21 14:01:30.9791|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
-2023-06-21 14:01:30.9791|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:30.9791|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:30.9791|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
-2023-06-21 14:01:30.9791|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
-2023-06-21 14:01:30.9791|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
-2023-06-21 14:01:30.9812|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
-2023-06-21 14:01:30.9812|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
-2023-06-21 14:01:30.9812|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
-2023-06-21 14:01:30.9812|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
-2023-06-21 14:01:30.9812|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
-2023-06-21 14:01:30.9812|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[GetInItBackEnd.Models.Offer.OfferDto, GetInItBackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
-2023-06-21 14:01:31.0304|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
-2023-06-21 14:01:31.0304|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
-2023-06-21 14:01:31.0304|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
-2023-06-21 14:01:31.0304|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:31.0304|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:31.0304|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:31.0304|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:31.0304|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action GetInItBackEnd.Controllers.OfferController.GetAllOffers (GetInItBackEnd) in 246.7932ms 
-2023-06-21 14:01:31.0304|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'GetInItBackEnd.Controllers.OfferController.GetAllOffers (GetInItBackEnd)' 
-2023-06-21 14:01:31.0304|10407|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'GetInItDbContext' disposed. 
-2023-06-21 14:01:31.0304|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost/api/offer/GetEveryExistingOffer - - - 200 2 application/json;+charset=utf-8 324.1970ms 
-2023-06-21 14:01:31.0459|0|DEBUG|Program|init main 
-2023-06-21 14:01:31.0868|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.7 initialized 'GetInItDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:7.0.7' with options: StoreName=GetInItDb  
-2023-06-21 14:01:31.0971|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
-2023-06-21 14:01:31.0971|4|DEBUG|Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultViewCompiler|Initializing Razor view compiler with no compiled views. 
-2023-06-21 14:01:31.0971|63|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
-2023-06-21 14:01:31.1101|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
-2023-06-21 14:01:31.1101|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-61beac45-c194-47f9-a2d7-e231fdca960a.xml'. 
-2023-06-21 14:01:31.1101|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-e18af407-1558-4655-9058-fa0c0096c470.xml'. 
-2023-06-21 14:01:31.1101|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {61beac45-c194-47f9-a2d7-e231fdca960a}. 
-2023-06-21 14:01:31.1101|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e18af407-1558-4655-9058-fa0c0096c470}. 
-2023-06-21 14:01:31.1101|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {e18af407-1558-4655-9058-fa0c0096c470} with expiration date 2023-09-11 11:37:12Z as default key. 
-2023-06-21 14:01:31.1101|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
-2023-06-21 14:01:31.1101|51|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
-2023-06-21 14:01:31.1101|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
-2023-06-21 14:01:31.1101|4|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
-2023-06-21 14:01:31.1101|3|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
-2023-06-21 14:01:31.1101|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {e18af407-1558-4655-9058-fa0c0096c470} as the default key. 
-2023-06-21 14:01:31.1101|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {e18af407-1558-4655-9058-fa0c0096c470} was loaded during application startup. 
-2023-06-21 14:01:31.1101|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly GetInItBackEnd 
-2023-06-21 14:01:31.1101|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
-2023-06-21 14:01:31.1827|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST http://localhost/api/offer/createOffer application/json;+charset=utf-8 626 
-2023-06-21 14:01:31.1827|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
-2023-06-21 14:01:31.1827|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
-2023-06-21 14:01:31.1827|1001|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/offer/createOffer' 
-2023-06-21 14:01:31.1827|1005|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'GetInItBackEnd.Controllers.OfferController.CreateOffer (GetInItBackEnd)' with route pattern 'api/offer/createOffer' is valid for the request path '/api/offer/createOffer' 
-2023-06-21 14:01:31.1827|1|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'GetInItBackEnd.Controllers.OfferController.CreateOffer (GetInItBackEnd)' 
-2023-06-21 14:01:31.1827|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
-2023-06-21 14:01:31.1827|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
-2023-06-21 14:01:31.1827|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
-2023-06-21 14:01:31.1827|15|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
-2023-06-21 14:01:31.1827|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'GetInItBackEnd.Controllers.OfferController.CreateOffer (GetInItBackEnd)' 
-2023-06-21 14:01:31.1827|102|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "CreateOffer", controller = "Offer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] CreateOffer(GetInItBackEnd.Models.CreateOfferDto) on controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd). 
-2023-06-21 14:01:31.1827|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
-2023-06-21 14:01:31.1827|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
-2023-06-21 14:01:31.1985|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), GetInItBackend.Integration.Tests.FakeManagerFilter 
-2023-06-21 14:01:31.1985|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
-2023-06-21 14:01:31.1985|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter, Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
-2023-06-21 14:01:31.1985|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:31.1985|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:31.1985|1|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd) 
-2023-06-21 14:01:31.1985|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller GetInItBackEnd.Controllers.OfferController (GetInItBackEnd) 
-2023-06-21 14:01:31.1985|22|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.CreateOfferDto' ... 
-2023-06-21 14:01:31.1985|44|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.CreateOfferDto' using the name '' in request data ... 
-2023-06-21 14:01:31.1985|2|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json; charset=utf-8'. 
-2023-06-21 14:01:31.1985|1|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json; charset=utf-8'. 
-2023-06-21 14:01:31.2459|45|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.CreateOfferDto'. 
-2023-06-21 14:01:31.2459|23|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'dto' of type 'GetInItBackEnd.Models.CreateOfferDto'. 
-2023-06-21 14:01:31.2459|26|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'dto' of type 'GetInItBackEnd.Models.CreateOfferDto' ... 
-2023-06-21 14:01:31.2459|27|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'dto' of type 'GetInItBackEnd.Models.CreateOfferDto'. 
-2023-06-21 14:01:31.2618|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
-2023-06-21 14:01:31.2618|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
-2023-06-21 14:01:31.2618|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
-2023-06-21 14:01:31.2618|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
-2023-06-21 14:01:31.2618|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter GetInItBackend.Integration.Tests.FakeManagerFilter. 
-2023-06-21 14:01:31.2618|101|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.OfferController.CreateOffer (GetInItBackEnd) - Validation state: Valid 
-2023-06-21 14:01:31.2618|102|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method GetInItBackEnd.Controllers.OfferController.CreateOffer (GetInItBackEnd) with arguments (GetInItBackEnd.Models.CreateOfferDto) 
-2023-06-21 14:01:31.2618|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.7 initialized 'GetInItDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory:7.0.7' with options: StoreName=GetInItDb  
-2023-06-21 14:01:31.2883|10808|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"GetInItDbContext"' generated a value for the property '"Id"."Offer"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3144|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'GetInItDbContext' started tracking 'Offer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3144|10808|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"GetInItDbContext"' generated a value for the property '"Id"."Technology"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3144|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'GetInItDbContext' started tracking 'Technology' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3144|10808|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"GetInItDbContext"' generated a value for the property '"Id"."Technology"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3144|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'GetInItDbContext' started tracking 'Technology' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3144|10808|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|'"GetInItDbContext"' generated a value for the property '"Id"."Technology"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3144|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'GetInItDbContext' started tracking 'Technology' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3304|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'GetInItDbContext' started tracking 'OfferTechnology' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3304|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'GetInItDbContext' started tracking 'OfferTechnology' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3304|10806|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'GetInItDbContext' started tracking 'OfferTechnology' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3304|10004|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges starting for 'GetInItDbContext'. 
-2023-06-21 14:01:31.3304|10800|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges starting for 'GetInItDbContext'. 
-2023-06-21 14:01:31.3414|10801|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|DetectChanges completed for 'GetInItDbContext'. 
-2023-06-21 14:01:31.3414|30100|INFO|Microsoft.EntityFrameworkCore.Update|Saved 7 entities to in-memory store. 
-2023-06-21 14:01:31.3414|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Offer' tracked by 'GetInItDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3414|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Technology' tracked by 'GetInItDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3414|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Technology' tracked by 'GetInItDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3414|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'Technology' tracked by 'GetInItDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3414|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'OfferTechnology' tracked by 'GetInItDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3414|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'OfferTechnology' tracked by 'GetInItDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3414|10807|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|An entity of type 'OfferTechnology' tracked by 'GetInItDbContext' changed state from 'Added' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
-2023-06-21 14:01:31.3414|10005|DEBUG|Microsoft.EntityFrameworkCore.Update|SaveChanges completed for 'GetInItDbContext' with 7 entities written to the database. 
-2023-06-21 14:01:31.3414|103|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method GetInItBackEnd.Controllers.OfferController.CreateOffer (GetInItBackEnd), returned result Microsoft.AspNetCore.Mvc.CreatedResult in 85.0344ms. 
-2023-06-21 14:01:31.3414|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter GetInItBackend.Integration.Tests.FakeManagerFilter. 
-2023-06-21 14:01:31.3414|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
-2023-06-21 14:01:31.3414|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
-2023-06-21 14:01:31.3414|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
-2023-06-21 14:01:31.3414|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
-2023-06-21 14:01:31.3414|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:31.3414|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:31.3414|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
-2023-06-21 14:01:31.3414|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
-2023-06-21 14:01:31.3414|5|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.CreatedResult. 
-2023-06-21 14:01:31.3414|11|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
-2023-06-21 14:01:31.3414|4|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
-2023-06-21 14:01:31.3414|8|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
-2023-06-21 14:01:31.3414|10|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
-2023-06-21 14:01:31.3414|2|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter' and content type '' to write the response. 
-2023-06-21 14:01:31.3414|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedResult, writing value of type 'null'. 
-2023-06-21 14:01:31.3414|6|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.CreatedResult. 
-2023-06-21 14:01:31.3414|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
-2023-06-21 14:01:31.3414|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
-2023-06-21 14:01:31.3414|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:31.3414|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:31.3414|52|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:31.3414|53|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
-2023-06-21 14:01:31.3414|105|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action GetInItBackEnd.Controllers.OfferController.CreateOffer (GetInItBackEnd) in 150.0044ms 
-2023-06-21 14:01:31.3414|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'GetInItBackEnd.Controllers.OfferController.CreateOffer (GetInItBackEnd)' 
-2023-06-21 14:01:31.3414|10407|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'GetInItDbContext' disposed. 
-2023-06-21 14:01:31.3414|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST http://localhost/api/offer/createOffer application/json;+charset=utf-8 626 - 201 - - 166.3837ms 
-2023-06-21 14:01:31.3584|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
-2023-06-21 14:01:31.3584|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
-2023-06-21 14:01:31.3584|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
-2023-06-21 14:01:31.3584|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
-2023-06-21 14:01:31.3584|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
-2023-06-21 14:01:31.3584|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
-2023-06-21 14:01:31.3584|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
-2023-06-21 14:01:31.3584|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2023-06-21 15:17:54.9535|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-06-21 15:17:54.9535|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2023-06-21 15:17:54.9535|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2023-06-21 15:17:54.9535|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-21 15:17:54.9535|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-21 15:17:54.9535|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Technologies] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2023-06-21 15:17:54.9676|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Technologies] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2023-06-21 15:17:54.9676|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'GetInItDB' on server 'localhost'. 
+2023-06-21 15:17:54.9822|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'GetInItDB' on server 'localhost' is being disposed after spending 12ms reading results. 
+2023-06-21 15:17:54.9822|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-21 15:17:54.9822|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'GetInItDB' on server 'localhost' (0ms). 
+2023-06-21 15:17:55.0247|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2023-06-21 15:17:55.0721|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2023-06-21 15:17:55.0832|63|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-06-21 15:17:55.0832|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-61beac45-c194-47f9-a2d7-e231fdca960a.xml'. 
+2023-06-21 15:17:55.0832|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-e18af407-1558-4655-9058-fa0c0096c470.xml'. 
+2023-06-21 15:17:55.0930|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {61beac45-c194-47f9-a2d7-e231fdca960a}. 
+2023-06-21 15:17:55.0930|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e18af407-1558-4655-9058-fa0c0096c470}. 
+2023-06-21 15:17:55.0930|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {e18af407-1558-4655-9058-fa0c0096c470} with expiration date 2023-09-11 11:37:12Z as default key. 
+2023-06-21 15:17:55.1052|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-21 15:17:55.1052|51|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2023-06-21 15:17:55.1052|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-21 15:17:55.1052|4|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2023-06-21 15:17:55.1052|3|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2023-06-21 15:17:55.1052|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {e18af407-1558-4655-9058-fa0c0096c470} as the default key. 
+2023-06-21 15:17:55.1052|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {e18af407-1558-4655-9058-fa0c0096c470} was loaded during application startup. 
+2023-06-21 15:17:55.1396|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5099 
+2023-06-21 15:17:55.1396|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly GetInItBackEnd 
+2023-06-21 15:17:55.1396|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-06-21 15:17:55.1396|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-06-21 15:17:55.1396|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\GetInItBackEnd 
+2023-06-21 15:17:55.1396|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2023-06-21 15:18:01.5878|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRIB7O87CL3" accepted. 
+2023-06-21 15:18:01.5878|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRIB7O87CL3" started. 
+2023-06-21 15:18:01.6269|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5099/swagger/index.html - - 
+2023-06-21 15:18:01.6269|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2023-06-21 15:18:01.6269|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-21 15:18:01.6575|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.html' 
+2023-06-21 15:18:01.6575|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2023-06-21 15:18:01.6896|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-21 15:18:01.6896|5|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger/index.html does not match an existing file 
+2023-06-21 15:18:01.6896|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2023-06-21 15:18:01.8256|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRIB7O87CL3" completed keep alive response. 
+2023-06-21 15:18:01.8256|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/swagger/index.html - - - 200 - text/html;charset=utf-8 202.1896ms 
+2023-06-21 15:18:01.9446|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5099/swagger/v1/swagger.json - - 
+2023-06-21 15:18:01.9446|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-21 15:18:01.9446|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json' 
+2023-06-21 15:18:01.9446|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2023-06-21 15:18:01.9446|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-21 15:18:01.9446|5|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger/v1/swagger.json does not match an existing file 
+2023-06-21 15:18:02.1203|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRIB7O87CL3" completed keep alive response. 
+2023-06-21 15:18:02.1206|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 175.9850ms 

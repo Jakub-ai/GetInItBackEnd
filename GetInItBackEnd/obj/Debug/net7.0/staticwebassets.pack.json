@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd\\wwwroot\\OfferFiles\\13\\tokeny.txt",
+      "PackagePath": "staticwebassets\\OfferFiles\\13\\tokeny.txt"
+    },
+    {
+      "Id": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd\\wwwroot\\OfferFiles\\14\\tokeny.txt",
+      "PackagePath": "staticwebassets\\OfferFiles\\14\\tokeny.txt"
+    },
+    {
+      "Id": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd\\wwwroot\\OfferFiles\\1\\2\\tokeny.txt",
+      "PackagePath": "staticwebassets\\OfferFiles\\1\\2\\tokeny.txt"
+    },
+    {
+      "Id": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd\\wwwroot\\OfferFiles\\1\\tokeny.txt",
+      "PackagePath": "staticwebassets\\OfferFiles\\1\\tokeny.txt"
+    },
+    {
+      "Id": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd\\wwwroot\\OfferFiles\\2\\2\\tokeny.txt",
+      "PackagePath": "staticwebassets\\OfferFiles\\2\\2\\tokeny.txt"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.GetInItBackEnd.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.GetInItBackEnd.props",
+      "PackagePath": "build\\GetInItBackEnd.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.GetInItBackEnd.props",
+      "PackagePath": "buildMultiTargeting\\GetInItBackEnd.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.GetInItBackEnd.props",
+      "PackagePath": "buildTransitive\\GetInItBackEnd.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

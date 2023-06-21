@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GetInItBackEnd</name>
+    </assembly>
+    <members>
+        <member name="M:GetInItBackEnd.Controllers.AccountController.RegisterCompanyAccount(GetInItBackEnd.Models.Account.CreateAccountDto)">
+            <summary>
+            Register a new company account.
+            </summary>
+            <param name="accountDto">Data Transfer Object containing information required to register a new company account.</param>
+            <returns>An ActionResult indicating the outcome of the account registration process. If successful, returns a '201 Created' status along with the location of the new resource.</returns>
+        </member>
+        <member name="M:GetInItBackEnd.Controllers.AccountController.RegisterUserAccount(GetInItBackEnd.Models.Account.RegisterUserDto)">
+            <summary>
+            Registers a new user account.
+            </summary>
+            <param name="userDto">The Data Transfer Object containing the information required to register a new user account.</param>
+            <returns>Returns an ActionResult indicating the result of the account registration process. If the operation is successful, it returns a '201 Created' status along with the location of the new resource.</returns>
+        </member>
+        <member name="T:GetInItBackEnd.Controllers.JobApplicationController">
+            <summary>
+            mozna tu wpisac opis controllera i kazdego endpointu zeby zrobic dokumentacje kodu jezeli bedzie potrzebna
+            </summary>
+        </member>
+        <member name="M:GetInItBackEnd.Controllers.JobApplicationController.CreateApplication(GetInItBackEnd.Models.JobApplicationDto.CreateJobApplicationDto,System.Int32,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            controller for creating new jobapplications by user
+            </summary>
+            <param name="dto"></param>
+            <param name="offerId"></param>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GetInItBackEnd.Migrations.Initial">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:GetInItBackEnd.Migrations.al1">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.al1.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.al1.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.al1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:GetInItBackEnd.Migrations.al2">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.al2.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.al2.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:GetInItBackEnd.Migrations.al2.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
