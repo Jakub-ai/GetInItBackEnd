@@ -11,11 +11,11 @@ using GetInItBackEnd.Middleware;
 using GetInItBackEnd.Models.Account;
 using GetInItBackEnd.Models.JobApplicationDto;
 using GetInItBackEnd.Models.Validators;
-using GetInItBackEnd.Seeders;
+
 using GetInItBackEnd.Services.AccountServices;
 using GetInItBackEnd.Services.ApplicationServices;
 using GetInItBackEnd.Services.CompanyServices;
-using GetInItBackEnd.Services.GptServices;
+
 using GetInItBackEnd.Services.OfferServices;
 using GetInItBackEnd.Services.PaymentServices;
 using Microsoft.AspNetCore.Authorization;
@@ -73,7 +73,7 @@ builder.Services.AddAuthentication(option =>
 builder.Services.AddControllers();
 builder.Services.AddDbContext<GetInItDbContext>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("GetInIt")));
-builder.Services.AddScoped<TechnologySeeder>();
+
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Logging.ClearProviders();
 builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
@@ -83,8 +83,6 @@ builder.Host.UseNLog();
 builder.Services.AddScoped<RequestTimeMiddleware>();*/
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICompanyService, CompanyService>();
-builder.Services.AddHttpClient<ChatGptService>();
-builder.Services.AddScoped<IChatGptService, ChatGptService>();
 builder.Services.AddScoped<IOfferService, OfferService>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
 builder.Services.AddScoped<IApplicationService, ApplicationService>();
@@ -130,8 +128,7 @@ StripeConfiguration.ApiKey =
     "sk_test_51NECXpLpkQnyrIfCXAF91dHQTHQBIj4PCtBXiRTMumckFBOUezK7spzO8PhAStUZPiAGRarv1Su2HU9YERZz6oe600GEU7tbYo";
 // Configure the HTTP request pipeline.
 var scope = app.Services.CreateScope();
-var seeder = scope.ServiceProvider.GetRequiredService<TechnologySeeder>();
-await seeder.Seed();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();

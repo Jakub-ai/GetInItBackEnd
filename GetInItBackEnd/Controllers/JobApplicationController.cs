@@ -80,6 +80,7 @@ public class JobApplicationController : ControllerBase
     }
     [Authorize(Policy = "EmployeeRole")]
     [Authorize(Policy = "ManagerRole")]
+    [Authorize(Policy = "UserRole")]
     [HttpPost("DownloadFile")]
     public async Task<IActionResult> DownloadResumeFile([FromBody]FileDownloadDto dto)
     {

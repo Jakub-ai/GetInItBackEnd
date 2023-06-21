@@ -98,58 +98,5 @@ public class PaymentService : IPaymentService
         await _dbContext.SaveChangesAsync();
         return payment.Id;
     }
-    
-
-    /*public async Task<int> PaymentToDatabase(HttpRequest request)
-    {
-        var json = await new StreamReader(request.Body).ReadToEndAsync();
-
-        try
-        {
-            var stripeEvent = EventUtility.ParseEvent(json);
-
-            if (stripeEvent.Type == Events.PaymentIntentSucceeded)
-            {
-                var paymentIntent = stripeEvent.Data.Object as PaymentIntent;
-
-                var paymentDto = new PaymentDto
-                {
-                    
-                    PaymentDate = DateTime.UtcNow,
-                    Amount = paymentIntent.Amount.ToString() ,
-                    StripePaymentId = paymentIntent.Id,
-                    PaymentStatus = "Succeeded",
-                    Name = _userContextService.GetUserName,
-                    LastName = _userContextService.GetUserLastName
-
-                };
-
-                var payment = new Payment
-                {
-                    PaymentDate = paymentDto.PaymentDate,
-                    Amount = paymentDto.Amount,
-                    StripePaymentId = paymentDto.StripePaymentId,
-                    PaymentStatus = paymentDto.PaymentStatus,
-                    Name = paymentDto.Name,
-                    Email = paymentDto.Email
-                    
-                    
-                };
-
-                _dbContext.Payments.Add(payment);
-                await _dbContext.SaveChangesAsync();
-
-                return 1; // W przypadku sukcesu, zwróć 1
-            }
-
-            return 0; // W przypadku niepowodzenia, zwróć 0
-        }
-        catch (Exception e)
-        {
-            _logger.LogError(e.Message);
-            return -1; // W przypadku błędu, zwróć -1
-        }
-    }
-    */
 
 }

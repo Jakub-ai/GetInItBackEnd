@@ -169,13 +169,13 @@ public class AccountService : IAccountService
             .FirstOrDefaultAsync(u => u.Email == dto.Email);
         if (account is null)
         {
-            throw new BadRequestException("Invalid email or password");
+            throw new BadRequestException("Invalid email ");
             
         }
         var result =   _passwordHasher.VerifyHashedPassword(account, account.PasswordHash, dto.Password);
         if (result == PasswordVerificationResult.Failed )
         {
-            throw new BadRequestException("Invalid email or password");
+            throw new BadRequestException("Invalid  password");
         }
 
         var claims = new List<Claim>()

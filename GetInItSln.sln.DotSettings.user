@@ -3,5 +3,12 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::63DB92E9-7823-4B44-81E9-181D24E8D1DA::net7.0::GetInItBackEnd.Tests.AccountControllerTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::63169F5F-A22C-4E0A-A352-6F8C6A805D9D::net7.0::GetInItBackend.Integration.Tests.OfferControllerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::63DB92E9-7823-4B44-81E9-181D24E8D1DA::net7.0::GetInItBackEnd.Tests.OfferControllerTests.GetOffersByPrimarySkill_ReturnsOffers_WhenCalled&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::63DB92E9-7823-4B44-81E9-181D24E8D1DA::net7.0::GetInItBackEnd.Tests.OfferControllerTests.GetAllOffers_ReturnsOffers_WhenCalled&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::63DB92E9-7823-4B44-81E9-181D24E8D1DA::net7.0::GetInItBackEnd.Tests.CompanyControllerTests.GetAll_ReturnsCompanies_WhenCalled&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::63DB92E9-7823-4B44-81E9-181D24E8D1DA::net7.0::GetInItBackEnd.Tests.CompanyControllerTests.Update_ReturnsOk_WhenCalled&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::63169F5F-A22C-4E0A-A352-6F8C6A805D9D::net7.0::GetInItBackend.Integration.Tests.ApplicationControllerTests.GetAllApplications_ReturnsSuccessStatusCode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::63169F5F-A22C-4E0A-A352-6F8C6A805D9D::net7.0::GetInItBackend.Integration.Tests.ApplicationControllerTests.DownloadResumeFile_ReturnsSuccessStatusCode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::63169F5F-A22C-4E0A-A352-6F8C6A805D9D::net7.0::GetInItBackend.Integration.Tests.ApplicationControllerTests.DownloadResumeFile_ReturnsCorrectStatusCode&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
