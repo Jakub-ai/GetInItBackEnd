@@ -8,5 +8,7 @@
     &lt;TestId&gt;xUnit::B7B7C5AF-469B-4B8A-BF80-F4AE5425D99E::net7.0::GetInItBackend.Integration.Tests.AccountControllerTests.GetAllOffers_ReturnsSuccessStatusCode&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::B7B7C5AF-469B-4B8A-BF80-F4AE5425D99E::net7.0::GetInItBackend.Integration.Tests.AccountControllerTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::B7B7C5AF-469B-4B8A-BF80-F4AE5425D99E::net7.0::GetInItBackend.Integration.Tests.OfferControllerTests.CreateOffer_ReturnCreatedCode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::B7B7C5AF-469B-4B8A-BF80-F4AE5425D99E::net7.0::GetInItBackend.Integration.Tests.OfferControllerTests.GetAllOffers_ReturnsSuccessStatusCode&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::B7B7C5AF-469B-4B8A-BF80-F4AE5425D99E::net7.0::GetInItBackend.Integration.Tests.OfferControllerTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
