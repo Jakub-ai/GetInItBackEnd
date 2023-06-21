@@ -11523,3 +11523,232 @@ END
 2023-06-20 18:20:29.9643|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
 2023-06-20 18:20:29.9643|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
 2023-06-20 18:20:29.9643|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2023-06-20 18:47:35.8128|0|DEBUG|Program|init main 
+2023-06-20 18:47:36.1045|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2023-06-20 18:47:36.7374|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'OfferId'} was not created on entity type 'OfferEmploymentType (Dictionary<string, object>)' as the properties are already covered by the index {'OfferId', 'EmploymentTypeId'}. 
+2023-06-20 18:47:36.7374|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'OffersId'} was not created on entity type 'OfferTechnology (Dictionary<string, object>)' as the properties are already covered by the index {'OffersId', 'TechnologiesId'}. 
+2023-06-20 18:47:36.8346|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'OfferTechnology (Dictionary<string, object>).OffersId' was created in shadow state because there are no eligible CLR members with a matching name. 
+2023-06-20 18:47:36.8346|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'OfferTechnology (Dictionary<string, object>).TechnologiesId' was created in shadow state because there are no eligible CLR members with a matching name. 
+2023-06-20 18:47:36.8616|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'SalaryFrom' on entity type 'Offer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-06-20 18:47:36.8616|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'SalaryTo' on entity type 'Offer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-06-20 18:47:37.0418|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.3 initialized 'GetInItDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.3' with options: None 
+2023-06-20 18:47:37.0595|20005|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2023-06-20 18:47:37.0945|20006|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (33ms). 
+2023-06-20 18:47:37.0945|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-20 18:47:37.2763|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-20 18:47:37.2885|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2023-06-20 18:47:37.2953|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (5ms). 
+2023-06-20 18:47:37.2953|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (10ms). 
+2023-06-20 18:47:37.2953|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2023-06-20 18:47:37.3468|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2023-06-20 18:47:37.3468|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-20 18:47:37.3623|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'GetInItDB' on server 'localhost' (6ms). 
+2023-06-20 18:47:37.4108|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Technology>()
+    .Any()' 
+2023-06-20 18:47:37.5643|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            SELECT 1
+            FROM Technologies AS t)), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+    GetInItBackEnd.Entities.GetInItDbContext, 
+    False, 
+    False, 
+    True
+)
+    .Single()' 
+2023-06-20 18:47:37.5982|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-06-20 18:47:37.5982|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2023-06-20 18:47:37.5982|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2023-06-20 18:47:37.5982|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-20 18:47:37.5982|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-20 18:47:37.5982|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Technologies] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2023-06-20 18:47:37.6117|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Technologies] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2023-06-20 18:47:37.6231|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'GetInItDB' on server 'localhost'. 
+2023-06-20 18:47:37.6231|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'GetInItDB' on server 'localhost' is being disposed after spending 12ms reading results. 
+2023-06-20 18:47:37.6231|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-20 18:47:37.6231|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'GetInItDB' on server 'localhost' (0ms). 
+2023-06-20 18:47:37.6725|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2023-06-20 18:47:37.7324|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2023-06-20 18:47:37.7324|63|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-06-20 18:47:37.7478|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-61beac45-c194-47f9-a2d7-e231fdca960a.xml'. 
+2023-06-20 18:47:37.7478|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-e18af407-1558-4655-9058-fa0c0096c470.xml'. 
+2023-06-20 18:47:37.7478|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {61beac45-c194-47f9-a2d7-e231fdca960a}. 
+2023-06-20 18:47:37.7478|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e18af407-1558-4655-9058-fa0c0096c470}. 
+2023-06-20 18:47:37.7678|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {e18af407-1558-4655-9058-fa0c0096c470} with expiration date 2023-09-11 11:37:12Z as default key. 
+2023-06-20 18:47:37.7678|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-20 18:47:37.7678|51|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2023-06-20 18:47:37.7678|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-20 18:47:37.7678|4|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2023-06-20 18:47:37.7678|3|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2023-06-20 18:47:37.7678|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {e18af407-1558-4655-9058-fa0c0096c470} as the default key. 
+2023-06-20 18:47:37.7678|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {e18af407-1558-4655-9058-fa0c0096c470} was loaded during application startup. 
+2023-06-20 18:47:37.8051|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5099 
+2023-06-20 18:47:37.8051|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly GetInItBackEnd 
+2023-06-20 18:47:37.8051|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-06-20 18:47:37.8051|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-06-20 18:47:37.8051|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd 
+2023-06-20 18:47:37.8051|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2023-06-20 18:47:40.4482|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRHLO7QVESV" accepted. 
+2023-06-20 18:47:40.4491|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRHLO7QVESV" started. 
+2023-06-20 18:47:40.5247|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRHLO7QVET0" accepted. 
+2023-06-20 18:47:40.5247|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRHLO7QVET0" started. 
+2023-06-20 18:47:40.5522|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5099/swagger/index.html - - 
+2023-06-20 18:47:40.5522|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2023-06-20 18:47:40.5522|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-20 18:47:40.5799|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.html' 
+2023-06-20 18:47:40.5799|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2023-06-20 18:47:40.6074|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-20 18:47:40.6074|5|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger/index.html does not match an existing file 
+2023-06-20 18:47:40.6074|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2023-06-20 18:47:40.7323|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRHLO7QVESV" completed keep alive response. 
+2023-06-20 18:47:40.7323|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/swagger/index.html - - - 200 - text/html;charset=utf-8 182.7711ms 
+2023-06-20 18:47:40.8668|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5099/swagger/v1/swagger.json - - 
+2023-06-20 18:47:40.8668|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-20 18:47:40.8668|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json' 
+2023-06-20 18:47:40.8668|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2023-06-20 18:47:40.8668|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-20 18:47:40.8668|5|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger/v1/swagger.json does not match an existing file 
+2023-06-20 18:47:41.0601|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRHLO7QVESV" completed keep alive response. 
+2023-06-20 18:47:41.0601|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 193.6937ms 
+2023-06-20 18:49:10.9308|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-06-20 18:49:10.9308|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-06-20 18:49:10.9379|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRHLO7QVESV" disconnecting. 
+2023-06-20 18:49:10.9379|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRHLO7QVET0" disconnecting. 
+2023-06-20 18:49:10.9379|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRHLO7QVESV" stopped. 
+2023-06-20 18:49:10.9379|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRHLO7QVET0" stopped. 
+2023-06-20 18:49:10.9379|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMRHLO7QVESV" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-20 18:49:10.9379|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMRHLO7QVET0" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-20 18:49:10.9379|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 
+2023-06-20 18:49:16.8039|0|DEBUG|Program|init main 
+2023-06-20 18:49:17.0859|10401|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework. 
+2023-06-20 18:49:17.7866|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'OfferId'} was not created on entity type 'OfferEmploymentType (Dictionary<string, object>)' as the properties are already covered by the index {'OfferId', 'EmploymentTypeId'}. 
+2023-06-20 18:49:17.7866|10601|DEBUG|Microsoft.EntityFrameworkCore.Model|The index {'OffersId'} was not created on entity type 'OfferTechnology (Dictionary<string, object>)' as the properties are already covered by the index {'OffersId', 'TechnologiesId'}. 
+2023-06-20 18:49:17.9224|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'OfferTechnology (Dictionary<string, object>).OffersId' was created in shadow state because there are no eligible CLR members with a matching name. 
+2023-06-20 18:49:17.9224|10600|DEBUG|Microsoft.EntityFrameworkCore.Model.Validation|The property 'OfferTechnology (Dictionary<string, object>).TechnologiesId' was created in shadow state because there are no eligible CLR members with a matching name. 
+2023-06-20 18:49:17.9539|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'SalaryFrom' on entity type 'Offer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-06-20 18:49:17.9539|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'SalaryTo' on entity type 'Offer'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. 
+2023-06-20 18:49:18.1573|10403|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.3 initialized 'GetInItDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.3' with options: None 
+2023-06-20 18:49:18.1741|20005|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection. 
+2023-06-20 18:49:18.2136|20006|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (37ms). 
+2023-06-20 18:49:18.2175|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-20 18:49:18.4278|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-20 18:49:18.4463|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteNonQuery'. 
+2023-06-20 18:49:18.4546|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteNonQuery' (6ms). 
+2023-06-20 18:49:18.4546|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteNonQuery' (14ms). 
+2023-06-20 18:49:18.4679|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2023-06-20 18:49:18.5182|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (54ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2023-06-20 18:49:18.5182|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-20 18:49:18.5363|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'GetInItDB' on server 'localhost' (7ms). 
+2023-06-20 18:49:18.5871|10111|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Technology>()
+    .Any()' 
+2023-06-20 18:49:18.7802|10107|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            SELECT 1
+            FROM Technologies AS t)), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+    GetInItBackEnd.Entities.GetInItDbContext, 
+    False, 
+    False, 
+    True
+)
+    .Single()' 
+2023-06-20 18:49:18.8186|20103|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'. 
+2023-06-20 18:49:18.8186|20104|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (0ms). 
+2023-06-20 18:49:18.8186|20106|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (0ms). 
+2023-06-20 18:49:18.8186|20000|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-20 18:49:18.8186|20001|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-20 18:49:18.8236|20100|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Technologies] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2023-06-20 18:49:18.8236|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Technologies] AS [t]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2023-06-20 18:49:18.8464|20301|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'GetInItDB' on server 'localhost'. 
+2023-06-20 18:49:18.8464|20300|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'GetInItDB' on server 'localhost' is being disposed after spending 14ms reading results. 
+2023-06-20 18:49:18.8464|20002|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'GetInItDB' on server 'localhost'. 
+2023-06-20 18:49:18.8543|20003|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'GetInItDB' on server 'localhost' (1ms). 
+2023-06-20 18:49:18.9152|12|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2023-06-20 18:49:18.9763|1|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2023-06-20 18:49:18.9861|63|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-06-20 18:49:18.9861|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-61beac45-c194-47f9-a2d7-e231fdca960a.xml'. 
+2023-06-20 18:49:18.9861|37|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\jakub\AppData\Local\ASP.NET\DataProtection-Keys\key-e18af407-1558-4655-9058-fa0c0096c470.xml'. 
+2023-06-20 18:49:18.9982|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {61beac45-c194-47f9-a2d7-e231fdca960a}. 
+2023-06-20 18:49:18.9982|18|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {e18af407-1558-4655-9058-fa0c0096c470}. 
+2023-06-20 18:49:18.9982|13|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {e18af407-1558-4655-9058-fa0c0096c470} with expiration date 2023-09-11 11:37:12Z as default key. 
+2023-06-20 18:49:19.0115|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-20 18:49:19.0115|51|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2023-06-20 18:49:19.0115|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-20 18:49:19.0115|4|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2023-06-20 18:49:19.0115|3|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2023-06-20 18:49:19.0115|2|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {e18af407-1558-4655-9058-fa0c0096c470} as the default key. 
+2023-06-20 18:49:19.0115|65|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {e18af407-1558-4655-9058-fa0c0096c470} was loaded during application startup. 
+2023-06-20 18:49:19.0465|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5099 
+2023-06-20 18:49:19.0465|13|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly GetInItBackEnd 
+2023-06-20 18:49:19.0465|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-06-20 18:49:19.0465|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-06-20 18:49:19.0465|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd 
+2023-06-20 18:49:19.0465|2|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2023-06-20 18:49:26.5202|39|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRHLP7EHVP3" accepted. 
+2023-06-20 18:49:26.5202|1|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRHLP7EHVP3" started. 
+2023-06-20 18:49:26.5713|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5099/swagger/index.html - - 
+2023-06-20 18:49:26.5713|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2023-06-20 18:49:26.5713|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-20 18:49:26.6022|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.html' 
+2023-06-20 18:49:26.6022|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2023-06-20 18:49:26.6312|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-20 18:49:26.6312|5|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger/index.html does not match an existing file 
+2023-06-20 18:49:26.6312|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. 
+2023-06-20 18:49:26.7650|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRHLP7EHVP3" completed keep alive response. 
+2023-06-20 18:49:26.7650|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/swagger/index.html - - - 200 - text/html;charset=utf-8 196.9179ms 
+2023-06-20 18:49:27.0166|1|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5099/swagger/v1/swagger.json - - 
+2023-06-20 18:49:27.0166|2|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-20 18:49:27.0166|1000|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json' 
+2023-06-20 18:49:27.0166|2|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints 
+2023-06-20 18:49:27.0166|9|DEBUG|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was not authenticated. 
+2023-06-20 18:49:27.0166|5|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path /swagger/v1/swagger.json does not match an existing file 
+2023-06-20 18:49:27.1906|9|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRHLP7EHVP3" completed keep alive response. 
+2023-06-20 18:49:27.1906|2|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5099/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 174.3510ms 
+2023-06-20 18:50:44.0231|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2023-06-20 18:50:44.0231|3|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopping 
+2023-06-20 18:50:44.0305|10|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRHLP7EHVP3" disconnecting. 
+2023-06-20 18:50:44.0305|2|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRHLP7EHVP3" stopped. 
+2023-06-20 18:50:44.0305|7|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMRHLP7EHVP3" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-20 18:50:44.0305|4|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting stopped 

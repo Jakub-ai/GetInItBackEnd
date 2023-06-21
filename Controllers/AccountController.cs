@@ -16,6 +16,11 @@ public class AccountController : ControllerBase
         _accountService = accountService;
     }
     
+    /// <summary>
+    /// Register a new company account.
+    /// </summary>
+    /// <param name="accountDto">Data Transfer Object containing information required to register a new company account.</param>
+    /// <returns>An ActionResult indicating the outcome of the account registration process. If successful, returns a '201 Created' status along with the location of the new resource.</returns>
     [HttpPost("RegisterCompanyAccount")]
     public async Task<ActionResult> RegisterCompanyAccount([FromBody] CreateAccountDto accountDto)
     {
@@ -23,6 +28,11 @@ public class AccountController : ControllerBase
        
         return Created($"/api/account/{id}", null);
     }
+    /// <summary>
+    /// Registers a new user account.
+    /// </summary>
+    /// <param name="userDto">The Data Transfer Object containing the information required to register a new user account.</param>
+    /// <returns>Returns an ActionResult indicating the result of the account registration process. If the operation is successful, it returns a '201 Created' status along with the location of the new resource.</returns>
     [HttpPost("RegisterUserAccount")]
     public async Task<ActionResult> RegisterUserAccount([FromBody] RegisterUserDto userDto)
     {

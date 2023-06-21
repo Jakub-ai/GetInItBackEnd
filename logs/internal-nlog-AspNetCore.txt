@@ -3729,3 +3729,17 @@
 2023-06-20 18:20:28.3876 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
 2023-06-20 18:20:28.4053 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackend.Integration.Tests\bin\Debug\net7.0\NLog.config
 2023-06-20 18:20:28.5965 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackend.Integration.Tests\bin\Debug\net7.0\NLog.config
+2023-06-20 18:47:35.7175 Info Message Template Auto Format enabled
+2023-06-20 18:47:35.7175 Info Loading assembly: NLog.Web.AspNetCore
+2023-06-20 18:47:35.7662 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-06-20 18:47:35.7662 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-06-20 18:47:35.7662 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-06-20 18:47:35.7885 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-06-20 18:47:35.9692 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-06-20 18:49:16.7043 Info Message Template Auto Format enabled
+2023-06-20 18:49:16.7043 Info Loading assembly: NLog.Web.AspNetCore
+2023-06-20 18:49:16.7576 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-06-20 18:49:16.7622 Info Registered target NLog.Targets.FileTarget(Name=RequestTime)
+2023-06-20 18:49:16.7622 Info Registered target NLog.Targets.FileTarget(Name=exceptions)
+2023-06-20 18:49:16.7802 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config
+2023-06-20 18:49:16.9552 Info Validating config: TargetNames=allfile, exceptions, RequestTime, ConfigItems=64, FilePath=C:\Users\jakub\Desktop\ISZProjekt\GetInItBackEnd\bin\Debug\net7.0\NLog.config

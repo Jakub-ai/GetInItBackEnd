@@ -4,6 +4,20 @@
         <name>GetInItBackEnd</name>
     </assembly>
     <members>
+        <member name="M:GetInItBackEnd.Controllers.AccountController.RegisterCompanyAccount(GetInItBackEnd.Models.Account.CreateAccountDto)">
+            <summary>
+            Register a new company account.
+            </summary>
+            <param name="accountDto">Data Transfer Object containing information required to register a new company account.</param>
+            <returns>An ActionResult indicating the outcome of the account registration process. If successful, returns a '201 Created' status along with the location of the new resource.</returns>
+        </member>
+        <member name="M:GetInItBackEnd.Controllers.AccountController.RegisterUserAccount(GetInItBackEnd.Models.Account.RegisterUserDto)">
+            <summary>
+            Registers a new user account.
+            </summary>
+            <param name="userDto">The Data Transfer Object containing the information required to register a new user account.</param>
+            <returns>Returns an ActionResult indicating the result of the account registration process. If the operation is successful, it returns a '201 Created' status along with the location of the new resource.</returns>
+        </member>
         <member name="T:GetInItBackEnd.Controllers.JobApplicationController">
             <summary>
             mozna tu wpisac opis controllera i kazdego endpointu zeby zrobic dokumentacje kodu jezeli bedzie potrzebna
