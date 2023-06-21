@@ -44,7 +44,7 @@ To run this project, you need Docker and .NET 7.0 SDK installed.
 9. Run the Docker container:
 ```docker run -p 5000:80 getinbackend```
 
-The API will now be running on http://localhost:50099.
+The API will now be running on http://localhost:5099.
 # Usage
 After installation and running the application, companies can register and add employees to create and view their own job listings. Individual users can view these listings and apply directly, attaching their CV in PDF format if necessary. Payments for donations can be made securely via Stripe.
 
