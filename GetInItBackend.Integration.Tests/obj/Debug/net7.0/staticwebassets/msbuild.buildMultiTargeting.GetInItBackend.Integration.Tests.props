@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\GetInItBackend.Integration.Tests.props" />
+</Project>

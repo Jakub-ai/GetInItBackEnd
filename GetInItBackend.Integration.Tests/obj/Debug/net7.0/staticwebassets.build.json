@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "Hash": "cAAVoxJV0/0clJY9S/E2G5zC2gySmL6TiulMUWevOmo=",
+  "Source": "GetInItBackend.Integration.Tests",
+  "BasePath": "_content/GetInItBackend.Integration.Tests",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd\\GetInItBackEnd.csproj",
+      "Version": 2,
+      "Source": "GetInItBackEnd",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [
+    {
+      "Name": "GetInItBackEnd\\wwwroot",
+      "Source": "GetInItBackEnd",
+      "ContentRoot": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd\\wwwroot\\",
+      "BasePath": "_content/GetInItBackEnd",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd\\wwwroot\\OfferFiles\\1\\2\\tokeny.txt",
+      "SourceId": "GetInItBackEnd",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd\\wwwroot\\",
+      "BasePath": "_content/GetInItBackEnd",
+      "RelativePath": "OfferFiles/1/2/tokeny.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\OfferFiles\\1\\2\\tokeny.txt"
+    },
+    {
+      "Identity": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd\\wwwroot\\OfferFiles\\1\\tokeny.txt",
+      "SourceId": "GetInItBackEnd",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd\\wwwroot\\",
+      "BasePath": "_content/GetInItBackEnd",
+      "RelativePath": "OfferFiles/1/tokeny.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\OfferFiles\\1\\tokeny.txt"
+    },
+    {
+      "Identity": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd\\wwwroot\\OfferFiles\\13\\tokeny.txt",
+      "SourceId": "GetInItBackEnd",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd\\wwwroot\\",
+      "BasePath": "_content/GetInItBackEnd",
+      "RelativePath": "OfferFiles/13/tokeny.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\OfferFiles\\13\\tokeny.txt"
+    },
+    {
+      "Identity": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd\\wwwroot\\OfferFiles\\14\\tokeny.txt",
+      "SourceId": "GetInItBackEnd",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd\\wwwroot\\",
+      "BasePath": "_content/GetInItBackEnd",
+      "RelativePath": "OfferFiles/14/tokeny.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\OfferFiles\\14\\tokeny.txt"
+    },
+    {
+      "Identity": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd\\wwwroot\\OfferFiles\\2\\2\\tokeny.txt",
+      "SourceId": "GetInItBackEnd",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\jakub\\Desktop\\ISZProjekt\\GetInItBackEnd\\GetInItBackEnd\\wwwroot\\",
+      "BasePath": "_content/GetInItBackEnd",
+      "RelativePath": "OfferFiles/2/2/tokeny.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\OfferFiles\\2\\2\\tokeny.txt"
+    }
+  ]
+}
