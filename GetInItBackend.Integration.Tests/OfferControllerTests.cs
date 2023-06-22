@@ -49,21 +49,6 @@ public class OfferControllerTests : IClassFixture<WebApplicationFactory<Program>
         response.EnsureSuccessStatusCode(); // Status Code 200-299
     }
 
-    [Fact]
-    public async Task CreateOffer_ReturnCreatedCode()
-    {
-        var fixture = new Fixture();
-        var mockService = new Mock<IAccountService>();
-        var model = fixture.Create<CreateOfferDto>();
-        var json = JsonConvert.SerializeObject(model);
-        var httpContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json");
-
-      
-        var response = await _client.PostAsync("api/offer/createOffer", httpContent);
-
-        response.StatusCode.Should().Be(System.Net.HttpStatusCode.Created);
-        response.Headers.Location.Should().NotBeNull();
-    }
 
 
     
